@@ -50,3 +50,4 @@ nnoremap <A-m> @q
 set nofoldenable
 
 let g:indentLine_enabled = 0
+set expandtab
