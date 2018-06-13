@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/zach/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 
 export NIX_PATH="${NIX_PATH:+$NIX_PATH:}nixpkgs=$HOME/.nix-defexpr/channels/nixpkgs"
 
-#export PATH="$PATH:/home/zach/.nix-profile/bin:/home/zach/bin:~/.local/bin"
+#export PATH="$PATH:$HOME/.nix-profile/bin:/home/zach/bin:~/.local/bin"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 
@@ -104,8 +104,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pm="sudo pacman"
 alias mocp="mocp -T transparent-background"
-alias makealias="xdg-open /home/zach/.zshrc"
-alias music="udisksctl mount -b /dev/sda2 > /dev/null 2>&1; cd /run/media/zach/1AD2B07DD2B05EA7/music/; mocp -m"
+alias makealias="xdg-open $HOME/.zshrc"
+alias music="udisksctl mount -b /dev/sda2 > /dev/null 2>&1; cd /run/media/zachchurchill/1AD2B07DD2B05EA7/music/; mocp -m"
 alias youtubeflac="youtube-dl --extract-audio --audio-format flac -o '%(autonumber)s.%(title)s.%(ext)s' "
 alias neofetch="neofetch \
 --block_range 1 14 \
@@ -115,7 +115,7 @@ alias neofetch="neofetch \
 --speed_shorthand on \
 "
 alias fetch="neofetch"
-alias colortest="/home/zach/Documents/shell-scripts/colortest.sh"
+alias colortest="$HOME/Documents/shell-scripts/colortest.sh"
 alias sudo="sudo -E"
 alias gksudo="gksudo -k"
 alias unrarall="find ./ -name \*.rar -exec unrar x -y  {} \;"
