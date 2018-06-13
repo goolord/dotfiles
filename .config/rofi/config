@@ -1,0 +1,4 @@
+rofi.theme:            sidestyle.rasi
+rofi.sidebar-mode:     false
+rofi.drun-icon-theme:  Numix
+rofi.show-icons:       true
