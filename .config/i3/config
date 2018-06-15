@@ -299,6 +299,6 @@ exec --no-startup-id clipmenud &
 exec xset s 3600 3600
 exec xset -dpms
 #background
-exec xsetroot -solid "#504945"
+exec hsetroot -solid "#504945"
 exec compton &
 #exec --no-startup-id nm-applet &
