@@ -8,9 +8,9 @@ content_type="image/png"
 
 
 function shot {
-shutter -e -n -s -o "$filename" &>/dev/null
+# shutter -e -n -s -o "$filename" &>/dev/null
 # scrot -s "$filename" &>/dev/null
-# gnome-screenshot -a -f $filename &>/dev/null
+gnome-screenshot -a -f $filename &>/dev/null
 }
 
 #idk how to implement closing the script when you press "esc" w/o complicating this

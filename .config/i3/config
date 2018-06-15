@@ -97,6 +97,8 @@ bindsym Mod1+F4 kill
 #                                     -sf "$white"
 
 bindsym Mod4+d exec --no-startup-id rofi -show drun
+bindsym Mod4+r exec --no-startup-id rofi -show run
+bindsym Mod4+w exec --no-startup-id rofi -show window
 
 # change focus
 bindsym Mod4+$left focus left
