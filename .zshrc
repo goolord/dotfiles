@@ -130,7 +130,6 @@ alias flux="redshift -O 4250"
 alias weather="curl wttr.in/Norcross"
 alias mount="mount | column -t"
 alias rampart="mount -t tmpfs tmpfs /mnt -o size=1024m"
-alias fishconfig="vim ~/.config/fish/config.fish"
 alias nixp="nix-env"
 alias snr='nix-repl "<nixpkgs>"'
 alias vim="nvim"
