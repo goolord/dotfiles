@@ -39,15 +39,3 @@ let g:spacevim_custom_plugins = [
     \ ['ndmitchell/ghcid', { 'rtp': 'plugins/nvim', 'on_ft' : 'haskell'}],
     \ ]
 
-let g:haskell_tabular = 0 
-
-set wrap
-
-"Keybinds
-
-nnoremap <A-m> @q 
-
-set nofoldenable
-
-let g:indentLine_enabled = 0
-set expandtab
