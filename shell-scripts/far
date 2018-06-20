@@ -1,2 +1,0 @@
-#! /bin/sh
-rg $2 $1 -l | xargs sed -i -e "s@$2@$3@g" || echo "usage: far /path/to/directory/ 'oldstring' 'newstring'\n--fixed-strings for literal strings"
