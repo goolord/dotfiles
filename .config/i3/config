@@ -98,7 +98,7 @@ bindsym Mod1+F4 kill
 
 bindsym Mod4+d exec --no-startup-id rofi -show drun
 bindsym Mod4+r exec --no-startup-id rofi -show run
-bindsym Mod4+w exec --no-startup-id rofi -show window
+bindsym Mod4+shift+w exec --no-startup-id rofi -show window
 
 # change focus
 bindsym Mod4+$left focus left
@@ -231,7 +231,7 @@ bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #        bindsym Escape mode "default"
 #}
 
-bindsym Mod4+r mode "resize"
+#sym Mod4+r mode "resize"
 
 #fibonacci
 #default_orientation vertical #start in opposite orientation from your monitor
@@ -299,6 +299,6 @@ exec --no-startup-id clipmenud &
 exec xset s 3600 3600
 exec xset -dpms
 #background
-exec xsetroot -solid "#504945"
+exec hsetroot -solid "#504945"
 exec compton &
 #exec --no-startup-id nm-applet &
