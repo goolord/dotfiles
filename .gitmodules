@@ -1,0 +1,3 @@
+[submodule "shell-scripts"]
+	path = shell-scripts
+	url = https://github.com/goolord/shell-scripts.git
