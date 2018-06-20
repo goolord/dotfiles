@@ -104,7 +104,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pm="sudo pacman"
 alias mocp="mocp -T transparent-background"
-alias makealias="xdg-open $HOME/.zshrc"
+alias makealias="vim $HOME/.zshrc"
 alias music="udisksctl mount -b /dev/sda2 > /dev/null 2>&1; cd /run/media/zachchurchill/1AD2B07DD2B05EA7/music/; mocp -m"
 alias youtubeflac="youtube-dl --extract-audio --audio-format flac -o '%(autonumber)s.%(title)s.%(ext)s' "
 alias neofetch="neofetch \
@@ -130,7 +130,7 @@ alias flux="redshift -O 4250"
 alias weather="curl wttr.in/Norcross"
 alias mount="mount | column -t"
 alias rampart="mount -t tmpfs tmpfs /mnt -o size=1024m"
-alias fishconfig="xdg-open ~/.config/fish/config.fish"
+alias fishconfig="vim ~/.config/fish/config.fish"
 alias nixp="nix-env"
 alias snr='nix-repl "<nixpkgs>"'
 alias vim="nvim"
