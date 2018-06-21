@@ -1,5 +1,5 @@
 # directory of dotfiles
-DIR=$(dirname $0)
+DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # link .config folder
 ln -sf $DIR/.config/* $HOME/.config/
