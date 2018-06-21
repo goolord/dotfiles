@@ -76,8 +76,9 @@ floating_modifier Mod4
 
 # start a terminal
 # bindsym Mod4+Return exec alacritty
-  bindsym Mod4+Return exec zst
+# bindsym Mod4+Return exec zst
 # bindsym Mod4+Return exec termite
+  bindsym Mod4+Return exec $TERMINAL
 
 # kill focused window
 bindsym Mod4+Shift+q kill
