@@ -35,7 +35,7 @@ let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
 
 let g:spacevim_custom_plugins = [
-    \ ['dag/vim2hs',       { 'on_ft' : 'haskell'}],
+    \ ['dag/vim2hs',       { 'on_ft' : 'haskell'  }],
     \ ['ndmitchell/ghcid', { 'rtp': 'plugins/nvim', 'on_ft' : 'haskell'}],
     \ ]
 
