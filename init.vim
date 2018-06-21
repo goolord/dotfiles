@@ -16,6 +16,8 @@ set guicursor=a:blinkon0
 set nofoldenable
 set wrap
 
+autocmd VimLeave * set guicursor=a:i:beam-blinkon0
+
 "Keybinds
 nnoremap <A-m> @q 
 
