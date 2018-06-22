@@ -128,11 +128,11 @@ alias ds4="ds4drv --hidraw --led 000002"
 alias srgb="xgamma -g .85"
 alias flux="redshift -O 4250"
 alias weather="curl wttr.in/Norcross"
-alias mount="mount | column -t"
-alias rampart="mount -t tmpfs tmpfs /mnt -o size=1024m"
+alias rampart="sudo mount -t tmpfs tmpfs /mnt -o size=1024m && cd /mnt"
 alias nixp="nix-env"
 alias snr='nix-repl "<nixpkgs>"'
 alias vim="nvim"
+alias bat="bat --paging never"
 
 #transfer
 alias transfer="~/Documents/shell-scripts/transfer.sh"
