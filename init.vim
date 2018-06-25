@@ -10,6 +10,7 @@ execute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
 
 let g:haskell_tabular = 0 
 let g:indentLine_enabled = 0
+let g:clamp_autostart = 0
 
 set expandtab
 set guicursor=a:blinkon0
