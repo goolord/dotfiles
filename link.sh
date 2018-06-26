@@ -10,7 +10,8 @@ mkdir $HOME/Documents/shell-scripts/; ln -sf $DIR/shell-scripts/* $HOME/Document
 # SpaceVim config
 mkdir $HOME/.SpaceVim.d/; ln -sf $DIR/.SpaceVim.d/* $HOME/.SpaceVim.d/
 
-ln -sf $DIR/.oh-my-zsh/* $HOME/.oh-my-zsh/
+ln -sf $DIR/.oh-my-zsh/custom/themes/* $HOME/.oh-my-zsh/custom/themes/
+ln -sf $DIR/.oh-my-zsh/custom/plugins/* $HOME/.oh-my-zsh/custom/plugins/
 
 ln -sf $DIR/.zshrc $HOME/
 

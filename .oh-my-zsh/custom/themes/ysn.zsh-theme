@@ -37,15 +37,8 @@ ys_hg_prompt_info() {
 
 local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 
-# Prompt format:
-#
-# PRIVILEGES USER @ MACHINE in DIRECTORY on git:BRANCH STATE [TIME] C:LAST_EXIT_CODE
-# $ COMMAND
-#
-# For example:
-#
-# % ys @ ys-mbp in ~/.oh-my-zsh on git:master x [21:47:42] C:0
-# $
+#############################################################
+
 PROMPT="%{$terminfo[bold]$fg[cyan]%}#%{$reset_color%} \
 %(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
 %{$terminfo[bold]$fg[cyan]%}@%{$reset_color%} \
@@ -53,7 +46,7 @@ PROMPT="%{$terminfo[bold]$fg[cyan]%}#%{$reset_color%} \
 %{$fg[cyan]%}in \
 %{$terminfo[bold]$fg[aqua]%}%~%{$reset_color%}\
 ${hg_info}\
-${git_info}\
- \
-%{$fg[cyan]%}[%*] $exit_code
+${git_info} \
+%{$fg[cyan]%}$exit_code \
 %{$terminfo[bold]$fg[yellow]%}> %{$reset_color%}"
+RPROMPT="%{$fg[cyan]%}%*"
