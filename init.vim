@@ -14,6 +14,8 @@ set undodir=$HOME/.swap/    " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 
+set helpheight=99999
+
 let g:startify_custom_header = [
         \ '                                  __                ',
         \ '     ___      __    ___   __  __ /\_\    ___ ___    ',
@@ -26,7 +28,7 @@ let g:startify_custom_header = [
 autocmd VimEnter *
         \   if !argc()
         \ |   Startify
-        \ |   VimFilerExplorer -split -simple -parent -winwidth=35 -toggle -no-quit
+        \ |   VimFilerExplorer -split -simple -parent -winwidth=30 -toggle -no-quit
         \ |   wincmd w
         \ | endif
 
@@ -38,9 +40,26 @@ let g:gruvbox_improved_warnings    = 1
 let g:gruvbox_termcolors           = 256
 let g:haskell_tabular              = 0
 let g:haskell_conceal_enumerations = 0
+set switchbuf                     -=split
 
-let g:airline#extensions#tabline#enabled   = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ }
+
+set hidden
+set noshowmode
+let g:buftabline_numbers = 2
+let g:buftabline_indicators = 'on'
+nmap <A-1> <Plug>BufTabLine.Go(1)
+nmap <A-2> <Plug>BufTabLine.Go(2)
+nmap <A-3> <Plug>BufTabLine.Go(3)
+nmap <A-4> <Plug>BufTabLine.Go(4)
+nmap <A-5> <Plug>BufTabLine.Go(5)
+nmap <A-6> <Plug>BufTabLine.Go(6)
+nmap <A-7> <Plug>BufTabLine.Go(7)
+nmap <A-8> <Plug>BufTabLine.Go(8)
+nmap <A-9> <Plug>BufTabLine.Go(9)
+nmap <A-0> <Plug>BufTabLine.Go(10)
 
 let g:indentLine_setColors    = 1
 let g:indentLine_enabled      = 1
@@ -49,6 +68,7 @@ let g:indentLine_conceallevel = 1
 let g:indentLine_color_gui    = '#626262'
 autocmd FileType vimfiler :IndentLinesDisable
 autocmd FileType startify :IndentLinesDisable
+autocmd FileType startify :setlocal nowrap
 
 " vimfiler ===========================================================
 let g:vimfiler_as_default_explorer        = 1
@@ -63,8 +83,8 @@ let g:vimfiler_time_format                = '%m-%d-%y %H:%M:%S'
 let g:vimfiler_expand_jump_to_first_child = 0
 let g:vimfiler_ignore_pattern             = '\.git\|\.DS_Store\|\.pyc'
 
-nnoremap <Leader>d :<C-u>VimFilerExplorer -split -simple -parent -winwidth=35 -toggle -no-quit <CR>
-nnoremap <Leader>jf :<C-u>VimFilerExplorer -split -simple -parent -winwidth=35 -no-quit -find <CR>
+nnoremap <silent> <Leader>d :<C-u>VimFilerExplorer -split -simple -parent -winwidth=35 -toggle -no-quit <CR>
+nnoremap <silent> <Leader>jf :<C-u>VimFilerExplorer -split -simple -parent -winwidth=35 -no-quit -find <CR>
 autocmd FileType vimfiler nmap <buffer> h <Plug>(vimfiler_switch_to_parent_directory)
 autocmd FileType vimfiler nmap <buffer> <C-R> <Plug>(vimfiler_redraw_screen)
 autocmd FileType vimfiler nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor_map(
@@ -92,17 +112,18 @@ vmap <Leader>a: :Tabularize /:<CR>
 "Keybinds
 noremap <A-m> @q 
 map <space> \
-nmap <esc> :noh<CR>
+nmap <silent> <esc> :noh<CR>
 " deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-nmap <A-Del> dw
-map <A-1> :b1<CR>
-map <A-2> :b2<CR>
-map <A-3> :b3<CR>
-map <A-4> :b4<CR>
-map <A-5> :b5<CR>
-map <A-6> :b6<CR>
-map <A-7> :b7<CR>
-map <A-8> :b8<CR>
-map <A-9> :b9<CR>
+inoremap <silent> <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+nmap <silent> <A-Del> dw
+" map <silent> <A-1> :b1<CR>
+" map <silent> <A-2> :b2<CR>
+" map <silent> <A-3> :b3<CR>
+" map <silent> <A-4> :b4<CR>
+" map <silent> <A-5> :b5<CR>
+" map <silent> <A-6> :b6<CR>
+" map <silent> <A-7> :b7<CR>
+" map <silent> <A-8> :b8<CR>
+" map <silent> <A-9> :b9<CR>
+map <silent> <tab> <C-W>W
 
