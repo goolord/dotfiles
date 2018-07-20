@@ -13,14 +13,11 @@ let g:indentLine_enabled = 0
 let g:clamp_autostart = 0
 let g:NERDAltDelims_haskell = 1
 
-set expandtab
+set expandtab softtabstop=0 shiftwidth=2 smarttab
 set guicursor=a:blinkon0
 set nofoldenable
 set wrap
 
-autocmd VimLeave * set guicursor=a:i:beam-blinkon0
-
 "Keybinds
 nnoremap <A-m> @q 
-
 
