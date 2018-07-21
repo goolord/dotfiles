@@ -29,19 +29,16 @@ autocmd VimEnter *
         \ |   wincmd w
         \ | endif
 
-let g:NERDAltDelims_haskell        = 1
-let g:NERDSpaceDelims              = 1
-let g:clamp_autostart              = 0
-let g:deoplete#enable_at_startup   = 1
-let g:gruvbox_improved_warnings    = 1
-let g:gruvbox_termcolors           = 256
-let g:haskell_conceal_enumerations = 0
-let g:haskell_indent_double        = 0
-let g:UtiliSnipsUsePythonVersion   = 3
-set switchbuf                     -=split
-au FileType haskell set nofoldenable
-
-let g:lightline = {
+let g:NERDAltDelims_haskell               = 1
+let g:NERDSpaceDelims                     = 1
+let g:clamp_autostart                     = 0
+let g:deoplete#enable_at_startup          = 1
+let g:gruvbox_improved_warnings           = 1
+let g:gruvbox_termcolors                  = 256
+let g:haskell_conceal_enumerations        = 0
+let g:haskell_indent_double               = 0
+let g:neosnippet#snippets_directory       = '~/.config/nvim/bundle/vim-snippets/snippets/'
+let g:lightline                           = {
       \ 'colorscheme': 'gruvbox',
       \ }
 
@@ -65,6 +62,7 @@ let g:indentLine_enabled      = 1
 let g:indentLine_char         = '▏'
 let g:indentLine_conceallevel = 1
 let g:indentLine_color_gui    = '#626262'
+
 autocmd FileType vimfiler :IndentLinesDisable
 autocmd FileType startify :IndentLinesDisable
 autocmd FileType help :IndentLinesDisable
@@ -115,6 +113,7 @@ nmap <Leader>a) :Tabularize /)<CR>
 vmap <Leader>a) :Tabularize /)<CR>
 " nmap <Leader>a<key> :Tabularize /<key><CR>
 
+
 " Keybinds
 noremap <A-m> @q 
 map <space> \
@@ -123,21 +122,11 @@ nmap <silent> <A-Del> dw
 nmap <silent> <tab> <C-W>W
 " Deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-" UltiSnips
-let g:UltiSnipsExpandTrigger       = "<a-tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<c-b>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
-let g:UltiSnipsListSnippets        = "<c-l>"
-
 " Neosnippets keybinds
 imap <expr><return> pumvisible() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<return>"
 smap <expr><return> pumvisible() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<return>"
-" xmap <return>  <Plug>(neosnippet_expand_target)
 imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-
