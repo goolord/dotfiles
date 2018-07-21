@@ -1,13 +1,10 @@
 "=====================================================================
 " init.vim --- Entry file for neovim
 "=====================================================================
-
 execute pathogen#infect()
-
 colorscheme gruvbox
 set background=dark " Setting dark mode
 set termguicolors
-
 set directory=$HOME/.swap/
 set undofile                " Save undos after file closes
 set undodir=$HOME/.swap/    " where to save undo histories
@@ -38,9 +35,11 @@ let g:clamp_autostart              = 0
 let g:deoplete#enable_at_startup   = 1
 let g:gruvbox_improved_warnings    = 1
 let g:gruvbox_termcolors           = 256
-let g:haskell_tabular              = 0
 let g:haskell_conceal_enumerations = 0
+let g:haskell_indent_double        = 0
+let g:UtiliSnipsUsePythonVersion   = 3
 set switchbuf                     -=split
+au FileType haskell set nofoldenable
 
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
@@ -49,7 +48,7 @@ let g:lightline = {
 set hidden
 set noshowmode
 let g:buftabline_numbers = 2
-let g:buftabline_indicators = 'on'
+let g:buftabline_indicators = 1
 nmap <A-1> <Plug>BufTabLine.Go(1)
 nmap <A-2> <Plug>BufTabLine.Go(2)
 nmap <A-3> <Plug>BufTabLine.Go(3)
@@ -68,6 +67,7 @@ let g:indentLine_conceallevel = 1
 let g:indentLine_color_gui    = '#626262'
 autocmd FileType vimfiler :IndentLinesDisable
 autocmd FileType startify :IndentLinesDisable
+autocmd FileType help :IndentLinesDisable
 autocmd FileType startify :setlocal nowrap
 
 " vimfiler ===========================================================
@@ -92,38 +92,52 @@ autocmd FileType vimfiler nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor
 
 "=====================================================================
 
-set expandtab
 set guicursor=a:blinkon0
 set mouse=a
 set nofoldenable
 set number
+set softtabstop=0 
 set shiftwidth=2 
+set expandtab
+filetype plugin indent on
 set tabstop=2
 set smarttab
-set softtabstop=0 
 set wrap
 
-"Tabular
+" Tabular
 nmap <Leader>a= :Tabularize /=<CR>
 vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:<CR>
-vmap <Leader>a: :Tabularize /:<CR>
+nmap <Leader>a: :Tabularize /::<CR>
+vmap <Leader>a: :Tabularize /::<CR>
+nmap <Leader>a( :Tabularize /(<CR>
+vmap <Leader>a( :Tabularize /(<CR>
+nmap <Leader>a) :Tabularize /)<CR>
+vmap <Leader>a) :Tabularize /)<CR>
+" nmap <Leader>a<key> :Tabularize /<key><CR>
 
-"Keybinds
+" Keybinds
 noremap <A-m> @q 
 map <space> \
 nmap <silent> <esc> :noh<CR>
-" deoplete tab-complete
-inoremap <silent> <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 nmap <silent> <A-Del> dw
-" map <silent> <A-1> :b1<CR>
-" map <silent> <A-2> :b2<CR>
-" map <silent> <A-3> :b3<CR>
-" map <silent> <A-4> :b4<CR>
-" map <silent> <A-5> :b5<CR>
-" map <silent> <A-6> :b6<CR>
-" map <silent> <A-7> :b7<CR>
-" map <silent> <A-8> :b8<CR>
-" map <silent> <A-9> :b9<CR>
-map <silent> <tab> <C-W>W
+nmap <silent> <tab> <C-W>W
+" Deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" UltiSnips
+let g:UltiSnipsExpandTrigger       = "<a-tab>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-b>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+let g:UltiSnipsListSnippets        = "<c-l>"
+
+" Neosnippets keybinds
+imap <expr><return> pumvisible() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<return>"
+smap <expr><return> pumvisible() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<return>"
+" xmap <return>  <Plug>(neosnippet_expand_target)
+imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
 
