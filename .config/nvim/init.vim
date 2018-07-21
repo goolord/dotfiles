@@ -123,8 +123,8 @@ nmap <silent> <tab> <C-W>W
 " Deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " Neosnippets keybinds
-imap <expr><return>  pumvisible() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<return>"
-smap <expr><return>  pumvisible() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<return>"
+imap <A-TAB>  <Plug>(neosnippet_expand_or_jump)
+smap <A-TAB>  <Plug>(neosnippet_expand_or_jump) 
 imap <expr><TAB>     pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB>     neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 if has('conceal')
