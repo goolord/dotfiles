@@ -1,0 +1,7 @@
+#!/bin/bash
+cd ~/.vim/bundle
+for i in `ls -d */`; do
+  cd "$i"
+  git pull
+  cd ..
+done
