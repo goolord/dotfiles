@@ -36,7 +36,6 @@ let g:deoplete#enable_at_startup          = 1
 let g:gruvbox_improved_warnings           = 1
 let g:gruvbox_termcolors                  = 256
 let g:haskell_conceal_enumerations        = 0
-let g:haskell_indent_double               = 0
 let g:neosnippet#snippets_directory       = '~/.config/nvim/bundle/vim-snippets/snippets/'
 let g:lightline                           = {
       \ 'colorscheme': 'gruvbox',
