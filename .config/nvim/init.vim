@@ -35,8 +35,7 @@ let g:clamp_autostart                     = 0
 let g:deoplete#enable_at_startup          = 1
 let g:gruvbox_improved_warnings           = 1
 let g:gruvbox_termcolors                  = 256
-let g:haskell_conceal_enumerations        = 0
-let g:neosnippet#snippets_directory       = '~/.config/nvim/bundle/vim-snippets/snippets/'
+" let g:neosnippet#snippets_directory       = '~/.config/nvim/bundle/vim-snippets/snippets/'
 let g:lightline                           = {
       \ 'colorscheme': 'gruvbox',
       \ }
@@ -110,7 +109,27 @@ nmap <Leader>a( :Tabularize /(<CR>
 vmap <Leader>a( :Tabularize /(<CR>
 nmap <Leader>a) :Tabularize /)<CR>
 vmap <Leader>a) :Tabularize /)<CR>
+nmap <Leader>a< :Tabularize /<\S*><CR>
+vmap <Leader>a< :Tabularize /<\S*><CR>
 " nmap <Leader>a<key> :Tabularize /<key><CR>
+
+" Performance
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+syntax sync minlines=256
+let g:haskell_conceal       = 0
+let g:haskell_quasi         = 0
+let g:haskell_interpolation = 0
+let g:haskell_regex         = 0
+let g:haskell_jmacro        = 0
+let g:haskell_shqq          = 0
+let g:haskell_sql           = 0
+let g:haskell_json          = 0
+let g:haskell_xml           = 0
+let g:haskell_hsp           = 0
+let g:haskell_tabular       = 0
+set lazyredraw
 
 
 " Keybinds
@@ -119,14 +138,13 @@ map <space> \
 nmap <silent> <esc> :noh<CR>
 nmap <silent> <A-Del> dw
 nmap <silent> <tab> <C-W>W
+nmap <A-e> :s/\%V"/\\"/g<CR>
+vmap <A-e> :s/\%V"/\\"/g<CR>
 " Deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " Neosnippets keybinds
-imap <A-TAB>  <Plug>(neosnippet_expand_or_jump)
-smap <A-TAB>  <Plug>(neosnippet_expand_or_jump) 
-imap <expr><TAB>     pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB>     neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
+" imap <A-TAB>         <Plug>(neosnippet_expand_or_jump)
+" smap <A-TAB>         <Plug>(neosnippet_expand_or_jump) 
+" imap <expr><TAB>     pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" smap <expr><TAB>     neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
