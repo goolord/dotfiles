@@ -13,3 +13,6 @@
 [submodule ".config/nvim/bundle/deoplete.nvim"]
 	path = .config/nvim/bundle/deoplete.nvim
 	url = git@github.com:Shougo/deoplete.nvim
+[submodule ".config/nvim/bundle/haskell-vim"]
+	path = .config/nvim/bundle/haskell-vim
+	url = https://github.com/goolord/haskell-vim
