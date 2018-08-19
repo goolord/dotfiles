@@ -28,3 +28,6 @@
 [submodule ".config/nvim/bundle/tabular"]
 	path = .config/nvim/bundle/tabular
 	url = git@github.com:godlygeek/tabular.git
+[submodule ".config/nvim/bundle/unite.vim"]
+	path = .config/nvim/bundle/unite.vim
+	url = git@github.com:Shougo/unite.vim.git
