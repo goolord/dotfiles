@@ -43,3 +43,12 @@
 [submodule ".config/nvim/bundle/vim-fugitive"]
 	path = .config/nvim/bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+[submodule ".config/nvim/bundle/--force"]
+	path = .config/nvim/bundle/--force
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule ".config/nvim/bundle/vim-nix"]
+	path = .config/nvim/bundle/vim-nix
+	url = git@github.com:LnL7/vim-nix.git
+[submodule ".config/nvim/bundle/vim-startify"]
+	path = .config/nvim/bundle/vim-startify
+	url = git@github.com:mhinz/vim-startify.git
