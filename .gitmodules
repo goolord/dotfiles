@@ -22,3 +22,6 @@
 [submodule ".config/nvim/bundle/lightline.vim"]
 	path = .config/nvim/bundle/lightline.vim
 	url = git@github.com:itchyny/lightline.vim.git
+[submodule ".config/nvim/bundle/nerdcommenter"]
+	path = .config/nvim/bundle/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git
