@@ -7,3 +7,6 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule ".config/nvim/bundle/gruvbox"]
+	path = .config/nvim/bundle/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
