@@ -14,4 +14,3 @@ ln -sf $DIR/.zshrc $HOME/
 
 ln -sf $DIR/init.vim $HOME/.config/nvim/init.vim
 
-ln -sf $DIR/init.vim $HOME/.SpaceVim/init.vim
