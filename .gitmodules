@@ -31,3 +31,15 @@
 [submodule ".config/nvim/bundle/unite.vim"]
 	path = .config/nvim/bundle/unite.vim
 	url = git@github.com:Shougo/unite.vim.git
+[submodule ".config/nvim/bundle/vim-airline-themes"]
+	path = .config/nvim/bundle/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
+[submodule ".config/nvim/bundle/vim-buftabline"]
+	path = .config/nvim/bundle/vim-buftabline
+	url = git@github.com:ap/vim-buftabline.git
+[submodule ".config/nvim/bundle/vimfiler.vim"]
+	path = .config/nvim/bundle/vimfiler.vim
+	url = git@github.com:Shougo/vimfiler.vim.git
+[submodule ".config/nvim/bundle/vim-fugitive"]
+	path = .config/nvim/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
