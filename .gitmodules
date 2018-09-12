@@ -7,3 +7,48 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule ".config/nvim/bundle/gruvbox"]
+	path = .config/nvim/bundle/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule ".config/nvim/bundle/deoplete.nvim"]
+	path = .config/nvim/bundle/deoplete.nvim
+	url = git@github.com:Shougo/deoplete.nvim
+[submodule ".config/nvim/bundle/haskell-vim"]
+	path = .config/nvim/bundle/haskell-vim
+	url = https://github.com/goolord/haskell-vim
+[submodule ".config/nvim/bundle/indentLine"]
+	path = .config/nvim/bundle/indentLine
+	url = git@github.com:Yggdroot/indentLine.git
+[submodule ".config/nvim/bundle/lightline.vim"]
+	path = .config/nvim/bundle/lightline.vim
+	url = git@github.com:itchyny/lightline.vim.git
+[submodule ".config/nvim/bundle/nerdcommenter"]
+	path = .config/nvim/bundle/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git
+[submodule ".config/nvim/bundle/tabular"]
+	path = .config/nvim/bundle/tabular
+	url = git@github.com:godlygeek/tabular.git
+[submodule ".config/nvim/bundle/unite.vim"]
+	path = .config/nvim/bundle/unite.vim
+	url = git@github.com:Shougo/unite.vim.git
+[submodule ".config/nvim/bundle/vim-airline-themes"]
+	path = .config/nvim/bundle/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
+[submodule ".config/nvim/bundle/vim-buftabline"]
+	path = .config/nvim/bundle/vim-buftabline
+	url = git@github.com:ap/vim-buftabline.git
+[submodule ".config/nvim/bundle/vimfiler.vim"]
+	path = .config/nvim/bundle/vimfiler.vim
+	url = git@github.com:Shougo/vimfiler.vim.git
+[submodule ".config/nvim/bundle/vim-fugitive"]
+	path = .config/nvim/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule ".config/nvim/bundle/--force"]
+	path = .config/nvim/bundle/--force
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule ".config/nvim/bundle/vim-nix"]
+	path = .config/nvim/bundle/vim-nix
+	url = git@github.com:LnL7/vim-nix.git
+[submodule ".config/nvim/bundle/vim-startify"]
+	path = .config/nvim/bundle/vim-startify
+	url = git@github.com:mhinz/vim-startify.git
