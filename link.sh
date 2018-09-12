@@ -12,6 +12,3 @@ ln -sf $DIR/.oh-my-zsh/custom/plugins/* $HOME/.oh-my-zsh/custom/plugins/
 
 ln -sf $DIR/.zshrc $HOME/
 
-ln -sf $DIR/init.vim $HOME/.config/nvim/init.vim
-
-ln -sf $DIR/init.vim $HOME/.SpaceVim/init.vim
