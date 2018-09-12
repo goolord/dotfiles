@@ -64,6 +64,7 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
+  fzf-zsh
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -102,6 +103,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ssh="export TERM=xterm-256color && ssh"
 alias pm="sudo pacman"
 alias mocp="mocp -T transparent-background"
 alias makealias="vim $HOME/.zshrc"
@@ -133,6 +135,12 @@ alias nixp="nix-env"
 alias snr='nix-repl "<nixpkgs>"'
 alias vim="nvim"
 alias bat="bat --paging never"
+alias cat="bat --paging never -p"
+alias pingp='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+# add support for ctrl+o to open selected file in vim
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
+alias top="htop"
 
 #transfer
 alias transfer="~/Documents/shell-scripts/transfer.sh"
