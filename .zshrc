@@ -141,6 +141,7 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 # add support for ctrl+o to open selected file in vim
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 alias top="htop"
+alias tmux="tmux -2 -f ~/.config/tmux.conf"
 
 #transfer
 alias transfer="~/Documents/shell-scripts/transfer.sh"
