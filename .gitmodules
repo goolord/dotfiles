@@ -55,3 +55,6 @@
 [submodule ".config/nvim/bundle/vim-javascript"]
 	path = .config/nvim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule ".config/nvim/bundle/indentline"]
+	path = .config/nvim/bundle/indentline
+	url = https://github.com/yggdroot/indentline
