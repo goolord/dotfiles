@@ -19,9 +19,6 @@
 [submodule ".config/nvim/bundle/indentLine"]
 	path = .config/nvim/bundle/indentLine
 	url = git@github.com:Yggdroot/indentLine.git
-[submodule ".config/nvim/bundle/lightline.vim"]
-	path = .config/nvim/bundle/lightline.vim
-	url = git@github.com:itchyny/lightline.vim.git
 [submodule ".config/nvim/bundle/nerdcommenter"]
 	path = .config/nvim/bundle/nerdcommenter
 	url = git@github.com:scrooloose/nerdcommenter.git
@@ -34,17 +31,11 @@
 [submodule ".config/nvim/bundle/vim-airline-themes"]
 	path = .config/nvim/bundle/vim-airline-themes
 	url = git@github.com:vim-airline/vim-airline-themes.git
-[submodule ".config/nvim/bundle/vim-buftabline"]
-	path = .config/nvim/bundle/vim-buftabline
-	url = git@github.com:ap/vim-buftabline.git
 [submodule ".config/nvim/bundle/vimfiler.vim"]
 	path = .config/nvim/bundle/vimfiler.vim
 	url = git@github.com:Shougo/vimfiler.vim.git
 [submodule ".config/nvim/bundle/vim-fugitive"]
 	path = .config/nvim/bundle/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
-[submodule ".config/nvim/bundle/--force"]
-	path = .config/nvim/bundle/--force
 	url = git@github.com:tpope/vim-fugitive.git
 [submodule ".config/nvim/bundle/vim-nix"]
 	path = .config/nvim/bundle/vim-nix
@@ -58,3 +49,6 @@
 [submodule ".config/nvim/bundle/indentline"]
 	path = .config/nvim/bundle/indentline
 	url = https://github.com/yggdroot/indentline
+[submodule ".config/nvim/bundle/vim-airline"]
+	path = .config/nvim/bundle/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git

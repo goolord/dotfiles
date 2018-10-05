@@ -35,24 +35,6 @@ let g:clamp_autostart                     = 0
 let g:deoplete#enable_at_startup          = 1
 let g:gruvbox_improved_warnings           = 1
 let g:gruvbox_termcolors                  = 256
-let g:lightline                           = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
-
-set hidden
-set noshowmode
-let g:buftabline_numbers = 2
-let g:buftabline_indicators = 1
-nmap <A-1> <Plug>BufTabLine.Go(1)
-nmap <A-2> <Plug>BufTabLine.Go(2)
-nmap <A-3> <Plug>BufTabLine.Go(3)
-nmap <A-4> <Plug>BufTabLine.Go(4)
-nmap <A-5> <Plug>BufTabLine.Go(5)
-nmap <A-6> <Plug>BufTabLine.Go(6)
-nmap <A-7> <Plug>BufTabLine.Go(7)
-nmap <A-8> <Plug>BufTabLine.Go(8)
-nmap <A-9> <Plug>BufTabLine.Go(9)
-nmap <A-0> <Plug>BufTabLine.Go(10)
 
 let g:indentLine_setColors    = 1
 let g:indentLine_enabled      = 1
@@ -67,7 +49,6 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_indent_disable = 1
-" let g:haskell_classic_highlighting = 1
 
 autocmd FileType vimfiler :IndentLinesDisable
 autocmd FileType startify :IndentLinesDisable
@@ -102,17 +83,59 @@ autocmd FileType vimfiler
 
 "======================================================================
 
+filetype plugin on
+set expandtab
 set guicursor=a:blinkon0
 set mouse=a
 set nofoldenable
 set number
-set softtabstop=0 
 set shiftwidth=2 
-set expandtab
-filetype plugin on
-set tabstop=2
 set smarttab
+set softtabstop=0 
+set tabstop=2
 set wrap
+
+" Airline
+nmap <A-1> <Plug>AirlineSelectTab1
+nmap <A-2> <Plug>AirlineSelectTab2
+nmap <A-3> <Plug>AirlineSelectTab3
+nmap <A-4> <Plug>AirlineSelectTab4
+nmap <A-4> <Plug>AirlineSelectTab4
+nmap <A-6> <Plug>AirlineSelectTab6
+nmap <A-7> <Plug>AirlineSelectTab7
+nmap <A-8> <Plug>AirlineSelectTab8
+nmap <A-9> <Plug>AirlineSelectTab9
+nmap <silent> <A-0> :blast<CR>
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#buffer_idx_format = {
+      \ '0': '0 ',
+      \ '1': '1 ',
+      \ '2': '2 ',
+      \ '3': '3 ',
+      \ '4': '4 ',
+      \ '5': '5 ',
+      \ '6': '6 ',
+      \ '7': '7 ',
+      \ '8': '8 ',
+      \ '9': '9 '
+      \}
+let g:airline#extensions#tabline#buffers_label = 'BUFFERS'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamecollapse = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#fnametruncate = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#show_tabs = 0
+let g:airline#extensions#tabline#tabs_label = 'TABS'
+let g:airline_detect_modified=1
+let g:airline_skip_empty_sections = 1
 
 " Tabular
 nmap <Leader>a= :Tabularize /,<CR>
@@ -144,6 +167,7 @@ nmap <silent> <A-Del> dw
 nmap <silent> <tab> <C-W>W
 nmap <A-e> :s/\%V"/\\"/g<CR>
 vmap <A-e> :s/\%V"/\\"/g<CR>
+
 " Deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 call deoplete#custom#option({

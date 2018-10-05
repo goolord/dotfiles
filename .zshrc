@@ -142,6 +142,8 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 alias top="htop"
 alias tmux="tmux -2 -f ~/.config/tmux.conf"
+alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
+alias ghcidc="cabal new-repl"
 
 #transfer
 alias transfer="~/Documents/shell-scripts/transfer.sh"
