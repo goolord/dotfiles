@@ -62,7 +62,7 @@ ZSH_THEME="ysn"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-syntax-highlighting
+  # zsh-syntax-highlighting
   zsh-autosuggestions
   fzf-zsh
 )
