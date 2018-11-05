@@ -101,6 +101,7 @@ nmap <A-2> <Plug>AirlineSelectTab2
 nmap <A-3> <Plug>AirlineSelectTab3
 nmap <A-4> <Plug>AirlineSelectTab4
 nmap <A-4> <Plug>AirlineSelectTab4
+nmap <A-5> <Plug>AirlineSelectTab5
 nmap <A-6> <Plug>AirlineSelectTab6
 nmap <A-7> <Plug>AirlineSelectTab7
 nmap <A-8> <Plug>AirlineSelectTab8
