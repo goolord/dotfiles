@@ -43,12 +43,12 @@
 [submodule ".config/nvim/bundle/vim-startify"]
 	path = .config/nvim/bundle/vim-startify
 	url = git@github.com:mhinz/vim-startify.git
-[submodule ".config/nvim/bundle/vim-javascript"]
-	path = .config/nvim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
 [submodule ".config/nvim/bundle/indentline"]
 	path = .config/nvim/bundle/indentline
 	url = https://github.com/yggdroot/indentline
 [submodule ".config/nvim/bundle/vim-airline"]
 	path = .config/nvim/bundle/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
+[submodule ".config/nvim/bundle/lbnf.vim"]
+	path = .config/nvim/bundle/lbnf.vim
+	url = https://github.com/vim-scripts/lbnf.vim

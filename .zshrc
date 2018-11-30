@@ -46,8 +46,6 @@ ZSH_THEME="ysn"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-
-
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -94,6 +92,8 @@ export NIX_PATH="${NIX_PATH:+$NIX_PATH:}nixpkgs=$HOME/.nix-defexpr/channels/nixp
 #export PATH="$PATH:$HOME/.nix-profile/bin:/home/zach/bin:~/.local/bin"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
+
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
