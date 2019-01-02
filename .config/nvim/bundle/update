@@ -2,6 +2,6 @@
 cd ~/.vim/bundle
 for i in `ls -d */`; do
   cd "$i"
-  git pull
+  git pull; git pull origin master
   cd ..
 done
