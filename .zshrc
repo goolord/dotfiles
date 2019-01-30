@@ -8,6 +8,7 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="ysn"
+fpath+=~/.zfunc
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -63,6 +64,8 @@ plugins=(
   # zsh-syntax-highlighting
   zsh-autosuggestions
   fzf-zsh
+  nix-shell
+  nix-zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -88,8 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 export NIX_PATH="${NIX_PATH:+$NIX_PATH:}nixpkgs=$HOME/.nix-defexpr/channels/nixpkgs"
-
-#export PATH="$PATH:$HOME/.nix-profile/bin:/home/zach/bin:~/.local/bin"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 

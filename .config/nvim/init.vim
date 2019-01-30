@@ -30,11 +30,12 @@ autocmd VimEnter *
         \ |   wincmd w
         \ | endif
 
-let g:NERDSpaceDelims                     = 1
-let g:clamp_autostart                     = 0
-let g:deoplete#enable_at_startup          = 1
-let g:gruvbox_improved_warnings           = 1
-let g:gruvbox_termcolors                  = 256
+let g:NERDSpaceDelims            = 1
+let g:clamp_autostart            = 0
+let g:deoplete#enable_at_startup = 1
+let g:gruvbox_improved_warnings  = 1
+let g:gruvbox_termcolors         = 256
+let g:indentLine_fileTypeExclude = ['json']
 
 let g:indentLine_setColors    = 1
 let g:indentLine_enabled      = 1
@@ -154,12 +155,34 @@ nmap <Leader>a< :Tabularize /<\S*><CR>
 vmap <Leader>a< :Tabularize /<\S*><CR>
 " nmap <Leader>a<key> :Tabularize /<key><CR>
 
+" ale
+let g:ale_completion_enabled = 1
+" let g:ale_rust_carg_use_clippy = 1
+let g:airline#extensions#ale#enabled = 1
+let b:ale_fixers = 
+\   { 'rust': ['rustfmt']
+\   , 'haskell': ['hfmt']
+\   }
+let g:ale_linters = 
+\   { 'haskell': ['hdevtools', 'hfmt', 'hlint'],
+\   }
+let g:ale_enabled = 0
+nmap <silent> <Leader>< <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>> <Plug>(ale_next_wrap)
+nmap <silent> <Leader>? <Plug>(ale_detail)
+autocmd FileType rust :ALEEnable
+" autocmd FileType haskell :ALEEnable
+
+" ghcid
+let g:ghcid_command = "ghcid -c 'cabal new-repl'"
+set hidden
+
 " Performance
 set nocursorcolumn
 set nocursorline
 set norelativenumber
-syntax sync minlines=256
 set lazyredraw
+syntax sync minlines=256
 
 " Keybinds
 noremap <A-m> @q 
@@ -173,6 +196,6 @@ vmap <A-e> :s/\%V"/\\"/g<CR>
 " Deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 call deoplete#custom#option({
-  \ 'auto_complete_delay': 500,
+  \ 'auto_complete_delay': 400,
   \ 'smart_case': v:true,
   \ })
