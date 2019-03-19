@@ -1,7 +1,27 @@
 "======================================================================
 " init.vim --- Entry file for neovim
 "======================================================================
-execute pathogen#infect()
+call plug#begin()
+Plug 'w0rp/ale', { 'for': 'rust' }
+Plug 'Shougo/deoplete.nvim'
+Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'morhetz/gruvbox'
+Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'cabal'] }
+Plug 'Shougo/unite.vim'
+Plug 'goolord/lbnf.vim', { 'for': 'bnf' }
+Plug 'Yggdroot/indentLine'
+Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
+Plug 'godlygeek/tabular'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/vimfiler.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'LnL7/vim-nix', { 'for': 'nix' }
+Plug 'mhinz/vim-startify'
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+call plug#end()
+
 colorscheme gruvbox
 set background=dark         " Setting dark mode
 set termguicolors
@@ -199,3 +219,5 @@ call deoplete#custom#option({
   \ 'auto_complete_delay': 400,
   \ 'smart_case': v:true,
   \ })
+
+"

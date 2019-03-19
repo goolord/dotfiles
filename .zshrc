@@ -64,7 +64,6 @@ plugins=(
   # zsh-syntax-highlighting
   zsh-autosuggestions
   fzf-zsh
-  nix-shell
   nix-zsh-completions
 )
 
@@ -107,7 +106,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 alias ssh="export TERM=xterm-256color && ssh"
 alias pm="sudo pacman"
 alias mocp="mocp -T transparent-background"
-alias makealias="vim $HOME/.zshrc"
+alias mkalias="vim $HOME/.zshrc"
 alias music="udisksctl mount -b /dev/sda2 > /dev/null 2>&1; cd /run/media/zachchurchill/1AD2B07DD2B05EA7/music/; mocp -m"
 alias youtubeflac="youtube-dl --extract-audio --audio-format flac -o '%(autonumber)s.%(title)s.%(ext)s' "
 alias neofetch="neofetch \
@@ -128,8 +127,9 @@ alias listenmic="pactl load-module module-loopback latency_msec=200"
 alias unlistenmic="pactl unload-module module-loopback"
 alias emacscli="emacs -nw"
 alias ds4="ds4drv --hidraw --led 000002"
-alias srgb="xgamma -g .85"
-alias flux="redshift -O 4250"
+alias srgb="xrandr --output eDP1 --gamma 0.85:0.85:0.75"
+alias flux="redshift -g 0.91:0.91:0.86 -O 4500"
+alias srgbhdmi="xrandr --output HDMI1 --gamma 1:1:1"
 alias weather="curl wttr.in/Norcross"
 alias rampart="sudo mount -t tmpfs tmpfs /mnt -o size=1024m && cd /mnt"
 alias nixp="nix-env"
@@ -144,5 +144,5 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 alias top="htop"
 alias tmux="tmux -2 -f ~/.config/tmux.conf"
 alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
-alias ghcidc="cabal new-repl"
+alias ghcidc="ghcid -c cabal v2-repl"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
