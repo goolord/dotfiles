@@ -6,7 +6,7 @@ Plug 'w0rp/ale', { 'for': 'rust' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'morhetz/gruvbox'
+Plug 'dkasak/gruvbox'
 Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'cabal'] }
 Plug 'Shougo/unite.vim'
 Plug 'goolord/lbnf.vim', { 'for': 'bnf' }
@@ -101,7 +101,9 @@ autocmd FileType vimfiler
 autocmd FileType vimfiler 
   \ nmap <buffer> <C-R> <Plug>(vimfiler_redraw_screen)
 autocmd FileType vimfiler 
-  \ nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor_map()
+  \ nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor_map(
+  \ "\<Plug>(vimfiler_expand_tree)",
+  \ "\<Plug>(vimfiler_edit_file)")
 
 "======================================================================
 
@@ -194,8 +196,8 @@ autocmd FileType rust :ALEEnable
 " autocmd FileType haskell :ALEEnable
 
 " ghcid
-let g:ghcid_command = "ghcid -c 'cabal new-repl'"
-set hidden
+" let g:ghcid_command = "ghcid -c 'cabal new-repl'"
+" set hidden
 
 " Performance
 set nocursorcolumn
@@ -220,4 +222,10 @@ call deoplete#custom#option({
   \ 'smart_case': v:true,
   \ })
 
-"
+" function! SynStack()
+  " if !exists("*synstack")
+    " return
+  " endif
+  " echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+" endfunc
+
