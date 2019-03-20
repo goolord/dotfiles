@@ -63,7 +63,7 @@ plugins=(
   git
   # zsh-syntax-highlighting
   zsh-autosuggestions
-  fzf-zsh
+  fzf
   nix-zsh-completions
 )
 
@@ -94,6 +94,8 @@ export NIX_PATH="${NIX_PATH:+$NIX_PATH:}nixpkgs=$HOME/.nix-defexpr/channels/nixp
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+# add support for ctrl+o to open selected file in vim
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -127,9 +129,8 @@ alias listenmic="pactl load-module module-loopback latency_msec=200"
 alias unlistenmic="pactl unload-module module-loopback"
 alias emacscli="emacs -nw"
 alias ds4="ds4drv --hidraw --led 000002"
-alias srgb="xrandr --output eDP1 --gamma 0.85:0.85:0.75"
-alias flux="redshift -g 0.91:0.91:0.86 -O 4500"
-alias srgbhdmi="xrandr --output HDMI1 --gamma 1:1:1"
+alias srgb="xgamma -g 0.9"
+alias flux="redshift -O 5000"
 alias weather="curl wttr.in/Norcross"
 alias rampart="sudo mount -t tmpfs tmpfs /mnt -o size=1024m && cd /mnt"
 alias nixp="nix-env"
@@ -139,8 +140,6 @@ alias bat="bat --paging never"
 alias cat="bat --paging never -p"
 alias pingp='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-# add support for ctrl+o to open selected file in vim
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 alias top="htop"
 alias tmux="tmux -2 -f ~/.config/tmux.conf"
 alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
