@@ -57,10 +57,10 @@ set $orange             #fe8019
 set $drkorange          #d65d0e
 
 #class                  border      backgr.     text        split
-client.focused          $drkorange  $drkorange  $black      $yellow
-client.focused_inactive $grey       $grey       $lightgrey  $yellow
-client.unfocused        $back       $darkgrey   $lightgrey  $yellow
-client.urgent           $red        $red        $black      $red
+client.focused          $drkorange  $drkorange  $black      $yellow 
+client.focused_inactive $grey       $grey       $lightgrey  $yellow 
+client.unfocused        $back       $darkgrey   $lightgrey  $yellow 
+client.urgent           $red        $red        $black      $red    
 client.background       $back
 
 
@@ -261,7 +261,7 @@ bar {
   height 			24
   font        pango: Droid Sans, droidsansmono nerd font 10
 # font 			  pango: InconsolataDZ for Powerline, awesome 10
-	separator_symbol 	"  "
+	separator_symbol 	" | "
 
 colors {
 		background $back
