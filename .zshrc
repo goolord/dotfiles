@@ -64,7 +64,7 @@ plugins=(
   # zsh-syntax-highlighting
   zsh-autosuggestions
   fzf
-  nix-zsh-completions
+  # nix-zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
