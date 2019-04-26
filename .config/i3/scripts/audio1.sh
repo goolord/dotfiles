@@ -54,19 +54,20 @@ vol=`getVolume`
 
 # determine icon
 if [ $vol -eq 0 ]; then
-	icon=""
+	icon="婢"
 else
 	if [ $vol -le 33 ]; then
-		icon=""
+		icon="奔"
 	else
-		icon=""
+		icon="墳"
 	fi
 fi
 
 # determine mute status
 if isMuted; then
 	color="#ff0000"
-	status=33
+	icon="婢"
+  # status=33
 fi
 
 full="$icon $vol%"
