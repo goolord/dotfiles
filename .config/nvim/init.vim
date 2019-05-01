@@ -9,14 +9,14 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'dkasak/gruvbox'
 Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'cabal'] }
 Plug 'Shougo/unite.vim'
-Plug 'goolord/lbnf.vim', { 'for': 'bnf' }
+Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
 Plug 'Yggdroot/indentLine'
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
 Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/vimfiler.vim'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
