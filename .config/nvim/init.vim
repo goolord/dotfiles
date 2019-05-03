@@ -9,7 +9,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'dkasak/gruvbox'
 Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'cabal'] }
 Plug 'Shougo/unite.vim'
-Plug 'goolord/lbnf.vim', { 'for': 'bnf' }
+Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
 Plug 'Yggdroot/indentLine'
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
 Plug 'godlygeek/tabular'

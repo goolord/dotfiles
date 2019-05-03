@@ -99,7 +99,9 @@ bindsym Mod1+F4 kill
 
 bindsym Mod4+d exec --no-startup-id rofi -show drun
 bindsym Mod4+r exec --no-startup-id rofi -show run
+bindsym Mod4+c exec --no-startup-id rofi -show combi
 bindsym Mod4+shift+w exec --no-startup-id rofi -show window
+bindsym Mod4+shift+s exec --no-startup-id rofi -show ssh
 
 # change focus
 bindsym Mod4+$left focus left
