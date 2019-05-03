@@ -20,6 +20,7 @@ Plug 'Shougo/vimfiler.vim'
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'raichoo/purescript-vim'
 call plug#end()
 
 colorscheme gruvbox
