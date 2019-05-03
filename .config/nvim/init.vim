@@ -16,10 +16,11 @@ Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/vimfiler.vim'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'raichoo/purescript-vim'
 call plug#end()
 
 colorscheme gruvbox
