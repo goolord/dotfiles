@@ -63,7 +63,7 @@ plugins=(
   git
   # zsh-syntax-highlighting
   zsh-autosuggestions
-  fzf
+  # fzf
   # nix-zsh-completions
 )
 
@@ -141,7 +141,9 @@ alias cat="bat --paging never -p"
 alias pingp='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="htop"
-alias tmux="tmux -2 -f ~/.config/tmux.conf"
+alias tmux="TERM=screen-256color tmux -f ~/.config/tmux.conf"
 alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
 alias ghcidc="ghcid -c cabal v2-repl"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
