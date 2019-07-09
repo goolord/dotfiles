@@ -141,9 +141,11 @@ alias cat="bat --paging never -p"
 alias pingp='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="htop"
+alias htop="TERM=xterm-256color htop"
 alias tmux="tmux -f ~/.config/tmux.conf"
 alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
 alias ghcidc="ghcid -c cabal v2-repl"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
+alias gp-l3='sudo openconnect --protocol=gp sentinela.layer3com.com'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
