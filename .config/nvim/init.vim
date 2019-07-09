@@ -7,11 +7,12 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'dkasak/gruvbox'
-Plug 'neovimhaskell/haskell-vim', { 'for': ['haskell', 'cabal'] }
+Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
 Plug 'Shougo/unite.vim'
 Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
 Plug 'Yggdroot/indentLine'
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
+Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': ['hamlet', 'lucius'] }
 Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -21,6 +22,10 @@ Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'raichoo/purescript-vim'
+" Plug 'autozimu/LanguageClient-neovim', {
+    " \ 'branch': 'next',
+    " \ 'do': './install.sh'
+    " \ }
 call plug#end()
 
 colorscheme gruvbox
@@ -31,6 +36,7 @@ set undofile                " Save undos after file closes
 set undodir=$HOME/.swap/    " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
+set clipboard=unnamedplus   " vim yanks to clipboard by default
 
 set helpheight=99999
 
@@ -184,17 +190,16 @@ let g:ale_completion_enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let b:ale_fixers = 
 \   { 'rust': ['rustfmt']
-\   , 'haskell': ['hfmt']
 \   }
-let g:ale_linters = 
-\   { 'haskell': ['hdevtools', 'hfmt', 'hlint'],
-\   }
+" \   , 'haskell': ['hfmt']
+" let g:ale_linters = 
+" \   { 'haskell': ['hie'],
+" \   }
 let g:ale_enabled = 0
 nmap <silent> <Leader>< <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>> <Plug>(ale_next_wrap)
 nmap <silent> <Leader>? <Plug>(ale_detail)
 autocmd FileType rust :ALEEnable
-" autocmd FileType haskell :ALEEnable
 
 " ghcid
 " let g:ghcid_command = "ghcid -c 'cabal new-repl'"
