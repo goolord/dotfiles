@@ -304,4 +304,4 @@ exec xset -dpms
 #background
 exec hsetroot -solid "#555350"
 exec compton &
-#exec --no-startup-id nm-applet &
+exec --no-startup-id nm-applet &
