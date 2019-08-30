@@ -5,7 +5,7 @@ DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 ln -sf $DIR/.config/* $HOME/.config/
 
 # shell scripts
-ln -sf $DIR/shell-scripts/* $HOME/Documents/shell-scripts/
+ln -sf $DIR/shell-scripts/* $HOME/Dev/shell-scripts/
 
 ln -sf $DIR/.oh-my-zsh/custom/themes/* $HOME/.oh-my-zsh/custom/themes/
 ln -sf $DIR/.oh-my-zsh/custom/plugins/* $HOME/.oh-my-zsh/custom/plugins/
