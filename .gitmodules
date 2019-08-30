@@ -4,3 +4,6 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "shell-scripts"]
+	path = shell-scripts
+	url = git@github.com:goolord/shell-scripts.git
