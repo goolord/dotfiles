@@ -182,6 +182,8 @@ nmap <Leader>a) :Tabularize /)<CR>
 vmap <Leader>a) :Tabularize /)<CR>
 nmap <Leader>a< :Tabularize /<\S*><CR>
 vmap <Leader>a< :Tabularize /<\S*><CR>
+nmap <Leader>a> :Tabularize /\S*><CR>
+vmap <Leader>a> :Tabularize /\S*><CR>
 " nmap <Leader>a<key> :Tabularize /<key><CR>
 
 " ale
