@@ -2,8 +2,13 @@
 " init.vim --- Entry file for neovim
 "======================================================================
 call plug#begin()
-Plug 'w0rp/ale', { 'for': 'rust' }
+Plug 'autozimu/LanguageClient-neovim', {
+\ 'branch': 'next',
+\ 'do': 'bash install.sh',
+\ 'for': ['haskell', 'rust', 'cabal', 'stack']
+\ }
 Plug 'Shougo/deoplete.nvim'
+Plug 'junegunn/fzf'
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'dkasak/gruvbox'
@@ -17,15 +22,10 @@ Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/vimfiler.vim'
-" Plug 'tpope/vim-fugitive'
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'raichoo/purescript-vim'
-" Plug 'autozimu/LanguageClient-neovim', {
-    " \ 'branch': 'next',
-    " \ 'do': './install.sh'
-    " \ }
 call plug#end()
 
 colorscheme gruvbox
@@ -144,17 +144,17 @@ let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#buffer_idx_format = {
-      \ '0': '0 ',
-      \ '1': '1 ',
-      \ '2': '2 ',
-      \ '3': '3 ',
-      \ '4': '4 ',
-      \ '5': '5 ',
-      \ '6': '6 ',
-      \ '7': '7 ',
-      \ '8': '8 ',
-      \ '9': '9 '
-      \}
+\ '0': '0 ',
+\ '1': '1 ',
+\ '2': '2 ',
+\ '3': '3 ',
+\ '4': '4 ',
+\ '5': '5 ',
+\ '6': '6 ',
+\ '7': '7 ',
+\ '8': '8 ',
+\ '9': '9 '
+\}
 let g:airline#extensions#tabline#buffers_label = 'BUFFERS'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamecollapse = 1
@@ -184,28 +184,27 @@ nmap <Leader>a< :Tabularize /<\S*><CR>
 vmap <Leader>a< :Tabularize /<\S*><CR>
 nmap <Leader>a> :Tabularize /\S*><CR>
 vmap <Leader>a> :Tabularize /\S*><CR>
-" nmap <Leader>a<key> :Tabularize /<key><CR>
 
-" ale
-let g:ale_completion_enabled = 1
-" let g:ale_rust_carg_use_clippy = 1
-let g:airline#extensions#ale#enabled = 1
-let b:ale_fixers = 
-\   { 'rust': ['rustfmt']
-\   }
-" \   , 'haskell': ['hfmt']
-" let g:ale_linters = 
-" \   { 'haskell': ['hie'],
-" \   }
-let g:ale_enabled = 0
-nmap <silent> <Leader>< <Plug>(ale_previous_wrap)
-nmap <silent> <Leader>> <Plug>(ale_next_wrap)
-nmap <silent> <Leader>? <Plug>(ale_detail)
-autocmd FileType rust :ALEEnable
+" LanguageClient
+set hidden
+let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rls'],
+    \ 'haskell': ['ghcide', '--lsp'],
+    \ }
+let g:LanguageClient_useVirtualText = 0
 
-" ghcid
-" let g:ghcid_command = "ghcid -c 'cabal new-repl'"
-" set hidden
+function LC_maps()
+  if has_key(g:LanguageClient_serverCommands, &filetype)
+    nnoremap <buffer> <F5> :call LanguageClient_contextMenu()<CR>
+    nnoremap <buffer> <silent> <C-e> :call LanguageClient#explainErrorAtPoint()<CR>
+    nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
+    nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
+    nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+  endif
+endfunction
+
+autocmd FileType * call LC_maps()
 
 " Performance
 set nocursorcolumn
@@ -229,11 +228,4 @@ call deoplete#custom#option({
   \ 'auto_complete_delay': 400,
   \ 'smart_case': v:true,
   \ })
-
-" function! SynStack()
-  " if !exists("*synstack")
-    " return
-  " endif
-  " echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-" endfunc
 
