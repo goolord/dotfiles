@@ -63,7 +63,7 @@ plugins=(
   git
   # zsh-syntax-highlighting
   zsh-autosuggestions
-  # fzf
+  fzf
   # nix-zsh-completions
 )
 
@@ -129,8 +129,9 @@ alias listenmic="pactl load-module module-loopback latency_msec=200"
 alias unlistenmic="pactl unload-module module-loopback"
 alias emacscli="emacs -nw"
 alias ds4="ds4drv --hidraw --led 000002"
-alias srgb="xgamma -g 0.86"
+alias srgb="xgamma -g 1"
 alias flux="redshift -O 5000"
+alias unflux="redshift -x"
 alias weather="curl wttr.in/Norcross"
 alias rampart="sudo mount -t tmpfs tmpfs /mnt -o size=1024m && cd /mnt"
 alias nixp="nix-env"
@@ -146,4 +147,3 @@ alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
 alias ghcidc="ghcid -c cabal v2-repl"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

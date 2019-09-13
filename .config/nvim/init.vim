@@ -180,14 +180,15 @@ vmap <Leader>a< :Tabularize /<\S*><CR>
 
 " ale
 let g:ale_completion_enabled = 1
-" let g:ale_rust_carg_use_clippy = 1
+let g:ale_rust_carg_use_clippy = 1
 let g:airline#extensions#ale#enabled = 1
 let b:ale_fixers = 
 \   { 'rust': ['rustfmt']
 \   , 'haskell': ['hfmt']
 \   }
 let g:ale_linters = 
-\   { 'haskell': ['hdevtools', 'hfmt', 'hlint'],
+\   { 'haskell': ['hdevtools', 'hfmt', 'hlint']
+\   , 'rust': ['rls']
 \   }
 let g:ale_enabled = 0
 nmap <silent> <Leader>< <Plug>(ale_previous_wrap)

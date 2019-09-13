@@ -242,6 +242,7 @@ bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 #custom keybinds
 bindsym Mod1+F2 exec xfce4-appfinder &
+bindsym Mod4+Mod1+e exec rofimoji -c &
 
 #laptop keys
 bindsym XF86MonBrightnessUp exec light -A 2
