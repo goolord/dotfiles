@@ -1,12 +1,12 @@
-[submodule "shell-scripts"]
-	path = shell-scripts
-	url = https://github.com/goolord/shell-scripts.git
 [submodule ".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
 	path = .oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".config/nvim/plugged/purescript-vim"]
-	path = .config/nvim/plugged/purescript-vim
-	url = git@github.com:purescript-contrib/purescript-vim.git
+[submodule "shell-scripts"]
+	path = shell-scripts
+	url = git@github.com:goolord/shell-scripts.git
+[submodule ".config/nvim/plugged/LanguageClient-neovim"]
+	path = .config/nvim/plugged/LanguageClient-neovim
+	url = git@github.com:autozimu/LanguageClient-neovim.git
