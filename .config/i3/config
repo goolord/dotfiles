@@ -186,7 +186,7 @@ mode "resize" {
 bar {
         id                      bar-1
         i3bar_command           i3bar --bar_id bar-0
-        status_command          i3blocks -c /home/zachchurchill/.config/i3/i3blocks.conf
+        status_command          i3blocks -c ~/.config/i3/i3blocks.conf
         position                top
         mode                    dock
         workspace_buttons       yes
