@@ -165,12 +165,6 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
@@ -192,7 +186,7 @@ bar {
         workspace_buttons       yes
         # tray_output             eDP1
         height                  24
-        font                    pango: Roboto, DroidSansMono Nerd Font 10
+        font pango:             Droid Sans, DroidSansMono nerd font 10
         # separator_symbol        "  "
         separator_symbol        " | "
 
