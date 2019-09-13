@@ -7,3 +7,6 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule ".config/nvim/plugged/purescript-vim"]
+	path = .config/nvim/plugged/purescript-vim
+	url = git@github.com:purescript-contrib/purescript-vim.git
