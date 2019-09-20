@@ -1,6 +1,8 @@
 "======================================================================
 " init.vim --- Entry file for neovim
 "======================================================================
+
+" plugins =============================================================
 call plug#begin()
 Plug 'autozimu/LanguageClient-neovim', {
 \ 'branch': 'next',
@@ -25,8 +27,9 @@ Plug 'Shougo/vimfiler.vim'
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'raichoo/purescript-vim'
+Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
 call plug#end()
+"======================================================================
 
 colorscheme gruvbox
 set background=dark         " Setting dark mode
@@ -50,12 +53,12 @@ let g:startify_custom_header = [
         \ ]
 
 autocmd VimEnter *
-        \   if !argc()
-        \ |   Startify
-        \ |   VimFilerExplorer -split -simple -parent -winwidth=30 
-        \     -toggle -no-quit
-        \ |   wincmd w
-        \ | endif
+\   if !argc()
+\ |   Startify
+\ |   VimFilerExplorer -split -simple -parent -winwidth=30 
+\     -toggle -no-quit
+\ |   wincmd w
+\ | endif
 
 let g:NERDSpaceDelims            = 1
 let g:clamp_autostart            = 0
@@ -111,7 +114,6 @@ autocmd FileType vimfiler
   \ nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor_map(
   \ "\<Plug>(vimfiler_expand_tree)",
   \ "\<Plug>(vimfiler_edit_file)")
-
 "======================================================================
 
 filetype plugin on
@@ -126,7 +128,7 @@ set softtabstop=0
 set tabstop=2
 set wrap
 
-" Airline
+" Airline =============================================================
 nmap <A-1> <Plug>AirlineSelectTab1
 nmap <A-2> <Plug>AirlineSelectTab2
 nmap <A-3> <Plug>AirlineSelectTab3
@@ -168,8 +170,9 @@ let g:airline#extensions#tabline#show_tabs = 0
 let g:airline#extensions#tabline#tabs_label = 'TABS'
 let g:airline_detect_modified=1
 let g:airline_skip_empty_sections = 1
+"======================================================================
 
-" Tabular
+" Tabular =============================================================
 nmap <Leader>a= :Tabularize /,<CR>
 vmap <Leader>a= :Tabularize /,<CR>
 nmap <Leader>a= :Tabularize /=<CR>
@@ -184,12 +187,16 @@ nmap <Leader>a< :Tabularize /<\S*><CR>
 vmap <Leader>a< :Tabularize /<\S*><CR>
 nmap <Leader>a> :Tabularize /\S*><CR>
 vmap <Leader>a> :Tabularize /\S*><CR>
+"======================================================================
 
-" LanguageClient
+" LanguageClient ======================================================
 set hidden
-let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
+let g:LanguageClient_rootMarkers = {
+  \ 'haskell': ['*.cabal', 'stack.yaml'],
+  \ 'rust': ['Cargo.toml'], 
+  \ }
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rls'],
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'haskell': ['ghcide', '--lsp'],
     \ }
 let g:LanguageClient_useVirtualText = 0
@@ -205,15 +212,17 @@ function LC_maps()
 endfunction
 
 autocmd FileType * call LC_maps()
+"======================================================================
 
-" Performance
+" Performance =========================================================
 set nocursorcolumn
 set nocursorline
 set norelativenumber
 set lazyredraw
 syntax sync minlines=256
+"======================================================================
 
-" Keybinds
+" Keybinds ============================================================
 noremap <A-m> @q 
 map <space> \
 nmap <silent> <esc> :noh<CR>
@@ -221,11 +230,13 @@ nmap <silent> <A-Del> dw
 nmap <silent> <tab> <C-W>W
 nmap <A-e> :s/\%V"/\\"/g<CR>
 vmap <A-e> :s/\%V"/\\"/g<CR>
+"======================================================================
 
-" Deoplete tab-complete
+" Deoplete tab-complete ===============================================
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 call deoplete#custom#option({
   \ 'auto_complete_delay': 400,
   \ 'smart_case': v:true,
   \ })
+"======================================================================
 
