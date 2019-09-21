@@ -186,7 +186,7 @@ bar {
         workspace_buttons       yes
         # tray_output             eDP1
         height                  24
-        font pango:             Droid Sans, DroidSansMono nerd font 10
+        font pango:             Roboto, RobotoMono nerd font 10
         # separator_symbol        "  "
         separator_symbol        " | "
 
