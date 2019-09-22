@@ -69,8 +69,8 @@ let g:indentLine_fileTypeExclude = ['json']
 
 let g:indentLine_setColors    = 1
 let g:indentLine_enabled      = 1
-let g:indentLine_char         = '⎸'
-" let g:indentLine_char         = '▏'
+" let g:indentLine_char         = '⎸'
+let g:indentLine_char         = '▏'
 let g:indentLine_conceallevel = 1
 let g:indentLine_color_gui    = '#626262'
 " haskell-vim
