@@ -69,8 +69,8 @@ let g:indentLine_fileTypeExclude = ['json']
 
 let g:indentLine_setColors    = 1
 let g:indentLine_enabled      = 1
-let g:indentLine_char         = '⎸'
-" let g:indentLine_char         = '▏'
+" let g:indentLine_char         = '⎸'
+let g:indentLine_char         = '▏'
 let g:indentLine_conceallevel = 1
 let g:indentLine_color_gui    = '#626262'
 " haskell-vim
@@ -196,7 +196,7 @@ let g:LanguageClient_rootMarkers = {
   \ 'rust': ['Cargo.toml'], 
   \ }
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
     \ 'haskell': ['ghcide', '--lsp'],
     \ }
 let g:LanguageClient_useVirtualText = 0
