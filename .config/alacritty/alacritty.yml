@@ -157,7 +157,7 @@ colors:
 #
 visual_bell:
   animation: Ease
-  duration: 400
+  duration: 0
   color: '0xebdbb2'
 
 # Background opacity
