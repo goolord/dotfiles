@@ -34,7 +34,7 @@ window:
   decorations: "full"
 
 # Display tabs using this many cells (changes require restart)
-tabspaces: 8
+tabspaces: 4
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -102,11 +102,6 @@ font:
 # Should display the render timer
 devuf.render_timer: false
 
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
-
-
 # Colors (Gruvbox dark)
 colors:
   # Default colors
@@ -161,8 +156,9 @@ colors:
 # To completely disable the visual bell, set its duration to 0.
 #
 visual_bell:
-  animation: EaseOutExpo
-  duration: 0
+  animation: Ease
+  duration: 400
+  color: '0xebdbb2'
 
 # Background opacity
 background_opacity: 1.0
@@ -204,12 +200,12 @@ mouse:
   # To disable this completely, set `faux_scrollback_lines` to 0.
   faux_scrolling_lines: 1
 
+  hide_when_typing: true
+
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
 dynamic_title: true
-
-hide_cursor_when_typing: true
 
 # Style of the cursor
 #
@@ -217,7 +213,9 @@ hide_cursor_when_typing: true
 # - Block
 # - Underline
 # - Beam
-cursor_style: Beam
+cursor:
+  style: Block
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
