@@ -29,8 +29,11 @@ bindsym $mod+g exec --no-startup-id "if [ `i3-msg -t get_tree | rg -Po \
 
 # keybinds
 bindsym $alt+Control+Delete exec gnome-system-monitor
-bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessUp exec brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec brightnessctl s -10%
+bindsym $mod+F5 exec brightnessctl s +10%
+bindsym $mod+F4 exec brightnessctl s 10%-
+bindsym $mod+F7 exec ~/bin/keyboard_backlight.sh
 bindsym XF86AudioRaiseVolume exec ponymix increase 5
 bindsym XF86AudioLowerVolume exec ponymix decrease 5
 bindsym XF86AudioMute exec ponymix toggle
@@ -183,8 +186,8 @@ bar {
         mode                    dock
         workspace_buttons       yes
         # tray_output             eDP1
-        height                  24
-        font pango:             Droid Sans, DroidSansMono Nerd Font 10
+        height                  26
+        font pango:             Fira Sans, Fira Code Nerd Font 13
         # separator_symbol        "  "
         separator_symbol        " | "
 
@@ -207,7 +210,6 @@ colors {
 #screensaver
 exec xset s 3600 3600
 exec xset -dpms
-exec xgamma -g .9
 #background
 exec --no-startup-id compton &
 exec --no-startup-id hsetroot -solid "#333333"

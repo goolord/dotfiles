@@ -17,7 +17,7 @@
   fc-color-trans: #d65d0eF0; 
   bg-color-trans: #272727F0;
 
-  font: "InconsolataGO Nerd Font";
+  font: "Fira Code";
 }
 
 /* ================================================= */
@@ -59,7 +59,7 @@
 }
 
 #button selected {
-  font:              "InconsolataGO Nerd Font SemiBold 11";
+  font:              "Fira Code SemiBold 11";
   background-color:  @fc-color-trans;
 }
 /* ================================================= */
@@ -74,11 +74,11 @@
 }
 
 #prompt {
-  font: "InconsolataGO Nerd Font SemiBold 12";
+  font: "Fira Code SemiBold 12";
 }
 
 #entry {
-  font: "InconsolataGO Nerd Font 12";
+  font: "Fira Code 12";
   width: 15em;
 }
 /* ================================================= */
@@ -92,7 +92,7 @@
 }
 
 #element {
-  font:     "InconsolataGO Nerd Font 13";
+  font:     "Fira Code 13";
   padding:  12px 1.5em 12px 14px;
 }
 
