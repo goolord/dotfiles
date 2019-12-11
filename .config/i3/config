@@ -22,30 +22,30 @@ new_float pixel 1
 #toggle gaps
 bindsym $mod+g exec --no-startup-id "if [ `i3-msg -t get_tree | rg -Po \
     '.*\\"gaps\\":{\\"inner\\":\K(-|)[0-9]+(?=.*\\"focused\\":true)'` -eq 0 ]; then \
-        i3-msg gaps inner current set 6; \
+        i3-msg gaps inner current set 8; \
     else \
         i3-msg gaps inner current set 0; \
     fi"
 
 # keybinds
-bindsym $alt+Control+Delete exec gnome-system-monitor
-bindsym XF86MonBrightnessUp exec brightnessctl s +10%
-bindsym XF86MonBrightnessDown exec brightnessctl s -10%
-bindsym $mod+F5 exec brightnessctl s +10%
-bindsym $mod+F4 exec brightnessctl s 10%-
-bindsym $mod+F7 exec ~/bin/keyboard_backlight.sh
-bindsym XF86AudioRaiseVolume exec ponymix increase 5
-bindsym XF86AudioLowerVolume exec ponymix decrease 5
-bindsym XF86AudioMute exec ponymix toggle
-bindsym XF86AudioMicMute exec amixer set Capture toggle
-bindsym Print exec ~/Documents/prtscr
+bindsym $alt+Control+Delete exec --no-starup-id gnome-system-monitor
+bindsym XF86MonBrightnessUp exec --no-starup-id brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s -10%
+bindsym $mod+F5 exec --no-startup-id brightnessctl s +10%
+bindsym $mod+F4 exec --no-startup-id brightnessctl s 10%-
+bindsym $mod+F7 exec --no-startup-id ~/bin/keyboard_backlight.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 5
+bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 5
+bindsym XF86AudioMute exec --no-startup-id ponymix toggle
+bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
+bindsym Print exec --no-startup-id ~/Documents/prtscr
 bindsym $mod+Tab move workspace to output right
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -53,8 +53,8 @@ bindsym $alt+F4 kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run -fn InconsolataGO-12.5 -nb "#282828" -nf "#ebdbb2" -sb "#d65d0e" -sf "#ebdbb2"
-bindsym $mod+d exec rofi -show drun
-bindsym $mod+c exec rofi -show combi
+bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+c exec --no-startup-id rofi -show combi
 bindsym $mod+r exec --no-startup-id rofi -show run
 bindsym $mod+Shift+w exec --no-startup-id rofi -show window
 
@@ -208,10 +208,10 @@ colors {
 # startup commands
 # exec --no-startup-id /usr/bin/discord &
 #screensaver
-exec xset s 3600 3600
-exec xset -dpms
+exec --no-startup-id xset s 3600 3600
+exec --no-startup-id xset -dpms
 #background
-exec --no-startup-id compton &
+# exec --no-startup-id compton &
 exec --no-startup-id hsetroot -solid "#333333"
 exec --no-startup-id ~/bin/startup.sh &
 exec --no-startup-id nm-applet &
