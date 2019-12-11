@@ -1,7 +1,5 @@
 fpath+=~/.zfunc
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.nix-profile/lib
-
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # add support for ctrl+o to open selected file in vim
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
@@ -40,7 +38,7 @@ alias unlistenmic="pactl unload-module module-loopback"
 alias emacscli="emacs -nw"
 alias ds4="ds4drv --hidraw --led 000002"
 alias srgb="redshift -x"
-alias flux="redshift -O 5000"
+alias flux="redshift -O 5500"
 alias unflux="redshift -x"
 alias weather="curl wttr.in/Norcross"
 alias rampart="sudo mount -t tmpfs tmpfs /mnt -o size=1024m && cd /mnt"

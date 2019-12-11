@@ -59,7 +59,7 @@
 }
 
 #button selected {
-  font:              "Fira Code SemiBold 11";
+  font:              "Fira Code SemiBold 12";
   background-color:  @fc-color-trans;
 }
 /* ================================================= */
@@ -74,11 +74,11 @@
 }
 
 #prompt {
-  font: "Fira Code SemiBold 12";
+  font: "Fira Code SemiBold 13";
 }
 
 #entry {
-  font: "Fira Code 12";
+  font: "Fira Code 13";
   width: 15em;
 }
 /* ================================================= */
@@ -92,7 +92,7 @@
 }
 
 #element {
-  font:     "Fira Code 13";
+  font:     "Fira Code 14";
   padding:  12px 1.5em 12px 14px;
 }
 
