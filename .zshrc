@@ -1,8 +1,23 @@
 fpath+=~/.zfunc
 
+export ZSH=$HOME/.oh-my-zsh
+
+source /etc/profile
+export NIXPKGS=$HOME/Dev/nixpkgs
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # add support for ctrl+o to open selected file in vim
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
+export ZSH_THEME=ysn
+
+plugins=(
+  git
+  # zsh-syntax-highlighting
+  zsh-autosuggestions
+  fzf
+  # nix-zsh-completions
+)
+
+
 source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -56,4 +71,6 @@ alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
 alias ghcidc="ghcid -c cabal v2-repl"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
 alias gp-l3='sudo openconnect --protocol=gp sentinela.layer3com.com'
-
+function clone() {
+  git clone git@github.com:$1/$2.git && cd $2
+}
