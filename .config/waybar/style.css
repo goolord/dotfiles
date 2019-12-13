@@ -1,6 +1,6 @@
 * {
 	font-size: 18px;
-	font-family: Fira Code;
+	font-family: Fira Code Nerd Font;
 }
 
 window#waybar {
@@ -45,7 +45,7 @@ window#waybar {
   border: 1px solid #aaaaee;
 }
 #workspaces button:hover {
-	background: #1a1a1a;
+	background: #8ec07c;
 }
 
 #pulseaudio {
