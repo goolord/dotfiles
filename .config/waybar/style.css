@@ -1,0 +1,85 @@
+* {
+	font-size: 18px;
+	font-family: Fira Code Nerd Font;
+}
+
+window#waybar {
+	background: #323232;
+	color: #fdf6e3;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	color: #1a1a1a;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	color: #292b2e;
+	background: #1a1a1a;
+}
+
+#workspaces,
+#pulseaudio,
+#backlight,
+#memory,
+#cpu,
+#temperature,
+#battery,
+#tray {
+	background: #212121;
+  border-left: 1px solid #5c5c5c;
+}
+
+#tray * {
+  padding: 0 5px;
+}
+
+#workspaces button {
+	padding: 0 5px;
+	color: #fdf6e3;
+  background: #323232;
+  border: 1px solid #4c4c4c;
+}
+#workspaces button.focused {
+	background: #458588;
+  border: 1px solid #aaaaee;
+}
+#workspaces button:hover {
+	background: #8ec07c;
+}
+
+#pulseaudio {
+	color: #b16286;
+}
+#backlight {
+	color: #b58900;
+}
+#memory {
+	color: #fe8019;
+}
+#temperature {
+	color: #fb4924;
+}
+#cpu {
+	color: #8ec07c;
+}
+#battery {
+	color: #fabd2f;
+}
+
+#clock {
+  padding: 0 0.5em;
+}
+
+#pulseaudio,
+#backlight,
+#memory,
+#cpu,
+#temperature,
+#battery {
+	padding: 0 15px;
+}
+
+#tray {
+  padding-left: 10px;
+}

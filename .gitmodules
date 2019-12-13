@@ -4,9 +4,12 @@
 [submodule ".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "shell-scripts"]
-	path = shell-scripts
-	url = git@github.com:goolord/shell-scripts.git
 [submodule ".config/nvim/plugged/LanguageClient-neovim"]
 	path = .config/nvim/plugged/LanguageClient-neovim
 	url = git@github.com:autozimu/LanguageClient-neovim.git
+[submodule "shell-scripts"]
+	path = shell-scripts
+	url = git@github.com:goolord/shell-scripts.git
+[submodule ".config/i3/i3blocks-contrib"]
+	path = .config/i3/i3blocks-contrib
+	url = https://github.com/vivien/i3blocks-contrib

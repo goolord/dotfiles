@@ -9,7 +9,7 @@
 YS_VCS_PROMPT_PREFIX1=" %{$fg[white]%}on%{$reset_color%} "
 YS_VCS_PROMPT_PREFIX2=":%{$fg[cyan]%}"
 YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
-YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}x"
+YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}✗"
 YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}o"
 
 # Git info
@@ -46,14 +46,24 @@ local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 #
 # % ys @ ys-mbp in ~/.oh-my-zsh on git:master x [21:47:42] C:0
 # $
+
+case $IN_NIX_SHELL in
+  pure) 
+    local nix_shell_prompt='nix-shell '
+    ;;
+  impure)
+    local nix_shell_prompt='nix-shell '
+esac
+
 PROMPT="%{$terminfo[bold]$fg[cyan]%}#%{$reset_color%} \
-%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
+%{$terminfo[bold]$fg[yellow]%}$nix_shell_prompt%{$reset_color%}\
+%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[green]%}%n) \
 %{$terminfo[bold]$fg[cyan]%}@%{$reset_color%} \
-%{$fg[cyan]%}%m \
+%{$fg[blue]%}%m \
 %{$fg[cyan]%}in \
 %{$terminfo[bold]$fg[aqua]%}%~%{$reset_color%}\
 ${hg_info}\
 ${git_info}\
  \
 %{$fg[cyan]%}[%*] $exit_code
-%{$terminfo[bold]$fg[yellow]%}> %{$reset_color%}"
+%{$terminfo[bold]$fg[yellow]%}➜ %{$reset_color%}"

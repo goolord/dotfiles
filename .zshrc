@@ -1,110 +1,27 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-  export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ysn"
 fpath+=~/.zfunc
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+export ZSH=$HOME/.oh-my-zsh
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  # zsh-syntax-highlighting
-  zsh-autosuggestions
-  fzf
-  # nix-zsh-completions
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-export NIX_PATH="${NIX_PATH:+$NIX_PATH:}nixpkgs=$HOME/.nix-defexpr/channels/nixpkgs"
-
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
-
+source /etc/profile
+export NIXPKGS=$HOME/Dev/nixpkgs
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # add support for ctrl+o to open selected file in vim
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
+export ZSH_THEME=ysn
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+plugins=(
+  git
+  zsh-autosuggestions
+  fzf
+  nix-shell
+)
+
+
+source $ZSH/oh-my-zsh.sh
+
+. /home/zach/.nix-profile/etc/profile.d/nix.sh
+
+# Aliases
 alias ssh="TERM=xterm-256color ssh"
 alias pm="sudo pacman"
 alias mocp="mocp -T transparent-background"
@@ -129,9 +46,8 @@ alias listenmic="pactl load-module module-loopback latency_msec=200"
 alias unlistenmic="pactl unload-module module-loopback"
 alias emacscli="emacs -nw"
 alias ds4="ds4drv --hidraw --led 000002"
-alias srgb="xgamma -g 1"
-alias flux="redshift -O 5000"
-alias unflux="redshift -x"
+alias flux="blueshift -t 5500"
+alias unflux="blueshift -r"
 alias weather="curl wttr.in/Norcross"
 alias rampart="sudo mount -t tmpfs tmpfs /mnt -o size=1024m && cd /mnt"
 alias nixp="nix-env"
@@ -148,4 +64,6 @@ alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
 alias ghcidc="ghcid -c cabal v2-repl"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
 alias gp-l3='sudo openconnect --protocol=gp sentinela.layer3com.com'
-
+function clone() {
+  git clone git@github.com:$1/$2.git && cd $2
+}
