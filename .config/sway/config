@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term env WINIT_UNIX_BACKEND=x11 alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu rofi -show drun | xargs swaymsg exec --
@@ -30,7 +30,7 @@ set $menu rofi -show drun | xargs swaymsg exec --
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output * scale 1
+# output * scale 1
 
 hide_edge_borders --i3 smart
 
@@ -47,6 +47,10 @@ hide_edge_borders --i3 smart
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+exec swayidle -w \
+         timeout 300 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock-fancy -f'
 
 ### Input configuration
 #
@@ -239,6 +243,18 @@ bar {
     font pango:FiraCode 12
 }
 
+#toggle gaps
+bindsym $mod+g exec "\
+case $(cat ~/.gaps) in\
+    true)\
+        echo true && sway gaps inner current set 8; echo false > ~/.gaps\
+        ;;\
+    *)\
+        echo false && sway gaps inner current set 0; echo true > ~/.gaps\
+        ;;\
+esac\
+"
+
 font pango:FiraCode 10
 
 include /etc/sway/config.d/*
@@ -250,5 +266,16 @@ for_window [app_id="waybar" floating] {
   move left 180px
 }
 
-for_window [app_id="org.gnome.Nautilus"] border pixel 2
-for_window [class="firefox"] border pixel 2
+for_window [app_id="org.gnome.Nautilus"] { 
+  border pixel 2
+}
+for_window [class="Chromium|Slack|discord|firefox"] { 
+  border pixel 2
+}
+
+input 1267:12529:ELAN1206:00_04F3:30F1_Touchpad {
+    tap enabled
+}
+
+seat seat0 xcursor_theme default 30
+
