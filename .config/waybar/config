@@ -13,6 +13,7 @@
 		"clock#3"
 	],
 	"modules-right": [
+    "custom/weather",
 		"pulseaudio",
 		"memory",
 		"cpu",
@@ -41,6 +42,11 @@
 		"tooltip": false
 	},
 
+  "custom/weather": {
+    "exec": "~/bin/rsdarksky --api eb0bc7ab4f02dfbb93f361282c8085af --latitude 33.941890 --longitude -84.212180",
+    "interval": 3600,
+    "format": "{}"
+  },
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
 		"format-bluetooth": "{icon}  {volume}%",
@@ -78,10 +84,11 @@
 	"battery": {
 		"states": {
 			"good": 95,
-			"warning": 30,
-			"critical": 15
+			"warning": 20,
+			"critical": 10
 		},
 		"format": "{icon} {capacity}%",
+    "format-charging": "⚡{capacity}%",
 		"format-icons": [
 			" ",
 			" ",

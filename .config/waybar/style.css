@@ -8,16 +8,6 @@ window#waybar {
 	color: #fdf6e3;
 }
 
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: #1a1a1a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #292b2e;
-	background: #1a1a1a;
-}
-
 #workspaces,
 #pulseaudio,
 #backlight,
@@ -25,6 +15,7 @@ window#waybar {
 #cpu,
 #temperature,
 #battery,
+#custom-weather,
 #tray {
 	background: #212121;
   border-left: 1px solid #5c5c5c;
@@ -66,11 +57,15 @@ window#waybar {
 #battery {
 	color: #fabd2f;
 }
+#custom-weather {
+  color: #83a598;
+}
 
 #clock {
   padding: 0 0.5em;
 }
 
+#custom-weather,
 #pulseaudio,
 #backlight,
 #memory,
@@ -83,3 +78,4 @@ window#waybar {
 #tray {
   padding-left: 10px;
 }
+
