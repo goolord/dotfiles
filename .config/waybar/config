@@ -59,12 +59,22 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "Mem {}%"
+		"format": " {used:0.1f}G/{total:0.1f}G"
 	},
 	"cpu": {
 		"interval": 5,
-		"format": "CPU {usage:2}%"
+		"format": " {usage:2}%"
 	},
+  "temperature": {
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
 	"battery": {
 		"states": {
 			"good": 95,
