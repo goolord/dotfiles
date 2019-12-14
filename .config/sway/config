@@ -17,7 +17,7 @@ set $right l
 set $term env WINIT_UNIX_BACKEND=x11 alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu rofi -show drun | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --¬
 
 ### Output configuration
 #
@@ -48,9 +48,9 @@ hide_edge_borders --i3 smart
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-         timeout 300 'swaymsg "output * dpms off"' \
-              resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock-fancy -f'
+  timeout 300 'swaymsg "output * dpms off"' \
+       resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock-fancy -f'
 
 ### Input configuration
 #
@@ -79,9 +79,9 @@ exec swayidle -w \
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    bindsym $mod+c exec rofi -show combi
-    bindsym $mod+r exec rofi -show run
-    bindsym $mod+shift+w exec rofi -show window
+    # bindsym $mod+c exec wofi --show combi -i
+    bindsym $mod+r exec wofi --show run -i
+    # bindsym $mod+shift+w exec wofi --show window -i
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -99,10 +99,10 @@ exec swayidle -w \
 # Moving around:
 #
     # Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
+    # bindsym $mod+$left focus left
+    # bindsym $mod+$down focus down
+    # bindsym $mod+$up focus up
+    # bindsym $mod+$right focus right
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -152,7 +152,7 @@ exec swayidle -w \
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+h splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -246,12 +246,12 @@ bar {
 #toggle gaps
 bindsym $mod+g exec "\
 case $(cat ~/.gaps) in\
-    true)\
-        echo true && sway gaps inner current set 8; echo false > ~/.gaps\
-        ;;\
-    *)\
-        echo false && sway gaps inner current set 0; echo true > ~/.gaps\
-        ;;\
+  true)\
+    echo true && sway gaps inner current set 8; echo false > ~/.gaps\
+    ;;\
+  *)\
+    echo false && sway gaps inner current set 0; echo true > ~/.gaps\
+    ;;\
 esac\
 "
 
@@ -274,7 +274,7 @@ for_window [class="Chromium|Slack|discord|firefox"] {
 }
 
 input 1267:12529:ELAN1206:00_04F3:30F1_Touchpad {
-    tap enabled
+  tap enabled
 }
 
 seat seat0 xcursor_theme default 30

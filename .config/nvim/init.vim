@@ -28,6 +28,7 @@ Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
+Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 call plug#end()
 "======================================================================
 

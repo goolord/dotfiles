@@ -33,11 +33,11 @@
 		"tooltip": false
 	},
 	"clock#2": {
-		"format": "{:%H:%M}",
+		"format": "{:%I:%M %p}",
 		"tooltip": false
 	},
 	"clock#3": {
-		"format": "{:%m-%d}",
+		"format": "{:%Y/%m/%d}",
 		"tooltip": false
 	},
 
@@ -53,9 +53,9 @@
 			]
 		},
 		"scroll-step": 5,
-		"on-click": "pamixer -t",
+		"on-click-right": "pamixer -t",
     "smooth-scrolling-threshold": 2,
-		"on-click-right": "pavucontrol"
+		"on-click": "pavucontrol"
 	},
 	"memory": {
 		"interval": 5,
