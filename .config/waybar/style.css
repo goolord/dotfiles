@@ -1,6 +1,7 @@
 * {
 	font-size: 18px;
 	font-family: Fira Code Nerd Font;
+  transition: all 0s;
 }
 
 window#waybar {
@@ -17,7 +18,7 @@ window#waybar {
 #battery,
 #custom-weather,
 #tray {
-	background: #212121;
+	background: #272727;
   border-left: 1px solid #5c5c5c;
 }
 
@@ -40,7 +41,7 @@ window#waybar {
 }
 
 #pulseaudio {
-	color: #b16286;
+	color: #b76389;
 }
 #backlight {
 	color: #b58900;
@@ -55,7 +56,7 @@ window#waybar {
 	color: #8ec07c;
 }
 #battery {
-	color: #fabd2f;
+	color: #f2b80c;
 }
 #custom-weather {
   color: #83a598;
