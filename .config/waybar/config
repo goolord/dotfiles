@@ -26,6 +26,7 @@
 	"sway/workspaces": {
 		"disable-scroll": false,
 		"format": "{name}",
+    "disable-scroll-wraparound": true,
     "smooth-scrolling-threshold": 4
 	},
 
