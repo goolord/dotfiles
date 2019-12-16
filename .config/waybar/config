@@ -15,6 +15,7 @@
 	"modules-right": [
     "custom/weather",
 		"pulseaudio",
+    // "disk",
 		"memory",
 		"cpu",
     "temperature",
@@ -98,6 +99,12 @@
 			" "
 		]
 	},
+  "disk": {
+    "interval": 300,
+    "format": "{icon} {used}/{total}",
+    "format-icon": "",
+    "path": "/"
+  },
 	"tray": {
 		"icon-size": 20
 	}
