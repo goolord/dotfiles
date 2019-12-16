@@ -17,6 +17,7 @@ window#waybar {
 #temperature,
 #battery,
 #custom-weather,
+#disk,
 #tray {
 	background: #272727;
   border-left: 1px solid #5c5c5c;
@@ -32,10 +33,26 @@ window#waybar {
   background: #323232;
   border: 1px solid #4c4c4c;
 }
+
+#workspaces button.urgent {
+  background: red;
+  animation: blinking 0.8s infinite;
+}
+
+@keyframes blinking{
+    0%{   background-color: red;     }
+    49%{  background-color: inherit; }
+    50%{  background-color: inherit; }
+    99%{  background-color: inherit; }
+    100%{ background-color: red;     }
+}
+
+
 #workspaces button.focused {
 	background: #458588;
   border: 1px solid #aaaaee;
 }
+
 #workspaces button:hover {
 	background: #8ec07c;
 }
@@ -61,12 +78,16 @@ window#waybar {
 #custom-weather {
   color: #83a598;
 }
+#disk {
+  color: white;
+}
 
 #clock {
   padding: 0 0.5em;
 }
 
 #custom-weather,
+#disk,
 #pulseaudio,
 #backlight,
 #memory,
