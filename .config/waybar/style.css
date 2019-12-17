@@ -34,9 +34,15 @@ window#waybar {
   border: 1px solid #4c4c4c;
 }
 
+#workspaces button.focused {
+	background: #458588;
+  border: 1px solid #aaaaee;
+}
+
 #workspaces button.urgent {
   background: red;
   animation: blinking 0.8s infinite;
+  border: 1px solid red;
 }
 
 @keyframes blinking{
@@ -45,12 +51,6 @@ window#waybar {
     50%{  background-color: inherit; }
     99%{  background-color: inherit; }
     100%{ background-color: red;     }
-}
-
-
-#workspaces button.focused {
-	background: #458588;
-  border: 1px solid #aaaaee;
 }
 
 #workspaces button:hover {
