@@ -266,6 +266,8 @@ for_window [app_id="waybar" floating] {
   move left 180px
 }
 
+for_window [app_id="zenity"] floating enable
+
 for_window [app_id="org.gnome.Nautilus"] { 
   border pixel 2
 }
@@ -275,7 +277,17 @@ for_window [class="Chromium|Slack|discord|firefox|Bitwig Studio"] {
 
 input 1267:12529:ELAN1206:00_04F3:30F1_Touchpad {
   tap enabled
+  scroll_factor 0.5
+}
+
+input 1133:50184:Logitech_USB_Trackball {
+  scroll_button 276
+  scroll_method on_button_down
 }
 
 seat seat0 xcursor_theme default 32
 
+
+# remap back button to middle mouse
+set $TRACKBALL 1133:50184:Logitech_USB_Trackball
+bindsym --input-device=$TRACKBALL --whole-window BTN_SIDE seat seat0 cursor press BTN_MIDDLE; seat seat0 cursor release BTN_MIDDLE
