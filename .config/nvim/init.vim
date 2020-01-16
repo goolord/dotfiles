@@ -52,6 +52,7 @@ let g:startify_custom_header = [
         \ '   \ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\',
         \ '    \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/',
         \ ]
+nmap <silent> <Leader>s :Startify<CR>
 
 autocmd VimEnter *
 \   if !argc()
