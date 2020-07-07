@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term env WINIT_UNIX_BACKEND=x11 alacritty
+set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --¬
@@ -287,6 +287,10 @@ input 1133:50184:Logitech_USB_Trackball {
 
 seat seat0 xcursor_theme default 32
 
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+  # gsettings set org.gnome.desktop.interface cursor-size 32
+# }
 
 # remap back button to middle mouse
 set $TRACKBALL 1133:50184:Logitech_USB_Trackball
