@@ -62,8 +62,10 @@ alias htop="TERM=xterm-256color htop"
 alias tmux="tmux -f ~/.config/tmux.conf"
 alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
 alias ghcidc="ghcid -c cabal v2-repl"
+alias ghcidr="ghcid -c cabal v2-repl $1"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
-alias gp-l3='sudo openconnect --protocol=gp sentinela.layer3com.com'
+alias gp-l3='lpass show microsoftonline.com --password | sudo openconnect --protocol=gp sentinela.layer3com.com -u zchurchill --passwd-on-stdin'
 function clone() {
   git clone git@github.com:$1/$2.git && cd $2
 }
+alias doppleganger="PWD=$(pwd) $TERM &"
