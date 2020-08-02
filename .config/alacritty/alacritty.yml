@@ -29,6 +29,8 @@ window:
     x: 1
     y: 1
 
+  dynamic_title: true
+
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
   decorations: "full"
@@ -152,7 +154,7 @@ colors:
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
   animation: Ease
   duration: 0
   color: '0xebdbb2'
@@ -201,8 +203,6 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-
-dynamic_title: true
 
 # Style of the cursor
 #

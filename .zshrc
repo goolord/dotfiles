@@ -68,4 +68,10 @@ alias gp-l3='lpass show microsoftonline.com --password | sudo openconnect --prot
 function clone() {
   git clone git@github.com:$1/$2.git && cd $2
 }
-alias doppleganger="PWD=$(pwd) $TERM &"
+function doppelganger() {
+  PWD=$(pwd) $TERM & disown
+}
+alias dumpcore="cabal exec -- ghc-core --no-asm --no-cast $1"
+function gitignore () {
+  curl https://raw.githubusercontent.com/github/gitignore/master/${(C)1}.gitignore > .gitignore
+}
