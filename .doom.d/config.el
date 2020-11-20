@@ -19,13 +19,18 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 17 :weight 'normal)
-      doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 20 :weight 'normal)
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 19.25 :weight 'light))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-gruvbox)
+
+;; Set cursor color
+(setq evil-normal-state-cursor '(box "#ebdbb2")
+      evil-insert-state-cursor '(bar "#ebdbb2")
+      evil-visual-state-cursor '(hollow "#ebdbb2"))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -52,3 +57,39 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(map! :leader
+      :desc "Toggle tree"
+      "d" #'treemacs)
+
+(map! :desc "Previous window"
+      "<tab>" #'evil-window-prev)
+
+(map! :leader
+      :desc "Align"
+      "a" #'align)
+
+(map! :desc "Navigate open buffers"
+      "M-f" #'ibuffer)
+
+(define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
+
+(setq treemacs-TAB-actions-config
+  '((root-node-open   . evil-window-prev)
+    (root-node-closed . evil-window-prev)
+    (dir-node-open    . evil-window-prev)
+    (dir-node-closed  . evil-window-prev)
+    (file-node-open   . evil-window-prev)
+    (file-node-closed . evil-window-prev)
+    (tag-node-open    . evil-window-prev)
+    (tag-node-closed  . evil-window-prev)
+    (tag-node         . evil-window-prev)))
+
+(with-eval-after-load "treemacs-evil"
+  (evil-define-key 'treemacs treemacs-mode-map (kbd "'") #'treemacs-peek)
+  (evil-define-key 'treemacs treemacs-mode-map (kbd "h") #'treemacs-collapse-parent-node)
+  (evil-define-key 'treemacs treemacs-mode-map (kbd "l") #'treemacs-RET-action)
+  (evil-define-key 'treemacs treemacs-mode-map (kbd "M-h") #'treemacs-root-up)
+  (evil-define-key 'treemacs treemacs-mode-map (kbd "M-l") #'treemacs-root-down))
+
+(evil-define-key 'normal 'global (kbd "<esc>") #'evil-ex-nohighlight)
