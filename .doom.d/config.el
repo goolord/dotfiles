@@ -62,6 +62,10 @@
       :desc "Toggle tree"
       "d" #'treemacs)
 
+(map! :leader
+      :desc "Toggle vterm"
+      "v" #'+vterm/toggle)
+
 (map! :desc "Previous window"
       "<tab>" #'evil-window-prev)
 
@@ -72,7 +76,9 @@
 (map! :desc "Navigate open buffers"
       "M-f" #'ibuffer)
 
-(define-key evil-insert-state-map (kbd "TAB") 'tab-to-tab-stop)
+(map! :leader
+      :desc "Comment or uncomment"
+      "c SPC" #'evilnc-comment-or-uncomment-lines)
 
 (setq treemacs-TAB-actions-config
   '((root-node-open   . evil-window-prev)
@@ -93,3 +99,6 @@
   (evil-define-key 'treemacs treemacs-mode-map (kbd "M-l") #'treemacs-root-down))
 
 (evil-define-key 'normal 'global (kbd "<esc>") #'evil-ex-nohighlight)
+
+(after! vterm
+  (set-popup-rule! "*doom:vterm-popup:main" :size 0.3 :vslot -4 :select t :quit nil :ttl 0 :side 'right))
