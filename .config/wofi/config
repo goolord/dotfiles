@@ -1,0 +1,6 @@
+allow_images=true
+allow_markup=true
+width=800px
+layer=overlay
+insensitive=true
+line_wrap=word
