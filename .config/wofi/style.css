@@ -1,6 +1,5 @@
 window {
-  font: Fira Sans 20px;
-  overflow-x: hidden;
+  font: 20px 'Fira Sans', sans-serif;
   margin: 5px;
 }
 
