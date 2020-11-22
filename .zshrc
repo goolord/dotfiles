@@ -66,7 +66,6 @@ alias ghcidc="ghcid -c cabal v2-repl"
 alias ghcidr="ghcid -c cabal v2-repl $1"
 alias ghcids="ghcid -c stack repl"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
-alias gp-l3='lpass show microsoftonline.com --password | sudo openconnect --protocol=gp sentinela.layer3com.com -u zchurchill --passwd-on-stdin'
 alias rgless='rg "$@" --color always --column'
 function clone() {
   git clone git@github.com:$1/$2.git && cd $2
