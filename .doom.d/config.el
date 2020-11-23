@@ -40,7 +40,6 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -58,6 +57,11 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+
+(global-visual-line-mode t)
+
 (map! :leader
       :desc "Toggle tree"
       "d" #'treemacs)
@@ -66,8 +70,13 @@
       :desc "Toggle vterm"
       "v" #'+vterm/toggle)
 
-(map! :desc "Previous window"
-      "<tab>" #'evil-window-prev)
+(map! :n
+      :desc "Tab between windows"
+      "<tab>" #'evil-window-next)
+
+(map! :i
+      :desc "ctrl shift v paste in instert mode"
+      "C-V" #'evil-paste-after)
 
 (map! :leader
       :desc "Align"
@@ -80,25 +89,34 @@
       :desc "Comment or uncomment"
       "c SPC" #'evilnc-comment-or-uncomment-lines)
 
+(map! :leader
+      :desc "ripgrep"
+      "r g" #'counsel-rg)
+
 (setq treemacs-TAB-actions-config
-  '((root-node-open   . evil-window-prev)
-    (root-node-closed . evil-window-prev)
-    (dir-node-open    . evil-window-prev)
-    (dir-node-closed  . evil-window-prev)
-    (file-node-open   . evil-window-prev)
-    (file-node-closed . evil-window-prev)
-    (tag-node-open    . evil-window-prev)
-    (tag-node-closed  . evil-window-prev)
-    (tag-node         . evil-window-prev)))
+  '((root-node-open   . evil-window-next)
+    (root-node-closed . evil-window-next)
+    (dir-node-open    . evil-window-next)
+    (dir-node-closed  . evil-window-next)
+    (file-node-open   . evil-window-next)
+    (file-node-closed . evil-window-next)
+    (tag-node-open    . evil-window-next)
+    (tag-node-closed  . evil-window-next)
+    (tag-node         . evil-window-next)))
 
-(with-eval-after-load "treemacs-evil"
-  (evil-define-key 'treemacs treemacs-mode-map (kbd "'") #'treemacs-peek)
-  (evil-define-key 'treemacs treemacs-mode-map (kbd "h") #'treemacs-collapse-parent-node)
-  (evil-define-key 'treemacs treemacs-mode-map (kbd "l") #'treemacs-RET-action)
-  (evil-define-key 'treemacs treemacs-mode-map (kbd "M-h") #'treemacs-root-up)
-  (evil-define-key 'treemacs treemacs-mode-map (kbd "M-l") #'treemacs-root-down))
+(after! treemacs-evil
+  (map! :map treemacs-mode-map
+        "'" #'treemacs-peek
+        "'" #'treemacs-peek
+        "h" #'treemacs-collapse-pare
+        "l" #'treemacs-RET-action
+        "M-h" #'treemacs-root-up
+        "M-l" #'treemacs-root-down))
 
-(evil-define-key 'normal 'global (kbd "<esc>") #'evil-ex-nohighlight)
+(map! :n
+      :desc "remove highlight, usually from regex"
+      "<esc>" #'evil-ex-nohighlight)
 
 (after! vterm
   (set-popup-rule! "*doom:vterm-popup:main" :size 0.3 :vslot -4 :select t :quit nil :ttl 0 :side 'right))
+
