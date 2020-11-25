@@ -76,7 +76,7 @@
 
 (map! :i
       :desc "ctrl shift v paste in instert mode"
-      "C-V" #'evil-paste-after)
+      "C-S-V" #'evil-paste-after)
 
 (map! :leader
       :desc "Align"
@@ -104,14 +104,13 @@
     (tag-node-closed  . evil-window-next)
     (tag-node         . evil-window-next)))
 
-(after! treemacs-evil
-  (map! :map treemacs-mode-map
-        "'" #'treemacs-peek
-        "'" #'treemacs-peek
-        "h" #'treemacs-collapse-pare
-        "l" #'treemacs-RET-action
-        "M-h" #'treemacs-root-up
-        "M-l" #'treemacs-root-down))
+(after! (:and treemacs treemacs-evil)
+  (evil-define-key* 'treemacs treemacs-mode-map
+    (kbd "h") #'treemacs-collapse-parent-node
+    (kbd "l") #'treemacs-RET-action
+    (kbd "M-h") #'treemacs-root-up
+    (kbd "M-l") #'treemacs-root-down
+    (kbd "'") #'treemacs-peek))
 
 (map! :n
       :desc "remove highlight, usually from regex"

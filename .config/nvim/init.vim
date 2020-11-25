@@ -234,6 +234,8 @@ nmap <silent> <A-Del> dw
 nmap <silent> <tab> <C-W>W
 nmap <A-e> :s/\%V"/\\"/g<CR>
 vmap <A-e> :s/\%V"/\\"/g<CR>
+map <MiddleMouse> <Nop>
+imap <MiddleMouse> <Nop>
 "======================================================================
 
 " Deoplete tab-complete ===============================================
