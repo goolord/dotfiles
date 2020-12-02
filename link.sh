@@ -11,3 +11,5 @@ ln -sf $DIR/.oh-my-zsh/custom/themes/* $HOME/.oh-my-zsh/custom/themes/
 ln -sf $DIR/.oh-my-zsh/custom/plugins/* $HOME/.oh-my-zsh/custom/plugins/
 ln -sf $DIR/.zshrc $HOME/
 
+ln -sf $DIR/.doom.d $HOME/
+

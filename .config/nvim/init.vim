@@ -29,12 +29,14 @@ Plug 'mhinz/vim-startify'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
 call plug#end()
 "======================================================================
 
 colorscheme gruvbox
 set background=dark         " Setting dark mode
 set termguicolors
+
 set directory=$HOME/.swap//
 set undofile                " Save undos after file closes
 set undodir=$HOME/.swap/    " where to save undo histories
@@ -232,12 +234,14 @@ nmap <silent> <A-Del> dw
 nmap <silent> <tab> <C-W>W
 nmap <A-e> :s/\%V"/\\"/g<CR>
 vmap <A-e> :s/\%V"/\\"/g<CR>
+map <MiddleMouse> <Nop>
+imap <MiddleMouse> <Nop>
 "======================================================================
 
 " Deoplete tab-complete ===============================================
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 call deoplete#custom#option({
-  \ 'auto_complete_delay': 400,
+  \ 'auto_complete_delay': 300,
   \ 'smart_case': v:true,
   \ })
 "======================================================================
