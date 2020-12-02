@@ -1,6 +1,10 @@
+width=600
+height=500
 allow_images=true
 allow_markup=true
-width=800px
-layer=overlay
+alow_images=true
+colors=colors
+filter_rate=100
 insensitive=true
+layer=overlay
 line_wrap=word

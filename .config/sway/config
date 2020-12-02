@@ -276,7 +276,7 @@ for_window [class="Chromium|Slack|discord|firefox|Bitwig Studio|emacs"] {
 }
 
 input 6392:3993:USB_OPTICAL_MOUSE {
-  # scroll_factor 2
+  scroll_factor 1.25
   accel_profile flat
   pointer_accel -0.18
 }

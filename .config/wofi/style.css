@@ -1,29 +1,30 @@
-window {
-  font: 20px 'Fira Sans', sans-serif;
-  margin: 5px;
+* {
+  font-family: 'Fira Code Nerd Font', monospace;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 #input {
-  margin: 5px;
-  background: none;
-  border: none;
+  padding: 10px;
+  border: 2px solid transparent;
+  background-color: transparent;
   box-shadow: none;
 }
 
 #inner-box {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px;
 }
 
 #outer-box {
   padding: 5px;
+  border: 2px solid #666666;
 }
 
 #scroll {
-  /* margin: 5px; */
+  margin: 5px;
+  border-top: 2px solid #666666;
 }
 
 #text {
   margin: 5px;
 }
-
