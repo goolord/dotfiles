@@ -10,7 +10,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ 'for': ['haskell', 'rust', 'cabal', 'stack']
 \ }
 Plug 'Shougo/deoplete.nvim'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'dkasak/gruvbox'
@@ -144,6 +145,12 @@ nmap <A-7> <Plug>AirlineSelectTab7
 nmap <A-8> <Plug>AirlineSelectTab8
 nmap <A-9> <Plug>AirlineSelectTab9
 nmap <silent> <A-0> :blast<CR>
+
+let g:airline_detect_modified=1
+let g:airline_skip_empty_sections = 1
+
+" Tabs
+let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
@@ -162,7 +169,6 @@ let g:airline#extensions#tabline#buffer_idx_format = {
 \ '9': '9 '
 \}
 let g:airline#extensions#tabline#buffers_label = 'BUFFERS'
-let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamecollapse = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#fnametruncate = 0
@@ -172,25 +178,17 @@ let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#show_tabs = 0
 let g:airline#extensions#tabline#tabs_label = 'TABS'
-let g:airline_detect_modified=1
-let g:airline_skip_empty_sections = 1
 "======================================================================
 
 " Tabular =============================================================
-nmap <Leader>a= :Tabularize /,<CR>
-vmap <Leader>a= :Tabularize /,<CR>
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:\+<CR>
-vmap <Leader>a: :Tabularize /:\+<CR>
-nmap <Leader>a( :Tabularize /(<CR>
-vmap <Leader>a( :Tabularize /(<CR>
-nmap <Leader>a) :Tabularize /)<CR>
-vmap <Leader>a) :Tabularize /)<CR>
-nmap <Leader>a< :Tabularize /<\S*><CR>
-vmap <Leader>a< :Tabularize /<\S*><CR>
-nmap <Leader>a> :Tabularize /\S*><CR>
-vmap <Leader>a> :Tabularize /\S*><CR>
+map <Leader>a :Tabularize /
+map <Leader>a( :Tabularize /(<CR>
+map <Leader>a) :Tabularize /)<CR>
+map <Leader>a: :Tabularize /:\+<CR>
+map <Leader>a< :Tabularize /<\S*><CR>
+map <Leader>a, :Tabularize /,<CR>
+map <Leader>a= :Tabularize /=<CR>
+map <Leader>a> :Tabularize /\S*><CR>
 "======================================================================
 
 " LanguageClient ======================================================
@@ -242,7 +240,7 @@ imap <MiddleMouse> <Nop>
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 call deoplete#custom#option({
   \ 'auto_complete_delay': 300,
-  \ 'smart_case': v:true,
+  \ 'smart_case': v:false,
   \ })
 "======================================================================
 
