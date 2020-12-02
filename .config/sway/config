@@ -17,7 +17,7 @@ set $right l
 set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --¬
+set $menu dmenu_path | wofi --show drun -I | xargs swaymsg exec --¬
 
 ### Output configuration
 #
@@ -275,14 +275,10 @@ for_window [class="Chromium|Slack|discord|firefox|Bitwig Studio"] {
   border pixel 2
 }
 
-input 1267:12529:ELAN1206:00_04F3:30F1_Touchpad {
-  tap enabled
-  scroll_factor 0.5
-}
-
-input 1133:50184:Logitech_USB_Trackball {
-  scroll_button 276
-  scroll_method on_button_down
+input 6392:3993:USB_OPTICAL_MOUSE {
+  # scroll_factor 2
+  accel_profile flat
+  pointer_accel -0.18
 }
 
 seat seat0 xcursor_theme default 32
@@ -292,6 +288,7 @@ seat seat0 xcursor_theme default 32
   # gsettings set org.gnome.desktop.interface cursor-size 32
 # }
 
-# remap back button to middle mouse
-set $TRACKBALL 1133:50184:Logitech_USB_Trackball
-bindsym --input-device=$TRACKBALL --whole-window BTN_SIDE seat seat0 cursor press BTN_MIDDLE; seat seat0 cursor release BTN_MIDDLE
+# exec_always import-gsettings \
+#     gtk-theme:gtk-theme-name \
+#     icon-theme:gtk-icon-theme-name \
+#     cursor-theme:gtk-cursor-theme-name

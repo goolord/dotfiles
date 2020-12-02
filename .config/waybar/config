@@ -62,7 +62,7 @@
 		},
 		"scroll-step": 5,
 		"on-click-right": "pamixer -t",
-    "smooth-scrolling-threshold": 2,
+    "smooth-scrolling-threshold": 1,
 		"on-click": "pavucontrol"
 	},
 	"memory": {
