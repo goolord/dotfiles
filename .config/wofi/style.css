@@ -1,0 +1,29 @@
+window {
+  font: 20px 'Fira Sans', sans-serif;
+  margin: 5px;
+}
+
+#input {
+  margin: 5px;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+#inner-box {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#outer-box {
+  padding: 5px;
+}
+
+#scroll {
+  /* margin: 5px; */
+}
+
+#text {
+  margin: 5px;
+}
+

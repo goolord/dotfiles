@@ -22,6 +22,8 @@ source $ZSH/oh-my-zsh.sh
 . /home/zach/.nix-profile/etc/profile.d/nix.sh
 
 # Aliases
+setopt complete_aliases
+
 alias ssh="TERM=xterm-256color ssh"
 alias pm="sudo pacman"
 alias mocp="mocp -T transparent-background"
@@ -47,13 +49,12 @@ alias unlistenmic="pactl unload-module module-loopback"
 alias emacscli="emacs -nw"
 alias ds4="ds4drv --hidraw --led 000002"
 alias flux="redshift -O 5500"
-alias unflux="redshift -r"
+alias unflux="redshift -x"
 alias weather="curl wttr.in/Norcross"
 alias rampart="sudo mount -t tmpfs tmpfs /mnt -o size=1024m && cd /mnt"
 alias nixp="nix-env"
 alias snr='nix-repl "<nixpkgs>"'
 alias vim="nvim"
-alias bat="bat --paging never"
 alias cat="bat --paging never -p"
 alias pingp='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
@@ -63,8 +64,9 @@ alias tmux="tmux -f ~/.config/tmux.conf"
 alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
 alias ghcidc="ghcid -c cabal v2-repl"
 alias ghcidr="ghcid -c cabal v2-repl $1"
+alias ghcids="ghcid -c stack repl"
 alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
-alias gp-l3='lpass show microsoftonline.com --password | sudo openconnect --protocol=gp sentinela.layer3com.com -u zchurchill --passwd-on-stdin'
+alias rgless='rg "$@" --color always --column'
 function clone() {
   git clone git@github.com:$1/$2.git && cd $2
 }

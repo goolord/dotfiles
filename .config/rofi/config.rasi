@@ -1,0 +1,9 @@
+configuration {
+  modi: "combi,window,run,drun";
+  combi-modi: "window,drun,ssh";
+  theme: "sidestyle.rasi";
+  drun-icon-theme: "Numix";
+  show-icons: true;
+  sidebar-mode: false;
+  font: "FiraCode Nerd Font 10";
+}
