@@ -9,28 +9,28 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ 'do': 'bash install.sh',
 \ 'for': ['haskell', 'rust', 'cabal', 'stack']
 \ }
+Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'dkasak/gruvbox'
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'godlygeek/tabular'
+Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
+Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
-Plug 'scrooloose/nerdcommenter'
-Plug 'dkasak/gruvbox'
-Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
-Plug 'Shougo/unite.vim'
-Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
-Plug 'Yggdroot/indentLine'
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
+Plug 'mhinz/vim-startify'
 Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': ['hamlet', 'lucius'] }
-Plug 'godlygeek/tabular'
+Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
+Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Shougo/vimfiler.vim'
-Plug 'LnL7/vim-nix', { 'for': 'nix' }
-Plug 'mhinz/vim-startify'
-Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
-Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 call plug#end()
 "======================================================================
 
@@ -234,6 +234,9 @@ nmap <A-e> :s/\%V"/\\"/g<CR>
 vmap <A-e> :s/\%V"/\\"/g<CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
+"present tag list
+nnoremap <C-]> g<C-]> 
+map <C-b>w :Buffers<CR>
 "======================================================================
 
 " Deoplete tab-complete ===============================================
