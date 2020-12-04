@@ -20,6 +20,7 @@ Plug 'elmcast/elm-vim', { 'for': 'elm' }
 Plug 'godlygeek/tabular'
 Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
 Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
+Plug 'hellerve/carp-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
