@@ -2294,22 +2294,6 @@ function! s:system_chomp(...)
   return v:shell_error ? '' : substitute(ret, '\n$', '', '')
 endfunction
 
-function! s:git_origin_branch(spec)
-  if len(a:spec.branch)
-    return a:spec.branch
-  endif
-
-  " The file may not be present if this is a local repository
-  let origin_head = a:spec.dir.'/.git/refs/remotes/origin/HEAD'
-  if filereadable(origin_head)
-    return split(readfile(origin_head)[0], 'refs/remotes/origin/')[-1]
-  endif
-
-  " The command may not return the name of a branch in detached HEAD state
-  let result = s:lines(s:system('git symbolic-ref --short HEAD', a:spec.dir))
-  return v:shell_error ? '' : result[-1]
-endfunction
-
 function! s:git_validate(spec, check_branch)
   let err = ''
   if isdirectory(a:spec.dir)

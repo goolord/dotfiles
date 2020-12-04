@@ -31,6 +31,7 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'hellerve/carp-vim'
 call plug#end()
 "======================================================================
 
