@@ -68,7 +68,6 @@ autocmd VimEnter *
 
 let g:NERDSpaceDelims            = 1
 let g:clamp_autostart            = 0
-let g:deoplete#enable_at_startup = 1
 let g:gruvbox_improved_warnings  = 1
 let g:gruvbox_termcolors         = 256
 let g:indentLine_fileTypeExclude = ['json']
@@ -217,6 +216,21 @@ endfunction
 autocmd FileType * call LC_maps()
 "======================================================================
 
+
+" Deoplete ======================================================
+let g:deoplete#enable_at_startup = 1
+let deoplete#tag#cache_limit_size = 50000000
+" tab-complete 
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+call deoplete#custom#option({
+  \ 'auto_complete_delay': 300,
+  \ 'smart_case': v:false,
+  \ 'sources': {
+		\ '_': ['buffer', 'tag'],
+		\ },
+  \ })
+"======================================================================
+
 " Performance =========================================================
 set nocursorcolumn
 set nocursorline
@@ -238,13 +252,5 @@ imap <MiddleMouse> <Nop>
 "present tag list
 nnoremap <C-]> g<C-]> 
 map <C-b>w :Buffers<CR>
-"======================================================================
-
-" Deoplete tab-complete ===============================================
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-call deoplete#custom#option({
-  \ 'auto_complete_delay': 300,
-  \ 'smart_case': v:false,
-  \ })
 "======================================================================
 
