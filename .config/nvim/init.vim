@@ -126,7 +126,7 @@ set expandtab
 set guicursor=a:blinkon0
 set mouse=a
 set nofoldenable
-set number
+set number relativenumber
 set shiftwidth=2 
 set smarttab
 set softtabstop=0 
@@ -234,7 +234,7 @@ call deoplete#custom#option({
 " Performance =========================================================
 set nocursorcolumn
 set nocursorline
-set norelativenumber
+" set norelativenumber
 set lazyredraw
 syntax sync minlines=256
 "======================================================================
@@ -252,5 +252,7 @@ imap <MiddleMouse> <Nop>
 "present tag list
 nnoremap <C-]> g<C-]> 
 map <C-b>w :Buffers<CR>
+"toggle relative numbers
+map <silent> <Leader>l :set relativenumber!<CR>
 "======================================================================
 
