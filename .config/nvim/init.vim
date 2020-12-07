@@ -242,16 +242,30 @@ syntax sync minlines=256
 " Keybinds ============================================================
 noremap <A-m> @q 
 map <space> \
-nmap <silent> <esc> :noh<CR>
-nmap <silent> <A-Del> dw
-nmap <silent> <tab> <C-W>W
-nmap <A-e> :s/\%V"/\\"/g<CR>
-vmap <A-e> :s/\%V"/\\"/g<CR>
+map <silent> <esc> :noh<CR>
+map <silent> <A-Del> dw
+map <silent> <tab> <C-W>W
+map <A-e> :s/\%V"/\\"/g<CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 "present tag list
 nnoremap <C-]> g<C-]> 
+"fzf
 map <C-b>w :Buffers<CR>
+map <Leader>f%b :BTags<CR>
+map <Leader>f%c :BCommits<CR>
+map <Leader>f%l :BLines<CR>
+map <Leader>f/ :History/<CR>
+map <Leader>f: :History/<CR>
+map <Leader>fb :Buffers<CR>
+map <Leader>fc :Commands<CR>
+map <Leader>fc :Commits<CR>
+map <Leader>ff :Files<CR>
+map <Leader>fh :History<CR>
+map <Leader>fl :Lines<CR>
+map <Leader>fm :Maps<CR>
+map <Leader>fr :Rg 
+map <Leader>ft :Tags<CR>
 "toggle relative numbers
 map <silent> <Leader>l :set relativenumber!<CR>
 "======================================================================
