@@ -12,7 +12,6 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'dkasak/gruvbox'
@@ -58,14 +57,6 @@ let g:startify_custom_header = [
         \ ]
 nmap <silent> <Leader>s :Startify<CR>
 
-autocmd VimEnter *
-\   if !argc()
-\ |   Startify
-\ |   VimFilerExplorer -split -simple -parent -winwidth=30 
-\     -toggle -no-quit
-\ |   wincmd w
-\ | endif
-
 let g:NERDSpaceDelims            = 1
 let g:clamp_autostart            = 0
 let g:gruvbox_improved_warnings  = 1
@@ -87,38 +78,10 @@ let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_indent_disable = 1
 
-autocmd FileType vimfiler :IndentLinesDisable
 autocmd FileType startify :IndentLinesDisable
 autocmd FileType help :IndentLinesDisable
 autocmd FileType startify :setlocal nowrap
 
-" vimfiler ============================================================
-let g:vimfiler_as_default_explorer        = 1
-let g:vimfiler_safe_mode_by_default       = 0
-let g:vimfiler_tree_leaf_icon             = " "
-let g:vimfiler_tree_opened_icon           = '▼'
-let g:vimfiler_tree_closed_icon           = '▷'
-let g:vimfiler_file_icon                  = '-'
-let g:vimfiler_marked_file_icon           = '✓'
-let g:vimfiler_readonly_file_icon         = ''
-let g:vimfiler_time_format                = '%m-%d-%y %H:%M:%S'
-let g:vimfiler_expand_jump_to_first_child = 0
-let g:vimfiler_ignore_pattern             = '\.git\|\.DS_Store\|\.pyc'
-
-nnoremap <silent> <Leader>d :<C-u>
-  \ VimFilerExplorer -split -simple
-  \ -parent -winwidth=35 -toggle -no-quit <CR>
-nnoremap <silent> <Leader>jf :<C-u>
-  \ VimFilerExplorer -split -simple
-  \ -parent -winwidth=35 -no-quit -find <CR>
-autocmd FileType vimfiler
-  \ nmap <buffer> h <Plug>(vimfiler_switch_to_parent_directory)
-autocmd FileType vimfiler 
-  \ nmap <buffer> <C-R> <Plug>(vimfiler_redraw_screen)
-autocmd FileType vimfiler 
-  \ nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor_map(
-  \ "\<Plug>(vimfiler_expand_tree)",
-  \ "\<Plug>(vimfiler_edit_file)")
 "======================================================================
 
 filetype plugin on
@@ -239,10 +202,22 @@ set lazyredraw
 syntax sync minlines=256
 "======================================================================
 
+" Netrw ============================================================
+let g:netrw_liststyle=3
+let g:netrw_browse_split=4
+let g:netrw_altv=1
+let g:netrw_winsize=30
+let g:netrw_banner=0
+map <silent> <Leader>d :Lexplore<CR>
+autocmd FileType netrw set nolist
+autocmd FileType netrw
+  \ nmap <buffer> l <CR>
+"======================================================================
+
 " Keybinds ============================================================
 noremap <A-m> @q 
 map <space> \
-map <silent> <esc> :noh<CR>
+nmap <silent> <esc> :noh<CR>
 map <silent> <A-Del> dw
 map <silent> <tab> <C-W>W
 map <A-e> :s/\%V"/\\"/g<CR>
@@ -251,7 +226,6 @@ imap <MiddleMouse> <Nop>
 "present tag list
 nnoremap <C-]> g<C-]> 
 "fzf
-map <C-b>w :Buffers<CR>
 map <Leader>f%b :BTags<CR>
 map <Leader>f%c :BCommits<CR>
 map <Leader>f%l :BLines<CR>
@@ -268,5 +242,7 @@ map <Leader>fr :Rg
 map <Leader>ft :Tags<CR>
 "toggle relative numbers
 map <silent> <Leader>l :set relativenumber!<CR>
+"del quotes
+nnoremap do" di"vawp
 "======================================================================
 
