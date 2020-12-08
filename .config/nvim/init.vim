@@ -65,10 +65,10 @@ let g:indentLine_fileTypeExclude = ['json']
 
 let g:indentLine_setColors    = 1
 let g:indentLine_enabled      = 1
-" let g:indentLine_char         = '⎸'
 let g:indentLine_char         = '▏'
 let g:indentLine_conceallevel = 1
 let g:indentLine_color_gui    = '#626262'
+
 " haskell-vim
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
@@ -112,36 +112,8 @@ nmap <silent> <A-0> :blast<CR>
 
 let g:airline_detect_modified=1
 let g:airline_skip_empty_sections = 1
-
-" Tabs
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#buffer_idx_format = {
-\ '0': '0 ',
-\ '1': '1 ',
-\ '2': '2 ',
-\ '3': '3 ',
-\ '4': '4 ',
-\ '5': '5 ',
-\ '6': '6 ',
-\ '7': '7 ',
-\ '8': '8 ',
-\ '9': '9 '
-\}
-let g:airline#extensions#tabline#buffers_label = 'BUFFERS'
-let g:airline#extensions#tabline#fnamecollapse = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#fnametruncate = 0
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#show_tab_nr = 1
-let g:airline#extensions#tabline#show_tab_type = 1
-let g:airline#extensions#tabline#show_tabs = 0
-let g:airline#extensions#tabline#tabs_label = 'TABS'
+" tab config in git history
+let g:airline#extensions#tabline#enabled = 0 
 "======================================================================
 
 " Tabular =============================================================
@@ -180,7 +152,6 @@ endfunction
 autocmd FileType * call LC_maps()
 "======================================================================
 
-
 " Deoplete ======================================================
 let g:deoplete#enable_at_startup = 1
 let deoplete#tag#cache_limit_size = 50000000
@@ -190,8 +161,8 @@ call deoplete#custom#option({
   \ 'auto_complete_delay': 300,
   \ 'smart_case': v:false,
   \ 'sources': {
-		\ '_': ['buffer', 'tag'],
-		\ },
+    \ '_': ['buffer', 'tag'],
+    \ },
   \ })
 "======================================================================
 
@@ -207,10 +178,10 @@ syntax sync minlines=256
 let g:netrw_liststyle=3
 let g:netrw_browse_split=4
 let g:netrw_altv=1
-let g:netrw_winsize=30
 let g:netrw_banner=0
 map <silent> <Leader>d :Lexplore<CR>
 autocmd FileType netrw set nolist
+autocmd FileType netrw :vertical resize 30 <CR>
 autocmd FileType netrw
   \ nmap <buffer> l <CR>
 "======================================================================
