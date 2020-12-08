@@ -95,6 +95,7 @@ set smarttab
 set softtabstop=0 
 set tabstop=2
 set wrap
+set scrolloff=5
 
 " Airline =============================================================
 nmap <A-1> <Plug>AirlineSelectTab1
