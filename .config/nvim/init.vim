@@ -31,6 +31,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
+Plug 'tpope/vim-fugitive'
 call plug#end()
 "======================================================================
 
@@ -202,7 +203,7 @@ map <Leader>f%b :BTags<CR>
 map <Leader>f%c :BCommits<CR>
 map <Leader>f%l :BLines<CR>
 map <Leader>f/ :History/<CR>
-map <Leader>f: :History/<CR>
+map <Leader>f: :History:<CR>
 map <Leader>fb :Buffers<CR>
 map <Leader>fc :Commands<CR>
 map <Leader>fc :Commits<CR>
