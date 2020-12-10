@@ -18,7 +18,6 @@ plugins=(
   nix-shell
 )
 
-
 source $ZSH/oh-my-zsh.sh
 
 . /home/zach/.nix-profile/etc/profile.d/nix.sh
@@ -79,3 +78,5 @@ alias dumpcore="cabal exec -- ghc-core --no-asm --no-cast $1"
 function gitignore () {
   curl https://raw.githubusercontent.com/github/gitignore/master/${(C)1}.gitignore > .gitignore
 }
+alias smurf-docker-ghcid="docker-compose up -d stack localstack postgresql-test postgresql-analytics-test"
+ 
