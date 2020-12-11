@@ -219,3 +219,9 @@ map <silent> <Leader>l :set relativenumber!<CR>
 nnoremap do" di"vawp
 "======================================================================
 
+" Terminal ============================================================
+nnoremap <Leader>t :vs<bar>term<cr><c-w>L:vertical resize 60<cr>
+autocmd TermOpen * set norelativenumber
+autocmd TermOpen * set nonu
+tnoremap <Esc> <C-\><C-n>
+"======================================================================
