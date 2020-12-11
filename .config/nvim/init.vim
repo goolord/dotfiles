@@ -230,4 +230,6 @@ au FileType fzf tunmap <Esc>
 
 " Ghcid ============================================================
 autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh"
+autocmd FileType ghcid :windo wincmd L
+autocmd FileType ghcid :vertical resize 90 <CR>
 "======================================================================
