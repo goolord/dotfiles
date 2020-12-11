@@ -32,6 +32,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'tpope/vim-fugitive'
+Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 call plug#end()
 "======================================================================
 
@@ -223,5 +224,10 @@ nnoremap do" di"vawp
 nnoremap <Leader>t :vs<bar>term<cr><c-w>L:vertical resize 60<cr>
 autocmd TermOpen * set norelativenumber
 autocmd TermOpen * set nonu
-tnoremap <Esc> <C-\><C-n>
+au TermOpen * tnoremap <Esc> <c-\><c-n>
+au FileType fzf tunmap <Esc>
+"======================================================================
+
+" Ghcid ============================================================
+autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh"
 "======================================================================
