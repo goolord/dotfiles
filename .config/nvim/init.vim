@@ -58,6 +58,7 @@ let g:startify_custom_header = [
         \ '    \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/',
         \ ]
 nmap <silent> <Leader>s :Startify<CR>
+let g:startify_change_to_dir = 0
 
 let g:NERDSpaceDelims            = 1
 let g:clamp_autostart            = 0
@@ -193,7 +194,7 @@ noremap <A-m> @q
 map <space> \
 nmap <silent> <esc> :noh<CR>
 map <silent> <A-Del> dw
-map <silent> <tab> <C-W>W
+map <silent> <tab> <C-W>w
 map <A-e> :s/\%V"/\\"/g<CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
@@ -232,4 +233,5 @@ au FileType fzf tunmap <Esc>
 autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh"
 autocmd FileType ghcid :windo wincmd L
 autocmd FileType ghcid :vertical resize 90 <CR>
+autocmd FileType ghcid :IndentLinesDisable
 "======================================================================
