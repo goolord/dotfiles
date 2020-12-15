@@ -39,7 +39,7 @@ alias neofetch="neofetch \
 --speed_shorthand on \
 "
 alias fetch="neofetch"
-alias colortest="$HOME/Documents/shell-scripts/colortest.sh"
+alias colortest="$HOME/Dev/shell-scripts/colortest.sh"
 alias sudo="sudo -E"
 alias gksudo="gksudo -k"
 alias unrarall="find ./ -name \*.rar -exec unrar x -y  {} \;"
