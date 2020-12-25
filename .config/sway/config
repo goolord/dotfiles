@@ -255,9 +255,10 @@ case $(cat ~/.gaps) in\
 esac\
 "
 
-font pango:FiraCode 10
-
 include /etc/sway/config.d/*
+
+font pango:FiraCode Nerd Font 10
+
 exec swaybg -c '#404040'
 
 for_window [app_id="waybar" floating] {
