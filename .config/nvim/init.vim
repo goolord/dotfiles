@@ -33,6 +33,7 @@ Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'tpope/vim-fugitive'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
+Plug 'keith/swift.vim', { 'for': 'swift' }
 call plug#end()
 "======================================================================
 
