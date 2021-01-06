@@ -10,7 +10,12 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ 'for': ['haskell', 'rust', 'cabal', 'stack']
 \ }
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neco-syntax'
+" Plug 'deoplete-plugins/deoplete-tags'
+" Plug 'deoplete-plugins/deoplete-dictionary'
+" Plug 'deoplete-plugins/deoplete-emoji'
+" Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/unite.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'cespare/vim-toml', { 'for': 'toml' }
@@ -32,6 +37,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'keith/swift.vim', { 'for': 'swift' }
 call plug#end()
@@ -131,6 +137,32 @@ map <Leader>a= :Tabularize /=<CR>
 map <Leader>a> :Tabularize /\S*><CR>
 "======================================================================
 
+" Deoplete ======================================================
+let g:deoplete#enable_at_startup = 1
+let deoplete#tag#cache_limit_size = 50000000
+let g:necosyntax#min_keyword_length = 2
+let g:necosyntax#max_syntax_lines = 50000000
+" tab-complete 
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+call deoplete#custom#option({
+  \ 'auto_complete_delay': 300,
+  \ 'smart_case': v:false,
+  \ 'camel_case': v:false,
+  \ 'sources': {
+    \ '_': ['buffer', 'tag', 'omni'],
+    \ 'haskell': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
+    \ 'rust': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
+    \ },
+  \ })
+call deoplete#custom#source('omni', 'functions', {
+  \ 'haskell': ['haskellcomplete#Complete']
+  \})
+call deoplete#custom#var('omni', 'input_patterns', {
+  \ 'haskell': ['import.*', '{-# \w* .*'],
+  \})
+
+"======================================================================
+
 " LanguageClient ======================================================
 set hidden
 let g:LanguageClient_rootMarkers = {
@@ -138,10 +170,10 @@ let g:LanguageClient_rootMarkers = {
   \ 'rust': ['Cargo.toml'], 
   \ }
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ 'haskell': ['ghcide', '--lsp'],
     \ }
-let g:LanguageClient_useVirtualText = 0
+let g:LanguageClient_useVirtualText = "Diagnostics"
 
 function LC_maps()
   if has_key(g:LanguageClient_serverCommands, &filetype)
@@ -154,20 +186,7 @@ function LC_maps()
 endfunction
 
 autocmd FileType * call LC_maps()
-"======================================================================
 
-" Deoplete ======================================================
-let g:deoplete#enable_at_startup = 1
-let deoplete#tag#cache_limit_size = 50000000
-" tab-complete 
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-call deoplete#custom#option({
-  \ 'auto_complete_delay': 300,
-  \ 'smart_case': v:false,
-  \ 'sources': {
-    \ '_': ['buffer', 'tag'],
-    \ },
-  \ })
 "======================================================================
 
 " Performance =========================================================
