@@ -13,8 +13,8 @@ Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
 " Plug 'deoplete-plugins/deoplete-tags'
-" Plug 'deoplete-plugins/deoplete-dictionary'
-" Plug 'deoplete-plugins/deoplete-emoji'
+Plug 'deoplete-plugins/deoplete-dictionary', { }
+Plug 'deoplete-plugins/deoplete-emoji', { 'for': ['md'] }
 " Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/unite.vim'
 Plug 'Yggdroot/indentLine'
@@ -50,7 +50,7 @@ set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 " set clipboard=unnamedplus   " vim yanks to clipboard by default
 
-set helpheight=99999
+" set helpheight=99999
 
 let g:startify_custom_header = [
         \ '                                  __                ',
@@ -88,8 +88,7 @@ autocmd FileType startify :IndentLinesDisable
 autocmd FileType help :IndentLinesDisable
 autocmd FileType startify :setlocal nowrap
 
-"======================================================================
-
+" Gui =================================================================
 filetype plugin on
 set expandtab
 set guicursor=a:blinkon0
@@ -102,9 +101,9 @@ set softtabstop=0
 set tabstop=2
 set wrap
 set scrolloff=5
+"======================================================================
 
-" Status line =============================================================
-
+" Status line =========================================================
 hi User1 guibg=#3c3836 guifg=#a89984
 
 set statusline=
@@ -148,7 +147,6 @@ call deoplete#custom#source('omni', 'functions', {
 call deoplete#custom#var('omni', 'input_patterns', {
   \ 'haskell': ['import.*', '{-# \w* .*'],
   \})
-
 "======================================================================
 
 " LanguageClient ======================================================
@@ -182,7 +180,6 @@ function LC_maps()
 endfunction
 
 autocmd FileType * call LC_maps()
-
 "======================================================================
 
 " Performance =========================================================
@@ -253,8 +250,8 @@ autocmd FileType ghcid :IndentLinesDisable
 "======================================================================
 
 " fzf =================================================================
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
+let g:fzf_colors = { 
+  \ 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
   \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
@@ -265,5 +262,6 @@ let g:fzf_colors =
   \ 'pointer': ['fg', 'Exception'],
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+  \ 'header':  ['fg', 'Comment'] 
+  \ }
 "======================================================================
