@@ -32,8 +32,6 @@ Plug 'mhinz/vim-startify'
 Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': ['hamlet', 'lucius'] }
 Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'tpope/vim-fugitive'
@@ -107,23 +105,15 @@ set tabstop=2
 set wrap
 set scrolloff=5
 
-" Airline =============================================================
-nmap <A-1> <Plug>AirlineSelectTab1
-nmap <A-2> <Plug>AirlineSelectTab2
-nmap <A-3> <Plug>AirlineSelectTab3
-nmap <A-4> <Plug>AirlineSelectTab4
-nmap <A-4> <Plug>AirlineSelectTab4
-nmap <A-5> <Plug>AirlineSelectTab5
-nmap <A-6> <Plug>AirlineSelectTab6
-nmap <A-7> <Plug>AirlineSelectTab7
-nmap <A-8> <Plug>AirlineSelectTab8
-nmap <A-9> <Plug>AirlineSelectTab9
-nmap <silent> <A-0> :blast<CR>
+" Status line =============================================================
 
-let g:airline_detect_modified=1
-let g:airline_skip_empty_sections = 1
-" tab config in git history
-let g:airline#extensions#tabline#enabled = 0 
+hi User1 guibg=#3c3836 guifg=#a89984
+
+set statusline=
+set statusline+=%0*\ %{FugitiveHead()}\ 
+set statusline+=%1*\ %f\ %m%=
+set statusline+=%0*\ %y\ %{&fileencoding?&fileencoding:&encoding}\ [%{&fileformat}\]\ %p%%\ %l:%c
+set statusline+=\ 
 "======================================================================
 
 " Tabular =============================================================
@@ -170,18 +160,26 @@ let g:LanguageClient_rootMarkers = {
   \ 'rust': ['Cargo.toml'], 
   \ }
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ 'haskell': ['ghcide', '--lsp'],
-    \ }
+  \ 'haskell': ['haskell-language-server-wrapper', '--lsp'],
+  \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+  \ }
+let g:LanguageClient_settingsPath = expand('~/.config/nvim/lsp.json')
 let g:LanguageClient_useVirtualText = "Diagnostics"
 
 function LC_maps()
   if has_key(g:LanguageClient_serverCommands, &filetype)
-    nnoremap <buffer> <F5> :call LanguageClient_contextMenu()<CR>
     nnoremap <buffer> <silent> <C-e> :call LanguageClient#explainErrorAtPoint()<CR>
     nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
     nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
     nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+    nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+    map <Leader>lk :call LanguageClient#textDocument_hover()<CR>
+    map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
+    map <Leader>lr :call LanguageClient#textDocument_rename()<CR>
+    map <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
+    map <Leader>lb :call LanguageClient#textDocument_references()<CR>
+    map <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
+    map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
   endif
 endfunction
 
@@ -249,9 +247,28 @@ au TermOpen * tnoremap <Esc> <c-\><c-n>
 au FileType fzf tunmap <Esc>
 "======================================================================
 
-" Ghcid ============================================================
+" Ghcid ===============================================================
 autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh"
 autocmd FileType ghcid :windo wincmd L
 autocmd FileType ghcid :vertical resize 90 <CR>
 autocmd FileType ghcid :IndentLinesDisable
+"======================================================================
+
+" Git / fugitive ======================================================
+"======================================================================
+
+" fzf =================================================================
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 "======================================================================

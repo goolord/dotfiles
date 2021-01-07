@@ -10,6 +10,7 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 export ZSH_THEME=ysn
 
 export CARP_DIR=~/Dev/Carp/
+export BAT_THEME="gruvbox"
 
 plugins=(
   git
