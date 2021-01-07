@@ -234,6 +234,7 @@ map <Leader>ft :Tags<CR>
 map <silent> <Leader>l :set relativenumber!<CR>
 "del quotes
 nnoremap do" di"vawp
+map <silent> <F7> :setlocal spell! spelllang=en_us<CR>
 "======================================================================
 
 " Terminal ============================================================
