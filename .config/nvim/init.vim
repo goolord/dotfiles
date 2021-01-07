@@ -13,8 +13,8 @@ Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
 " Plug 'deoplete-plugins/deoplete-tags'
-Plug 'deoplete-plugins/deoplete-dictionary', { }
-Plug 'deoplete-plugins/deoplete-emoji', { 'for': ['md'] }
+" Plug 'deoplete-plugins/deoplete-dictionary', { 'for': [] }
+Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
 " Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/unite.vim'
 Plug 'Yggdroot/indentLine'
@@ -125,6 +125,8 @@ map <Leader>a> :Tabularize /\S*><CR>
 "======================================================================
 
 " Deoplete ======================================================
+autocmd FileType gitcommit,text,markdown call deoplete#custom#source('emoji', 'converters', ['converter_emoji'])
+
 let g:deoplete#enable_at_startup = 1
 let deoplete#tag#cache_limit_size = 50000000
 let g:necosyntax#min_keyword_length = 2
@@ -136,7 +138,7 @@ call deoplete#custom#option({
   \ 'smart_case': v:false,
   \ 'camel_case': v:false,
   \ 'sources': {
-    \ '_': ['buffer', 'tag', 'omni'],
+    \ '_': ['buffer', 'tag', 'omni', 'emoji'],
     \ 'haskell': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
     \ 'rust': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
     \ },
