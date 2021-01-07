@@ -101,6 +101,7 @@ set softtabstop=0
 set tabstop=2
 set wrap
 set scrolloff=5
+set list listchars=trail:·
 "======================================================================
 
 " Status line =========================================================
