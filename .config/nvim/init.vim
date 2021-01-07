@@ -29,8 +29,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
 Plug 'mhinz/vim-startify'
-Plug 'pbrisbin/vim-syntax-shakespeare', { 'for': ['hamlet', 'lucius'] }
-Plug 'raichoo/purescript-vim', { 'for': 'purescript' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
@@ -252,9 +250,6 @@ autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh
 autocmd FileType ghcid :windo wincmd L
 autocmd FileType ghcid :vertical resize 90 <CR>
 autocmd FileType ghcid :IndentLinesDisable
-"======================================================================
-
-" Git / fugitive ======================================================
 "======================================================================
 
 " fzf =================================================================
