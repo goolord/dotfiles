@@ -199,7 +199,7 @@ syntax sync minlines=256
 "======================================================================
 
 " Defx ================================================================
-map <silent> <Leader>d :Defx -new -toggle -split=vertical -winwidth=35 -columns=space:indent:icons:filename:type <CR>
+map <silent> <Leader>d :Defx -toggle -split=vertical -winwidth=35 -columns=space:indent:icons:filename:type <CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   set norelativenumber
