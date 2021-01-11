@@ -115,8 +115,7 @@ hi User1 guibg=#3c3836 guifg=#a89984
 set statusline=
 set statusline+=%0*\ %{FugitiveHead()}\ 
 set statusline+=%1*\ %f\ %m%=
-set statusline+=%0*\ %y\ %{&fileencoding?&fileencoding:&encoding}\ [%{&fileformat}\]\ %p%%\ %l:%c
-set statusline+=\ 
+set statusline+=%0*\ %y\ %{&fileencoding?&fileencoding:&encoding}\ [%{&fileformat}\]\ %p%%\ %l:%c\ 
 "======================================================================
 
 " Tabular =============================================================
@@ -199,7 +198,11 @@ syntax sync minlines=256
 "======================================================================
 
 " Defx ================================================================
-map <silent> <Leader>d :Defx -toggle -split=vertical -winwidth=35 -show-ignored-files -columns=space:indent:icons:filename:type <CR>
+map <silent> <Leader>d :Defx -toggle 
+      \ -split=vertical -winwidth=35 
+      \ -show-ignored-files 
+      \ -vertical-preview -preview-width=50 
+      \ -columns=space:indent:icons:filename:type <CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   set norelativenumber
