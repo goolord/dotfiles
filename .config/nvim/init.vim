@@ -5,40 +5,44 @@
 " plugins =============================================================
 call plug#begin()
 
+" filetype plugins
+Plug 'LnL7/vim-nix', { 'for': 'nix' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'elmcast/elm-vim', { 'for': 'elm' }
+Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
+Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
+Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
+Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
+Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
+Plug 'keith/swift.vim', { 'for': 'swift' }
+" deoplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
+Plug 'Shougo/neco-syntax'
+Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
+" Plug 'deoplete-plugins/deoplete-tags'
+" Plug 'sebastianmarkow/deoplete-rust'
+" defx
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
+" other plugins
 Plug 'autozimu/LanguageClient-neovim', {
 \ 'branch': 'next',
 \ 'do': 'bash install.sh',
 \ 'for': ['haskell', 'rust', 'cabal', 'stack']
 \ }
-Plug 'LnL7/vim-nix', { 'for': 'nix' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neco-syntax'
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'kristijanhusak/defx-icons'
-" Plug 'deoplete-plugins/deoplete-tags'
-" Plug 'deoplete-plugins/deoplete-dictionary', { 'for': [] }
-Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
-" Plug 'sebastianmarkow/deoplete-rust'
 Plug 'Shougo/unite.vim'
 Plug 'Yggdroot/indentLine'
-Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'dkasak/gruvbox'
-Plug 'elmcast/elm-vim', { 'for': 'elm' }
 Plug 'godlygeek/tabular'
-Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
-Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
 Plug 'hellerve/carp-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
 Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdcommenter'
-Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
-Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
-Plug 'keith/swift.vim', { 'for': 'swift' }
 call plug#end()
 "======================================================================
 
@@ -67,7 +71,6 @@ nmap <silent> <Leader>s :Startify<CR>
 let g:startify_change_to_dir = 0
 
 let g:NERDSpaceDelims            = 1
-let g:clamp_autostart            = 0
 let g:gruvbox_improved_warnings  = 1
 let g:gruvbox_termcolors         = 256
 let g:indentLine_fileTypeExclude = ['json']
@@ -79,17 +82,16 @@ let g:indentLine_conceallevel = 1
 let g:indentLine_color_gui    = '#626262'
 
 " haskell-vim
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_quantification   = 1 " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo      = 1 " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax      = 1 " to enable highlighting of `proc`
 let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_indent_disable = 1
+let g:haskell_enable_typeroles        = 1 " to enable highlighting of type roles
+let g:haskell_enable_static_pointers  = 1 " to enable highlighting of `static`
+let g:haskell_indent_disable          = 1
 
-autocmd FileType startify :IndentLinesDisable
+autocmd FileType startify :IndentLinesDisable | setlocal nowrap
 autocmd FileType help :IndentLinesDisable
-autocmd FileType startify :setlocal nowrap
 
 " Gui =================================================================
 filetype plugin on
