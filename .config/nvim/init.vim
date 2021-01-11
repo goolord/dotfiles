@@ -90,7 +90,15 @@ let g:haskell_enable_typeroles        = 1 " to enable highlighting of type roles
 let g:haskell_enable_static_pointers  = 1 " to enable highlighting of `static`
 let g:haskell_indent_disable          = 1
 
-autocmd FileType startify :IndentLinesDisable | setlocal nowrap
+function StartifyConfig()
+  setlocal nowrap
+  execute 'IndentLinesDisable'
+  " execute 'DefxZ'
+  " execute 'wincmd w'
+endfunction
+
+autocmd FileType,WinNew startify :call StartifyConfig()
+
 autocmd FileType help :IndentLinesDisable
 
 " Gui =================================================================
@@ -198,11 +206,15 @@ syntax sync minlines=256
 "======================================================================
 
 " Defx ================================================================
-map <silent> <Leader>d :Defx -toggle 
-      \ -split=vertical -winwidth=35 
-      \ -show-ignored-files 
-      \ -vertical-preview -preview-width=50 
-      \ -columns=space:indent:icons:filename:type <CR>
+command! -nargs=* DefxZ Defx <args>
+  \ -split=vertical -winwidth=30
+  \ -show-ignored-files 
+  \ -vertical-preview -preview-width=50 
+  \ -columns=space:indent:icons:filename:type
+
+command DefxZToggle DefxZ -toggle
+
+map <silent> <Leader>d :DefxZToggle<CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   set norelativenumber
@@ -222,7 +234,7 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> N defx#do_action('new_file')
   nnoremap <silent><buffer><expr> M defx#do_action('new_multiple_files')
-  nnoremap <silent><buffer><expr> d defx#do_action('remove')
+  nnoremap <silent><buffer><expr> dd defx#do_action('remove')
   nnoremap <silent><buffer><expr> r defx#do_action('rename')
   nnoremap <silent><buffer><expr> ! defx#do_action('execute_command')
   nnoremap <silent><buffer><expr> x defx#do_action('execute_system')
@@ -287,9 +299,10 @@ endfunction
 "======================================================================
 
 " Ghcid ===============================================================
-autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh"
+autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"
 autocmd FileType ghcid call GhcidWinOpts()
 function GhcidWinOpts()
+  set syntax=txt
   execute 'windo wincmd L'
   execute 'vertical resize 90 <CR>'
   execute 'IndentLinesDisable'
