@@ -195,14 +195,13 @@ syntax sync minlines=256
 
 " Netrw ============================================================
 let g:netrw_liststyle=3
-let g:netrw_browse_split=4
 let g:netrw_altv=1
 let g:netrw_banner=0
+let g:netrw_special_syntax=1
 map <silent> <Leader>d :Lexplore<CR>
 autocmd FileType netrw set nolist
 autocmd FileType netrw :vertical resize 30 <CR>
-autocmd FileType netrw
-  \ nmap <buffer> l <CR>
+autocmd FileType netrw nmap <buffer> l <CR>
 "======================================================================
 
 " Keybinds ============================================================
