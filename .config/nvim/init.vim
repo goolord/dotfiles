@@ -4,6 +4,7 @@
 
 " plugins =============================================================
 call plug#begin()
+
 Plug 'autozimu/LanguageClient-neovim', {
 \ 'branch': 'next',
 \ 'do': 'bash install.sh',
@@ -12,6 +13,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
 " Plug 'deoplete-plugins/deoplete-tags'
 " Plug 'deoplete-plugins/deoplete-dictionary', { 'for': [] }
 Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
@@ -193,15 +196,44 @@ set lazyredraw
 syntax sync minlines=256
 "======================================================================
 
-" Netrw ============================================================
-let g:netrw_liststyle=3
-let g:netrw_altv=1
-let g:netrw_banner=0
-let g:netrw_special_syntax=1
-map <silent> <Leader>d :Lexplore<CR>
-autocmd FileType netrw set nolist
-autocmd FileType netrw :vertical resize 30 <CR>
-autocmd FileType netrw nmap <buffer> l <CR>
+" Defx ================================================================
+map <silent> <Leader>d :Defx -new -toggle -split=vertical -winwidth=35 -columns=space:indent:icons:filename:type <CR>
+autocmd FileType defx call s:defx_my_settings()
+function! s:defx_my_settings() abort
+  set norelativenumber
+  set nonu
+  set cursorline
+  execute 'IndentLinesDisable'
+  " Define mappings
+  nnoremap <silent><buffer><expr> c defx#do_action('copy')
+  nnoremap <silent><buffer><expr> m defx#do_action('move')
+  nnoremap <silent><buffer><expr> p defx#do_action('paste')
+  nnoremap <silent><buffer><expr> l 
+    \ defx#is_directory() ?
+    \ defx#do_action('open_tree', 'toggle') :
+    \ defx#do_action('drop')
+  nnoremap <silent><buffer><expr> L defx#do_action('open')
+  nnoremap <silent><buffer><expr> P defx#do_action('preview')
+  nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
+  nnoremap <silent><buffer><expr> N defx#do_action('new_file')
+  nnoremap <silent><buffer><expr> M defx#do_action('new_multiple_files')
+  nnoremap <silent><buffer><expr> d defx#do_action('remove')
+  nnoremap <silent><buffer><expr> r defx#do_action('rename')
+  nnoremap <silent><buffer><expr> ! defx#do_action('execute_command')
+  nnoremap <silent><buffer><expr> x defx#do_action('execute_system')
+  nnoremap <silent><buffer><expr> yy defx#do_action('yank_path')
+  nnoremap <silent><buffer><expr> . defx#do_action('toggle_ignored_files')
+  nnoremap <silent><buffer><expr> h defx#do_action('cd', ['..'])
+  nnoremap <silent><buffer><expr> ~ defx#do_action('cd')
+  nnoremap <silent><buffer><expr> q defx#do_action('quit')
+  nnoremap <silent><buffer><expr> <CR> defx#do_action('toggle_select') . 'j'
+  nnoremap <silent><buffer><expr> * defx#do_action('toggle_select_all')
+  nnoremap <silent><buffer><expr> j line('.') == line('$') ? 'gg' : 'j'
+  nnoremap <silent><buffer><expr> k line('.') == 1 ? 'G' : 'k'
+  nnoremap <silent><buffer><expr> <C-l> defx#do_action('redraw')
+  nnoremap <silent><buffer><expr> <C-g> defx#do_action('print')
+  nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
+endfunction
 "======================================================================
 
 " Keybinds ============================================================
@@ -239,17 +271,24 @@ map <silent> <F7> :setlocal spell! spelllang=en_us<CR>
 
 " Terminal ============================================================
 nnoremap <Leader>t :vs<bar>term<cr><c-w>L:vertical resize 60<cr>
-autocmd TermOpen * set norelativenumber
-autocmd TermOpen * set nonu
-au TermOpen * tnoremap <Esc> <c-\><c-n>
+autocmd TermOpen * call TermKeyBinds()
 au FileType fzf tunmap <Esc>
+
+function TermKeyBinds()
+  set norelativenumber
+  set nonu
+  tnoremap <Esc> <c-\><c-n>
+endfunction
 "======================================================================
 
 " Ghcid ===============================================================
 autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh"
-autocmd FileType ghcid :windo wincmd L
-autocmd FileType ghcid :vertical resize 90 <CR>
-autocmd FileType ghcid :IndentLinesDisable
+autocmd FileType ghcid call GhcidWinOpts()
+function GhcidWinOpts()
+  execute 'windo wincmd L'
+  execute 'vertical resize 90 <CR>'
+  execute 'IndentLinesDisable'
+endfunction
 "======================================================================
 
 " fzf =================================================================
