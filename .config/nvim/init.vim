@@ -153,7 +153,7 @@ call deoplete#custom#source('omni', 'functions', {
   \ 'haskell': ['haskellcomplete#Complete']
   \})
 call deoplete#custom#var('omni', 'input_patterns', {
-  \ 'haskell': ['import.*', '{-# \w* .*'],
+  \ 'haskell': ['import\s*\(qualified\)\?\s*\(\w\|\.\)*', '{-#\s*\w* .*'],
   \})
 "======================================================================
 
