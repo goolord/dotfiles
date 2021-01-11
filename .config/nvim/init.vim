@@ -31,7 +31,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ 'do': 'bash install.sh',
 \ 'for': ['haskell', 'rust', 'cabal', 'stack']
 \ }
-Plug 'Shougo/unite.vim'
+" Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Yggdroot/indentLine'
 Plug 'dkasak/gruvbox'
 Plug 'godlygeek/tabular'
