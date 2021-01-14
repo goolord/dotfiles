@@ -214,6 +214,14 @@ command! -nargs=* DefxZ Defx <args>
 
 command DefxZToggle DefxZ -toggle
 
+function! DefxOpen()
+  if defx#is_directory()
+    return defx#do_action('open_tree', 'toggle')
+  else
+    return defx#do_action('drop')
+  endif
+endfunction
+
 map <silent> <Leader>d :DefxZToggle<CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
@@ -225,10 +233,8 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> c defx#do_action('copy')
   nnoremap <silent><buffer><expr> m defx#do_action('move')
   nnoremap <silent><buffer><expr> p defx#do_action('paste')
-  nnoremap <silent><buffer><expr> l 
-    \ defx#is_directory() ?
-    \ defx#do_action('open_tree', 'toggle') :
-    \ defx#do_action('drop')
+  nnoremap <silent><buffer><expr> l DefxOpen()
+	nnoremap <silent><buffer><expr> <2-LeftMouse> DefxOpen()
   nnoremap <silent><buffer><expr> L defx#do_action('open')
   nnoremap <silent><buffer><expr> P defx#do_action('preview')
   nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
