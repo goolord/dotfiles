@@ -29,7 +29,7 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'autozimu/LanguageClient-neovim', {
 \ 'branch': 'next',
 \ 'do': 'bash install.sh',
-\ 'for': ['haskell', 'rust', 'cabal', 'stack']
+\ 'on': 'LanguageClientStart'
 \ }
 " Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Yggdroot/indentLine'
