@@ -1,3 +1,4 @@
   {
-    "haskell.hlintOn": false
+    "haskell.hlintOn": false,
+    "haskell.completionSnippetsOn": true
   }

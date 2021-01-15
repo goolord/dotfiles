@@ -29,7 +29,7 @@ Plug 'kristijanhusak/defx-icons'
 Plug 'autozimu/LanguageClient-neovim', {
 \ 'branch': 'next',
 \ 'do': 'bash install.sh',
-\ 'on': 'LanguageClientStart'
+\ 'for': ['haskell', 'rust']
 \ }
 " Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Yggdroot/indentLine'
@@ -147,7 +147,7 @@ let g:necosyntax#max_syntax_lines = 50000000
 " tab-complete 
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 call deoplete#custom#option({
-  \ 'auto_complete_delay': 300,
+  \ 'auto_complete_delay': 200,
   \ 'smart_case': v:false,
   \ 'camel_case': v:false,
   \ 'sources': {
@@ -177,24 +177,20 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_settingsPath = expand('~/.config/nvim/lsp.json')
 let g:LanguageClient_useVirtualText = "Diagnostics"
 
-function LC_maps()
-  if has_key(g:LanguageClient_serverCommands, &filetype)
-    nnoremap <buffer> <silent> <C-e> :call LanguageClient#explainErrorAtPoint()<CR>
-    nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<CR>
-    nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
-    nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-    nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-    map <Leader>lk :call LanguageClient#textDocument_hover()<CR>
-    map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
-    map <Leader>lr :call LanguageClient#textDocument_rename()<CR>
-    map <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
-    map <Leader>lb :call LanguageClient#textDocument_references()<CR>
-    map <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
-    map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
-  endif
-endfunction
+autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autostart = 0
 
-autocmd FileType * call LC_maps()
+nmap <F5> <Plug>(lcn-menu)
+nmap <silent>K <Plug>(lcn-hover)
+nmap <silent> gd <Plug>(lcn-definition)
+nmap <silent> <F2> <Plug>(lcn-rename)
+nmap <silent> <C-e> <Plug>(lcn-explain-error)
+map <silent> <Leader>lk <PLug>(lcn-hover)
+map <silent> <Leader>lg <PLug>(lcn-definition)
+map <silent> <Leader>lr <PLug>(lcn-rename)
+map <silent> <Leader>lf <PLug>(lcn-formatting)
+map <silent> <Leader>lb <PLug>(lcn-references)
+map <silent> <Leader>la <PLug>(lcn-code-ction)
+map <silent> <Leader>ls <PLug>(lcn-symbols)
 "======================================================================
 
 " Performance =========================================================
@@ -234,7 +230,7 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> m defx#do_action('move')
   nnoremap <silent><buffer><expr> p defx#do_action('paste')
   nnoremap <silent><buffer><expr> l DefxOpen()
-	nnoremap <silent><buffer><expr> <2-LeftMouse> DefxOpen()
+  nnoremap <silent><buffer><expr> <2-LeftMouse> DefxOpen()
   nnoremap <silent><buffer><expr> L defx#do_action('open')
   nnoremap <silent><buffer><expr> P defx#do_action('preview')
   nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
