@@ -177,20 +177,20 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_settingsPath = expand('~/.config/nvim/lsp.json')
 let g:LanguageClient_useVirtualText = "Diagnostics"
 
-autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autostart = 0
+autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
 
 nmap <F5> <Plug>(lcn-menu)
 nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
 nmap <silent> <C-e> <Plug>(lcn-explain-error)
-map <silent> <Leader>lk <PLug>(lcn-hover)
-map <silent> <Leader>lg <PLug>(lcn-definition)
-map <silent> <Leader>lr <PLug>(lcn-rename)
-map <silent> <Leader>lf <PLug>(lcn-formatting)
-map <silent> <Leader>lb <PLug>(lcn-references)
-map <silent> <Leader>la <PLug>(lcn-code-ction)
-map <silent> <Leader>ls <PLug>(lcn-symbols)
+map <silent> <Leader>lk <Plug>(lcn-hover)
+map <silent> <Leader>lg <Plug>(lcn-definition)
+map <silent> <Leader>lr <Plug>(lcn-rename)
+map <silent> <Leader>lf <Plug>(lcn-formatting)
+map <silent> <Leader>lb <Plug>(lcn-references)
+map <silent> <Leader>la <Plug>(lcn-code-ction)
+map <silent> <Leader>ls <Plug>(lcn-symbols)
 "======================================================================
 
 " Performance =========================================================
@@ -218,13 +218,17 @@ function! DefxOpen()
   endif
 endfunction
 
+command! DefxHelp call fzf#vim#maps("n", {'options': '--query=defx\ '})
+
 map <silent> <Leader>d :DefxZToggle<CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
+  setlocal statusline =\ help:\ <Leader>h
   set norelativenumber
   set nonu
   set cursorline
   execute 'IndentLinesDisable'
+  nnoremap <silent><buffer> <Leader>h :DefxHelp<CR>
   " Define mappings
   nnoremap <silent><buffer><expr> c defx#do_action('copy')
   nnoremap <silent><buffer><expr> m defx#do_action('move')
@@ -266,21 +270,6 @@ map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 "present tag list
 nnoremap <C-]> g<C-]> 
-"fzf
-map <Leader>f%b :BTags<CR>
-map <Leader>f%c :BCommits<CR>
-map <Leader>f%l :BLines<CR>
-map <Leader>f/ :History/<CR>
-map <Leader>f: :History:<CR>
-map <Leader>fb :Buffers<CR>
-map <Leader>fc :Commands<CR>
-map <Leader>fc :Commits<CR>
-map <Leader>ff :Files<CR>
-map <Leader>fh :History<CR>
-map <Leader>fl :Lines<CR>
-map <Leader>fm :Maps<CR>
-map <Leader>fr :Rg 
-map <Leader>ft :Tags<CR>
 "toggle relative numbers
 map <silent> <Leader>l :set relativenumber!<CR>
 "del quotes
@@ -326,4 +315,19 @@ let g:fzf_colors = {
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] 
   \ }
+
+map <Leader>f%b :BTags<CR>
+map <Leader>f%c :BCommits<CR>
+map <Leader>f%l :BLines<CR>
+map <Leader>f/ :History/<CR>
+map <Leader>f: :History:<CR>
+map <Leader>fb :Buffers<CR>
+map <Leader>fc :Commands<CR>
+map <Leader>fg :Commits<CR>
+map <Leader>ff :Files<CR>
+map <Leader>fh :History<CR>
+map <Leader>fl :Lines<CR>
+map <Leader>fm :Maps<CR>
+map <Leader>fr :Rg 
+map <Leader>ft :Tags<CR>
 "======================================================================
