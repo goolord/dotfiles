@@ -19,7 +19,6 @@ Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
 Plug 'Shougo/neco-syntax'
-Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
 " Plug 'deoplete-plugins/deoplete-tags'
 " Plug 'sebastianmarkow/deoplete-rust'
 " defx
@@ -73,7 +72,7 @@ let g:startify_change_to_dir = 0
 let g:NERDSpaceDelims            = 1
 let g:gruvbox_improved_warnings  = 1
 let g:gruvbox_termcolors         = 256
-let g:indentLine_fileTypeExclude = ['json']
+let g:indentLine_fileTypeExclude = ['json', 'text', 'markdown', 'startify', 'defx', 'ghcid', 'gitcommit']
 
 let g:indentLine_setColors    = 1
 let g:indentLine_enabled      = 1
@@ -90,24 +89,13 @@ let g:haskell_enable_typeroles        = 1 " to enable highlighting of type roles
 let g:haskell_enable_static_pointers  = 1 " to enable highlighting of `static`
 let g:haskell_indent_disable          = 1
 
-function StartifyConfig()
-  setlocal nowrap
-  execute 'IndentLinesDisable'
-  " execute 'DefxZ'
-  " execute 'wincmd w'
-endfunction
-
-autocmd FileType,WinNew startify :call StartifyConfig()
-
-autocmd FileType help :IndentLinesDisable
-
 " Gui =================================================================
 filetype plugin on
 set expandtab
 set guicursor=a:blinkon0
 set mouse=a
 set nofoldenable
-set number relativenumber
+set number
 set shiftwidth=2 
 set smarttab
 set softtabstop=0 
@@ -147,7 +135,7 @@ let g:necosyntax#max_syntax_lines = 50000000
 " tab-complete 
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 call deoplete#custom#option({
-  \ 'auto_complete_delay': 200,
+  \ 'auto_complete_delay': 250,
   \ 'smart_case': v:false,
   \ 'camel_case': v:false,
   \ 'sources': {
@@ -189,7 +177,7 @@ map <silent> <Leader>lg <Plug>(lcn-definition)
 map <silent> <Leader>lr <Plug>(lcn-rename)
 map <silent> <Leader>lf <Plug>(lcn-formatting)
 map <silent> <Leader>lb <Plug>(lcn-references)
-map <silent> <Leader>la <Plug>(lcn-code-ction)
+map <silent> <Leader>la <Plug>(lcn-code-action)
 map <silent> <Leader>ls <Plug>(lcn-symbols)
 "======================================================================
 
@@ -227,7 +215,6 @@ function! s:defx_my_settings() abort
   set norelativenumber
   set nonu
   set cursorline
-  execute 'IndentLinesDisable'
   nnoremap <silent><buffer> <Leader>h :DefxHelp<CR>
   " Define mappings
   nnoremap <silent><buffer><expr> c defx#do_action('copy')
@@ -296,7 +283,6 @@ function GhcidWinOpts()
   set syntax=txt
   execute 'windo wincmd L'
   execute 'vertical resize 90 <CR>'
-  execute 'IndentLinesDisable'
 endfunction
 "======================================================================
 
