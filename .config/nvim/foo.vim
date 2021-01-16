@@ -19,7 +19,6 @@ Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
 Plug 'Shougo/neco-syntax'
-Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
 " Plug 'deoplete-plugins/deoplete-tags'
 " Plug 'sebastianmarkow/deoplete-rust'
 " defx
@@ -182,6 +181,7 @@ autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
 nmap <F5> <Plug>(lcn-menu)
 nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
+nmap <silent> <C-]> <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
 nmap <silent> <C-e> <Plug>(lcn-explain-error)
 map <silent> <Leader>lk <Plug>(lcn-hover)
