@@ -9,7 +9,7 @@ call plug#begin()
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'elmcast/elm-vim', { 'for': 'elm' }
-Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
+" Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
 Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
@@ -17,6 +17,7 @@ Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'keith/swift.vim', { 'for': 'swift' }
 " deoplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete-lsp', { 'do': ':UpdateRemotePlugins' }
 Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
 Plug 'Shougo/neco-syntax'
 Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
@@ -26,14 +27,10 @@ Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
 " other plugins
-Plug 'autozimu/LanguageClient-neovim', {
-\ 'branch': 'next',
-\ 'do': 'bash install.sh',
-\ 'for': ['haskell', 'rust']
-\ }
+Plug 'neovim/nvim-lspconfig'
 " Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Yggdroot/indentLine'
-Plug 'dkasak/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'godlygeek/tabular'
 Plug 'hellerve/carp-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -152,8 +149,8 @@ call deoplete#custom#option({
   \ 'camel_case': v:false,
   \ 'sources': {
     \ '_': ['buffer', 'tag', 'omni', 'emoji'],
-    \ 'haskell': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
-    \ 'rust': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
+    \ 'haskell': ['buffer', 'tag', 'omni', 'syntax', 'lsp'],
+    \ 'rust': ['buffer', 'tag', 'omni', 'syntax', 'lsp'],
     \ },
   \ })
 call deoplete#custom#source('omni', 'functions', {
@@ -162,35 +159,6 @@ call deoplete#custom#source('omni', 'functions', {
 call deoplete#custom#var('omni', 'input_patterns', {
   \ 'haskell': ['import\s*\(qualified\)\?\s*\(\w\|\.\)*', '{-#\s*\w* .*'],
   \})
-"======================================================================
-
-" LanguageClient ======================================================
-set hidden
-let g:LanguageClient_rootMarkers = {
-  \ 'haskell': ['*.cabal', 'stack.yaml'],
-  \ 'rust': ['Cargo.toml'], 
-  \ }
-let g:LanguageClient_serverCommands = {
-  \ 'haskell': ['haskell-language-server-wrapper', '--lsp'],
-  \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-  \ }
-let g:LanguageClient_settingsPath = expand('~/.config/nvim/lsp.json')
-let g:LanguageClient_useVirtualText = "Diagnostics"
-
-autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
-
-nmap <F5> <Plug>(lcn-menu)
-nmap <silent>K <Plug>(lcn-hover)
-nmap <silent> gd <Plug>(lcn-definition)
-nmap <silent> <F2> <Plug>(lcn-rename)
-nmap <silent> <C-e> <Plug>(lcn-explain-error)
-map <silent> <Leader>lk <Plug>(lcn-hover)
-map <silent> <Leader>lg <Plug>(lcn-definition)
-map <silent> <Leader>lr <Plug>(lcn-rename)
-map <silent> <Leader>lf <Plug>(lcn-formatting)
-map <silent> <Leader>lb <Plug>(lcn-references)
-map <silent> <Leader>la <Plug>(lcn-code-ction)
-map <silent> <Leader>ls <Plug>(lcn-symbols)
 "======================================================================
 
 " Performance =========================================================
@@ -285,6 +253,7 @@ au FileType fzf tunmap <Esc>
 function TermKeyBinds()
   set norelativenumber
   set nonu
+  execute 'IndentLinesDisable'
   tnoremap <Esc> <c-\><c-n>
 endfunction
 "======================================================================
@@ -331,3 +300,5 @@ map <Leader>fm :Maps<CR>
 map <Leader>fr :Rg 
 map <Leader>ft :Tags<CR>
 "======================================================================
+
+luafile ~/.config/nvim/init-particle.lua
