@@ -170,6 +170,7 @@ autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
 nmap <F5> <Plug>(lcn-menu)
 nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
+autocmd! User LanguageClient-neovim nmap <silent> <C-]> <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
 nmap <silent> <C-e> <Plug>(lcn-explain-error)
 map <silent> <Leader>lk <Plug>(lcn-hover)
@@ -256,7 +257,7 @@ map <A-e> :s/\%V"/\\"/g<CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 "present tag list
-nnoremap <C-]> g<C-]> 
+nnoremap <C-]> 
 "toggle relative numbers
 map <silent> <Leader>l :set relativenumber!<CR>
 "del quotes
