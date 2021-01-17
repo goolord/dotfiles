@@ -15,7 +15,7 @@ Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'keith/swift.vim', { 'for': 'swift' }
-Plug 'lifepillar/vim-mucomplete'
+Plug 'hellerve/carp-vim'
 " defx
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
@@ -25,11 +25,10 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ 'do': 'bash install.sh',
 \ 'for': ['haskell', 'rust']
 \ }
-" Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'lifepillar/vim-mucomplete'
 Plug 'Yggdroot/indentLine'
 Plug 'dkasak/gruvbox'
 Plug 'godlygeek/tabular'
-Plug 'hellerve/carp-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
@@ -39,10 +38,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 call plug#end()
 "======================================================================
-
-colorscheme gruvbox
-set background=dark         " Setting dark mode
-set termguicolors
 
 set directory=$HOME/.swap//
 set undofile                " Save undos after file closes
@@ -67,13 +62,13 @@ let g:startify_change_to_dir = 0
 let g:NERDSpaceDelims            = 1
 let g:gruvbox_improved_warnings  = 1
 let g:gruvbox_termcolors         = 256
-let g:indentLine_fileTypeExclude = ['json', 'text', 'markdown', 'startify', 'defx', 'ghcid', 'gitcommit', 'help']
 
-let g:indentLine_setColors    = 1
-let g:indentLine_enabled      = 1
-let g:indentLine_char         = '▏'
-let g:indentLine_conceallevel = 1
-let g:indentLine_color_gui    = '#626262'
+let g:indentLine_fileTypeExclude = ['json', 'text', 'markdown', 'startify', 'defx', 'ghcid', 'gitcommit', 'help']
+let g:indentLine_setColors       = 1
+let g:indentLine_enabled         = 1
+let g:indentLine_char            = '▏'
+let g:indentLine_conceallevel    = 1
+let g:indentLine_color_gui       = '#626262'
 
 " haskell-vim
 let g:haskell_enable_quantification   = 1 " to enable highlighting of `forall`
@@ -87,7 +82,6 @@ let g:haskell_indent_disable          = 1
 " Gui =================================================================
 filetype plugin on
 set expandtab
-set guicursor=a:blinkon0
 set mouse=a
 set nofoldenable
 set number
@@ -97,6 +91,10 @@ set softtabstop=0
 set tabstop=2
 set wrap
 set scrolloff=5
+
+colorscheme gruvbox
+set background=dark         " Setting dark mode
+set termguicolors
 "======================================================================
 
 " Status line =========================================================
@@ -125,7 +123,7 @@ set completeopt+=noselect
 set shortmess+=c   " Shut off completion messages
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#minimum_prefix_length = 2
-let g:mucomplete#completion_delay = 2000
+let g:mucomplete#completion_delay = 1000
 let g:mucomplete#reopen_immediately = 1
 let g:mucomplete#chains = {
     \ '_'       : [ 'path', 'omni', 'keyn', 'uspl' ],
@@ -140,7 +138,6 @@ let g:mucomplete#chains = {
     \             ,
     \             },
     \ }
-
 "======================================================================
 
 " LanguageClient ======================================================
@@ -156,12 +153,14 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_settingsPath = expand('~/.config/nvim/lsp.json')
 let g:LanguageClient_useVirtualText = "Diagnostics"
 
-autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
+augroup LanguageClient
+  autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
+  autocmd! User LanguageClientStarted nmap <silent> <C-]> <Plug>(lcn-definition)
+augroup END
 
 nmap <F5> <Plug>(lcn-menu)
 nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
-autocmd! User LanguageClientStarted nmap <silent> <C-]> <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
 nmap <silent> <C-e> <Plug>(lcn-explain-error)
 map <silent> <Leader>lk <Plug>(lcn-hover)
@@ -242,17 +241,15 @@ endfunction
 noremap <A-m> @q 
 map <space> \
 nmap <silent> <esc> :noh<CR>
-map <silent> <A-Del> dw
 map <silent> <tab> <C-W>w
+" escape a string
 map <A-e> :s/\%V"/\\"/g<CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 "present tag list
 nnoremap <C-]> g<C-]>
 "toggle relative numbers
-map <silent> <Leader>l :set relativenumber!<CR>
-"del quotes
-nnoremap do" di"vawp
+map <silent> <Leader>r :set relativenumber!<CR>
 map <silent> <F7> :setlocal spell! spelllang=en_us<CR>
 "======================================================================
 
@@ -269,13 +266,16 @@ endfunction
 "======================================================================
 
 " Ghcid ===============================================================
-autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"
-autocmd FileType ghcid call GhcidWinOpts()
 function GhcidWinOpts()
   set syntax=txt
   execute 'windo wincmd L'
   execute 'vertical resize 90 <CR>'
 endfunction
+
+augroup ghcid
+  autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"
+  autocmd FileType ghcid call GhcidWinOpts()
+augroup END
 "======================================================================
 
 " fzf =================================================================
