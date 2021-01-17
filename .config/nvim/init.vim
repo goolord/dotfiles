@@ -10,6 +10,7 @@ Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'elmcast/elm-vim', { 'for': 'elm' }
 Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
+Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim', 'for': ['haskell', 'cabal'] }
 Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
@@ -35,7 +36,6 @@ Plug 'mhinz/vim-startify'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 call plug#end()
 "======================================================================
 
