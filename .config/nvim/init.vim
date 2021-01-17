@@ -15,12 +15,7 @@ Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
 Plug 'vmchale/cabal-project-vim', { 'for': 'cabalproject' }
 Plug 'vmchale/dhall-vim', { 'for': 'dhall' }
 Plug 'keith/swift.vim', { 'for': 'swift' }
-" deoplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'fszymanski/deoplete-emoji', { 'for': ['markdown', 'text', 'gitcommit'] }
-Plug 'Shougo/neco-syntax'
-" Plug 'deoplete-plugins/deoplete-tags'
-" Plug 'sebastianmarkow/deoplete-rust'
+Plug 'lifepillar/vim-mucomplete'
 " defx
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
@@ -72,7 +67,7 @@ let g:startify_change_to_dir = 0
 let g:NERDSpaceDelims            = 1
 let g:gruvbox_improved_warnings  = 1
 let g:gruvbox_termcolors         = 256
-let g:indentLine_fileTypeExclude = ['json', 'text', 'markdown', 'startify', 'defx', 'ghcid', 'gitcommit']
+let g:indentLine_fileTypeExclude = ['json', 'text', 'markdown', 'startify', 'defx', 'ghcid', 'gitcommit', 'help']
 
 let g:indentLine_setColors    = 1
 let g:indentLine_enabled      = 1
@@ -102,7 +97,6 @@ set softtabstop=0
 set tabstop=2
 set wrap
 set scrolloff=5
-set list listchars=trail:·
 "======================================================================
 
 " Status line =========================================================
@@ -125,31 +119,28 @@ map <Leader>a= :Tabularize /=<CR>
 map <Leader>a> :Tabularize /\S*><CR>
 "======================================================================
 
-" Deoplete ======================================================
-autocmd FileType gitcommit,text,markdown call deoplete#custom#source('emoji', 'converters', ['converter_emoji'])
+" mucomplete ==========================================================
+set completeopt+=menuone
+set completeopt+=noselect
+set shortmess+=c   " Shut off completion messages
+let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#minimum_prefix_length = 2
+let g:mucomplete#completion_delay = 2000
+let g:mucomplete#reopen_immediately = 1
+let g:mucomplete#chains = {
+    \ '_'       : [ 'path', 'omni', 'keyn', 'uspl' ],
+    \ 'haskell' : { 'default': ['path', 'omni', 'keyn', 'uspl']
+    \             , 'haskell.*Comment': []
+    \             , 'haskellString': []
+    \             ,
+    \             },
+    \ 'rust'    : { 'default': ['path', 'omni', 'keyn', 'uspl']
+    \             , 'rustComment.*': []
+    \             , 'rustString.*': []
+    \             ,
+    \             },
+    \ }
 
-let g:deoplete#enable_at_startup = 1
-let deoplete#tag#cache_limit_size = 50000000
-let g:necosyntax#min_keyword_length = 2
-let g:necosyntax#max_syntax_lines = 50000000
-" tab-complete 
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-call deoplete#custom#option({
-  \ 'auto_complete_delay': 250,
-  \ 'smart_case': v:false,
-  \ 'camel_case': v:false,
-  \ 'sources': {
-    \ '_': ['buffer', 'tag', 'omni', 'emoji'],
-    \ 'haskell': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
-    \ 'rust': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
-    \ },
-  \ })
-call deoplete#custom#source('omni', 'functions', {
-  \ 'haskell': ['haskellcomplete#Complete']
-  \})
-call deoplete#custom#var('omni', 'input_patterns', {
-  \ 'haskell': ['import\s*\(qualified\)\?\s*\(\w\|\.\)*', '{-#\s*\w* .*'],
-  \})
 "======================================================================
 
 " LanguageClient ======================================================
@@ -170,7 +161,7 @@ autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
 nmap <F5> <Plug>(lcn-menu)
 nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
-autocmd! User LanguageClient-neovim nmap <silent> <C-]> <Plug>(lcn-definition)
+autocmd! User LanguageClientStarted nmap <silent> <C-]> <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
 nmap <silent> <C-e> <Plug>(lcn-explain-error)
 map <silent> <Leader>lk <Plug>(lcn-hover)
@@ -257,7 +248,7 @@ map <A-e> :s/\%V"/\\"/g<CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 "present tag list
-nnoremap <C-]> 
+nnoremap <C-]> g<C-]>
 "toggle relative numbers
 map <silent> <Leader>l :set relativenumber!<CR>
 "del quotes
@@ -300,7 +291,6 @@ let g:fzf_colors = {
   \ 'pointer': ['fg', 'Exception'],
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] 
   \ }
 
 map <Leader>f%b :BTags<CR>
