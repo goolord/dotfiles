@@ -1,15 +1,28 @@
 # directory of dotfiles
-DIR="$( cd "$(dirname "$0")" ; pwd -P )"
+DIR="$( { cd "$(dirname "$0")" || exit; } ; pwd -P )"
 
-# link .config folder
-ln -sf $DIR/.config/* $HOME/.config/
+alias linkcontents="cp -ansv"
+alias link="ln -sfvn"
+
+link "$DIR"/.config/* "$HOME"/.config
 
 # shell scripts
-ln -sf $DIR/shell-scripts/* $HOME/Dev/shell-scripts/
+function shellScripts() {
+  if [ -d ~/Dev/shell-scripts ]
+  then 
+    mkdir -p ~/Dev/shell-scripts
+    cd ~/Dev/shell-scripts && git pull
+  else 
+    git clone git@github.com:goolord/shell-scripts.git ~/Dev/shell-scripts -q
+  fi
+}
+printf "%s" "shell-scripts: "
+if shellScripts; then exit 1; else cd "$DIR" || exit; fi
 
-ln -sf $DIR/.oh-my-zsh/custom/themes/* $HOME/.oh-my-zsh/custom/themes/
-ln -sf $DIR/.oh-my-zsh/custom/plugins/* $HOME/.oh-my-zsh/custom/plugins/
-ln -sf $DIR/.zshrc $HOME/
+# zsh
+linkcontents "$DIR"/.oh-my-zsh/ "$HOME"/.oh-my-zsh/
+link "$DIR"/.zshrc "$HOME"/.zshrc
 
-ln -sf $DIR/.doom.d $HOME/
+# git
+link "$DIR"/.gitconfig "$HOME/"
 
