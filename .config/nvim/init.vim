@@ -122,7 +122,6 @@ set completeopt+=menuone
 set completeopt+=noselect
 set shortmess+=c   " Shut off completion messages
 let g:mucomplete#enable_auto_at_startup = 1
-let g:mucomplete#minimum_prefix_length = 2
 let g:mucomplete#completion_delay = 1000
 let g:mucomplete#reopen_immediately = 1
 let g:mucomplete#chains = {
@@ -156,7 +155,7 @@ let g:LanguageClient_useVirtualText = "Diagnostics"
 augroup LanguageClient
   au!
   autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
-  autocmd! User LanguageClientStarted nmap <silent> <C-]> <Plug>(lcn-definition)
+  autocmd! User LanguageClientStarted nmap <expr> <silent> <C-]> has_key(g:LanguageClient_serverCommands, &ft) ? '<Plug>(lcn-definition)' : 'g<C-]>'
 augroup END
 
 nmap <F5> <Plug>(lcn-menu)
