@@ -126,17 +126,17 @@ let g:mucomplete#minimum_prefix_length = 2
 let g:mucomplete#completion_delay = 1000
 let g:mucomplete#reopen_immediately = 1
 let g:mucomplete#chains = {
-    \ '_'       : [ 'path', 'omni', 'keyn', 'uspl' ],
-    \ 'haskell' : { 'default': ['path', 'omni', 'keyn', 'uspl']
+    \ 'haskell' : { 'default': ['omni', 'c-n', 'path', 'uspl']
     \             , 'haskell.*Comment': []
     \             , 'haskellString': []
     \             ,
     \             },
-    \ 'rust'    : { 'default': ['path', 'omni', 'keyn', 'uspl']
+    \ 'rust'    : { 'default': ['omni', 'c-n', 'path', 'uspl']
     \             , 'rustComment.*': []
     \             , 'rustString.*': []
     \             ,
     \             },
+    \ 'default' : ['omni', 'c-n', 'path', 'uspl', 'user']
     \ }
 "======================================================================
 
@@ -154,6 +154,7 @@ let g:LanguageClient_settingsPath = expand('~/.config/nvim/lsp.json')
 let g:LanguageClient_useVirtualText = "Diagnostics"
 
 augroup LanguageClient
+  au!
   autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:LanguageClient_autoStart = 0
   autocmd! User LanguageClientStarted nmap <silent> <C-]> <Plug>(lcn-definition)
 augroup END
@@ -273,6 +274,7 @@ function GhcidWinOpts()
 endfunction
 
 augroup ghcid
+  au!
   autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"
   autocmd FileType ghcid call GhcidWinOpts()
 augroup END
