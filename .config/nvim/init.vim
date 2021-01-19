@@ -9,7 +9,6 @@ call plug#begin()
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'elmcast/elm-vim', { 'for': 'elm' }
-Plug 'goolord/haskell-nvim', { 'for': ['haskell', 'cabal'] }
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim', 'for': ['haskell', 'cabal'] }
 Plug 'goolord/lbnf.vim', { 'for': ['bnf', 'lbnf'] }
 Plug 'lifepillar/pgsql.vim', { 'for': 'pgsql' }
@@ -70,14 +69,8 @@ let g:indentLine_char            = '▏'
 let g:indentLine_conceallevel    = 1
 let g:indentLine_color_gui       = '#626262'
 
-" haskell-vim
-let g:haskell_enable_quantification   = 1 " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo      = 1 " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax      = 1 " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles        = 1 " to enable highlighting of type roles
-let g:haskell_enable_static_pointers  = 1 " to enable highlighting of `static`
-let g:haskell_indent_disable          = 1
+" haskell
+let hs_highlight_debug = 1
 
 " Gui =================================================================
 filetype plugin on
