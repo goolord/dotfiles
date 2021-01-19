@@ -242,3 +242,6 @@ map <Leader>fm :Maps<CR>
 map <Leader>fr :Rg 
 map <Leader>ft :Tags<CR>
 "======================================================================
+
+autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"
+
