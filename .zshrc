@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 fpath+=~/.zfunc
 
 export ZSH=$HOME/.oh-my-zsh
@@ -7,7 +14,7 @@ export NIXPKGS=$HOME/Dev/nixpkgs
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # add support for ctrl+o to open selected file in vim
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
-export ZSH_THEME=ysn
+export ZSH_THEME=powerlevel10k/powerlevel10k
 
 export CARP_DIR=~/Dev/Carp/
 export BAT_THEME="gruvbox"
@@ -81,3 +88,6 @@ function gitignore () {
 }
 alias smurf-docker-ghcid="docker-compose up -d stack localstack postgresql-test postgresql-analytics-test"
  
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
