@@ -17,11 +17,12 @@ function shellScripts() {
   fi
 }
 printf "%s" "shell-scripts: "
-if shellScripts; then exit 1; else cd "$DIR" || exit; fi
+if shellScripts; then echo 'done'; else cd "$DIR" || exit; fi
 
 # zsh
 linkcontents "$DIR"/.oh-my-zsh/ "$HOME"/.oh-my-zsh/
 link "$DIR"/.zshrc "$HOME"/.zshrc
+link "$DIR"/.p10k.zsh "$HOME/"
 
 # git
 link "$DIR"/.gitconfig "$HOME/"

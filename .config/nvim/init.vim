@@ -27,7 +27,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ }
 Plug 'lifepillar/vim-mucomplete'
 Plug 'Yggdroot/indentLine'
-Plug 'dkasak/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
