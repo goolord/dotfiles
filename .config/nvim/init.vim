@@ -25,7 +25,9 @@ Plug 'autozimu/LanguageClient-neovim', {
 \ 'do': 'bash install.sh',
 \ 'for': ['haskell', 'rust']
 \ }
-Plug 'lifepillar/vim-mucomplete'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neco-syntax'
+Plug 'roxma/nvim-yarp'
 Plug 'Yggdroot/indentLine'
 Plug 'gruvbox-community/gruvbox'
 Plug 'godlygeek/tabular'
@@ -110,26 +112,33 @@ map <Leader>a= :Tabularize /=<CR>
 map <Leader>a> :Tabularize /\S*><CR>
 "======================================================================
 
-" mucomplete ==========================================================
-set completeopt+=menuone
-set completeopt+=noselect
-set shortmess+=c   " Shut off completion messages
-let g:mucomplete#enable_auto_at_startup = 1
-let g:mucomplete#completion_delay = 1000
-let g:mucomplete#reopen_immediately = 1
-let g:mucomplete#chains = {
-    \ 'haskell' : { 'default': ['omni', 'c-n', 'path', 'uspl']
-    \             , 'haskell.*Comment': []
-    \             , 'haskellString': []
-    \             ,
-    \             },
-    \ 'rust'    : { 'default': ['omni', 'c-n', 'path', 'uspl']
-    \             , 'rustComment.*': []
-    \             , 'rustString.*': []
-    \             ,
-    \             },
-    \ 'default' : ['omni', 'c-n', 'path', 'uspl', 'user']
-    \ }
+" deoplete ============================================================
+let g:deoplete#enable_at_startup = 1
+let deoplete#tag#cache_limit_size = 50000000
+inoremap <silent><expr> <TAB>
+    \ pumvisible() ? "\<C-n>" :
+    \ <SID>check_back_space() ? "\<Tab>" :
+    \ deoplete#complete()
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+call deoplete#custom#option({
+  \ 'auto_complete_popup': 'manual',
+  \ 'smart_case': v:false,
+  \ 'camel_case': v:false,
+  \ 'sources': {
+    \ '_': ['buffer', 'tag', 'omni', 'emoji'],
+    \ 'haskell': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
+    \ 'rust': ['buffer', 'tag', 'omni', 'LanguageClient', 'syntax'],
+    \ },
+  \ })
+call deoplete#custom#source('omni', 'functions', {
+  \ 'haskell': ['haskellcomplete#Complete']
+  \})
+call deoplete#custom#var('omni', 'input_patterns', {
+  \ 'haskell': ['import\s*\(qualified\)\?\s*\(\w\|\.\)*', '{-#\s*\w* .*'],
+  \})
 "======================================================================
 
 " LanguageClient ======================================================
