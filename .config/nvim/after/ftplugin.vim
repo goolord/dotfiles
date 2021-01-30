@@ -1,3 +1,7 @@
+autocmd FileType lua setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType tex setlocal conceallevel=0
+
+
 " disable nvim-compe on telescope.nvim
 augroup Compe
   autocmd!

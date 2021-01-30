@@ -38,14 +38,14 @@ local function set_keybindings()
         -- Search for visually selected text
         {'v', '<Leader>v', 'y/\\V<C-R>=escape(@",\'/\\\')<CR><CR>', {noremap = false, silent = false}},
         
-        {'','<space>', '\\', {silent = true} },
-        {'','<tab>', '<C-W>w', {noremap = false, silent = true} },
-        {'n','<esc>', ':noh<CR>', {noremap = false, silent = true} },
-        {'', '<Leader>a', '<Plug>(EasyAlign)', {} },
+        {'', '<space>', '\\', {silent = true} },
+        {'', '<tab>', '<C-W>w', {noremap = false, silent = true} },
+        {'n', '<esc>', ':noh<CR>', {noremap = false, silent = true} },
+        {'n', '<Leader>a', '<Plug>(EasyAlign)', {} },
+        {'x', '<Leader>a', '<Plug>(EasyAlign)', {} },
         -- tag list
         {'n', '<C-]', 'g<C-]', {noremap = true} },
     }
-
     for _, key in pairs(keybindings) do keymap(key[1], key[2], key[3], key[4]) end
 end
 set_keybindings()
