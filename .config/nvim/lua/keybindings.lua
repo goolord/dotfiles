@@ -38,12 +38,21 @@ local function set_keybindings()
         -- Search for visually selected text
         {'v', '<Leader>v', 'y/\\V<C-R>=escape(@",\'/\\\')<CR><CR>', {noremap = false, silent = false}},
         
-        {'', '<space>', '\\', {silent = true} },
+        {'', '<Space>', '<Leader>', {silent = true} },
         {'', '<tab>', '<C-W>w', {noremap = false, silent = true} },
         {'n', '<esc>', ':noh<CR>', {noremap = false, silent = true} },
         {'n', '<Leader>a', '<Plug>(EasyAlign)', {} },
         {'x', '<Leader>a', '<Plug>(EasyAlign)', {} },
         {'n', '<Leader>s', ':Startify<CR>', {silent = true} },
+        -- tabular
+        {'', '<Leader>a' , ':Tabularize /'          , {} },
+        {'', '<Leader>a(', ':Tabularize /(<CR>'     , {} },
+        {'', '<Leader>a)', ':Tabularize /)<CR>'     , {} },
+        {'', '<Leader>a:', ':Tabularize /:\\+<CR>'  , {} },
+        {'', '<Leader>a<', ':Tabularize /<\\S*><CR>', {} },
+        {'', '<Leader>a=', ':Tabularize /=<CR>'     , {} },
+        {'', '<Leader>a>', ':Tabularize /\\S*><CR>' , {} },
+        {'', '<Leader>a,', ':Tabularize /,<CR>'     , {} },
         -- tag list
         {'n', '<C-]', 'g<C-]', {noremap = true} },
     }
