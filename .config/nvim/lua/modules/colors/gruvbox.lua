@@ -63,22 +63,6 @@ function ApplyGruvbox()
         {'LspDiagnosticsDefaultWarning', {bg = 'NONE', fg = '#FABD2F'}},
         {'LspDiagnosticsDefaultHint', {bg = 'NONE', fg = '#83A598'}},
 
-        -- barbar
-        {'BufferCurrent', {bg = 'NONE', fg = '#EBDBB2', gui = 'bold'}},
-        {'BufferCurrentMod', {bg = 'NONE', fg = '#EBDBB2'}},
-        {'BufferCurrentSign', {bg = 'NONE', fg = '#EBDBB2'}},
-        {'BufferCurrentTarget', {bg = 'NONE', fg = '#EBDBB2'}},
-        {'BufferVisible', {bg = 'NONE', fg = '#EBDBB2'}},
-        {'BufferVisibleMod', {bg = 'NONE', fg = '#EBDBB2'}},
-        {'BufferVisibleSign', {bg = 'NONE', fg = '#EBDBB2'}},
-        {'BufferVisibleTarget', {bg = 'NONE', fg = '#EBDBB2'}},
-        {'BufferInactive', {bg = 'NONE', fg = '#928374'}},
-        {'BufferInactiveMod', {bg = 'NONE', fg = '#928374'}},
-        {'BufferInactiveSign', {bg = 'NONE', fg = '#928374'}},
-        {'BufferInactiveTarget', {bg = 'NONE', fg = '#928374'}},
-        -- {'BufferTabpages', {bg = 'NONE', fg = '#EBDBB2'}},
-        -- {'BufferTabpageFill', {bg = 'NONE', fg = '#EBDBB2'}},
-
         -- lspsaga
         {'LspFloatWinBorder', {bg = 'NONE', fg = '#928374'}},
         {'ProviderTruncateLine', {bg = 'NONE', fg = '#928374'}},

@@ -6,14 +6,9 @@ local function set_keybindings()
 
         -- disable keys
         {'n', 'Q', '<Nop>', {noremap = true, silent = true}},
-        {'n', '<Left>', '<Nop>', {noremap = true, silent = true}},
-        {'n', '<Right>', '<Nop>', {noremap = true, silent = true}},
-        {'n', '<Up>', '<Nop>', {noremap = true, silent = true}},
-        {'n', '<Down>', '<Nop>', {noremap = true, silent = true}},
         {'n', '<C-z>', '<Nop>', {noremap = true, silent = true}},
-
-        -- reload configuration
-        {'n', '<Leader>r', '<CMD>source ~/.config/nvim/init.vim<CR>', {noremap = true, silent = false}},
+        {'', '<MiddleMouse>', '<Nop>', {} },
+        {'i', '<MiddleMouse>', '<Nop>', {} },
 
         -- resize window
         {'n', '<C-Left>', '<CMD>vertical resize +5<CR>', {noremap = true, silent = true}},
@@ -21,24 +16,9 @@ local function set_keybindings()
         {'n', '<C-Right>', '<CMD>vertical resize -5<CR>', {noremap = true, silent = true}},
         {'n', '<C-Down>', '<CMD>resize +5<CR>', {noremap = true, silent = true}},
 
-        -- Buffers
-        {'n', '<A-l>', '<CMD>BufferNext<CR>', {noremap = true, silent = true}},
-        {'n', '<A-h>', '<CMD>BufferPrevious<CR>', {noremap = true, silent = true}},
-        {'n', '<A-L>', '<CMD>BufferMovePrevious<CR>', {noremap = true, silent = true}},
-        {'n', '<A-H>', '<CMD>BufferMoveNext<CR>', {noremap = true, silent = true}},
-        {'n', '<Leader>q', '<CMD>BufferClose<CR>', {noremap = true, silent = true}},
-        {'n', '<Leader>qq', '<CMD>bufdo BufferClose<CR>', {noremap = true, silent = true}},
-        {'n', '<Leader>qa', '<CMD>bufdo BufferClose!<CR>', {noremap = true, silent = true}},
-        {'n', '<Leader>qo', '<CMD>BufferCloseAllButCurrent<CR>', {noremap = true, silent = true}},
-        -- {'n', '<Leader>qi', '<CMD>bp<CR>:bd! #<CR>', {noremap = true, silent = true}},
-
         -- line bubbling
         {'n', '<A-j>', ']e', {noremap = false, silent = true}},
         {'n', '<A-k>', '[e', {noremap = false, silent = true}},
-
-        -- split window
-        {'n', '<C-A-k>', '<C-w>t<C-w>K', {noremap = false, silent = true}},
-        {'n', '<C-A-h>', '<C-w>t<C-w>H', {noremap = false, silent = true}},
 
         -- terminal mode
         {'t', '<Esc>', '<C-\\><C-n>', {noremap = true, silent = true}},
@@ -48,18 +28,12 @@ local function set_keybindings()
         {'n', '<Leader>fd', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
 
         -- telescope
-        {'n', '<Leader><space>', '<CMD>lua require("telescope.builtin").oldfiles({file_ignore_patterns = {"/usr/share/nvim/runtime/*"}})<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>b', '<CMD>lua require("telescope.builtin").buffers()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>o', '<CMD>lua require("telescope.builtin").find_files()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>m', '<CMD>lua require("telescope.builtin").marks()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader><Leader>', '<CMD>lua require("telescope.builtin").builtin()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>k', '<CMD>lua require("telescope.builtin").keymaps()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>/', '<CMD>lua require("telescope.builtin").current_buffer_fuzzy_find()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>?', '<CMD>lua require("telescope.builtin").grep_string()<CR>', {noremap = true, silent = false}},
-
-        -- base64
-        {'v', '<Leader>d64', 'c<C-r>=system(\'base64 -d\', @")<CR><ESC>', {noremap = false, silent = false}},
-        {'v', '<Leader>e64', 'c<C-r>=system(\'base64\', @")<CR><ESC>', {noremap = false, silent = false}},
+        {'n', '<Leader>fb', '<CMD>lua require("telescope.builtin").buffers()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>ff', '<CMD>lua require("telescope.builtin").find_files()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fm', '<CMD>lua require("telescope.builtin").marks()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>f_', '<CMD>lua require("telescope.builtin").builtin()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fk', '<CMD>lua require("telescope.builtin").keymaps()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fr', '<CMD>lua require("telescope.builtin").live_grep()<CR>', {noremap = true, silent = false}},
 
         -- others
         -- Delete in search result
@@ -71,25 +45,9 @@ local function set_keybindings()
         {'','<space>', '\\', {silent = true} },
         {'','<tab>', '<C-W>w', {noremap = false, silent = true} },
         {'n','<esc>', ':noh<CR>', {noremap = false, silent = true} },
-        {'', '<MiddleMouse>', '<Nop>', {} },
-        {'i', '<MiddleMouse>', '<Nop>', {} },
+        {'', '<Leader>a', '<Plug>(EasyAlign)', {} },
         -- tag list
         {'n', '<C-]', 'g<C-]', {noremap = true} },
-        -- fzf
-        {'', '<Leader>f%b', ':BTags<CR>'   , {} },
-        {'', '<Leader>f%c', ':BCommits<CR>', {} },
-        {'', '<Leader>f%l', ':BLines<CR>'  , {} },
-        {'', '<Leader>f/' , ':History/<CR>', {} },
-        {'', '<Leader>f:' , ':History:<CR>', {} },
-        {'', '<Leader>fb' , ':Buffers<CR>' , {} },
-        {'', '<Leader>fc' , ':Commands<CR>', {} },
-        {'', '<Leader>fg' , ':Commits<CR>' , {} },
-        {'', '<Leader>ff' , ':Files<CR>'   , {} },
-        {'', '<Leader>fh' , ':History<CR>' , {} },
-        {'', '<Leader>fl' , ':Lines<CR>'   , {} },
-        {'', '<Leader>fm' , ':Maps<CR>'    , {} },
-        {'', '<Leader>fr' , ':Rg'          , {} },
-        {'', '<Leader>ft' , ':Tags<CR>'    , {} },
     }
 
     for _, key in pairs(keybindings) do keymap(key[1], key[2], key[3], key[4]) end

@@ -1,18 +1,3 @@
---[[--
-File              : init.lua
-Date              : 30.01.2021
-Last Modified Date: 30.01.2021
---]]--
---[[--
-File              : init.lua
-Date              : 30.01.2021
-Last Modified Date: 30.01.2021
---]]--
---[[--
-File              : init.lua
-Date              : 30.01.2021
-Last Modified Date: 30.01.2021
---]]--
 vim.cmd('packadd packer.nvim')
 
 local packer = require('packer')
@@ -30,14 +15,8 @@ packer.startup(function()
     use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview', opt = true }
     use 'junegunn/vim-easy-align'
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
-    use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
-    use 'psliwka/vim-smoothie'
     use 'tpope/vim-commentary'
     use 'tweekmonster/startuptime.vim'
-
-    -- fzf
-    use 'junegunn/fzf'
-    use 'junegunn/fzf.vim'
 
     -- git
     use 'tpope/vim-fugitive'
@@ -51,7 +30,7 @@ packer.startup(function()
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' } }
     use 'lukas-reineke/format.nvim'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use { 'hrsh7th/nvim-compe', requires = { 'hrsh7th/vim-vsnip', 'hrsh7th/vim-vsnip-integ' } }
+    use 'hrsh7th/nvim-compe'
     use { 'glepnir/lspsaga.nvim', requires = { 'neovim/nvim-lspconfig' } }
 
     use {
@@ -65,8 +44,12 @@ packer.startup(function()
     use 'mhinz/vim-startify'
 
     -- filetype plugins
-    use { 'elmcast/elm-vim' }
-    use { 'ndmitchell/ghcid', rtp = 'plugins/nvim' }
+    use { 'elmcast/elm-vim', ft = 'elm' }
+    use { 
+        'ndmitchell/ghcid', 
+        rtp = 'plugins/nvim', 
+        ft = { 'haskell', 'cabal', 'stack' }
+    }
 end)
 
 
