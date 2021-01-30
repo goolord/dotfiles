@@ -43,6 +43,7 @@ local function set_keybindings()
         {'n', '<esc>', ':noh<CR>', {noremap = false, silent = true} },
         {'n', '<Leader>a', '<Plug>(EasyAlign)', {} },
         {'x', '<Leader>a', '<Plug>(EasyAlign)', {} },
+        {'n', '<Leader>s', ':Startify<CR>', {silent = true} },
         -- tag list
         {'n', '<C-]', 'g<C-]', {noremap = true} },
     }
