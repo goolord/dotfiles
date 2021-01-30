@@ -27,7 +27,7 @@ vim.g.nvim_tree_bindings = {
     toggle_ignored = 'I',
     toggle_dotfiles = 'H',
     refresh = 'R',
-    preview = '<Tab>',
+    preview = '=',
     cd = 'C',
     create = 'a',
     remove = 'd',

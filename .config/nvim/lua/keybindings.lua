@@ -47,10 +47,6 @@ local function set_keybindings()
         {'n', '<Leader>d', '<CMD>NvimTreeToggle<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fd', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
 
-        -- code formatter
-        {'n', '<Leader>f', '<CMD>FormatWrite<CR>', {noremap = false, silent = false}},
-        {'v', '<Leader>f', '<CMD>FormatWrite<CR>', {noremap = false, silent = false}},
-
         -- telescope
         {'n', '<Leader><space>', '<CMD>lua require("telescope.builtin").oldfiles({file_ignore_patterns = {"/usr/share/nvim/runtime/*"}})<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>b', '<CMD>lua require("telescope.builtin").buffers()<CR>', {noremap = true, silent = false}},
@@ -79,6 +75,21 @@ local function set_keybindings()
         {'i', '<MiddleMouse>', '<Nop>', {} },
         -- tag list
         {'n', '<C-]', 'g<C-]', {noremap = true} },
+        -- fzf
+        {'', '<Leader>f%b', ':BTags<CR>'   , {} },
+        {'', '<Leader>f%c', ':BCommits<CR>', {} },
+        {'', '<Leader>f%l', ':BLines<CR>'  , {} },
+        {'', '<Leader>f/' , ':History/<CR>', {} },
+        {'', '<Leader>f:' , ':History:<CR>', {} },
+        {'', '<Leader>fb' , ':Buffers<CR>' , {} },
+        {'', '<Leader>fc' , ':Commands<CR>', {} },
+        {'', '<Leader>fg' , ':Commits<CR>' , {} },
+        {'', '<Leader>ff' , ':Files<CR>'   , {} },
+        {'', '<Leader>fh' , ':History<CR>' , {} },
+        {'', '<Leader>fl' , ':Lines<CR>'   , {} },
+        {'', '<Leader>fm' , ':Maps<CR>'    , {} },
+        {'', '<Leader>fr' , ':Rg'          , {} },
+        {'', '<Leader>ft' , ':Tags<CR>'    , {} },
     }
 
     for _, key in pairs(keybindings) do keymap(key[1], key[2], key[3], key[4]) end
