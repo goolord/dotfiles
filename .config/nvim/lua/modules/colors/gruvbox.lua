@@ -50,13 +50,6 @@ function ApplyGruvbox()
         {'TelescopeResultsBorder', {bg = 'NONE', fg = '#928374', gui = 'bold'}},
         {'TelescopePromptPrefix', {bg = 'NONE', fg = '#D79921'}},
 
-        -- coc.nvim
-        {'CocErrorFloat', {bg = 'NONE', fg = '#FB4934'}},
-        {'CocErrorSign', {bg = 'NONE', fg = '#FB4934'}},
-        {'CocHintSign', {bg = 'NONE', fg = '#83A598'}},
-        {'CocInfoSign', {bg = 'NONE', fg = '#FABD2F'}},
-        {'CocWarningSign', {bg = 'NONE', fg = '#FE8019'}},
-
         -- diagnostic-nvim
         {'LspDiagnosticsDefaultError', {bg = 'NONE', fg = '#FB4934'}},
         {'LspDiagnosticsDefaultInformation', {bg = 'NONE', fg = '#D3869B'}},
