@@ -33,7 +33,7 @@ local function set_keybindings()
 
         -- others
         -- Delete in search result
-        {'n', '<Leader>x', '<CMD>%s///<CR>', {noremap = false, silent = false}},
+        {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},
 
         -- Search for visually selected text
         {'v', '<Leader>v', 'y/\\V<C-R>=escape(@",\'/\\\')<CR><CR>', {noremap = false, silent = false}},
