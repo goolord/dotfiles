@@ -48,9 +48,6 @@ function ApplyGruvbox()
     for _, highlight in pairs(highlights) do hl(highlight[1], highlight[2]) end
 end
 
--- italicize comments
-hl('Comment', {gui = 'italic'})
-
 -- automatically override colourscheme
 vim.cmd('augroup NewColor')
 vim.cmd('au!')

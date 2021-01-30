@@ -12,7 +12,7 @@ packer.startup(function()
     use { 'wbthomason/packer.nvim', opt = true }
 
     use 'Yggdroot/indentLine'
-    use 'junegunn/vim-easy-align'
+    use 'godlygeek/tabular'
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
     use 'tpope/vim-commentary'
     use 'tweekmonster/startuptime.vim'
