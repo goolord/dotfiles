@@ -80,4 +80,4 @@ function gitignore () {
   curl https://raw.githubusercontent.com/github/gitignore/master/${(C)1}.gitignore > .gitignore
 }
 alias smurf-docker-ghcid="docker-compose up -d stack localstack postgresql-test postgresql-analytics-test"
- 
+alias hasktags="hasktags -R -x ."
