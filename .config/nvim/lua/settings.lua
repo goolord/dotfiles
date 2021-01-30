@@ -23,7 +23,6 @@ local options = {
     errorbells = false,
     expandtab = true,
     fillchars = 'vert:│',
-    foldexpr = 'nvim_treesitter#foldexpr()',
     foldlevel = 0,
     foldmethod = 'manual',
     formatoptions = 'jcroql',

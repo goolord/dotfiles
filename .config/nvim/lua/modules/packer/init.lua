@@ -28,7 +28,6 @@ packer.startup(function()
     use 'neovim/nvim-lspconfig'
     use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' } }
     use 'lukas-reineke/format.nvim'
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'hrsh7th/nvim-compe'
     use { 'glepnir/lspsaga.nvim', requires = { 'neovim/nvim-lspconfig' } }
 
