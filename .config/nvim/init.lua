@@ -23,7 +23,6 @@ require('modules.packer.bootstrapping')
 require('modules.packer')
 
 -- neovim plugins for user interface
-require('plugins.barbar')
 require('plugins.indentLine')
 require('plugins.treesitter')
 require('plugins.nvimTree')
