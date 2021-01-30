@@ -76,8 +76,8 @@ function ApplyGruvbox()
         {'BufferInactiveMod', {bg = 'NONE', fg = '#928374'}},
         {'BufferInactiveSign', {bg = 'NONE', fg = '#928374'}},
         {'BufferInactiveTarget', {bg = 'NONE', fg = '#928374'}},
-        {'BufferTabpages', {bg = 'NONE', fg = '#EBDBB2'}},
-        {'BufferTabpageFill', {bg = 'NONE', fg = '#EBDBB2'}},
+        -- {'BufferTabpages', {bg = 'NONE', fg = '#EBDBB2'}},
+        -- {'BufferTabpageFill', {bg = 'NONE', fg = '#EBDBB2'}},
 
         -- lspsaga
         {'LspFloatWinBorder', {bg = 'NONE', fg = '#928374'}},
