@@ -9,7 +9,6 @@ require('modules.packer')
 
 -- neovim plugins for user interface
 require('plugins.indentLine')
-require('plugins.treesitter')
 require('plugins.nvimTree')
 
 -- neovim plugins for functionality
