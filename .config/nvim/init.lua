@@ -1,18 +1,3 @@
---[[--
-File              : init.lua
-Date              : 30.01.2021
-Last Modified Date: 30.01.2021
---]]--
---[[--
-File              : init.lua
-Date              : 30.01.2021
-Last Modified Date: 30.01.2021
---]]--
---[[--
-File              : init.lua
-Date              : 30.01.2021
-Last Modified Date: 30.01.2021
---]]--
 -- neovim basic configuration
 require('settings')
 
@@ -29,9 +14,6 @@ require('plugins.nvimTree')
 
 -- neovim plugins for functionality
 require('plugins.telescope')
-
--- neovim language support
-require('plugins.markdown')
 
 -- neovim git{_,hub} support
 require('plugins.gist')
