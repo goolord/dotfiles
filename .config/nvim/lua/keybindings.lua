@@ -53,3 +53,4 @@ local function set_keybindings()
     for _, key in pairs(keybindings) do keymap(key[1], key[2], key[3], key[4]) end
 end
 set_keybindings()
+
