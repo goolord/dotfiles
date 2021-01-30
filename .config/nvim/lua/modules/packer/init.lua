@@ -58,6 +58,10 @@ packer.startup(function()
       'hoob3rt/lualine.nvim',
       requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
+    local lualine = require('lualine')
+    lualine.status()
+    lualine.theme = 'gruvbox'
+
     use 'mhinz/vim-startify'
 
     -- filetype plugins
