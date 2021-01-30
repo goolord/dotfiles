@@ -83,3 +83,5 @@ vim.g.vimtex_compiler_progname = 'nvr'
 vim.g.vimsyn_embed = 'l'
 vim.g.fugitive_no_maps = 1
 
+vim.cmd('autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"')
+
