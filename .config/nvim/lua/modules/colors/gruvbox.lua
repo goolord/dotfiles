@@ -20,24 +20,6 @@ function ApplyGruvbox()
         {'SignifySignChange', {fg = '#D79921', bg = 'NONE'}},
         {'SignifySignDelete', {fg = '#CC241D', bg = 'NONE'}},
 
-        -- statusline colours
-        {'StatusLine', {bg = '#3C3836', fg = '#3C3836'}},
-        {'StatusLineActive', {bg = '#3C3836', fg = '#EBDBB2'}},
-        {'StatusLineInactive', {bg = '#3C3836', fg = '#928374'}},
-
-        {'StatusLineMode', {bg = '#EBDBB2', fg = '#282828', gui = 'bold'}},
-        {'StatusLineFileManagerIcon', {bg = '#EBDBB2', fg = '#3C3836'}},
-        {'StatusLineLineCol', {bg = '#EBDBB2', fg = '#3C3836', gui = 'bold'}},
-
-        {'StatusLineFiletype', {bg = '#BDAE93', fg = '#3C3836'}},
-        {'StatusLineGit', {bg = '#BDAE93', fg = '#3C3836'}},
-        {'StatusLineFileManagerText', {bg = '#BDAE93', fg = '#3C3836', gui = 'bold'}},
-
-        {'StatusLineFilename', {bg = '#3C3836', fg = '#D5C4A1'}},
-
-        {'StatusLineError', {bg = '#FB4934', fg = '#3C3836'}},
-        {'StatusLineWarning', {bg = '##fabd2f', fg = '#3C3836'}},
-
         -- luatree
         {'NvimTreeFolderIcon', {fg = '#D79921'}},
         {'NvimTreeIndentMarker', {fg = '#928374'}},
@@ -74,8 +56,5 @@ vim.cmd('augroup NewColor')
 vim.cmd('au!')
 vim.cmd('au ColorScheme gruvbox8 call v:lua.ApplyGruvbox()')
 vim.cmd('augroup END')
-
--- disable invert selection for gruvbox
-vim.g.gruvbox_invert_selection = false
 
 vim.cmd('colors gruvbox8')

@@ -7,18 +7,14 @@ local function set_keybindings()
         -- disable keys
         {'n', 'Q', '<Nop>', {noremap = true, silent = true}},
         {'n', '<C-z>', '<Nop>', {noremap = true, silent = true}},
-        {'', '<MiddleMouse>', '<Nop>', {} },
-        {'i', '<MiddleMouse>', '<Nop>', {} },
+        {'', '<MiddleMouse>', '<Nop>', {silent = true} },
+        {'i', '<MiddleMouse>', '<Nop>', {silent = true} },
 
         -- resize window
         {'n', '<C-Left>', '<CMD>vertical resize +5<CR>', {noremap = true, silent = true}},
         {'n', '<C-Up>', '<CMD>resize -5<CR>', {noremap = true, silent = true}},
         {'n', '<C-Right>', '<CMD>vertical resize -5<CR>', {noremap = true, silent = true}},
         {'n', '<C-Down>', '<CMD>resize +5<CR>', {noremap = true, silent = true}},
-
-        -- line bubbling
-        {'n', '<A-j>', ']e', {noremap = false, silent = true}},
-        {'n', '<A-k>', '[e', {noremap = false, silent = true}},
 
         -- terminal mode
         {'t', '<Esc>', '<C-\\><C-n>', {noremap = true, silent = true}},

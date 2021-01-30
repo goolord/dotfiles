@@ -12,7 +12,6 @@ packer.startup(function()
     use { 'wbthomason/packer.nvim', opt = true }
 
     use 'Yggdroot/indentLine'
-    use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview', opt = true }
     use 'junegunn/vim-easy-align'
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
     use 'tpope/vim-commentary'
