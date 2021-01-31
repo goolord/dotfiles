@@ -13,7 +13,7 @@ function ApplyGruvbox()
         {'SignColumn', {bg = 'NONE'}},
         {'ColorColumn', {bg = 'NONE', fg = '#928374'}},
         {'IncSearch', {bg = '#928374', fg = '#282828', gui = 'bold'}},
-        {'VertSplit', {bg = '#3C3836', fg = '#3C3836'}},
+        -- {'VertSplit', {bg = '#3C3836', fg = '#3C3836'}},
 
         -- signify
         {'SignifySignAdd', {fg = '#458588', bg = 'NONE'}},
