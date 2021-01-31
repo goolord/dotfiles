@@ -12,24 +12,18 @@ end
 
 local options = {
     autoindent = true,
-    autoread = true,
     backspace = 'indent,eol,start',
     bg = 'dark',
     completeopt = 'menuone,noselect',
-    conceallevel = 0,
-    cursorcolumn = false,
     cursorline = true,
-    encoding = 'utf-8',
+    directory = '$HOME/.swap//',
     errorbells = false,
     expandtab = true,
     fillchars = 'vert:│',
-    foldlevel = 0,
-    foldmethod = 'manual',
     formatoptions = 'jcroql',
     hidden = true,
     hlsearch = true,
     inccommand = 'nosplit',
-    laststatus = 2,
     lazyredraw = true,
     linebreak = true,
     list = true,
@@ -40,7 +34,6 @@ local options = {
     pumblend = 10,
     pumheight = 15,
     pyxversion = 3,
-    ruler = true,
     scrolloff = 5,
     shiftwidth = 2,
     shortmess = 'atToOc',
@@ -53,7 +46,6 @@ local options = {
     splitbelow = true,
     splitright = true,
     startofline = false,
-    swapfile=false,
     t_Co = '256',
     tabstop = 2,
     termguicolors = true,
@@ -85,3 +77,5 @@ vim.g.fugitive_no_maps = 1
 
 vim.cmd('autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"')
 
+vim.g.startify_change_to_dir = 0
+vim.g.hs_highlight_debug = 1
