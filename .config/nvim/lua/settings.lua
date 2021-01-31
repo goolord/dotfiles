@@ -38,7 +38,6 @@ local options = {
     shiftwidth = 2,
     shortmess = 'atToOc',
     showcmd = true,
-    showmatch = true,
     showmode = true,
     sidescrolloff = 10,
     smarttab = true,
