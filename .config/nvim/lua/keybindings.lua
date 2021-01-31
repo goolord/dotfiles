@@ -29,7 +29,7 @@ local function set_keybindings()
         {'n', '<Leader>ff', '<CMD>lua require("telescope.builtin").fd()<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fk', '<CMD>lua require("telescope.builtin").keymaps()<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fm', '<CMD>lua require("telescope.builtin").marks()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fr', '<CMD>lua require("telescope.builtin").live_grep()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fr', '<CMD>lua require("telescope").extensions.fzf_writer.staged_grep()<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>ft', '<CMD>lua require("telescope.builtin").tags()<CR>', {noremap = true, silent = false}},
 
         -- Delete in search result
