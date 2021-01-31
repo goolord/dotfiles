@@ -24,14 +24,14 @@ local function set_keybindings()
         {'n', '<Leader>fd', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
 
         -- telescope
-        {'n', '<Leader>fb', '<CMD>lua require("telescope.builtin").buffers()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>ff', '<CMD>lua require("telescope.builtin").find_files()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fm', '<CMD>lua require("telescope.builtin").marks()<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>f_', '<CMD>lua require("telescope.builtin").builtin()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fb', '<CMD>lua require("telescope.builtin").buffers()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>ff', '<CMD>lua require("telescope.builtin").fd()<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fk', '<CMD>lua require("telescope.builtin").keymaps()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fm', '<CMD>lua require("telescope.builtin").marks()<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fr', '<CMD>lua require("telescope.builtin").live_grep()<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>ft', '<CMD>lua require("telescope.builtin").tags()<CR>', {noremap = true, silent = false}},
 
-        -- others
         -- Delete in search result
         {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},
 
