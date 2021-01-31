@@ -77,5 +77,4 @@ vim.g.fugitive_no_maps = 1
 
 vim.cmd('autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"')
 
-vim.g.startify_change_to_dir = 0
 vim.g.hs_highlight_debug = 1
