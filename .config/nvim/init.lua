@@ -1,14 +1,14 @@
--- unload default plugins
-require('plugins.unload')
-
--- neovim basic configuration
-require('settings')
-
 -- install packer
 require('modules.packer.bootstrapping')
 
 -- neovim package manager
 require('modules.packer')
+
+-- unload default plugins
+require('plugins.unload')
+
+-- neovim basic configuration
+require('settings')
 
 -- gruvbox options
 require('plugins.gruvbox')

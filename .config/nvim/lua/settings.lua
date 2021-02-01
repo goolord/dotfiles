@@ -75,3 +75,7 @@ vim.g.fugitive_no_maps = 1
 vim.cmd('autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"')
 
 vim.g.hs_highlight_debug = 1
+
+vim.cmd('set guifont=FiraCode\\ Nerd\\ Font,monospace:h20')
+vim.g.neovide_cursor_animation_length = 0
+
