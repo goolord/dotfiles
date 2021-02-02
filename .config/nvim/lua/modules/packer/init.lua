@@ -27,7 +27,7 @@ packer.startup(function()
     -- nvim-lsp
     use 'neovim/nvim-lspconfig'
     -- clap
-    use 'liuchengxu/vim-clap'
+    use { 'liuchengxu/vim-clap', requires = { 'liuchengxu/vista.vim' } }
     -- ??
     use 'lukas-reineke/format.nvim'
     use 'hrsh7th/nvim-compe'
