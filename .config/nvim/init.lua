@@ -19,9 +19,7 @@ require('plugins.startify')
 -- neovim plugins for user interface
 require('plugins.indentLine')
 require('plugins.nvimTree')
-
--- neovim plugins for functionality
-require('plugins.telescope')
+require('plugins.clap')
 
 -- neovim git{_,hub} support
 require('plugins.gist')

@@ -23,14 +23,14 @@ local function set_keybindings()
         {'n', '<Leader>d', '<CMD>NvimTreeToggle<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fd', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
 
-        -- telescope
-        {'n', '<Leader>f_', '<CMD>lua require("telescope.builtin").builtin()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fb', '<CMD>lua require("telescope.builtin").buffers()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>ff', '<CMD>lua require("telescope.builtin").fd()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fk', '<CMD>lua require("telescope.builtin").keymaps()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fm', '<CMD>lua require("telescope.builtin").marks()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fr', '<CMD>lua require("telescope").extensions.fzf_writer.staged_grep()<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>ft', '<CMD>lua require("telescope.builtin").tags()<CR>', {noremap = true, silent = false}},
+        -- Clap
+        {'n', '<Leader>ff', '<CMD>Clap files<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>ft', '<CMD>Clap tags<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fb', '<CMD>Clap buffers<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fr', '<CMD>Clap grep<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fg', '<CMD>Clap grep2<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fm', '<CMD>Clap maps<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>f_', '<CMD>Clap providers<CR>', {noremap = true, silent = false}},
 
         -- Delete in search result
         {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},

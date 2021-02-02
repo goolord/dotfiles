@@ -1,12 +1,11 @@
 autocmd FileType lua setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal conceallevel=0
 
-
-" disable nvim-compe on telescope.nvim
+" disable nvim-compe
 augroup Compe
   autocmd!
   autocmd BufEnter * let g:compe_enabled = v:true
-  autocmd FileType TelescopePrompt let g:compe_enabled = v:false
+  autocmd FileType clap_input let g:compe_enabled = v:false
 augroup END
 
 " hide cursor on Nvim Tree
