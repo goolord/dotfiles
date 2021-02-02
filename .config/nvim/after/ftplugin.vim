@@ -4,8 +4,9 @@ autocmd FileType tex setlocal conceallevel=0
 " disable nvim-compe
 augroup Compe
   autocmd!
-  autocmd BufEnter * let g:compe_enabled = v:true
-  autocmd FileType clap_input let g:compe_enabled = v:false
+  " doesn't work atm
+  " autocmd BufEnter * let g:compe_enabled = v:true
+  " autocmd FileType clap_input call compe#setup({'enabled': v:false}, 0)
 augroup END
 
 " hide cursor on Nvim Tree

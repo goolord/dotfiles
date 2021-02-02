@@ -1,15 +1,22 @@
 local keymap = vim.api.nvim_set_keymap
 
+local source_ignored_filetype = { ignored_filetypes = {'clap_input' } }
+
 require('compe').setup({
     enabled = true,
-    autocomplete = false,
+    autocomplete = true,
     debug = false,
     min_length = 1,
     throttle_time = 100,
     source_timeout = 200,
     incomplete_delay = 400,
     allow_prefix_unmatch = false,
-    source = {path = true, buffer = true, nvim_lsp = true, tags = true}
+    source = {
+       path     = source_ignored_filetype,
+       buffer   = source_ignored_filetype,
+       nvim_lsp = source_ignored_filetype,
+       tags     = source_ignored_filetype
+    }
 })
 
 function Check_backspace()
@@ -22,6 +29,6 @@ function Check_backspace()
 end
 
 keymap('i', '<Tab>',
-    'pumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete() | <C-p>',
+    'pumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete()',
     {silent = true, noremap = true, expr = true})
 
