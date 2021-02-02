@@ -26,9 +26,8 @@ packer.startup(function()
 
     -- nvim-lsp
     use 'neovim/nvim-lspconfig'
-    -- telescope
-    use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' } }
-    use 'nvim-telescope/telescope-fzf-writer.nvim'
+    -- clap
+    use 'liuchengxu/vim-clap'
     -- ??
     use 'lukas-reineke/format.nvim'
     use 'hrsh7th/nvim-compe'
