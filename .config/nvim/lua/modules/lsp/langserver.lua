@@ -6,3 +6,4 @@ end
 
 lspconfig.hls.setup{}
 lspconfig.rls.setup{}
+-- lspconfig.elmls.setup{}
