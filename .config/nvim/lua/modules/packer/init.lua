@@ -44,13 +44,15 @@ packer.startup(function()
     use 'mhinz/vim-startify'
 
     -- filetype plugins
-    use { 'elmcast/elm-vim', ft = 'elm' }
-    use { 'LnL7/vim-nix', ft = 'nix'  }
-    use { 'hellerve/carp-vim', ft = 'carp' }
-    use { 'edwinb/idris2-vim', ft = 'idris2' }
+    -- ft broken for these kinds of plugins -_-
+    use { 'elmcast/elm-vim' } -- , ft = 'elm' }
+    use { 'LnL7/vim-nix' } -- , ft = 'nix' }
+    use { 'hellerve/carp-vim' } -- , ft = 'carp' }
+    use { 'edwinb/idris2-vim' } -- , ft = 'idris2' }
     use { 
         'ndmitchell/ghcid', 
         rtp = 'plugins/nvim', 
+        cmd = { 'Ghcid', 'GhcidKill' },
         ft = { 'haskell', 'cabal', 'stack' }
     }
 end)

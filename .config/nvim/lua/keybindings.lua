@@ -55,7 +55,7 @@ local function set_keybindings()
         {'', '<Leader>a>', ':Tabularize /\\S*><CR>' , {} },
         {'', '<Leader>a,', ':Tabularize /,<CR>'     , {} },
         -- tag list
-        {'n', '<C-]', 'g<C-]', {noremap = true} },
+        {'n', '<C-]>', 'g<C-]>', {noremap = true} },
     }
     for _, key in pairs(keybindings) do keymap(key[1], key[2], key[3], key[4]) end
 end
