@@ -1,8 +1,9 @@
 local keymap = vim.api.nvim_set_keymap
+local compe = require'compe'
 
 local source_ignored_filetype = { ignored_filetypes = {'clap_input' } }
 
-require('compe').setup({
+compe.setup({
     enabled = true,
     autocomplete = true,
     debug = false,
@@ -12,10 +13,11 @@ require('compe').setup({
     incomplete_delay = 400,
     allow_prefix_unmatch = false,
     source = {
-       path     = source_ignored_filetype,
-       buffer   = source_ignored_filetype,
-       nvim_lsp = source_ignored_filetype,
-       tags     = source_ignored_filetype
+       path          = source_ignored_filetype,
+       buffer        = source_ignored_filetype,
+       nvim_lsp      = source_ignored_filetype,
+       tags          = source_ignored_filetype,
+       collaborators = { filetypes = {'gitcommit'} }
     }
 })
 
