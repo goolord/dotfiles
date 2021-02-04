@@ -9,4 +9,10 @@ vim.g.startify_custom_header = {
     [[    \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 }
 
-
+vim.g.startify_lists = {
+    { type = 'dir'       , header = {'   MRU ' .. vim.fn['getcwd']() }  } ,
+    { type = 'files'     , header = {'   MRU'                        }  } ,
+    { type = 'sessions'  , header = {'   Sessions'                   }  } ,
+    { type = 'bookmarks' , header = {'   Bookmarks'                  }  } ,
+    { type = 'commands'  , header = {'   Commands'                   }  } ,
+}
