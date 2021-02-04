@@ -3,5 +3,5 @@
 " syn match hsFunction ".*" contains=sFunctionDef,hsTypeDef nextgroup=hsVarSym
 
 hi def link ConId Type
-hi! link Operator GruvboxBlue
+" hi! link Operator GruvboxBlue
 " hi! link hsFunction Function
