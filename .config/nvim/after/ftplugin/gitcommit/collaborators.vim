@@ -17,6 +17,8 @@ lua << END
 local compe = require'compe'
 local collaboratorSource = { }
 
+local collabCache = vim.fn['collaborators#list']()
+
 function collaboratorSource.get_metadata(_)
   return {
     priority = 10;
@@ -30,9 +32,8 @@ function collaboratorSource.determine(_, context)
 end
 
 function collaboratorSource.complete(self, args)
-  local res = vim.fn['collaborators#list']()
   args.callback({
-    items = res;
+    items = collabCache;
     incomplete = false;
   })
 end
