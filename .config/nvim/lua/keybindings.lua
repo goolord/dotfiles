@@ -25,8 +25,8 @@ local function set_keybindings()
 
         -- Clap
         {'n', '<Leader>ff', '<CMD>Clap files<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>ft', '<CMD>Clap tags<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fT', '<CMD>Clap proj_tags<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>ft', '<CMD>Clap proj_tags<CR>', {noremap = true, silent = false}},
+        {'n', '<Leader>fT', '<CMD>Clap tags<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fb', '<CMD>Clap buffers<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fr', '<CMD>Clap grep<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fg', '<CMD>Clap grep2<CR>', {noremap = true, silent = false}},
