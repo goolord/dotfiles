@@ -13,13 +13,12 @@ require('settings')
 -- gruvbox options
 require('plugins.gruvbox')
 
--- startify
-require('plugins.startify')
-
 -- neovim plugins for user interface
+require('plugins.startify')
 require('plugins.indentLine')
 require('plugins.nvimTree')
 require('plugins.clap')
+require('plugins.statusline')
 
 -- neovim git{_,hub} support
 require('plugins.gist')

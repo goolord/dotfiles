@@ -1,9 +1,9 @@
 [pull]
-	rebase = false
+  rebase = false
 [user]
-	email = zacharyachurchill@gmail.com
-	name = Zachary Churchill
+  email = zacharyachurchill@gmail.com
+  name = Zachary Churchill
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [push]
-	default = current
+  default = current

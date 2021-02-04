@@ -37,12 +37,6 @@ function ApplyGruvbox()
         {'LspDiagnosticsDefaultInformation', {bg = 'NONE', fg = '#D3869B'}},
         {'LspDiagnosticsDefaultWarning', {bg = 'NONE', fg = '#FABD2F'}},
         {'LspDiagnosticsDefaultHint', {bg = 'NONE', fg = '#83A598'}},
-
-        -- lspsaga
-        {'LspFloatWinBorder', {bg = 'NONE', fg = '#928374'}},
-        {'ProviderTruncateLine', {bg = 'NONE', fg = '#928374'}},
-        {'LspSagaDocTruncateLine', {bg = 'NONE', fg = '#928374'}},
-        {'LspSagaCodeActionTruncateLine', {bg = 'NONE', fg = '#928374'}},
     }
 
     for _, highlight in pairs(highlights) do hl(highlight[1], highlight[2]) end

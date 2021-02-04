@@ -27,19 +27,19 @@ packer.startup(function()
     -- nvim-lsp
     use 'neovim/nvim-lspconfig'
     -- clap
-    use { 'liuchengxu/vim-clap', requires = { 'liuchengxu/vista.vim' } }
+    use { 
+        'liuchengxu/vim-clap', 
+        requires = { 'liuchengxu/vista.vim' },
+        run = function () vim.fn['clap#installer#build_maple']() end,
+    }
     -- ??
     use 'lukas-reineke/format.nvim'
     use 'hrsh7th/nvim-compe'
-    use { 'glepnir/lspsaga.nvim', requires = { 'neovim/nvim-lspconfig' } }
 
     use {
       'hoob3rt/lualine.nvim',
       requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
-    local lualine = require('lualine')
-    lualine.status()
-    lualine.theme = 'gruvbox'
 
     use 'mhinz/vim-startify'
 
