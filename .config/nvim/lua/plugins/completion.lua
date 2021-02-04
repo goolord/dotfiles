@@ -17,7 +17,10 @@ compe.setup({
        buffer        = source_ignored_filetype,
        nvim_lsp      = source_ignored_filetype,
        tags          = source_ignored_filetype,
-       collaborators = { filetypes = {'gitcommit'} }
+       collaborators = { 
+           filetypes = {'gitcommit'}, 
+           ignored_filetypes = source_ignored_filetype["ignored_filetypes"]
+       }
     }
 })
 
