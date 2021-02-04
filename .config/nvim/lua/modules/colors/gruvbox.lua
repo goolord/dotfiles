@@ -48,4 +48,8 @@ vim.cmd('au!')
 vim.cmd('au ColorScheme gruvbox8 call v:lua.ApplyGruvbox()')
 vim.cmd('augroup END')
 
+vim.cmd('hi! link LspDiagnosticsUnderlineError Underlined')
+vim.cmd('hi! link LspDiagnosticsUnderlineWarning Underlined')
+
 vim.cmd('colors gruvbox8')
+
