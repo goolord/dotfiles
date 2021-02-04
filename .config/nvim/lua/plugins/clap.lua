@@ -5,4 +5,5 @@ vim.g.clap_current_selection_sign = {
     texthl = 'ClapCurrentSelectionSign',
     linehl = 'ClapCurrentSelection' 
 }
-
+vim.g.clap_spinner_frames = 
+    { "🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘" }
