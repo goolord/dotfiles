@@ -47,6 +47,7 @@ packer.startup(function()
     use { 'LnL7/vim-nix' } -- , ft = 'nix' }
     use { 'hellerve/carp-vim' } -- , ft = 'carp' }
     use { 'edwinb/idris2-vim' } -- , ft = 'idris2' }
+
     use { 
         'ndmitchell/ghcid', 
         rtp = 'plugins/nvim', 
