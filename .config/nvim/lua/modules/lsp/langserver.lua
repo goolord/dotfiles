@@ -14,18 +14,16 @@ local blacklist = { "/home/zach/Dev/smurf" }
 
 local function in_blacklist(dir)
     local res = false
-    for i,entr in ipairs(blacklist) do
+    for _,entr in pairs(blacklist) do
         if string.find(dir, entr) then
             res = true
             break
-        else
         end
     end
     return res
 end
 
-if in_blacklist(vim.fn.getcwd()) then
-else
+if not in_blacklist(vim.fn.getcwd()) then
     lspconfig.hls.setup(defaultOpts)
 end
 
