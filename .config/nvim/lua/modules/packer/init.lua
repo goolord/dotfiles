@@ -19,7 +19,6 @@ packer.startup(function()
 
     -- git
     use 'tpope/vim-fugitive'
-    use { 'mattn/gist-vim', requires = { 'mattn/webapi-vim' } }
 
     -- colorsceme
     use { 'lifepillar/vim-gruvbox8' }
