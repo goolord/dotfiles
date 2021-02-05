@@ -19,3 +19,5 @@ keymap('n' , 'gR'        , ':lua vim.lsp.buf.rename()<CR>'             , {norema
 keymap('n' , '<leader>F' , ':lua vim.lsp.buf.formatting()<CR>'         , {noremap = true , silent = true})
 keymap('v' , '<leader>F' , ':lua vim.lsp.buf.formatting()<CR>'         , {noremap = true , silent = true})
 
+-- if i can figure out how to remap only to buffers where lsp is active, i can do
+-- keymap('n' , '<C-]>'     , ':lua vim.lsp.buf.definition()<CR>'         , {noremap = true , silent = true})
