@@ -20,9 +20,6 @@ require('plugins.nvimTree')
 require('plugins.clap')
 require('plugins.statusline')
 
--- neovim git{_,hub} support
-require('plugins.gist')
-
 -- neovim code completion and code formater
 require('modules.lsp')
 require('plugins.completion')
