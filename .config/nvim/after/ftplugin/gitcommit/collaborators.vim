@@ -1,12 +1,3 @@
-function! collaborators#complete(findstart, base)
-  if a:findstart
-    let line = getline('.')
-    let start = col('.') - 1
-    return start
-  else
-    return { 'words': collaborators#list() }
-endfun
-
 function collaborators#list()
   let cwd = getcwd()
   return systemlist('git log | grep Author: | sort | uniq | cut -c 9-')
@@ -21,8 +12,8 @@ local collabCache = vim.fn['collaborators#list']()
 
 function collaboratorSource.get_metadata(_)
   return {
-    priority = 10;
-    dup = 0;
+    priority = 100;
+    dup = true;
     menu = '[Collab]';
   }
 end
@@ -32,10 +23,11 @@ function collaboratorSource.determine(_, context)
 end
 
 function collaboratorSource.complete(self, args)
-  args.callback({
-    items = collabCache;
-    incomplete = false;
-  })
+  if string.find(vim.fn.getline('.'), 'author') then
+    args.callback({ items = collabCache; })
+  else
+    args.callback({ items = { 'co-authored-by: ' }; })
+  end
 end
 
 compe.register_source('collaborators', collaboratorSource)
