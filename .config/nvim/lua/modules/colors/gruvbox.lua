@@ -13,24 +13,10 @@ function ApplyGruvbox()
         {'SignColumn', {bg = 'NONE'}},
         {'ColorColumn', {bg = 'NONE', fg = '#928374'}},
         {'IncSearch', {bg = '#928374', fg = '#282828', gui = 'bold'}},
-        -- {'VertSplit', {bg = '#3C3836', fg = '#3C3836'}},
-
-        -- signify
-        {'SignifySignAdd', {fg = '#458588', bg = 'NONE'}},
-        {'SignifySignChange', {fg = '#D79921', bg = 'NONE'}},
-        {'SignifySignDelete', {fg = '#CC241D', bg = 'NONE'}},
 
         -- luatree
         {'NvimTreeFolderIcon', {fg = '#D79921'}},
         {'NvimTreeIndentMarker', {fg = '#928374'}},
-
-        -- telescope
-        {'TelescopeSelection', {bg = 'NONE', fg = '#D79921', gui = 'bold'}},
-        {'TelescopeMatching', {bg = 'NONE', fg = '#D79921', gui = 'bold'}},
-        {'TelescopePreviewBorder', {bg = 'NONE', fg = '#928374', gui = 'bold'}},
-        {'TelescopePromptBorder', {bg = 'NONE', fg = '#928374', gui = 'bold'}},
-        {'TelescopeResultsBorder', {bg = 'NONE', fg = '#928374', gui = 'bold'}},
-        {'TelescopePromptPrefix', {bg = 'NONE', fg = '#D79921'}},
 
         -- diagnostic-nvim
         {'LspDiagnosticsDefaultError', {bg = 'NONE', fg = '#FB4934'}},
