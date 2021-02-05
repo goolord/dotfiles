@@ -10,7 +10,7 @@ local function setOptions(options)
     end
 end
 
-local options = {
+setOptions {
     autoindent = true,
     backspace = 'indent,eol,start',
     bg = 'dark',
@@ -60,7 +60,6 @@ local options = {
     wrap = true,
     writebackup = true
 }
-setOptions(options)
 
 vim.cmd('syntax on')
 vim.cmd('colorscheme gruvbox8')
@@ -68,9 +67,7 @@ vim.cmd('filetype plugin indent on')
 vim.cmd('syntax sync minlines=256')
 
 vim.g.python3_host_prog = '/usr/bin/python3'
-vim.g.vimtex_compiler_progname = 'nvr'
 vim.g.vimsyn_embed = 'l'
-vim.g.fugitive_no_maps = 1
 
 vim.cmd('autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"')
 

@@ -25,6 +25,7 @@ packer.startup(function()
 
     -- nvim-lsp
     use 'neovim/nvim-lspconfig'
+
     -- clap
     use { 
         'liuchengxu/vim-clap', 
