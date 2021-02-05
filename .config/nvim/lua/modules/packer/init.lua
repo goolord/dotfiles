@@ -32,7 +32,6 @@ packer.startup(function()
         run = function () vim.fn['clap#installer#build_maple']() end,
     }
     -- ??
-    use 'lukas-reineke/format.nvim'
     use 'hrsh7th/nvim-compe'
 
     use {
