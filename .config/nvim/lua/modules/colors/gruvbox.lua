@@ -23,6 +23,8 @@ function ApplyGruvbox()
         {'LspDiagnosticsDefaultInformation', {bg = 'NONE', fg = '#D3869B'}},
         {'LspDiagnosticsDefaultWarning', {bg = 'NONE', fg = '#FABD2F'}},
         {'LspDiagnosticsDefaultHint', {bg = 'NONE', fg = '#83A598'}},
+        {'LspDiagnosticsUnderlineError', {bg = 'NONE', fg = 'NONE', gui = 'underline'}},
+        {'LspDiagnosticsUnderlineWarning', {bg = 'NONE', fg = 'NONE', gui = 'underline'}},
     }
 
     for _, highlight in pairs(highlights) do hl(highlight[1], highlight[2]) end
@@ -33,9 +35,6 @@ vim.cmd('augroup NewColor')
 vim.cmd('au!')
 vim.cmd('au ColorScheme gruvbox8 call v:lua.ApplyGruvbox()')
 vim.cmd('augroup END')
-
-vim.cmd('hi! link LspDiagnosticsUnderlineError Underlined')
-vim.cmd('hi! link LspDiagnosticsUnderlineWarning Underlined')
 
 vim.cmd('colors gruvbox8')
 
