@@ -25,6 +25,10 @@ packer.startup(function()
 
     -- nvim-lsp
     use 'neovim/nvim-lspconfig'
+    use  { 
+        'RishabhRD/nvim-lsputils',
+        requires = { 'RishabhRD/popfix' } 
+    }
 
     -- clap
     use { 
