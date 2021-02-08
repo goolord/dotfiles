@@ -15,7 +15,10 @@ packer.startup(function()
     use 'godlygeek/tabular'
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
     use 'tpope/vim-commentary'
-    use 'tweekmonster/startuptime.vim'
+    use {
+        'tweekmonster/startuptime.vim',
+        cmd = { 'StartupTime' }
+    }
 
     -- git
     use 'tpope/vim-fugitive'
