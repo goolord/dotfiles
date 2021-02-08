@@ -13,7 +13,7 @@ local collabCache = vim.fn['collaborators#list']()
 function collaboratorSource.get_metadata(_)
   return {
     priority = 100;
-    dup = true;
+    dup = false;
     menu = '[Collab]';
   }
 end
