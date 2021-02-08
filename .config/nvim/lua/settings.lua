@@ -44,6 +44,7 @@ setOptions {
     softtabstop = 2,
     startofline = false,
     t_Co = '256',
+    tags = './tags;,tags;./.tags;,.tags;',
     tabstop = 2,
     termguicolors = true,
     title = true,
