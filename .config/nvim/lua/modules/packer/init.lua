@@ -49,6 +49,9 @@ packer.startup(function()
 
     use 'mhinz/vim-startify'
 
+    use { 'jremmen/vim-ripgrep', cmd = { 'Rg' } }
+    use { 'rking/ag.vim', cmd = { 'Ag' } }
+
     -- filetype plugins
     -- ft broken for these kinds of plugins -_-
     use { 'elmcast/elm-vim' } -- , ft = 'elm' }
