@@ -50,7 +50,6 @@ packer.startup(function()
 
     -- filetype plugins
     -- ft broken for these kinds of plugins -_-
-    -- use { 'elmcast/elm-vim' } -- , ft = 'elm' }
     use { 'LnL7/vim-nix' } -- , ft = 'nix' }
     use { 'hellerve/carp-vim' } -- , ft = 'carp' }
     use { 'edwinb/idris2-vim' } -- , ft = 'idris2' }

@@ -1,18 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
 local completion = require'completion'
 
-local source_ignored_filetype = { ignored_filetypes = {'clap_input' } }
-
-
-function Check_backspace()
-    local col = vim.fn.col('.') - 1
-    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        return true
-    else
-        return false
-    end
-end
-
 vim.g.completion_enable_auto_popup = 0
 
 keymap('i', '<Tab>', '<Plug>(completion_smart_tab)', {})
