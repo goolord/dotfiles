@@ -10,7 +10,7 @@ function! collaborators#complete(findstart, base)
     " locate the start of the word
     let line = getline('.')
     let start = col('.') - 1
-    while l:start > 0 && l:line[l:start - 1] =~ '\a'
+    while l:start > 0 && l:line[l:start - 1] =~ '\(\a\|-\)'
       let l:start -= 1
     endwhile
     return start
