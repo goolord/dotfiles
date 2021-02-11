@@ -11,23 +11,23 @@ packer.init({
 packer.startup(function()
     use { 'wbthomason/packer.nvim', opt = true }
 
-    use 'Yggdroot/indentLine'
     use 'godlygeek/tabular'
-    use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
     use 'terrortylor/nvim-comment'
-    use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
     use 'akinsho/nvim-toggleterm.lua'
     use 'hrsh7th/nvim-compe'
+    use { 'jremmen/vim-ripgrep', cmd = { 'Rg' } }
+    use { 'rking/ag.vim', cmd = { 'Ag' } }
+    use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
+
+    -- gui
+    use 'Yggdroot/indentLine'
+    use 'mhinz/vim-startify'
+    use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
 
     use {
       'hoob3rt/lualine.nvim',
       requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
-
-    use 'mhinz/vim-startify'
-
-    use { 'jremmen/vim-ripgrep', cmd = { 'Rg' } }
-    use { 'rking/ag.vim', cmd = { 'Ag' } }
 
     use { 
         'liuchengxu/vim-clap', 
