@@ -3,32 +3,27 @@ function collaborators#list()
   return systemlist('git log | grep Author: | sort | uniq | cut -c 9-')
 endfunction
 
-lua << END
+let s:collabCache = add(collaborators#list(), 'co-authored-by: ')
 
-local compe = require'compe'
-local collaboratorSource = { }
-
-local collabCache = vim.fn['collaborators#list']()
-
-function collaboratorSource.get_metadata(_)
-  return {
-    priority = 100;
-    dup = false;
-    menu = '[Collab]';
-  }
-end
-
-function collaboratorSource.determine(_, context)
-  return compe.helper.determine(context)
-end
-
-function collaboratorSource.complete(self, args)
-  if string.find(vim.fn.getline('.'), 'author') then
-    args.callback({ items = collabCache; })
+function! collaborators#complete(findstart, base)
+  if a:findstart
+    " locate the start of the word
+    let line = getline('.')
+    let start = col('.') - 1
+    while l:start > 0 && l:line[l:start - 1] =~ '\a'
+      let l:start -= 1
+    endwhile
+    return start
   else
-    args.callback({ items = { 'co-authored-by: ' }; })
-  end
-end
+    let matches = []
+    for m in s:collabCache
+      if empty(matchstr(m, '^' . a:base . '.*'))
+        continue
+      else
+        call add(l:matches, m)
+      endif
+    endfor
+    return { 'words': matches }
+endfun
 
-compe.register_source('collaborators', collaboratorSource)
-END
+setlocal completefunc=collaborators#complete

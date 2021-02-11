@@ -1,28 +1,8 @@
 local keymap = vim.api.nvim_set_keymap
-local compe = require'compe'
+local completion = require'completion'
 
 local source_ignored_filetype = { ignored_filetypes = {'clap_input' } }
 
-compe.setup({
-    enabled = true,
-    autocomplete = true,
-    debug = false,
-    min_length = 1,
-    throttle_time = 100,
-    source_timeout = 200,
-    incomplete_delay = 400,
-    allow_prefix_unmatch = false,
-    source = {
-       path          = source_ignored_filetype,
-       buffer        = source_ignored_filetype,
-       nvim_lsp      = source_ignored_filetype,
-       tags          = source_ignored_filetype,
-       collaborators = { 
-           filetypes = {'gitcommit'}, 
-           ignored_filetypes = source_ignored_filetype["ignored_filetypes"]
-       }
-    }
-})
 
 function Check_backspace()
     local col = vim.fn.col('.') - 1
@@ -33,7 +13,25 @@ function Check_backspace()
     end
 end
 
-keymap('i', '<Tab>',
-    'pumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete()',
-    {silent = true, noremap = true, expr = true})
+vim.g.completion_enable_auto_popup = 0
 
+keymap('i', '<Tab>', '<Plug>(completion_smart_tab)', {})
+keymap('i', '<c-j>', '<Plug>(completion_next_source)', {})
+keymap('i', '<c-k>', '<Plug>(completion_prev_source)', {})
+
+vim.g.completion_auto_change_source = 1
+vim.g.completion_matching_strategy_list = { 'exact', 'substring', 'fuzzy', 'all' }
+
+vim.g.completion_chain_complete_list = { 
+    default = {
+        { complete_items = { 'lsp', 'snippet' } },
+        { mode = '<c-n>' },
+        { mode = 'tags' },
+        { complete_items = { 'path' } },
+    },
+    gitcommit = {
+        { mode = 'user' },
+        { mode = '<c-n>' },
+        { complete_items = { 'path' } },
+    }
+}
