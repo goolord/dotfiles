@@ -1,5 +1,4 @@
 local keymap = vim.api.nvim_set_keymap
-local completion = require'completion'
 
 vim.g.completion_enable_auto_popup = 0
 
