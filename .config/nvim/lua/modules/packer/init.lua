@@ -14,7 +14,7 @@ packer.startup(function()
     use 'godlygeek/tabular'
     use 'terrortylor/nvim-comment'
     use 'akinsho/nvim-toggleterm.lua'
-    use 'hrsh7th/nvim-compe'
+    use 'nvim-lua/completion-nvim'
     use { 'jremmen/vim-ripgrep', cmd = { 'Rg' } }
     use { 'rking/ag.vim', cmd = { 'Ag' } }
     use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
