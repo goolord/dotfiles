@@ -14,10 +14,25 @@ packer.startup(function()
     use 'Yggdroot/indentLine'
     use 'godlygeek/tabular'
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
-    use 'tpope/vim-commentary'
+    use 'terrortylor/nvim-comment'
+    use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
+    use 'akinsho/nvim-toggleterm.lua'
+    use 'hrsh7th/nvim-compe'
+
     use {
-        'tweekmonster/startuptime.vim',
-        cmd = { 'StartupTime' }
+      'hoob3rt/lualine.nvim',
+      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+
+    use 'mhinz/vim-startify'
+
+    use { 'jremmen/vim-ripgrep', cmd = { 'Rg' } }
+    use { 'rking/ag.vim', cmd = { 'Ag' } }
+
+    use { 
+        'liuchengxu/vim-clap', 
+        requires = { 'liuchengxu/vista.vim' },
+        run = function () vim.fn['clap#installer#build_maple']() end,
     }
 
     -- git
@@ -33,28 +48,9 @@ packer.startup(function()
         requires = { 'RishabhRD/popfix' } 
     }
 
-    -- clap
-    use { 
-        'liuchengxu/vim-clap', 
-        requires = { 'liuchengxu/vista.vim' },
-        run = function () vim.fn['clap#installer#build_maple']() end,
-    }
-    -- ??
-    use 'hrsh7th/nvim-compe'
-
-    use {
-      'hoob3rt/lualine.nvim',
-      requires = {'kyazdani42/nvim-web-devicons', opt = true}
-    }
-
-    use 'mhinz/vim-startify'
-
-    use { 'jremmen/vim-ripgrep', cmd = { 'Rg' } }
-    use { 'rking/ag.vim', cmd = { 'Ag' } }
-
     -- filetype plugins
     -- ft broken for these kinds of plugins -_-
-    use { 'elmcast/elm-vim' } -- , ft = 'elm' }
+    -- use { 'elmcast/elm-vim' } -- , ft = 'elm' }
     use { 'LnL7/vim-nix' } -- , ft = 'nix' }
     use { 'hellerve/carp-vim' } -- , ft = 'carp' }
     use { 'edwinb/idris2-vim' } -- , ft = 'idris2' }

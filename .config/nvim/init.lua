@@ -28,6 +28,10 @@ require('plugins.completion')
 require('modules.colors.gruvbox')
 require('plugins.gruvbox')
 
+-- other
+require('plugins.nvim-comment')
+require('plugins.toggleterm')
+
 -- neovim keybindings
 require('keybindings')
 
