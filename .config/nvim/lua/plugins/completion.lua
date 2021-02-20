@@ -13,6 +13,7 @@ vim.g.completion_chain_complete_list = {
     default = {
         { complete_items = { 'lsp', 'snippet' } },
         { mode = '<c-n>' },
+        { mode = 'omni' },
         { mode = 'tags' },
         { complete_items = { 'path' } },
     },

@@ -59,7 +59,8 @@ setOptions {
     wildoptions = 'pum',
     winblend = 0,
     wrap = true,
-    writebackup = true
+    writebackup = true,
+    omnifunc = 'syntaxcomplete#Complete'
 }
 
 vim.cmd('syntax on')
