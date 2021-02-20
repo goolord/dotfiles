@@ -16,3 +16,9 @@ vim.g.startify_lists = {
     { type = 'bookmarks' , header = {'   Bookmarks'                  }  } ,
     { type = 'commands'  , header = {'   Commands'                   }  } ,
 }
+
+-- todo cd here but not w/ files
+vim.g.startify_bookmarks = {
+    { c = '~/.config/nvim' },
+    { s = '~/Dev/smurf' },
+}
