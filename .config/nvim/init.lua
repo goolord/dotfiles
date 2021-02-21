@@ -10,28 +10,6 @@ require('modules.packer')
 -- neovim basic configuration
 require('settings')
 
--- gruvbox options
-require('plugins.gruvbox')
-
--- neovim plugins for user interface
-require('plugins.startify')
-require('plugins.indentLine')
-require('plugins.nvimTree')
-require('plugins.clap')
-require('plugins.statusline')
-
--- neovim code completion and code formater
-require('modules.lsp')
-require('plugins.completion')
-
--- colorscheme
-require('modules.colors.gruvbox')
-require('plugins.gruvbox')
-
--- other
-require('plugins.nvim-comment')
-require('plugins.toggleterm')
-
 -- neovim keybindings
 require('keybindings')
 

@@ -12,37 +12,46 @@ packer.startup(function()
     use { 'wbthomason/packer.nvim', opt = true }
 
     use 'godlygeek/tabular'
-    use 'terrortylor/nvim-comment'
-    use 'akinsho/nvim-toggleterm.lua'
-    use 'nvim-lua/completion-nvim'
+    use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
+    use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
+    use { 'nvim-lua/completion-nvim', config = require('plugins.completion') }
     use { 'jremmen/vim-ripgrep', cmd = { 'Rg' } }
     use { 'rking/ag.vim', cmd = { 'Ag' } }
     use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
 
     -- gui
-    use 'Yggdroot/indentLine'
-    use 'mhinz/vim-startify'
-    use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
+    use { 'Yggdroot/indentLine', config = require('plugins.indentLine') }
+    use { 'mhinz/vim-startify', config = require('plugins.startify') }
+    use { 
+        'kyazdani42/nvim-tree.lua', 
+        requires = { 'kyazdani42/nvim-web-devicons' },
+        config = require('plugins.nvimTree')
+    }
 
     use {
       'hoob3rt/lualine.nvim',
-      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+      requires = {'kyazdani42/nvim-web-devicons', opt = true},
+      config = require('plugins.statusline')
     }
 
     use { 
         'liuchengxu/vim-clap', 
         requires = { 'liuchengxu/vista.vim' },
         run = function () vim.fn['clap#installer#build_maple']() end,
+        config = require('plugins.clap'),
     }
 
     -- git
     use 'tpope/vim-fugitive'
 
     -- colorsceme
-    use { 'lifepillar/vim-gruvbox8' }
+    use { 
+        'lifepillar/vim-gruvbox8', 
+        config = require('plugins.gruvbox'),
+    }
 
     -- nvim-lsp
-    use 'neovim/nvim-lspconfig'
+    use { 'neovim/nvim-lspconfig', config = require('modules.lsp') }
     use  { 
         'RishabhRD/nvim-lsputils',
         requires = { 'RishabhRD/popfix' } 
