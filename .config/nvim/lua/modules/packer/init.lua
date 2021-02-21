@@ -29,9 +29,9 @@ packer.startup(function()
     }
 
     use {
-      'hoob3rt/lualine.nvim',
-      requires = {'kyazdani42/nvim-web-devicons', opt = true},
-      config = require('plugins.statusline')
+        'hoob3rt/lualine.nvim',
+        requires = {'kyazdani42/nvim-web-devicons', opt = true},
+        config = require('plugins.statusline')
     }
 
     use { 
@@ -58,15 +58,15 @@ packer.startup(function()
     }
 
     -- filetype plugins
-    -- ft broken for these kinds of plugins -_-
-    use { 'LnL7/vim-nix' } -- , ft = 'nix' }
-    use { 'hellerve/carp-vim' } -- , ft = 'carp' }
-    use { 'edwinb/idris2-vim' } -- , ft = 'idris2' }
+    use { 'LnL7/vim-nix', ft = 'nix' }
+    use { 'hellerve/carp-vim', ft = 'carp' }
+    use { 'edwinb/idris2-vim' , ft = 'idris2' }
 
     use { 
         'ndmitchell/ghcid', 
         rtp = 'plugins/nvim', 
         cmd = { 'Ghcid', 'GhcidKill' },
+        ft = { 'haskell', 'cabal', 'stack' }
     }
 end)
 
