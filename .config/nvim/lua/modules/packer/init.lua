@@ -2,11 +2,7 @@ vim.cmd('packadd packer.nvim')
 
 local packer = require('packer')
 
-packer.init({
-    display = {
-        open_cmd = 'leftabove 80vnew [packer]',
-    }
-})
+packer.init()
 
 packer.startup(function()
     use { 'wbthomason/packer.nvim', opt = true }
