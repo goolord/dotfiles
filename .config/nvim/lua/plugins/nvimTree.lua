@@ -16,6 +16,7 @@ return function()
         ['H']    = get_lua_cb("toggle_dotfiles"),
         ['R']    = get_lua_cb("refresh"),
         ['=']    = get_lua_cb("preview"),
+        ['<Tab>'] = '<C-W>w',
     }
 
     vim.g.nvim_tree_icons = {
