@@ -9,20 +9,19 @@ return function()
     end 
 
     vim.g.nvim_tree_bindings = {
-        ['l']    = get_lua_cb("edit"),
-        ['o']    = get_lua_cb("edit"),
-        ['<cr>'] = get_lua_cb("edit"),
-        ['I']    = get_lua_cb("toggle_ignored"),
-        ['H']    = get_lua_cb("toggle_dotfiles"),
-        ['R']    = get_lua_cb("refresh"),
-        ['=']    = get_lua_cb("preview"),
+        ['l']     = get_lua_cb("edit"),
+        ['o']     = get_lua_cb("edit"),
+        ['<cr>']  = get_lua_cb("edit"),
+        ['I']     = get_lua_cb("toggle_ignored"),
+        ['H']     = get_lua_cb("toggle_dotfiles"),
+        ['R']     = get_lua_cb("refresh"),
+        ['=']     = get_lua_cb("preview"),
         ['<Tab>'] = '<C-W>w',
     }
 
     vim.g.nvim_tree_icons = {
         default = '',
         symlink = '',
-        folder = {default = " ", open = " "},
     }
 
     -- disable word wrap
