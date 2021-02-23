@@ -1,1 +1,3 @@
-require('nvim_comment').setup()
+return function()
+    require('nvim_comment').setup()
+end

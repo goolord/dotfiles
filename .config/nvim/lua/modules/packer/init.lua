@@ -34,7 +34,7 @@ packer.startup(function()
         'liuchengxu/vim-clap', 
         requires = { 'liuchengxu/vista.vim' },
         run = function () vim.fn['clap#installer#build_maple']() end,
-        config = require('plugins.clap'),
+        config = require('plugins.clap')
     }
 
     -- git
@@ -43,7 +43,7 @@ packer.startup(function()
     -- colorsceme
     use { 
         'lifepillar/vim-gruvbox8', 
-        config = require('plugins.gruvbox'),
+        config = require('plugins.gruvbox')
     }
 
     -- nvim-lsp
