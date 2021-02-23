@@ -13,5 +13,5 @@ vim.g.indentLine_fileTypeExclude = {
     'fzf',
     'markdown',
     'log',
+    'terminal',
 }
-vim.g.indentLine_bufTypeExclude = {'help', 'terminal'}
