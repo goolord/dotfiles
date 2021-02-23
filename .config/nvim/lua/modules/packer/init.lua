@@ -62,7 +62,6 @@ packer.startup(function()
         'ndmitchell/ghcid', 
         rtp = 'plugins/nvim', 
         cmd = { 'Ghcid', 'GhcidKill' },
-        ft = { 'haskell', 'cabal', 'stack' }
     }
 end)
 
