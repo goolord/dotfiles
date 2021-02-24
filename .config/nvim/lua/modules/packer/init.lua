@@ -47,8 +47,12 @@ packer.startup(function()
     }
 
     -- nvim-lsp
-    use { 'neovim/nvim-lspconfig', config = require('modules.lsp') }
-    use  { 
+    use { 
+        'neovim/nvim-lspconfig', 
+        config = require('modules.lsp'),
+        ft = { 'haskell', 'rust' }
+    }
+    use { 
         'RishabhRD/nvim-lsputils',
         requires = { 'RishabhRD/popfix' } 
     }
