@@ -1,5 +1,6 @@
+local lspconfig = require('lspconfig')
+
 return function()
-    local lspconfig = require('lspconfig')
 
     -- a bit of a hack :/
     local blacklist = { "/home/zach/Dev/smurf" }
@@ -19,7 +20,7 @@ return function()
     -- in buffers where lsp is on
     local function custom_on_attach(client)
         if in_blacklist(vim.fn.getcwd()) then
-            client.stop()
+            client.stop(true)
             return
         end
 
