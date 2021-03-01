@@ -52,6 +52,6 @@ return function()
     local defaultOpts = { on_attach = custom_on_attach }
 
     lspconfig.hls.setup(defaultOpts)
-    lspconfig.rls.setup(defaultOpts)
+    lspconfig.rust_analyzer.setup(defaultOpts)
     -- lspconfig.elmls.setup{}
 end
