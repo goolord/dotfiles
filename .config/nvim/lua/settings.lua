@@ -11,18 +11,14 @@ local function setOptions(options)
 end
 
 setOptions {
-    autoindent = true,
-    backspace = 'indent,eol,start',
     bg = 'dark',
     completeopt = 'menu,menuone,noselect',
     cursorline = true,
     directory = '$HOME/.swap//',
     errorbells = false,
     expandtab = true,
-    fillchars = 'vert:│',
     formatoptions = 'jcroql',
     hidden = true,
-    hlsearch = true,
     inccommand = 'nosplit',
     lazyredraw = true,
     linebreak = true,
@@ -37,10 +33,8 @@ setOptions {
     scrolloff = 5,
     shiftwidth = 2,
     shortmess = 'atToOc',
-    showcmd = true,
     showmode = true,
     sidescrolloff = 10,
-    smarttab = true,
     softtabstop = 2,
     startofline = false,
     t_Co = '256',
@@ -54,7 +48,6 @@ setOptions {
     undolevels = 1000,
     undoreload = 10000,
     updatetime = 300,
-    wildmenu = true,
     wildmode = 'full',
     wildoptions = 'pum',
     winblend = 0,
@@ -63,17 +56,12 @@ setOptions {
     omnifunc = 'syntaxcomplete#Complete'
 }
 
-vim.cmd('syntax on')
-vim.cmd('colorscheme gruvbox8')
-vim.cmd('filetype plugin indent on')
 vim.cmd('syntax sync minlines=256')
 
 vim.g.python3_host_prog = '/usr/bin/python3'
 vim.g.vimsyn_embed = 'l'
 
 vim.cmd('autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"')
-
-vim.g.hs_highlight_debug = 1
 
 vim.cmd('set guifont=FiraCode\\ Nerd\\ Font,monospace:h20')
 vim.g.neovide_cursor_animation_length = 0
