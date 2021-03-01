@@ -38,3 +38,4 @@ vim.cmd('augroup END')
 
 vim.cmd('colors gruvbox8')
 
+vim.g.hs_highlight_debug = 1
