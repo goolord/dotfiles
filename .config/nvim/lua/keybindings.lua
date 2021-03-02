@@ -1,52 +1,58 @@
 local keymap = vim.api.nvim_set_keymap
 
+local clap_settings = { noremap = true, silent = false }
+local function clap_bind(c,provider)
+    return {'n', '<Leader>f' .. c, '<CMD>Clap ' .. provider .. '<CR>', clap_settings}
+end
+
+local function tabularize_bind(c,regex)
+    return {'', '<Leader>a' .. c, ':Tabularize ' .. regex, {} }
+end
+
 local function set_keybindings()
     local keybindings = {
         -- {'mode', 'keybindings', 'command', '{noremap=bool', 'silent=bool', expr=bool}}
-
         -- disable keys
         {'', '<MiddleMouse>', '<Nop>', {silent = true} },
         {'i', '<MiddleMouse>', '<Nop>', {silent = true} },
-
         -- terminal mode
         {'t', '<Esc>', '<C-\\><C-n>', {noremap = true, silent = true}},
-
         -- nvim tree.lua
         {'n', '<Leader>d', '<CMD>NvimTreeToggle<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fd', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
-
         -- Clap
-        {'n', '<Leader>ff', '<CMD>Clap files<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fi', '<CMD>Clap filer<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fq', '<CMD>Clap quickfix<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fl', '<CMD>Clap loclist<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>ft', '<CMD>Clap proj_tags<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fT', '<CMD>Clap tags<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fb', '<CMD>Clap buffers<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fr', '<CMD>Clap grep<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fg', '<CMD>Clap grep2<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>fm', '<CMD>Clap maps<CR>', {noremap = true, silent = false}},
-        {'n', '<Leader>f_', '<CMD>Clap providers<CR>', {noremap = true, silent = false}},
-
+        clap_bind('f','files'),
+        clap_bind('i','filer'),
+        clap_bind('q','quickfix'),
+        clap_bind('l','loclist'),
+        clap_bind('t','proj_tags'),
+        clap_bind('T','tags'),
+        clap_bind('b','buffers'),
+        clap_bind('r','grep'),
+        clap_bind('g','grep2'),
+        clap_bind('m','maps'),
+        clap_bind('M','marks'),
+        clap_bind('j','jumps'),
+        clap_bind('y','yanks'),
+        clap_bind('_','providers'),
         -- Delete in search result
         {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},
-
         -- Search for visually selected text
         {'v', '<Leader>v', 'y/\\V<C-R>=escape(@",\'/\\\')<CR><CR>', {noremap = false, silent = false}},
-        
+        -- other
         {'', '<Space>', '<Leader>', {silent = true} },
         {'', '<tab>', '<C-W>w', {noremap = false, silent = true} },
         {'n', '<esc>', ':noh<CR>', {noremap = false, silent = true} },
         {'n', '<Leader>s', ':Startify<CR>', {silent = true} },
         -- tabular
-        {'', '<Leader>a' , ':Tabularize /'          , {} },
-        {'', '<Leader>a(', ':Tabularize /(<CR>'     , {} },
-        {'', '<Leader>a)', ':Tabularize /)<CR>'     , {} },
-        {'', '<Leader>a:', ':Tabularize /:\\+<CR>'  , {} },
-        {'', '<Leader>a<', ':Tabularize /<\\S*><CR>', {} },
-        {'', '<Leader>a=', ':Tabularize /=<CR>'     , {} },
-        {'', '<Leader>a>', ':Tabularize /\\S*><CR>' , {} },
-        {'', '<Leader>a,', ':Tabularize /,/l0r1<CR>', {} },
+        tabularize_bind('','/'),
+        tabularize_bind('(','/(<CR>'),
+        tabularize_bind(')','/)<CR>'),
+        tabularize_bind(':','/:\\+<CR>'),
+        tabularize_bind('<','/<\\S*><CR>'),
+        tabularize_bind('=','/=<CR>'),
+        tabularize_bind('>','/\\S*><CR>'),
+        tabularize_bind(',','/,/l0r1<CR>'),
         -- tag list
         {'n', '<C-]>', 'g<C-]>', {noremap = true} },
         -- macro
@@ -54,5 +60,5 @@ local function set_keybindings()
     }
     for _, key in pairs(keybindings) do keymap(key[1], key[2], key[3], key[4]) end
 end
-set_keybindings()
 
+set_keybindings()
