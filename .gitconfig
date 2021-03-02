@@ -7,3 +7,5 @@
   defaultBranch = main
 [push]
   default = current
+[branch]
+  autoSetupMerge = always

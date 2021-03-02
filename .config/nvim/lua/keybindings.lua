@@ -49,6 +49,8 @@ local function set_keybindings()
         {'', '<Leader>a,', ':Tabularize /,/l0r1<CR>', {} },
         -- tag list
         {'n', '<C-]>', 'g<C-]>', {noremap = true} },
+        -- macro
+        {'n', '<A-m>', '@q', {} },
     }
     for _, key in pairs(keybindings) do keymap(key[1], key[2], key[3], key[4]) end
 end
