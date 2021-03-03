@@ -29,8 +29,9 @@ return function()
         -- keymaps
         buf_keymap('n', 'K'        , ':lua vim.lsp.buf.hover()<CR>'                       , {noremap = false, silent = true})
         buf_keymap('n', '<C-]>'    , ':lua vim.lsp.buf.definition()<CR>'                  , {noremap = false, silent = true})
-        buf_keymap('n', 'gc'       , ':lua vim.lsp.buf.code_action()<CR>'                 , {noremap = true , silent = true})
+        buf_keymap('n', 'gA'       , ':lua vim.lsp.buf.code_action()<CR>'                 , {noremap = true , silent = true})
         buf_keymap('n', 'gd'       , ':lua vim.lsp.buf.definition()<CR>'                  , {noremap = true , silent = true})
+        buf_keymap('n', 'gD'       , ':lua vim.lsp.buf.type_definition()<CR>'             , {noremap = true , silent = true})
         buf_keymap('n', 'gf'       , ':lua vim.lsp.buf.workspace_symbol()<CR>'            , {noremap = true , silent = true})
         buf_keymap('n', '<C-e>'    , ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {noremap = true , silent = true})
         buf_keymap('n', 'g['       , ':lua vim.lsp.diagnostic.goto_prev()<CR>'            , {noremap = true , silent = true})
@@ -38,8 +39,7 @@ return function()
         buf_keymap('n', 'gl'       , ':lua vim.lsp.diagnostic.set_loclist()<CR>'          , {noremap = true , silent = true})
         buf_keymap('n', 'gr'       , ':lua vim.lsp.buf.references()<CR>'                  , {noremap = true , silent = true})
         buf_keymap('n', 'gR'       , ':lua vim.lsp.buf.rename()<CR>'                      , {noremap = true , silent = true})
-        buf_keymap('n', '<leader>F', ':lua vim.lsp.buf.formatting()<CR>'                  , {noremap = true , silent = true})
-        buf_keymap('v', '<leader>F', ':lua vim.lsp.buf.formatting()<CR>'                  , {noremap = true , silent = true})
+        buf_keymap('' , '<leader>F', ':lua vim.lsp.buf.formatting()<CR>'                  , {noremap = true , silent = true})
         -- nvim-lsputils
         vim.lsp.handlers['textDocument/codeAction']     = require'lsputil.codeAction'.code_action_handler
         vim.lsp.handlers['textDocument/references']     = require'lsputil.locations'.references_handler
