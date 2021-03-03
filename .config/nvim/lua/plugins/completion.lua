@@ -1,3 +1,6 @@
+vim.g.nocomplete = { 'clap_input' }
+vim.cmd([[autocmd BufEnter * if index(g:nocomplete, &ft) < 0 | lua require'completion'.on_attach()]])
+
 return function()
     local keymap = vim.api.nvim_set_keymap
 
@@ -9,8 +12,6 @@ return function()
     keymap('i', '<c-k>'  , '<Plug>(completion_prev_source)', {})
 
     vim.g.completion_auto_change_source = 1
-
-    vim.cmd([[autocmd BufEnter * lua require'completion'.on_attach()]])
 
     vim.g.completion_chain_complete_list = { 
         default = {
@@ -25,6 +26,5 @@ return function()
             { mode = '<c-n>' },
             { complete_items = { 'path' } },
         },
-        clap_input = {}
     }
 end
