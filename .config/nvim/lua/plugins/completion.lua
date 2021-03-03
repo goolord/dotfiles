@@ -4,14 +4,15 @@ vim.cmd([[autocmd BufEnter * if index(g:nocomplete, &ft) < 0 | lua require'compl
 return function()
     local keymap = vim.api.nvim_set_keymap
 
-    vim.g.completion_enable_auto_popup = 1
+    vim.g.completion_enable_auto_popup = 0
+    vim.g.completion_auto_change_source = 1
+    vim.g.completion_enable_auto_paren = 1
+    vim.g.completion_auto_change_source = 1
 
     keymap('i', '<Tab>'  , '<Plug>(completion_smart_tab)'  , {})
     keymap('i', '<S-Tab>', '<Plug>(completion_smart_s_tab)', {})
     keymap('i', '<c-j>'  , '<Plug>(completion_next_source)', {})
     keymap('i', '<c-k>'  , '<Plug>(completion_prev_source)', {})
-
-    vim.g.completion_auto_change_source = 1
 
     vim.g.completion_chain_complete_list = { 
         default = {
