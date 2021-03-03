@@ -11,8 +11,6 @@ packer.startup(function()
     use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
     use { 'nvim-lua/completion-nvim', config = require('plugins.completion') }
-    use { 'jremmen/vim-ripgrep', cmd = { 'Rg' } }
-    use { 'rking/ag.vim', cmd = { 'Ag' } }
     use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
 
     -- gui
