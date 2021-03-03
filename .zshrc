@@ -10,7 +10,7 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 export ZSH_THEME=ysn
 
 export CARP_DIR=~/Dev/Carp/
-export BAT_THEME="gruvbox"
+export BAT_THEME="gruvbox-dark"
 
 plugins=(
   git
@@ -39,7 +39,6 @@ alias neofetch="neofetch \
 --ascii_logo_size small \
 --speed_shorthand on \
 "
-alias fetch="neofetch"
 alias colortest="$HOME/Dev/shell-scripts/colortest.sh"
 alias sudo="sudo -E"
 alias gksudo="gksudo -k"

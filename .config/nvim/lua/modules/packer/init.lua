@@ -32,7 +32,6 @@ packer.startup(function()
 
     use { 
         'liuchengxu/vim-clap', 
-        requires = { 'liuchengxu/vista.vim' },
         run = function () vim.fn['clap#installer#build_maple']() end,
         config = require('plugins.clap')
     }
