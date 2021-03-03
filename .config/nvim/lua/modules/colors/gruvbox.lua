@@ -9,7 +9,6 @@ end
 function ApplyGruvbox()
     local highlights = {
         -- normal stuff
-        -- {'Normal', {bg = 'NONE'}},
         {'SignColumn', {bg = 'NONE'}},
         {'ColorColumn', {bg = 'NONE', fg = '#928374'}},
         {'IncSearch', {bg = '#928374', fg = '#282828', gui = 'bold'}},
