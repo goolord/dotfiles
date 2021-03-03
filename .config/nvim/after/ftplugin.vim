@@ -3,9 +3,6 @@ autocmd FileType elm setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal conceallevel=0
 autocmd FileType toggleterm setlocal nonu
 
-let nocomplete = ['clap_input']
-autocmd BufEnter * if index(nocomplete, &ft) < 0 | lua require'completion'.on_attach()
-
 " hide cursor on Nvim Tree
 augroup HideCursor
   au!

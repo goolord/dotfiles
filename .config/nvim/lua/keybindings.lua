@@ -40,8 +40,6 @@ local function set_keybindings()
         clap_bind('_','providers'),
         -- Delete in search result
         {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},
-        -- Search for visually selected text
-        {'v', '<Leader>v', 'y/\\V<C-R>=escape(@",\'/\\\')<CR><CR>', {noremap = false, silent = false}},
         -- other
         {'', '<Space>', '<Leader>', {silent = true} },
         {'', '<tab>', '<C-W>w', {noremap = false, silent = true} },

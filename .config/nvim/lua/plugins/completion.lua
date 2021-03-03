@@ -1,7 +1,7 @@
 return function()
     local keymap = vim.api.nvim_set_keymap
 
-    vim.g.completion_enable_auto_popup = 0
+    vim.g.completion_enable_auto_popup = 1
 
     keymap('i', '<Tab>'  , '<Plug>(completion_smart_tab)'  , {})
     keymap('i', '<S-Tab>', '<Plug>(completion_smart_s_tab)', {})
@@ -9,6 +9,8 @@ return function()
     keymap('i', '<c-k>'  , '<Plug>(completion_prev_source)', {})
 
     vim.g.completion_auto_change_source = 1
+
+    vim.cmd([[autocmd BufEnter * lua require'completion'.on_attach()]])
 
     vim.g.completion_chain_complete_list = { 
         default = {
@@ -22,6 +24,7 @@ return function()
             { mode = 'user' },
             { mode = '<c-n>' },
             { complete_items = { 'path' } },
-        }
+        },
+        clap_input = {}
     }
 end
