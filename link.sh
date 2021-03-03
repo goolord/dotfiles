@@ -1,10 +1,7 @@
 # directory of dotfiles
 DIR="$( { cd "$(dirname "$0")" || exit; } ; pwd -P )"
 
-alias linkcontents="cp -ansv"
-alias link="ln -sfvn"
-
-link "$DIR"/.config/* "$HOME"/.config
+stow dotfiles -t ~/
 
 # shell scripts
 function shellScripts() {
@@ -18,12 +15,4 @@ function shellScripts() {
 }
 printf "%s" "shell-scripts: "
 if shellScripts; then echo 'done'; else cd "$DIR" || exit; fi
-
-# zsh
-linkcontents "$DIR"/.oh-my-zsh/ "$HOME"/.oh-my-zsh/
-link "$DIR"/.zshrc "$HOME"/.zshrc
-link "$DIR"/.p10k.zsh "$HOME/"
-
-# git
-link "$DIR"/.gitconfig "$HOME/"
 
