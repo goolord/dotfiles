@@ -21,16 +21,20 @@ local function set_keybindings()
         {'n', '<Leader>d', '<CMD>NvimTreeToggle<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fd', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
         -- Clap
-        -- look into using :b, :find, :grep, vanilla vim stuff more often
+        -- :find
         clap_bind('f','files'),
         clap_bind('i','filer'),
+        -- :copen
         clap_bind('q','quickfix'),
+        -- :lopen
         clap_bind('l','loclist'),
-        -- vista uninstalled, proj_tags not working atm
-        -- clap_bind('t','proj_tags'),
+        -- :tj
+        clap_bind('t','proj_tags'),
+        -- vista uninstalled
         -- clap_bind('T','tags'),
-        {'n', '<Leader>ft', ':tj ', {}},
+        -- :ls :b
         clap_bind('b','buffers'),
+        -- :grep
         clap_bind('r','grep'),
         clap_bind('g','grep2'),
         clap_bind('m','maps'),
