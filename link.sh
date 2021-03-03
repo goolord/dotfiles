@@ -1,7 +1,7 @@
 # directory of dotfiles
 DIR="$( { cd "$(dirname "$0")" || exit; } ; pwd -P )"
 
-stow dotfiles -t ~/
+stow home -t ~/
 
 # shell scripts
 function shellScripts() {
