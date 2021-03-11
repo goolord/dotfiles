@@ -49,10 +49,8 @@ packer.startup(function()
         config = require('modules.lsp'),
         ft = { 'haskell', 'rust' }
     }
-    use { 
-        'RishabhRD/nvim-lsputils',
-        requires = { 'RishabhRD/popfix' } 
-    }
+
+    use '~/Dev/nvim-clap-lsp'
 
     -- filetype plugins
     use { 'LnL7/vim-nix', ft = 'nix' }

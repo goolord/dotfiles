@@ -4,18 +4,18 @@ return function()
     vim.g.nvim_tree_indent_markers = 1
     vim.g.nvim_tree_hide_dotfiles = 1
 
-    local function get_lua_cb(cb_name)
+    local function tree_cb(cb_name)
       return string.format(":lua require'nvim-tree'.on_keypress('%s')<CR>", cb_name)
     end 
 
     vim.g.nvim_tree_bindings = {
-        ['l']     = get_lua_cb("edit"),
-        ['o']     = get_lua_cb("edit"),
-        ['<cr>']  = get_lua_cb("edit"),
-        ['I']     = get_lua_cb("toggle_ignored"),
-        ['H']     = get_lua_cb("toggle_dotfiles"),
-        ['R']     = get_lua_cb("refresh"),
-        ['=']     = get_lua_cb("preview"),
+        ['l']     = tree_cb("edit"),
+        ['o']     = tree_cb("edit"),
+        ['<cr>']  = tree_cb("edit"),
+        ['I']     = tree_cb("toggle_ignored"),
+        ['H']     = tree_cb("toggle_dotfiles"),
+        ['R']     = tree_cb("refresh"),
+        ['=']     = tree_cb("preview"),
         ['<Tab>'] = '<C-W>w',
     }
 
