@@ -40,15 +40,15 @@ return function()
         buf_keymap('n', 'gr'       , ':lua vim.lsp.buf.references()<CR>'                  , {noremap = true , silent = true})
         buf_keymap('n', 'gR'       , ':lua vim.lsp.buf.rename()<CR>'                      , {noremap = true , silent = true})
         buf_keymap('' , '<leader>F', ':lua vim.lsp.buf.formatting()<CR>'                  , {noremap = true , silent = true})
-        -- nvim-lsputils
-        vim.lsp.handlers['textDocument/codeAction']     = require'lsputil.codeAction'.code_action_handler
-        vim.lsp.handlers['textDocument/references']     = require'lsputil.locations'.references_handler
-        vim.lsp.handlers['textDocument/definition']     = require'lsputil.locations'.definition_handler
-        vim.lsp.handlers['textDocument/declaration']    = require'lsputil.locations'.declaration_handler
-        vim.lsp.handlers['textDocument/typeDefinition'] = require'lsputil.locations'.typeDefinition_handler
-        vim.lsp.handlers['textDocument/implementation'] = require'lsputil.locations'.implementation_handler
-        vim.lsp.handlers['textDocument/documentSymbol'] = require'lsputil.symbols'.document_handler
-        vim.lsp.handlers['workspace/symbol']            = require'lsputil.symbols'.workspace_handler
+        -- nvim-clap-lsp
+        vim.lsp.handlers['textDocument/codeAction']     = require'clap-lsp.codeAction'.code_action_handler
+        -- vim.lsp.handlers['textDocument/references']     = require'lsputil.locations'.references_handler
+        vim.lsp.handlers['textDocument/definition']     = require'clap-lsp.locations'.definition_handler
+        -- vim.lsp.handlers['textDocument/declaration']    = require'lsputil.locations'.declaration_handler
+        -- vim.lsp.handlers['textDocument/typeDefinition'] = require'lsputil.locations'.typeDefinition_handler
+        -- vim.lsp.handlers['textDocument/implementation'] = require'lsputil.locations'.implementation_handler
+        vim.lsp.handlers['textDocument/documentSymbol'] = require'clap-lsp.symbols'.document_handler
+        vim.lsp.handlers['workspace/symbol']            = require'clap-lsp.symbols'.workspace_handler
     end
 
     local defaultOpts = { on_attach = custom_on_attach }
