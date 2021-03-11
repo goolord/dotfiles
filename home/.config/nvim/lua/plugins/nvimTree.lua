@@ -6,7 +6,7 @@ return function()
 
     local function tree_cb(cb_name)
       return string.format(":lua require'nvim-tree'.on_keypress('%s')<CR>", cb_name)
-    end 
+    end
 
     vim.g.nvim_tree_bindings = {
         ['l']     = tree_cb("edit"),
