@@ -16,8 +16,8 @@ packer.startup(function()
     -- gui
     use { 'Yggdroot/indentLine', config = require('plugins.indentLine') }
     use { 'mhinz/vim-startify', config = require('plugins.startify') }
-    use { 
-        'kyazdani42/nvim-tree.lua', 
+    use {
+        'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons' },
         config = require('plugins.nvimTree')
     }
@@ -28,8 +28,8 @@ packer.startup(function()
         config = require('plugins.statusline')
     }
 
-    use { 
-        'liuchengxu/vim-clap', 
+    use {
+        'liuchengxu/vim-clap',
         run = function () vim.fn['clap#installer#build_maple']() end,
         config = require('plugins.clap')
     }
@@ -38,14 +38,14 @@ packer.startup(function()
     use 'tpope/vim-fugitive'
 
     -- colorsceme
-    use { 
-        'lifepillar/vim-gruvbox8', 
+    use {
+        'lifepillar/vim-gruvbox8',
         config = require('plugins.gruvbox')
     }
 
     -- nvim-lsp
-    use { 
-        'neovim/nvim-lspconfig', 
+    use {
+        'neovim/nvim-lspconfig',
         config = require('modules.lsp'),
         ft = { 'haskell', 'rust' }
     }
@@ -56,10 +56,11 @@ packer.startup(function()
     use { 'LnL7/vim-nix', ft = 'nix' }
     use { 'hellerve/carp-vim', ft = 'carp' }
     use { 'edwinb/idris2-vim' , ft = 'idris2' }
+    use { '~/Dev/collaborators.vim', ft = 'gitcommit' }
 
-    use { 
-        'ndmitchell/ghcid', 
-        rtp = 'plugins/nvim', 
+    use {
+        'ndmitchell/ghcid',
+        rtp = 'plugins/nvim',
         cmd = { 'Ghcid', 'GhcidKill' },
     }
 end)

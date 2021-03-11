@@ -42,7 +42,7 @@ return function()
         buf_keymap('' , '<leader>F', ':lua vim.lsp.buf.formatting()<CR>'                  , {noremap = true , silent = true})
         -- nvim-clap-lsp
         vim.lsp.handlers['textDocument/codeAction']     = require'clap-lsp.codeAction'.code_action_handler
-        -- vim.lsp.handlers['textDocument/references']     = require'lsputil.locations'.references_handler
+        vim.lsp.handlers['textDocument/references']     = require'clap-lsp.locations'.references_handler
         vim.lsp.handlers['textDocument/definition']     = require'clap-lsp.locations'.definition_handler
         -- vim.lsp.handlers['textDocument/declaration']    = require'lsputil.locations'.declaration_handler
         -- vim.lsp.handlers['textDocument/typeDefinition'] = require'lsputil.locations'.typeDefinition_handler
