@@ -52,6 +52,11 @@ packer.startup(function()
 
     use '~/Dev/nvim-clap-lsp'
 
+    -- use {
+    --     'nvim-treesitter/nvim-treesitter',
+    --     config = require('plugins.treesitter'),
+    --     run = function () vim.cmd('TSUpdate') end,
+    -- }
     -- filetype plugins
     use { 'LnL7/vim-nix', ft = 'nix' }
     use { 'hellerve/carp-vim', ft = 'carp' }
