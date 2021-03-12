@@ -12,6 +12,8 @@ packer.startup(function()
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
     use { 'nvim-lua/completion-nvim', config = require('plugins.completion') }
     use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
+    
+    use { 'jremmen/vim-ripgrep', cmd = 'Rg' }
 
     -- gui
     use { 'Yggdroot/indentLine', config = require('plugins.indentLine') }
@@ -57,6 +59,7 @@ packer.startup(function()
     --     config = require('plugins.treesitter'),
     --     run = function () vim.cmd('TSUpdate') end,
     -- }
+
     -- filetype plugins
     use { 'LnL7/vim-nix', ft = 'nix' }
     use { 'hellerve/carp-vim', ft = 'carp' }
