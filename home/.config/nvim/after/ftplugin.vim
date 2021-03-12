@@ -11,4 +11,3 @@ augroup HideCursor
 augroup END
 
 au FileType NvimTree hi Cursor blend=100
-

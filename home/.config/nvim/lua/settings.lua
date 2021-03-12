@@ -54,7 +54,7 @@ setOptions {
     wrap = true,
     writebackup = true,
     omnifunc = 'syntaxcomplete#Complete',
-    grepprg = 'rg\\ --vimgrep\\ --smart-case\\ --follow'
+    grepprg = 'rg\\ --vimgrep\\ --follow'
 }
 
 vim.cmd('syntax sync minlines=256')
