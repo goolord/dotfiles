@@ -32,7 +32,7 @@ end
 -- automatically override colourscheme
 vim.cmd('augroup NewColor')
 vim.cmd('au!')
-vim.cmd('au ColorScheme gruvbox8 call v:lua.ApplyGruvbox()')
+vim.cmd('au ColorScheme * call v:lua.ApplyGruvbox()')
 vim.cmd('augroup END')
 
 vim.cmd('colors gruvbox8')
