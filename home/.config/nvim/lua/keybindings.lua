@@ -17,25 +17,17 @@ local function set_keybindings()
         {'i', '<MiddleMouse>', '<Nop>', {silent = true} },
         -- terminal mode
         {'t', '<Esc>', '<C-\\><C-n>', {noremap = true, silent = true}},
-        -- nvim tree.lua
+        -- nvim-tree.lua
         {'n', '<Leader>d', '<CMD>NvimTreeToggle<CR>', {noremap = true, silent = false}},
         {'n', '<Leader>fd', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
         -- Clap
-        -- :find
-        clap_bind('f','files'),
         clap_bind('i','filer'),
-        -- :copen
-        clap_bind('q','quickfix'),
-        -- :lopen
-        clap_bind('l','loclist'),
-        -- :tj
-        clap_bind('t','proj_tags'),
-        -- vista uninstalled
-        -- clap_bind('T','tags'),
-        -- :ls :b
-        clap_bind('b','buffers'),
-        -- :grep
-        clap_bind('r','grep'),
+        clap_bind('f','files'),     -- :find
+        clap_bind('q','quickfix'),  -- :copen
+        clap_bind('l','loclist'),   -- :lopen
+        clap_bind('t','proj_tags'), -- :tj
+        clap_bind('b','buffers'),   -- :ls :b
+        clap_bind('r','grep'),      -- :grep
         clap_bind('g','grep2'),
         clap_bind('m','maps'),
         clap_bind('M','marks'),
@@ -55,7 +47,7 @@ local function set_keybindings()
         tabularize_bind(')','/)<CR>'),
         tabularize_bind(':','/:\\+<CR>'),
         tabularize_bind('<','/<\\S*><CR>'),
-        tabularize_bind('=','/=<CR>'),
+        tabularize_bind('=','/=\\S*<CR>'),
         tabularize_bind('>','/\\S*><CR>'),
         tabularize_bind(',','/,/l0r1<CR>'),
         -- tag list
