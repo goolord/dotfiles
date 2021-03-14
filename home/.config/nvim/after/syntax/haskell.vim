@@ -1,5 +1,4 @@
-" syn match hsFunction "^\(\i\|(\)\S*"
-
 hi def link ConId Type
-" hi! link Operator GruvboxBlue
+
+" syn match hsFunction "^\(\i\|(\)\S*"
 " hi def link hsFunction Function
