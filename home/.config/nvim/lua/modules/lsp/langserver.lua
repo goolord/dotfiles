@@ -46,6 +46,8 @@ return function()
         vim.lsp.handlers['textDocument/definition']     = require'clap-lsp.locations'.definition_handler
         vim.lsp.handlers['textDocument/documentSymbol'] = require'clap-lsp.symbols'.document_handler
         vim.lsp.handlers['workspace/symbol']            = require'clap-lsp.symbols'.workspace_handler
+
+        vim.cmd('setlocal signcolumn=yes')
     end
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
