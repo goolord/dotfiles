@@ -65,6 +65,7 @@ packer.startup(function()
     use { 'hellerve/carp-vim', ft = 'carp' }
     use { 'edwinb/idris2-vim' , ft = 'idris2' }
     use { '~/Dev/collaborators.vim', ft = 'gitcommit' }
+    use { 'cespare/vim-toml ', ft = 'toml' }
 
     use {
         'ndmitchell/ghcid',
