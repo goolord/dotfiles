@@ -2,10 +2,10 @@
 require('plugins.unload')
 
 -- install packer
-require('modules.packer.bootstrapping')
+require('plugins.bootstrapping')
 
 -- neovim package manager
-require('modules.packer')
+require('plugins')
 
 -- neovim basic configuration
 require('settings')
