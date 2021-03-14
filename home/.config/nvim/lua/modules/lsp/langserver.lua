@@ -48,7 +48,12 @@ return function()
         vim.lsp.handlers['workspace/symbol']            = require'clap-lsp.symbols'.workspace_handler
     end
 
-    local defaultOpts = { on_attach = custom_on_attach }
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    local defaultOpts = { 
+        on_attach = custom_on_attach,
+        capabilities = capabilities
+    }
 
     lspconfig.hls.setup(defaultOpts)
     lspconfig.rust_analyzer.setup(defaultOpts)
