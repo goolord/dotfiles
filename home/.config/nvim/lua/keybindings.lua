@@ -36,8 +36,9 @@ set_keybindings {
     clap_bind('M','marks'),
     clap_bind('j','jumps'),
     clap_bind('y','yanks'),
-    clap_bind(':','history:'),
-    clap_bind('/','history/'),
+    clap_bind(':','hist:'),
+    clap_bind('/','hist/'),
+    clap_bind('h','history'),
     clap_bind('_','providers'),
     -- Delete in search result
     {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},
