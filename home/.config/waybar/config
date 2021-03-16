@@ -1,78 +1,78 @@
 // vim:ft=json
 
 {
-	"layer": "bottom",
-	"position": "top",
+  "layer": "bottom",
+  "position": "top",
 
-	"modules-left": [
-		"sway/workspaces"
-	],
-	"modules-center": [
-		"clock#1",
-		"clock#2",
-		"clock#3"
-	],
-	"modules-right": [
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "clock#1",
+    "clock#2",
+    "clock#3"
+  ],
+  "modules-right": [
     "custom/weather",
-		"pulseaudio",
+    "pulseaudio",
     // "disk",
-		"memory",
-		"cpu",
+    "memory",
+    "cpu",
     "temperature",
-		"battery",
-		"tray"
-	],
+    "battery",
+    "tray"
+  ],
 
 
-	"sway/workspaces": {
-		"disable-scroll": false,
-		"format": "{name}",
+  "sway/workspaces": {
+    "disable-scroll": false,
+    "format": "{name}",
     "disable-scroll-wraparound": true,
     "smooth-scrolling-threshold": 1
-	},
+  },
 
-	"clock#1": {
-		"format": "{:%a}",
-		"tooltip": false
-	},
-	"clock#2": {
-		"format": "{:%I:%M %p}",
-		"tooltip": false
-	},
-	"clock#3": {
-		"format": "{:%Y/%m/%d}",
-		"tooltip": false
-	},
+  "clock#1": {
+    "format": "{:%a}",
+    "tooltip": false
+  },
+  "clock#2": {
+    "format": "{:%I:%M %p}",
+    "tooltip": false
+  },
+  "clock#3": {
+    "format": "{:%Y/%m/%d}",
+    "tooltip": false
+  },
 
   "custom/weather": {
     "exec": "~/bin/rsdarksky --api eb0bc7ab4f02dfbb93f361282c8085af --latitude 33.941890 --longitude -84.212180",
     "interval": 3600,
     "format": "{}"
   },
-	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "MUTE",
-		"format-icons": {
-			"headphones": "",
-			"default": [
-				"",
-				""
-			]
-		},
-		"scroll-step": 5,
-		"on-click-right": "pamixer -t",
+  "pulseaudio": {
+    "format": "{icon} {volume:2}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "MUTE",
+    "format-icons": {
+      "headphones": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 5,
+    "on-click-right": "pamixer -t",
     "smooth-scrolling-threshold": 1,
-		"on-click": "pavucontrol"
-	},
-	"memory": {
-		"interval": 5,
-		"format": " {used:0.1f}G/{total:0.1f}G"
-	},
-	"cpu": {
-		"interval": 5,
-		"format": " {usage:2}%"
-	},
+    "on-click": "pavucontrol"
+  },
+  "memory": {
+    "interval": 5,
+    "format": " {used:0.1f}G/{total:0.1f}G"
+  },
+  "cpu": {
+    "interval": 5,
+    "format": " {usage:2}%"
+  },
   "temperature": {
     "format": "{icon} {temperatureC}°C",
     "format-icons": [
@@ -83,30 +83,30 @@
       ""
     ]
   },
-	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 20,
-			"critical": 10
-		},
-		"format": "{icon} {capacity}%",
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
-		"format-icons": [
-			" ",
-			" ",
-			" ",
-			" ",
-			" "
-		]
-	},
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
+  },
   "disk": {
     "interval": 300,
     "format": "{icon} {used}/{total}",
     "format-icon": "",
     "path": "/"
   },
-	"tray": {
-		"icon-size": 20
-	}
+  "tray": {
+    "icon-size": 20
+  }
 }
 
