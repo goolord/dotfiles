@@ -14,9 +14,9 @@ window#waybar {
   border-left: 1px solid #5c5c5c;
 }
 
-.modules-right * { padding: 0 15px; }
+.modules-right > widget > * { padding: 0 15px; }
 
-#tray * { 
+#tray > * > * { 
   padding: 0 0px 0.2em 5px; 
 }
 
