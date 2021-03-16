@@ -1,5 +1,5 @@
 * {
-  font-size: 17px;
+  font-size: 16px;
   font-family: FiraCode Nerd Font;
   transition: all 0s;
 }
@@ -9,14 +9,15 @@ window#waybar {
   color: #fdf6e3;
 }
 
-.modules-right * {
+.modules-right > * {
   background: #272727;
   border-left: 1px solid #5c5c5c;
-  padding: 0 15px;
 }
 
+.modules-right * { padding: 0 15px; }
+
 #tray * {
-  padding: 0 5px;
+  padding: 0 0px 0 5px ;
 }
 
 #workspaces button {
@@ -38,16 +39,14 @@ window#waybar {
 }
 
 @keyframes blinking{
-    0%{   background-color: red;     }
-    49%{  background-color: inherit; }
-    50%{  background-color: inherit; }
-    99%{  background-color: inherit; }
-    100%{ background-color: red;     }
+    0%   { background-color: red;     }
+    49%  { background-color: inherit; }
+    50%  { background-color: inherit; }
+    99%  { background-color: inherit; }
+    100% { background-color: red;     }
 }
 
-#workspaces button:hover {
-  background: #8ec07c;
-}
+#workspaces button:hover { background: #8ec07c; }
 
 #pulseaudio     { color: #b76389; }
 #backlight      { color: #b58900; }
@@ -58,11 +57,7 @@ window#waybar {
 #custom-weather { color: #83a598; }
 #disk           { color: white;   }
 
-#clock {
-  padding: 0 0.5em;
-}
+#clock { padding: 0 0.5em; }
 
-#tray {
-  padding-left: 10px;
-}
+#tray { padding-left: 10px; }
 
