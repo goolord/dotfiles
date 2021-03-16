@@ -17,7 +17,7 @@ window#waybar {
 .modules-right > widget > * { padding: 0 15px; }
 
 #tray > * > * { 
-  padding: 0 0px 0.2em 5px; 
+  padding: 0 0px 0.1em 5px; 
 }
 
 #workspaces button {
@@ -57,7 +57,7 @@ window#waybar {
 #custom-weather { color: #83a598; }
 #disk           { color: white;   }
 
-#clock { padding: 0.2em 0.5em; }
+#clock { padding: 0.1em 0.5em; }
 
 #tray { padding-left: 10px; }
 
