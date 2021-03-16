@@ -12,6 +12,7 @@ window#waybar {
 .modules-right * {
   background: #272727;
   border-left: 1px solid #5c5c5c;
+  padding: 0 15px;
 }
 
 #tray * {
@@ -59,17 +60,6 @@ window#waybar {
 
 #clock {
   padding: 0 0.5em;
-}
-
-#custom-weather,
-#disk,
-#pulseaudio,
-#backlight,
-#memory,
-#cpu,
-#temperature,
-#battery {
-  padding: 0 15px;
 }
 
 #tray {
