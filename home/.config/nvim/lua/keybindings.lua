@@ -49,6 +49,7 @@ set_keybindings {
     {'n', '<Leader>s', ':Startify<CR>', {silent = true} },
     -- tabular
     tabularize_bind('','/'),
+    tabularize_bind('a','/'),
     tabularize_bind('(','/(<CR>'),
     tabularize_bind(')','/)<CR>'),
     tabularize_bind('{','/{<CR>'),
