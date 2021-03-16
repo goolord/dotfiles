@@ -1,5 +1,5 @@
 * {
-  font-size: 16px;
+  font-size: 17px;
   font-family: FiraCode Nerd Font;
   transition: all 0s;
 }
@@ -16,9 +16,7 @@ window#waybar {
 
 .modules-right * { padding: 0 15px; }
 
-#tray * {
-  padding: 0 0px 0 5px ;
-}
+#tray * { padding: 0 0px 0 5px ; }
 
 #workspaces button {
   padding: 0 5px;
@@ -57,7 +55,7 @@ window#waybar {
 #custom-weather { color: #83a598; }
 #disk           { color: white;   }
 
-#clock { padding: 0 0.5em; }
+#clock { padding: 0.2em 0.5em; }
 
 #tray { padding-left: 10px; }
 
