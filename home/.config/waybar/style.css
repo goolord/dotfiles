@@ -16,7 +16,9 @@ window#waybar {
 
 .modules-right * { padding: 0 15px; }
 
-#tray * { padding: 0 0px 0 5px ; }
+#tray * { 
+  padding: 0 0px 0.2em 5px; 
+}
 
 #workspaces button {
   padding: 0 5px;
