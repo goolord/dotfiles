@@ -48,30 +48,14 @@ window#waybar {
   background: #8ec07c;
 }
 
-#pulseaudio {
-  color: #b76389;
-}
-#backlight {
-  color: #b58900;
-}
-#memory {
-  color: #fe8019;
-}
-#temperature {
-  color: #fb4924;
-}
-#cpu {
-  color: #8ec07c;
-}
-#battery {
-  color: #f2b80c;
-}
-#custom-weather {
-  color: #83a598;
-}
-#disk {
-  color: white;
-}
+#pulseaudio     { color: #b76389; }
+#backlight      { color: #b58900; }
+#memory         { color: #fe8019; }
+#temperature    { color: #fb4924; }
+#cpu            { color: #8ec07c; }
+#battery        { color: #f2b80c; }
+#custom-weather { color: #83a598; }
+#disk           { color: white;   }
 
 #clock {
   padding: 0 0.5em;
