@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-30+20"
+    geometry = "325x5-30+20"
 
     # Turn on the progess bar
     progress_bar = true
@@ -330,7 +330,7 @@
     background = "#3c3836"
     foreground = "#ebdbb2"
     frame_color = "#a89984"
-    timeout = 8
+    timeout = 9
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
@@ -338,7 +338,7 @@
     background = "#3c3836"
     foreground = "#ebdbb2"
     frame_color = "#a89984"
-    timeout = 8
+    timeout = 9
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 

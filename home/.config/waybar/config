@@ -15,7 +15,7 @@
   "modules-right": [
     "custom/weather",
     "pulseaudio",
-    // "disk",
+    "disk",
     "memory",
     "cpu",
     "temperature",
@@ -102,7 +102,7 @@
   },
   "disk": {
     "interval": 300,
-    "format": "{icon} {used}/{total}",
+    "format": "{used}/{total}",
     "format-icon": "",
     "path": "/"
   },
