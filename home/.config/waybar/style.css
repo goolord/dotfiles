@@ -55,7 +55,7 @@ window#waybar {
 #cpu            { color: #8ec07c; }
 #battery        { color: #f2b80c; }
 #custom-weather { color: #83a598; }
-#disk           { color: white;   }
+#disk           { color: #c1440a; }
 
 #clock { padding: 0.1em 0.5em; }
 

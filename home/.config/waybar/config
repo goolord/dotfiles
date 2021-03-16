@@ -102,8 +102,7 @@
   },
   "disk": {
     "interval": 300,
-    "format": "{used}/{total}",
-    "format-icon": "",
+    "format": " {used}/{total}",
     "path": "/"
   },
   "tray": {
