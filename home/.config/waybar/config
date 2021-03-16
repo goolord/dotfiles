@@ -28,6 +28,7 @@
     "disable-scroll": false,
     "format": "{name}",
     "disable-scroll-wraparound": true,
+    "enable-bar-scroll": true,
     "smooth-scrolling-threshold": 1
   },
 
