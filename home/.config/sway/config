@@ -262,7 +262,7 @@ for_window [class="Chromium|Slack|discord|firefox|Bitwig Studio|emacs"] {
 
 input * {
   accel_profile flat
-  pointer_accel -0.6
+  pointer_accel -0.55
 }
 
 seat seat0 xcursor_theme default 32
