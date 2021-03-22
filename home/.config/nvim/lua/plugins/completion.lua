@@ -11,7 +11,7 @@ return function()
     keymap('i', '<Tab>'  , '<Plug>(completion_smart_tab)'  , {})
     keymap('i', '<S-Tab>', '<Plug>(completion_smart_s_tab)', {})
     keymap('i', '<c-j>'  , '<Plug>(completion_next_source)', {})
-    keymap('i', '<c-k>'  , '<Plug>(completion_prev_source)', {})
+    -- keymap('i', '<c-k>'  , '<Plug>(completion_prev_source)', {})
 
     vim.g.completion_chain_complete_list = {
         default = {
