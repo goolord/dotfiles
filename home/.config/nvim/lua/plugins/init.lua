@@ -10,7 +10,7 @@ packer.startup(function()
     use 'godlygeek/tabular'
     use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
-    use { 'nvim-lua/completion-nvim', config = require('plugins.completion') }
+    use { 'hrsh7th/nvim-compe', config = require('plugins.completion') }
     use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
     
     use { 'jremmen/vim-ripgrep', cmd = 'Rg' }
