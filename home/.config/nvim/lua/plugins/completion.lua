@@ -1,30 +1,45 @@
-vim.g.nocomplete = { 'clap_input' }
-vim.cmd([[autocmd BufEnter * if index(g:nocomplete, &ft) < 0 | lua require'completion'.on_attach()]])
-
 return function()
+    require'compe'.setup {
+        enabled = true;
+        autocomplete = true;
+        debug = false;
+        min_length = 1;
+        preselect = 'enable';
+        throttle_time = 80;
+        source_timeout = 200;
+        incomplete_delay = 400;
+        documentation = true;
+
+        source = {
+            path          = true;
+            buffer        = true;
+            calc          = true;
+            nvim_lsp      = true;
+            nvim_lua      = true;
+            tags          = true;
+            emoji         = { filetypes = {'gitcommit', 'text', 'markdown'} };
+            collaborators = { filetypes = {'gitcommit'} }
+        };
+    }
+
     local keymap = vim.api.nvim_set_keymap
 
-    vim.g.completion_auto_change_source = 1
-    vim.g.completion_enable_auto_paren = 1
-    vim.g.completion_enable_auto_popup = 0
+    keymap('i', '<C-Space>', 'compe#complete()'             , {noremap=true,silent=true,expr=true})
+    keymap('i', '<CR>'     , 'compe#confirm("<CR>")'        , {noremap=true,silent=true,expr=true})
+    keymap('i', '<C-e>'    , 'compe#close("<C-e>")'         , {noremap=true,silent=true,expr=true})
 
-    keymap('i', '<Tab>'  , '<Plug>(completion_smart_tab)'  , {})
-    keymap('i', '<S-Tab>', '<Plug>(completion_smart_s_tab)', {})
-    keymap('i', '<c-j>'  , '<Plug>(completion_next_source)', {})
-    -- keymap('i', '<c-k>'  , '<Plug>(completion_prev_source)', {})
+    function Check_backspace()
+        local col = vim.fn.col('.') - 1
+        if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+            return true
+        else
+            return false
+        end
+    end
 
-    vim.g.completion_chain_complete_list = {
-        default = {
-            { complete_items = { 'lsp', 'snippet' } },
-            { mode = '<c-n>' },
-            { mode = 'omni' },
-            { mode = 'tags' },
-            { complete_items = { 'path' } },
-        },
-        gitcommit = {
-            { mode = 'user' },
-            { mode = '<c-n>' },
-            { complete_items = { 'path' } },
-        },
-    }
+    keymap('i', '<Tab>',
+        'pumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete()',
+        {silent = true, noremap = true, expr = true})
 end
+
+
