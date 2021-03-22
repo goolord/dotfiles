@@ -11,35 +11,27 @@ return function()
         documentation = true;
 
         source = {
-            path          = true;
-            buffer        = true;
-            calc          = true;
-            nvim_lsp      = true;
-            nvim_lua      = true;
-            tags          = true;
-            emoji         = { filetypes = {'gitcommit', 'text', 'markdown'} };
+            path = true;
+            buffer = true;
+            calc = true;
+            nvim_lsp = true;
+            nvim_lua = true;
+            tags = true;
+            emoji = { filetypes = {'gitcommit', 'text', 'markdown'} };
             collaborators = { filetypes = {'gitcommit'} }
         };
     }
 
-    local keymap = vim.api.nvim_set_keymap
-
-    keymap('i', '<C-Space>', 'compe#complete()'             , {noremap=true,silent=true,expr=true})
-    keymap('i', '<CR>'     , 'compe#confirm("<CR>")'        , {noremap=true,silent=true,expr=true})
-    keymap('i', '<C-e>'    , 'compe#close("<C-e>")'         , {noremap=true,silent=true,expr=true})
+    local function keymap(k,m) vim.api.nvim_set_keymap('i', k, m, {noremap=true, silent=true, expr=true}) end
 
     function Check_backspace()
         local col = vim.fn.col('.') - 1
-        if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-            return true
-        else
-            return false
-        end
+        return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s')
     end
 
-    keymap('i', '<Tab>',
-        'pumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete()',
-        {silent = true, noremap = true, expr = true})
+    keymap('<C-Space>', 'compe#complete()')
+    keymap('<CR>'     , 'compe#confirm("<CR>")')
+    keymap('<C-e>'    , 'compe#close("<C-e>")')
+    keymap('<Tab>'    , 'pumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete()')
+
 end
-
-
