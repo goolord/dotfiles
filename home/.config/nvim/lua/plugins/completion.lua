@@ -11,12 +11,12 @@ return function()
         documentation = true;
 
         source = {
-            path = true;
-            buffer = true;
-            calc = true;
             nvim_lsp = true;
-            nvim_lua = true;
+            buffer = true;
             tags = true;
+            path = true;
+            nvim_lua = true;
+            calc = true;
             emoji = { filetypes = {'gitcommit', 'text', 'markdown'} };
             collaborators = { filetypes = {'gitcommit'} }
         };
