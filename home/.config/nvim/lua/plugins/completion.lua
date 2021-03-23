@@ -26,7 +26,10 @@ return function()
 
     function Check_backspace()
         local col = vim.fn.col('.') - 1
-        return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s')
+        if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') 
+        then return true 
+        else return false
+        end
     end
 
     keymap('<C-Space>', 'compe#complete()')
