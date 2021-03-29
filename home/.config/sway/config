@@ -260,10 +260,10 @@ for_window [class="Chromium|Slack|discord|firefox|Bitwig Studio|emacs"] {
   border pixel 2
 }
 
-# input * {
-#   accel_profile flat
-#   pointer_accel -0.55
-# }
+input 6392:3993:USB_OPTICAL_MOUSE {
+  accel_profile flat
+  pointer_accel -0.55
+}
 
 input 1267:12529:ELAN1206:00_04F3:30F1_Mouse {
   accel_profile adaptive
