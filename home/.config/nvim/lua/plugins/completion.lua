@@ -12,8 +12,9 @@ return function()
 
         source = {
             nvim_lsp = true;
-            buffer = true;
-            tags = true;
+            tabnine = true;
+            -- buffer = true;
+            -- tags = true;
             path = true;
             nvim_lua = true;
             calc = true;
