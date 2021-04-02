@@ -11,6 +11,7 @@ packer.startup(function()
     use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
     use { 'hrsh7th/nvim-compe', config = require('plugins.completion') }
+    use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
     use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
     
     use { 'jremmen/vim-ripgrep', cmd = 'Rg' }
