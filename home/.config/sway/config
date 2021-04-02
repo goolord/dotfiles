@@ -219,6 +219,7 @@ bindsym XF86AudioMute exec ponymix toggle
 bindsym XF86AudioMicMute exec amixer set Capture toggle
 bindsym Print exec ~/Documents/prtscr
 bindsym $mod+Tab move workspace to output right
+bindsym $mod+Shift+s exec ~/bin/scroat
 
 #
 # Status Bar:
