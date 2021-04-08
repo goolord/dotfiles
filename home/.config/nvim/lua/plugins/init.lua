@@ -63,9 +63,9 @@ packer.startup(function()
     -- }
 
     -- filetype plugins
-    use { 'LnL7/vim-nix', ft = 'nix' }
-    use { 'hellerve/carp-vim', ft = 'carp' }
-    use { 'edwinb/idris2-vim' , ft = 'idris2' }
+    use { 'LnL7/vim-nix' }
+    use { 'hellerve/carp-vim' }
+    use { 'edwinb/idris2-vim' }
     use { '~/Dev/collaborators.vim', ft = 'gitcommit' }
     use { 'cespare/vim-toml' }
 

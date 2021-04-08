@@ -11,7 +11,7 @@ return function()
         documentation = true;
 
         source = {
-            nvim_lsp = true;
+            nvim_lsp = { priority = 99999 };
             tabnine = true;
             -- buffer = true;
             -- tags = true;
