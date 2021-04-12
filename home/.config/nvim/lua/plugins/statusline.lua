@@ -1,7 +1,5 @@
 return function()
-    local lualine = require('lualine')
-
-    lualine.setup {
+    require('lualine').setup {
         options = {
             theme = 'gruvbox',
             component_separators = {'|', '|'},
