@@ -8,6 +8,6 @@ return function()
         texthl = 'ClapCurrentSelectionSign',
         linehl = 'ClapCurrentSelection'
     }
-    vim.g.clap_spinner_frames =
-        { "🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘" }
+    -- vim.g.clap_spinner_frames =
+    --     { "🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘" }
 end
