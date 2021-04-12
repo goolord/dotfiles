@@ -28,6 +28,7 @@ packer.startup(function()
     use {
         'hoob3rt/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true},
+        commit = '1b81b0021fa133ef6536faacb1789f170b9b4721',
         config = require('plugins.statusline')
     }
 
