@@ -39,6 +39,7 @@ set_keybindings {
     clap_bind(':','hist:'),
     clap_bind('/','hist/'),
     clap_bind('h','history'),
+    clap_bind('d','dumb_jump'),
     clap_bind('_','providers'),
     -- Delete in search result
     {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},
