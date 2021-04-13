@@ -18,6 +18,7 @@ setOptions {
     errorbells = false,
     expandtab = true,
     formatoptions = 'jcroql',
+    grepprg = 'rg\\ --vimgrep\\ --follow',
     hidden = true,
     inccommand = 'nosplit',
     lazyredraw = true,
@@ -27,19 +28,20 @@ setOptions {
     mouse = 'a',
     nofoldenable = true,
     number = true,
+    omnifunc = 'syntaxcomplete#Complete',
     pumblend = 10,
     pumheight = 15,
     pyxversion = 3,
     scrolloff = 5,
     shiftwidth = 2,
     shortmess = 'atToOc',
-    showmode = true,
+    showmode = false,
     sidescrolloff = 10,
     softtabstop = 2,
     startofline = false,
     t_Co = '256',
-    tags = './tags;,tags;./.tags;,.tags;',
     tabstop = 2,
+    tags = './tags;,tags;./.tags;,.tags;',
     termguicolors = true,
     title = true,
     ttimeoutlen = 50,
@@ -52,9 +54,7 @@ setOptions {
     wildoptions = 'pum',
     winblend = 0,
     wrap = true,
-    writebackup = true,
-    omnifunc = 'syntaxcomplete#Complete',
-    grepprg = 'rg\\ --vimgrep\\ --follow'
+    writebackup = true
 }
 
 vim.cmd('syntax sync minlines=256')
