@@ -9,10 +9,10 @@ augroup Compe
 augroup END
 
 " hide cursor on Nvim Tree
-augroup HideCursor
-  au!
-  au BufLeave,WinLeave,FileType NvimTree set guicursor&
-  au BufEnter,WinEnter,FileType NvimTree set guicursor=a:block-Cursor/Cursor-blinkon0,
-augroup END
-
-au FileType NvimTree hi Cursor blend=100
+" augroup HideCursor
+"   au!
+"   au WinLeave,FileType NvimTree set guicursor&
+"   au WinEnter,FileType NvimTree set guicursor=a:block-Cursor/Cursor-blinkon0,
+" augroup END
+" 
+" au FileType NvimTree hi Cursor blend=100
