@@ -33,7 +33,7 @@ window:
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: "full"
+  decorations: "none"
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -69,7 +69,6 @@ font:
     family: FiraCode Nerd Font # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
-    # hlsearch)<Plug>(incsearch-nohl-n)K)
 
   # The italic font face
   italic:
@@ -178,7 +177,7 @@ background_opacity: 1.0
 # - PasteSelection
 # - Copy (TODO)
 mouse_bindings:
-  - { mouse: Middle, action: PasteSelection }
+  - { mouse: Middle, action: None }
 
 mouse:
   # Click settings
@@ -267,4 +266,5 @@ live_config_reload: true
 # (e.g. "\x1b[5~") is? Open another terminal (like xterm) without tmux,
 # then run `showkey -a` to get the sequence associated to a key combination.
 # key_bindings:
-#   - { key: V,        mods: Control|Shift,    action: Paste               }
+#   - { key: Space, mods: Shift|Control, action: ToggleViMode }
+#   - { key: V,     mods: Control|Shift, action: Paste        }
