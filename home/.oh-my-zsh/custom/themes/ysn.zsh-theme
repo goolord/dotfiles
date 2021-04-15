@@ -58,10 +58,10 @@ esac
 PROMPT="%{$terminfo[bold]$fg[cyan]%}#%{$reset_color%} \
 %{$terminfo[bold]$fg[yellow]%}$nix_shell_prompt%{$reset_color%}\
 %(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[green]%}%n) \
-%{$terminfo[bold]%F{42}%}@%{$reset_color%} \
+%{$terminfo[bold]$fg[cyan]%}@%{$reset_color%} \
 %{$fg[blue]%}%m \
 %{$fg[cyan]%}in \
-%{$terminfo[bold]%F{42}%}%~%{$reset_color%}\
+%{$terminfo[bold]$fg[aqua]%}%~%{$reset_color%}\
 ${hg_info}\
 ${git_info}\
  \
