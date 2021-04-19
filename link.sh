@@ -7,7 +7,6 @@ stow home -d "$DIR" -t ~/
 function shellScripts() {
   if [ -d ~/Dev/shell-scripts ]
   then 
-    mkdir -p ~/Dev/shell-scripts
     cd ~/Dev/shell-scripts && git pull
   else 
     git clone git@github.com:goolord/shell-scripts.git ~/Dev/shell-scripts -q
@@ -16,3 +15,11 @@ function shellScripts() {
 printf "%s" "shell-scripts: "
 if shellScripts; then echo 'done'; else cd "$DIR" || exit; fi
 
+if [ -d ~/.zim ] 
+  then
+    :
+  else
+    mkdir -p ~/.zim
+    curl https://raw.githubusercontent.com/zimfw/zimfw/master/zimfw.zsh > ~/.zim/zimfw.zsh 
+    zsh ~/.zim/zimfw.zsh install
+fi
