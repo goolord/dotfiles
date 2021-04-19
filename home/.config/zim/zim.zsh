@@ -151,3 +151,7 @@ prompt_nix_shell() {
 MNML_PROMPT=(prompt_nix_shell $MNML_PROMPT)
 
 bindkey -s '^[l' 'ls^M'
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+bindkey '\e[1;5D' backward-word
+bindkey '\e[1;5C' forward-word
