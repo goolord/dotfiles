@@ -123,6 +123,8 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # user
 
+HISTFILE=~/.zsh_history
+
 MNML_ERR_COLOR=9
 # MNML_OK_COLOR=10
 
