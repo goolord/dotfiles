@@ -5,7 +5,6 @@
 
 # Sets sane Zsh built-in environment options.
 zmodule environment
-HISTFILE=~/.zsh_history
 # Applies correct bindkeys for input events.
 # zmodule input
 # Sets a custom terminal title.
