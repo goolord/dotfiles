@@ -3,23 +3,4 @@ DIR="$( { cd "$(dirname "$0")" || exit; } ; pwd -P )"
 
 stow home -d "$DIR" -t ~/
 
-# shell scripts
-function shellScripts() {
-  if [ -d ~/Dev/shell-scripts ]
-  then 
-    cd ~/Dev/shell-scripts && git pull
-  else 
-    git clone git@github.com:goolord/shell-scripts.git ~/Dev/shell-scripts -q
-  fi
-}
-printf "%s" "shell-scripts: "
-if shellScripts; then echo 'done'; else cd "$DIR" || exit; fi
-
-if [ -d ~/.zim ] 
-  then
-    :
-  else
-    mkdir -p ~/.zim
-    curl https://raw.githubusercontent.com/zimfw/zimfw/master/zimfw.zsh > ~/.zim/zimfw.zsh 
-    zsh ~/.zim/zimfw.zsh install
-fi
+cd ~/Dev/shell-scripts && git pull && cd "$DIR"
