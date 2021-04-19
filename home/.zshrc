@@ -1,25 +1,14 @@
+source ~/.config/zim/zim.zsh
 fpath+=~/.zfunc
-
-export ZSH=$HOME/.oh-my-zsh
 
 source /etc/profile
 export NIXPKGS=$HOME/Dev/nixpkgs
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # add support for ctrl+o to open selected file in vim
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
-export ZSH_THEME=ysn
 
 export CARP_DIR=~/Dev/Carp/
 export BAT_THEME="gruvbox-dark"
-
-plugins=(
-  git
-  zsh-autosuggestions
-  fzf
-  nix-shell
-)
-
-source $ZSH/oh-my-zsh.sh
 
 . /home/zach/.nix-profile/etc/profile.d/nix.sh
 
@@ -80,3 +69,4 @@ function gitignore () {
 }
 alias smurf-docker-ghcid="docker-compose up -d stack localstack postgres"
 alias hasktags="hasktags -c -R -x ."
+
