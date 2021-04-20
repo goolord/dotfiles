@@ -128,7 +128,7 @@ HISTFILE=~/.zsh_history
 MNML_ERR_COLOR=9
 # MNML_OK_COLOR=10
 MNML_MAGICENTER=()
-bindkey -M main "^M" accept-line
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=buffer-empty
 
 prompt_nix_shell() {
   if [[ -n "$IN_NIX_SHELL" ]]; then
