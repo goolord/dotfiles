@@ -43,9 +43,14 @@ set_keybindings {
     clap_bind('_','providers'),
     -- Delete in search result
     {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},
-    -- other
+    -- -- other
     {'', '<Space>', '<Leader>', {silent = true} },
-    {'', '<tab>', '<C-W>w', {noremap = false, silent = true} },
+    -- breaks <C-I> jump because terminals are dumb
+    -- {'n', '<tab>', '<C-W>w', {noremap = true, silent = true} },
+    {'n', '<C-h>', '<C-w>h', {noremap = true, silent = true} },
+    {'n', '<C-j>', '<C-w>j', {noremap = true, silent = true} },
+    {'n', '<C-k>', '<C-w>k', {noremap = true, silent = true} },
+    {'n', '<C-l>', '<C-w>l', {noremap = true, silent = true} },
     {'n', '<esc>', ':noh<CR>', {noremap = false, silent = true} },
     {'n', '<Leader>s', ':Startify<CR>', {silent = true} },
     -- tabular
