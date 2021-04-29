@@ -2,28 +2,7 @@ local lspconfig = require('lspconfig')
 
 return function()
 
-    -- a bit of a hack :/
-    local blacklist = { "/home/zach/Dev/smurf" }
-
-    local function in_blacklist(dir)
-        local res = false
-        for _,entr in pairs(blacklist) do
-            if string.find(dir, entr) then
-                res = true
-                break
-            end
-        end
-        return res
-    end
-
-    -- should figure out how to only remap these keybindings
-    -- in buffers where lsp is on
     local function custom_on_attach(client)
-        if in_blacklist(vim.fn.getcwd()) then
-            client.stop(true)
-            return
-        end
-
         local function buf_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
         local function buf_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
         -- keymaps
@@ -52,12 +31,19 @@ return function()
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
-    local defaultOpts = { 
+
+    lspconfig.hls.setup {
+        on_attach = custom_on_attach,
+        capabilities = capabilities,
+        settings = {
+            languageServerHaskell = {
+                hlintOn = false,
+            }
+        }
+    }
+    lspconfig.rust_analyzer.setup {
         on_attach = custom_on_attach,
         capabilities = capabilities
     }
-
-    lspconfig.hls.setup(defaultOpts)
-    lspconfig.rust_analyzer.setup(defaultOpts)
     -- lspconfig.elmls.setup{}
 end
