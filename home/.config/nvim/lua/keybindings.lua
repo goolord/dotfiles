@@ -1,8 +1,11 @@
 local keymap = vim.api.nvim_set_keymap
 
-local clap_settings = { noremap = true, silent = false }
-local function clap_bind(c,provider)
-    return {'n', '<Leader>f' .. c, '<CMD>Clap ' .. provider .. '<CR>', clap_settings}
+local function clap_bind(c, provider)
+    return 
+        {   'n', '<Leader>f' .. c, 
+            '<CMD>Clap ' .. provider .. '<CR>', 
+            { noremap = true, silent = false }
+        }
 end
 
 local function tabularize_bind(c,regex)

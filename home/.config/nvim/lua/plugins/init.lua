@@ -8,7 +8,7 @@ packer.startup(function()
     use { 'wbthomason/packer.nvim', opt = true }
 
     use 'godlygeek/tabular'
-    use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
+    use { 'terrortylor/nvim-comment', config = require('nvim_comment').setup }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
     use { 'hrsh7th/nvim-compe', config = require('plugins.completion') }
     use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}

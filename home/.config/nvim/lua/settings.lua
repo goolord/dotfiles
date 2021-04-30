@@ -41,7 +41,6 @@ setOptions {
     startofline = false,
     t_Co = '256',
     tabstop = 2,
-    tags = './tags;,tags;./.tags;,.tags;',
     termguicolors = true,
     title = true,
     ttimeoutlen = 50,
