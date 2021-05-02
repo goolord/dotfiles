@@ -16,7 +16,6 @@ return function()
         ['H']     = tree_cb("toggle_dotfiles"),
         ['R']     = tree_cb("refresh"),
         ['=']     = tree_cb("preview"),
-        ['<Tab>'] = '<C-W>w',
     }
 
     vim.g.nvim_tree_icons = {

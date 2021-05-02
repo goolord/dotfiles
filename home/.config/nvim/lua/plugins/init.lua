@@ -8,7 +8,7 @@ packer.startup(function()
     use { 'wbthomason/packer.nvim', opt = true }
 
     use 'godlygeek/tabular'
-    use { 'terrortylor/nvim-comment', config = require('nvim_comment').setup }
+    use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
     use { 'hrsh7th/nvim-compe', config = require('plugins.completion') }
     use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
@@ -27,6 +27,7 @@ packer.startup(function()
 
     use {
         'hoob3rt/lualine.nvim',
+        commit = 'f2f014e3797576eccc2320b711a336ea95f448fd',
         requires = {'kyazdani42/nvim-web-devicons', opt = true},
         config = require('plugins.statusline')
     }
