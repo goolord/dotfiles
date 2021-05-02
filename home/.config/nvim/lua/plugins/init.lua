@@ -56,6 +56,10 @@ packer.startup(function()
 
     use '~/Dev/nvim-clap-lsp'
     use 'kosayoda/nvim-lightbulb'
+    use {
+        'folke/lsp-trouble.nvim',
+        config = require('plugins.trouble'),
+    }
 
     -- use {
     --     'nvim-treesitter/nvim-treesitter',
@@ -64,11 +68,11 @@ packer.startup(function()
     -- }
 
     -- filetype plugins
-    use { 'LnL7/vim-nix' }
-    use { 'hellerve/carp-vim' }
-    use { 'edwinb/idris2-vim' }
+    use 'LnL7/vim-nix'
+    use 'hellerve/carp-vim'
+    use 'edwinb/idris2-vim'
+    use 'cespare/vim-toml'
     use { '~/Dev/collaborators.vim', ft = 'gitcommit' }
-    use { 'cespare/vim-toml' }
 
     use {
         'ndmitchell/ghcid',
