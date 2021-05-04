@@ -7,8 +7,5 @@ return function()
             icons_enabled = true,
         },
         extensions = { 'fugitive', 'nvim-tree' },
-
-        sections = require'lualine.defaults'.sections,
-        inactive_sections = require'lualine.defaults'.inactive_sections
     }
 end
