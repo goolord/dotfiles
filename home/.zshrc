@@ -18,7 +18,7 @@ setopt complete_aliases
 alias ssh="TERM=xterm-256color ssh"
 alias pm="sudo pacman"
 alias mocp="mocp -T transparent-background"
-alias mkalias="vim $HOME/.zshrc"
+alias mkalias="vim $HOME/.zshrc +"
 alias music="udisksctl mount -b /dev/sda2 > /dev/null 2>&1; cd /run/media/zachchurchill/1AD2B07DD2B05EA7/music/; mocp -m"
 alias youtubeflac="youtube-dl --extract-audio --audio-format flac -o '%(autonumber)s.%(title)s.%(ext)s' "
 alias neofetch="neofetch \
@@ -28,7 +28,6 @@ alias neofetch="neofetch \
 --ascii_logo_size small \
 --speed_shorthand on \
 "
-alias colortest="$HOME/Dev/shell-scripts/colortest.sh"
 alias sudo="sudo -E"
 alias gksudo="gksudo -k"
 alias unrarall="find ./ -name \*.rar -exec unrar x -y  {} \;"
@@ -51,22 +50,15 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="htop"
 alias htop="TERM=xterm-256color htop"
 alias tmux="tmux -f ~/.config/tmux.conf"
-alias ghcidns="nix-shell --run 'ghcid -c cabal new-repl'"
-alias ghcidc="ghcid -c cabal v2-repl"
-alias ghcidr="ghcid -c cabal v2-repl $1"
-alias ghcids="ghcid -c stack repl"
-alias nixmaster="nix-env -f -f https://github.com/NixOS/nixpkgs/archive/master.tar.gz -iA"
-alias rgless='rg "$@" --color always --column'
-function clone() {
-  git clone git@github.com:$1/$2.git && cd $2
-}
-function doppelganger() {
-  PWD=$(pwd) $TERM & disown
-}
-alias dumpcore="cabal exec -- ghc-core --no-asm --no-cast $1"
+function rgless () { rg "$@" --color always --column | less -r }
+function clone() { git clone git@github.com:$1/$2.git && cd $2 }
+function doppelganger() { PWD=$(pwd) "$TERM" & disown }
+alias dumpcore="cabal exec -- ghc-core --no-asm --no-cast"
 function gitignore () {
   curl https://raw.githubusercontent.com/github/gitignore/master/${(C)1}.gitignore > .gitignore
 }
 alias smurf-docker-ghcid="docker-compose up -d stack localstack postgres"
 alias hasktags="hasktags -c -R -x ."
-
+function nvim-closest() {
+  nvim $(fd -p $@)
+}
