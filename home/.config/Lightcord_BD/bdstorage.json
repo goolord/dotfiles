@@ -1,0 +1,77 @@
+{
+    "settings": {
+        "stable": {
+            "settings": {
+                "bda-gs-1": true,
+                "bda-gs-2": false,
+                "bda-gs-3": false,
+                "bda-gs-4": false,
+                "bda-gs-5": true,
+                "bda-gs-6": false,
+                "bda-gs-7": false,
+                "bda-gs-8": false,
+                "bda-es-0": true,
+                "bda-es-1": true,
+                "bda-es-2": true,
+                "bda-es-4": false,
+                "bda-es-6": true,
+                "bda-es-7": true,
+                "bda-gs-b": false,
+                "bda-es-8": true,
+                "bda-dc-0": false,
+                "bda-css-0": false,
+                "bda-css-1": false,
+                "bda-es-9": true,
+                "fork-dm-1": false,
+                "fork-ps-1": true,
+                "fork-ps-2": true,
+                "fork-ps-3": true,
+                "fork-ps-4": true,
+                "fork-ps-5": true,
+                "fork-ps-6": true,
+                "fork-ps-7": false,
+                "fork-es-2": false,
+                "fork-es-3": true,
+                "fork-wp-1": false,
+                "fork-wp-2": false,
+                "fork-beta": true,
+                "lightcord-1": false,
+                "lightcord-2": true,
+                "lightcord-presence-1": false,
+                "lightcord-3": false,
+                "lightcord-4": false,
+                "lightcord-5": true,
+                "lightcord-6": true,
+                "lightcord-7": false,
+                "lightcord-8": false,
+                "lightcord-9": false,
+                "lightcord-10": false,
+                "no_window_bound": false
+            },
+            "rpc": {
+                "name": "Lightcord",
+                "application_id": "711416957718757418",
+                "state": "Lightcord Client",
+                "details": "Browsing Discord",
+                "timestamps.start": 1620691389868,
+                "assets.small": null,
+                "assets.large": "712323821037682791"
+            },
+            "PluginCertifierHashes": "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",
+            "plugins": {
+                "ZeresPluginLibrary": true,
+                "PluginRepo": true,
+                "BetterVolume": true,
+                "DiscordFreeEmojis": true,
+                "ShowHiddenChannels": true
+            },
+            "themes": {
+                "Dark Discord": false,
+                "Glasscord Example Theme": false
+            }
+        },
+        "canary": {},
+        "ptb": {}
+    },
+    "version": "0.3.5"
+}
