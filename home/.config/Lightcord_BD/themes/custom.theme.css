@@ -5,13 +5,6 @@
  * @author       goolord
  * @source		 crouton.net
  */
-/**
- * @name         custom
- * @version 	 1.0
- * @description  custom css
- * @author       goolord
- * @source		 crouton.net
- */
 
 .chat-3bRxxu .attachButtonDivider-3Glu60 {
   display: none;
@@ -97,4 +90,8 @@
 
 .chat-3bRxxu form {
   margin: 0px;
+}
+
+.markup-2BOw-j {
+    color: #eee;
 }
