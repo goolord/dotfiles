@@ -261,6 +261,10 @@ for_window [class="Chromium|Slack|discord|lightcord|firefox|Bitwig Studio|emacs"
   border pixel 2
 }
 
+for_window [app_id="firefox"] { 
+  border pixel 2
+}
+
 input 6392:3993:USB_OPTICAL_MOUSE {
   accel_profile flat
   pointer_accel -0.55
