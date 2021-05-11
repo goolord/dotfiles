@@ -56,7 +56,7 @@ packer.startup(function()
     use '~/Dev/nvim-clap-lsp'
     use 'kosayoda/nvim-lightbulb'
     use {
-        'folke/lsp-trouble.nvim',
+        'folke/trouble.nvim',
         config = require('plugins.trouble'),
     }
 

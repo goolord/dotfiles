@@ -1,9 +1,9 @@
 /**
  * @name         custom
- * @version 	 1.0
+ * @version    1.0
  * @description  custom css
  * @author       goolord
- * @source		 crouton.net
+ * @source     crouton.net
  */
 
 .chat-3bRxxu .attachButtonDivider-3Glu60 {
@@ -92,6 +92,11 @@
   margin: 0px;
 }
 
+/* mine */
 .markup-2BOw-j {
-    color: #eee;
+  color: #eee;
+}
+
+.name-23GUGE {
+  color: #bbb;
 }
