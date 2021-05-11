@@ -1,0 +1,100 @@
+/**
+ * @name         custom
+ * @version 	 1.0
+ * @description  custom css
+ * @author       goolord
+ * @source		 crouton.net
+ */
+/**
+ * @name         custom
+ * @version 	 1.0
+ * @description  custom css
+ * @author       goolord
+ * @source		 crouton.net
+ */
+
+.chat-3bRxxu .attachButtonDivider-3Glu60 {
+  display: none;
+}
+
+.channelTextArea-2VhZ6z {
+  background: transparent;
+}
+
+.buttons-3JBrkn {
+  padding: 5px;
+}
+
+.sansAttachButton-td2irx:not(.innerDisabled-1YTFPN) {
+  padding-left: 0px
+}
+
+.sansAttachButton-td2irx > .textArea-12jD-V {
+  margin-left: 16px;
+}
+
+.attachWrapper-1_D-pj,
+.form-2fGMdU,
+.attachWrapper-2TRKBi {
+  border-top: none;
+  border-right: none;
+}
+
+.scrollableContainer-38zsVD,
+.scrollableContainer-2NUZem {
+  border-radius: 0px;
+}
+
+.chat-3bRxxu .attachButton-1UjEWA,
+.attachButton-2WznTc {
+  margin: 5px 10px;
+}
+
+.chat-3bRxxu .attachButtonPlus-rUdX-B {
+  opacity: .55;
+  height: 22px;
+  margin: 16px 10px;
+}
+
+.chat-3bRxxu .textArea-2Spzkt,
+.chat-3bRxxu .textArea-12jD-V {
+  background-color: transparent !important;
+  line-height: 1.25rem !important;
+  margin-top: 8px;
+}
+
+.chat-3bRxxu .textArea-2Spzkt.textAreaDisabled-2_o-kZ {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.chat-3bRxxu .textArea-2Spzkt.textAreaEnabledNoAttach-1WxUwj {
+  line-height: 1.25rem !important;
+  margin-top: 2px;
+}
+
+.chat-3bRxxu .innerNoAutocomplete-1WpcVO {
+  border-radius: 0px;
+}
+
+.form-2fGMdU {
+  padding: 0;
+}
+
+.form-2fGMdU:before {
+  display: none;
+}
+
+.chat-3bRxxu .channelTextArea-rNsIhG {
+  margin: 0px 0 0px;
+  padding: 0;
+  border: none;
+}
+
+.chat-3bRxxu .channelTextAreaEnabledNoAttach-3tPFmT.channelTextArea-1LDbYG.channelTextArea-rNsIhG {
+  margin: 4px 0 6px !important;
+}
+
+.chat-3bRxxu form {
+  margin: 0px;
+}
