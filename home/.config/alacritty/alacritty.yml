@@ -60,24 +60,12 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: FiraCode Nerd Font # should be "Menlo" or something on macOS.
+    family: monospace # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
-  # The bold font face
-  bold:
-    family: FiraCode Nerd Font # should be "Menlo" or something on macOS.
-    # Style can be specified to pick a specific face.
-    # style: Bold
-
-  # The italic font face
-  italic:
-    family: FiraCode Nerd Font # should be "Menlo" or something on macOS.
-    # Style can be specified to pick a specific face.
-    # style: Italic
-
   # Point size of the font
-  size: 15
+  size: 17
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.

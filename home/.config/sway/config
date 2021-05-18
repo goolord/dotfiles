@@ -213,9 +213,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl s -10%
 bindsym $mod+F5 exec brightnessctl s +10%
 bindsym $mod+F4 exec brightnessctl s 10%-
 bindsym $mod+F7 exec ~/bin/keyboard_backlight.sh
-bindsym XF86AudioRaiseVolume exec ponymix increase 5
-bindsym XF86AudioLowerVolume exec ponymix decrease 5
-bindsym XF86AudioMute exec ponymix toggle
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5
+bindsym XF86AudioMute exec pamixer -t
 bindsym XF86AudioMicMute exec amixer set Capture toggle
 bindsym Print exec ~/Documents/prtscr
 bindsym $mod+Tab move workspace to output right
@@ -247,7 +247,7 @@ esac\
 
 include /etc/sway/config.d/*
 
-font pango:FiraCode Nerd Font 10
+font pango:monospace 10
 
 exec swaybg -c '#404040'
 
