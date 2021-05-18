@@ -17,7 +17,7 @@ luarocks
 mupdf
 nemo
 neofetch
-nerd-fonts-complete
+otf-nerd-fonts-fira-code
 networkmanager-dmenu-git
 numix-icon-theme-git
 obs-studio-git
