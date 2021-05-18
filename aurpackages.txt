@@ -30,7 +30,6 @@ pamixer
 pavucontrol
 pipewire-jack
 pix-image-viewer-git
-ponymix
 qbittorrent
 redshift-wlr-gamma-control-git
 ripgrep
@@ -45,11 +44,13 @@ the_silver_searcher
 tmux
 tokei
 vlc
-waybar
+waybar-git
 wlr-randr
 wofi-hg
 xclip
+xdg-desktop-portal-wlr
 xdg-user-dirs-gtk
 xf86-video-amdgpu
 yay
 zsh
+wireplumber
