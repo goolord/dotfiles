@@ -28,7 +28,10 @@ otf-fira-code
 otf-fira-sans
 pamixer
 pavucontrol
+pipewire
+pipewire-pulse
 pipewire-jack
+pipewire-media-session
 pix-image-viewer-git
 qbittorrent
 redshift-wlr-gamma-control-git
@@ -45,6 +48,7 @@ tmux
 tokei
 vlc
 waybar-git
+wireplumber
 wlr-randr
 wofi-hg
 xclip
@@ -53,4 +57,3 @@ xdg-user-dirs-gtk
 xf86-video-amdgpu
 yay
 zsh
-wireplumber
