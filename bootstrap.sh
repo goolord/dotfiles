@@ -1,3 +1,5 @@
+yay -S $(cat aurpackages.txt) --needed
+
 if ! [ -d ~/Dev/shell-scripts ]
 then
   mkdir -p ~/Dev/shell-scripts
@@ -10,4 +12,3 @@ then
   curl https://raw.githubusercontent.com/zimfw/zimfw/master/zimfw.zsh > ~/.zim/zimfw.zsh 
   zsh ~/.zim/zimfw.zsh install
 fi
-
