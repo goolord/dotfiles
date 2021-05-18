@@ -5,3 +5,10 @@
   name = Zachary Churchill
 [init]
   defaultBranch = main
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  features = side-by-side line-numbers decorations
+  whitespace-error-style = 22 reverse
