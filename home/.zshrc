@@ -62,3 +62,8 @@ alias hasktags="hasktags -c -R -x ."
 function nvim-closest() {
   nvim $(fd -p $@)
 }
+function nvcp() {
+  nvim-closest $(wl-paste)
+}
+
+source /home/zach/.config/broot/launcher/bash/br

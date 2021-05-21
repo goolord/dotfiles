@@ -36,6 +36,7 @@ packer.startup(function()
         run = function () vim.fn['clap#installer#build_maple']() end,
         config = require('plugins.clap')
     }
+    use 'goolord/vim-clap-gruvbox'
 
     -- git
     use 'tpope/vim-fugitive'
