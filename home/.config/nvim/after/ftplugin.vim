@@ -16,3 +16,10 @@ augroup END
 " augroup END
 " 
 " au FileType NvimTree hi Cursor blend=100
+
+
+augroup NvimTree
+  au!
+  au FileType NvimTree hi NvimTreeNormal guibg=#1d2021
+augroup END
+

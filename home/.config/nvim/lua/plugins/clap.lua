@@ -1,4 +1,5 @@
 return function()
+    vim.g.clap_theme = 'gruvbox_dark'
     vim.g.clap_layout = { relative = 'editor' }
     vim.g.clap_disable_run_rooter = true
     vim.g.clap_enable_icon = 1
