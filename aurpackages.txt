@@ -44,6 +44,7 @@ the_silver_searcher
 themix-full-git
 tmux
 tokei
+uutils-coreutils
 vlc
 waybar-git
 wireplumber
