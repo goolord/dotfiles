@@ -3,6 +3,7 @@ amd-ucode
 arch-silence-grub-theme-git
 audacity
 bat
+broot
 capitaine-cursors
 cozette-ttf
 debtap
