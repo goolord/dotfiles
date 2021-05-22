@@ -1,0 +1,32 @@
+evaluate-commands %sh{
+    plugins="$kak_config/plugins"
+    mkdir -p "$plugins"
+    [ ! -e "$plugins/plug.kak" ] && \
+        git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+    printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
+}
+
+plug "andreyorst/plug.kak" noload
+plug "andreyorst/fzf.kak"
+
+#########################################################
+
+map global normal <c-p> ': fzf-mode<ret>'
+
+colorscheme gruvbox
+
+hook global InsertCompletionShow .* %{
+    try %{
+        execute-keys -draft 'h<a-K>\h<ret>'
+        map window insert <tab> <c-n>
+        map window insert <s-tab> <c-p>
+        hook -once -always window InsertCompletionHide .* %{
+            map window insert <tab> <tab>
+            map window insert <s-tab> <s-tab>
+        }
+    }
+}
+add-highlighter global/ number-lines
+add-highlighter global/ wrap
+
+def find -params 1 -shell-script-candidates %{ find . -type f } %{ edit %arg{1} }
