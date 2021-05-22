@@ -35,7 +35,7 @@ zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 # }}} End configuration added by Zim install
 
-zmodule junegunn/fzf -s shell/key-bindings.zsh -s shell/completion.zsh
+zmodule lotabout/skim -s shell/key-bindings.zsh -s shell/completion.zsh
 zmodule chisui/zsh-nix-shell -s nix-shell.plugin.zsh
 zmodule Aloxaf/fzf-tab -s fzf-tab.plugin.zsh
 
