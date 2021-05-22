@@ -11,8 +11,6 @@ discord_arch_electron
 exa
 fd
 firefox
-fzf
-git-fuzzy-git
 htop
 inkscape
 kakoune
