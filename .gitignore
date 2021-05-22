@@ -3,3 +3,4 @@
 .config/nvim/autoload/plug.vim.old
 .config/nvim/.netrwhist
 home/.config/Lightcord_BD/bdstorage.json
+home/.config/kak/plugins

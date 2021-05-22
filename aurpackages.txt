@@ -15,6 +15,7 @@ fzf
 git-fuzzy-git
 htop
 inkscape
+kakoune
 krita
 luarocks
 mupdf
@@ -36,6 +37,7 @@ qbittorrent
 ripgrep
 rust-analyzer
 shellcheck-bin
+skim
 slurp-git
 stow
 sway
