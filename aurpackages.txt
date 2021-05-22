@@ -11,6 +11,7 @@ discord_arch_electron
 exa
 fd
 firefox
+fzf
 htop
 inkscape
 kakoune
@@ -35,7 +36,6 @@ qbittorrent
 ripgrep
 rust-analyzer
 shellcheck-bin
-skim
 slurp-git
 stow
 sway
