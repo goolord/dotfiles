@@ -25,7 +25,7 @@ set_keybindings {
     {'t', '<Esc>', '<C-\\><C-n>', {noremap = true, silent = true}},
     -- nvim-tree.lua
     {'n', '<Leader>d', '<CMD>NvimTreeToggle<CR>', {noremap = true, silent = false}},
-    {'n', '<Leader>fd', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
+    {'n', '<Leader>td', '<CMD>NvimTreeFindFile<CR>', {noremap = true, silent = false}},
     -- Clap
     clap_bind('i','filer'),
     clap_bind('f','files'),     -- :find

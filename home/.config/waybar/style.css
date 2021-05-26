@@ -33,17 +33,17 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  background: red;
+  background: #ff0000;
   animation: blinking 0.8s infinite;
   border: 1px solid red;
 }
 
-@keyframes blinking{
-    0%   { background-color: red;     }
-    49%  { background-color: inherit; }
-    50%  { background-color: inherit; }
-    99%  { background-color: inherit; }
-    100% { background-color: red;     }
+@keyframes blinking {
+  0%   { background-color: #ff0000; }
+  49%  { background-color: inherit; }
+  50%  { background-color: inherit; }
+  99%  { background-color: inherit; }
+  100% { background-color: #f00000; }
 }
 
 #workspaces button:hover { background: #8ec07c; }
