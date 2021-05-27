@@ -12,6 +12,7 @@ exa
 fd
 firefox
 fzf
+gammastep
 htop
 inkscape
 kakoune
@@ -55,4 +56,5 @@ xclip
 xdg-desktop-portal-wlr
 xdg-user-dirs-gtk
 xf86-video-amdgpu
+youtube-dl
 zsh
