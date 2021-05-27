@@ -14,6 +14,7 @@ firefox
 fzf
 gammastep
 htop
+hyperfine
 inkscape
 kakoune
 krita
@@ -44,6 +45,7 @@ swaylock-fancy-git
 tealdeer-git
 the_silver_searcher
 themix-full-git
+tmate
 tmux
 tokei
 uutils-coreutils
