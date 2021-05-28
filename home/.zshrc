@@ -32,7 +32,7 @@ alias pm="sudo pacman"
 alias mocp="mocp ~/Music -T transparent-background"
 alias mkalias="vim $HOME/.zshrc +"
 alias music="udisksctl mount -b /dev/sda2 > /dev/null 2>&1; cd /run/media/zachchurchill/1AD2B07DD2B05EA7/music/; mocp -m"
-alias youtube-audio="youtube-dl --extract-audio -f bestaudio -o '%(autonumber)s.%(title)s.%(ext)s' "
+alias youtube-audio="youtube-dl --extract-audio -f bestaudio --add-metadata --embed-thumbnail -o '%(autonumber)s.%(title)s.%(ext)s'"
 alias neofetch="neofetch \
 --block_range 1 14 \
 --uptime_shorthand on \

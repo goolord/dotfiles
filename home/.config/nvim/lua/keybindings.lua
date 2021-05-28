@@ -59,8 +59,10 @@ set_keybindings {
     -- tabular
     tabularize_bind('','/'),
     tabularize_bind('a','/'),
-    tabularize_bind('(','/(<CR>'),
-    tabularize_bind(')','/)<CR>'),
+    tabularize_bind('(','/(/r0<CR>'),
+    tabularize_bind(')','/)/l0<CR>'),
+    tabularize_bind('[','/[/r0<CR>'),
+    tabularize_bind(']','/]/l0<CR>'),
     tabularize_bind('{','/{<CR>'),
     tabularize_bind('}','/}<CR>'),
     tabularize_bind(':','/:\\+<CR>'),
