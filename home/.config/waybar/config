@@ -20,7 +20,8 @@
     "cpu",
     "temperature",
     "battery",
-    "tray"
+    "tray",
+    "custom/shutdown"
   ],
 
 
@@ -107,6 +108,11 @@
   },
   "tray": {
     "icon-size": 20
+  },
+  "custom/shutdown": {
+    "interval": "once",
+    "format": "⏻",
+    "on-click": "~/Dev/shell-scripts/shutdown.sh"
   }
 }
 
