@@ -24,6 +24,10 @@ function ApplyGruvbox()
         {'LspDiagnosticsDefaultHint', {bg = 'NONE', fg = '#83A598'}},
         {'LspDiagnosticsUnderlineError', {bg = 'NONE', fg = 'NONE', gui = 'underline'}},
         {'LspDiagnosticsUnderlineWarning', {bg = 'NONE', fg = 'NONE', gui = 'underline'}},
+
+        -- coqtail
+        {'CoqtailChecked', {bg = '#1b4723'}},
+        {'CoqtailSent', {bg = '#79750e'}}
     }
 
     for _, highlight in pairs(highlights) do hl(highlight[1], highlight[2]) end
