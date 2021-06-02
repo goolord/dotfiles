@@ -3,6 +3,7 @@ amd-ucode
 arch-silence-grub-theme-git
 audacity
 bat
+bottom
 broot
 capitaine-cursors
 cozette-ttf
@@ -52,6 +53,7 @@ uutils-coreutils
 vlc
 waybar-git
 wireplumber
+wl-clipboard
 wlr-randr
 wofi
 xclip

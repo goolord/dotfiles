@@ -278,4 +278,5 @@ input 1267:12529:ELAN1206:00_04F3:30F1_Mouse {
 seat seat0 xcursor_theme default 32
 
 # startup
+exec cat ~/.cache/brightness | xargs brightnessctl set
 exec xmousepasteblock
