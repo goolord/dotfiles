@@ -34,7 +34,6 @@ packer.startup(function()
     use {
         'liuchengxu/vim-clap',
         run = function () vim.fn['clap#installer#build_maple']() end,
-        commit = 'ad10837b8b67368cf373d33c3f78898a9585ad60',
         config = require('plugins.clap')
     }
     use 'goolord/vim-clap-gruvbox'
@@ -70,7 +69,6 @@ packer.startup(function()
 
     -- filetype plugins
     use 'LnL7/vim-nix'
-    use 'hellerve/carp-vim'
     use 'edwinb/idris2-vim'
     use 'cespare/vim-toml'
     use { '~/Dev/collaborators.vim', ft = 'gitcommit' }
