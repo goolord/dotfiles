@@ -111,7 +111,7 @@
   },
   "custom/shutdown": {
     "interval": "once",
-    "format": "⏻",
+    "format": "⏻" ,
     "on-click": "~/Dev/shell-scripts/shutdown.sh"
   }
 }
