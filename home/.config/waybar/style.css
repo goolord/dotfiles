@@ -16,7 +16,16 @@ window#waybar {
 
 .modules-right > widget > * { padding: 0 15px; }
 
-#tray > * > * { 
+.modules-right > widget > #tray {
+  padding-left: 8px; 
+  padding-right: 13px; 
+}
+.modules-right > widget > #custom-shutdown { 
+  padding-left: 10px; 
+  padding-right: 12px; 
+}
+
+#tray > * > * {
   padding: 0 0px 0.1em 5px; 
 }
 
