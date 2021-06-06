@@ -6,6 +6,7 @@ bat
 bottom
 broot
 capitaine-cursors
+coq
 cozette-ttf
 debtap
 discord_arch_electron

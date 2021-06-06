@@ -8,3 +8,5 @@ filter_rate=100
 insensitive=true
 layer=overlay
 line_wrap=word
+term=alacritty
+always_parse_args=true
