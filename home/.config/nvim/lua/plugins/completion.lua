@@ -14,7 +14,7 @@ return function()
             nvim_lsp = { priority = 99999 };
             tabnine = true;
             -- buffer = true;
-            -- tags = true;
+            tags = true;
             path = true;
             nvim_lua = true;
             calc = true;
