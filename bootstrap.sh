@@ -1,4 +1,4 @@
-yay -S $(cat aurpackages.txt) --needed
+yay -S $(cat aurpackages.txt) --needed --sudoloop
 
 if ! [ -d ~/Dev/shell-scripts ]
 then

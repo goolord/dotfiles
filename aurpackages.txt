@@ -15,6 +15,7 @@ fd
 firefox
 fzf
 gammastep
+git-delta
 htop
 hyperfine
 inkscape
@@ -62,4 +63,5 @@ xdg-desktop-portal-wlr
 xdg-user-dirs-gtk
 xf86-video-amdgpu
 youtube-dl
+zenity
 zsh
