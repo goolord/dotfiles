@@ -13,7 +13,7 @@ return function()
         source = {
             nvim_lsp = { priority = 99999 };
             tabnine = true;
-            -- buffer = true;
+            buffer = { filetypes = { 'coq' } };
             tags = true;
             path = true;
             nvim_lua = true;
