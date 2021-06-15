@@ -177,9 +177,9 @@ bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86AudioMicMute exec amixer set Capture toggle
-bindsym Print exec ~/Documents/prtscr
 bindsym $mod+Tab move workspace to output right
 bindsym $mod+Shift+s exec scroat
+bindsym Print exec scroat
 
 #
 # Status Bar:
