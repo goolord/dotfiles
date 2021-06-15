@@ -65,3 +65,5 @@ xf86-video-amdgpu
 youtube-dl
 zenity
 zsh
+greetd
+greetd-tuigreet
