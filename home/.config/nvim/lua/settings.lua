@@ -5,7 +5,6 @@ vim.opt.directory     = os.getenv('HOME') .. '/.swap/'
 vim.opt.errorbells    = false
 vim.opt.expandtab     = true
 vim.opt.foldenable    = false
-vim.opt.formatoptions = 'jcroql'
 vim.opt.grepprg       = 'rg\\ --vimgrep\\ --follow'
 vim.opt.guifont       = 'FiraCode\\ Nerd\\ Font,monospace:h21.5'
 vim.opt.hidden        = true
