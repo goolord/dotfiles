@@ -16,7 +16,7 @@ set $menu dmenu_path | wofi --show drun -I | xargs swaymsg exec --¬
 ### Output configuration
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-# output * scale 1
+# output * scale 2
 
 hide_edge_borders --i3 smart
 
@@ -171,15 +171,19 @@ mode "resize" {
 }
 
 bindsym Mod4+Control+Delete exec --no-starup-id gnome-system-monitor
-bindsym $mod+F6 exec brightnessctl s +10%
-bindsym $mod+F5 exec brightnessctl s 10%-
+bindsym $mod+F6 exec brightnessctl s +5
+bindsym $mod+F5 exec brightnessctl s 5-
 bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86AudioMicMute exec amixer set Capture toggle
 bindsym $mod+Tab move workspace to output right
 bindsym $mod+Shift+s exec scroat
-bindsym Print exec scroat
+# bindsym Print exec scroat
+
+# discord hack
+bindsym Print exec xdotool keydown Print
+bindsym --release Print exec xdotool keyup Print
 
 #
 # Status Bar:
@@ -231,7 +235,7 @@ input 1267:12529:ELAN1206:00_04F3:30F1_Mouse {
   pointer_accel -0.3
 }
 
-seat seat0 xcursor_theme default 32
+seat seat0 xcursor_theme default 36
 
 # startup
 exec cat ~/.cache/brightness | xargs brightnessctl set
