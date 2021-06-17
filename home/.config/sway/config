@@ -240,3 +240,4 @@ seat seat0 xcursor_theme default 36
 # startup
 exec cat ~/.cache/brightness | xargs brightnessctl set
 exec xmousepasteblock
+exec mako
