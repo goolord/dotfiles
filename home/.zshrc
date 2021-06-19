@@ -2,7 +2,6 @@ source ~/.config/zim/zim.zsh
 fpath+=~/.zfunc
 
 source /etc/profile
-source /home/zach/.config/broot/launcher/bash/br
 
 export NIXPKGS=$HOME/Dev/nixpkgs
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
@@ -60,4 +59,3 @@ alias tmux="tmux -f ~/.config/tmux.conf"
 alias tmate="tmate -f ~/.config/tmux.conf"
 alias dumpcore="cabal exec -- ghc-core --no-asm --no-cast"
 alias hasktags="hasktags -c -R -x ."
-alias fl_studio="wine start /unix '$HOME/.wine/drive_c/Program Files/Image-Line/FL Studio 20/FL64.exe'"
