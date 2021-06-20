@@ -3,12 +3,10 @@ fpath+=~/.zfunc
 
 source /etc/profile
 
-export NIXPKGS=$HOME/Dev/nixpkgs
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # add support for ctrl+o to open selected file in vim
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 
-export CARP_DIR=~/Dev/Carp/
 export BAT_THEME="gruvbox-dark"
 
 . /home/zach/.nix-profile/etc/profile.d/nix.sh
