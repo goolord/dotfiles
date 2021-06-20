@@ -46,7 +46,5 @@ vim.cmd('syntax sync minlines=256')
 vim.g.python3_host_prog = '/usr/bin/python3'
 vim.g.vimsyn_embed = 'l'
 
-vim.cmd('autocmd BufRead,BufNewFile ~/Dev/smurf/* let g:ghcid_command = "./tools/ghcid.sh --no-height-limit --reverse-errors --clear"')
-
 vim.g.neovide_cursor_animation_length = 0
 
