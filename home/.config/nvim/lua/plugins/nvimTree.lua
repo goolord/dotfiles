@@ -9,13 +9,13 @@ return function()
     end
 
     vim.g.nvim_tree_bindings = {
-        ['l']    = tree_cb("edit"),
-        ['o']    = tree_cb("edit"),
-        ['<cr>'] = tree_cb("edit"),
-        ['I']    = tree_cb("toggle_ignored"),
-        ['H']    = tree_cb("toggle_dotfiles"),
-        ['R']    = tree_cb("refresh"),
-        ['=']    = tree_cb("preview"),
+        { key='l'   , cb=tree_cb("edit") },
+        { key='o'   , cb=tree_cb("edit") },
+        { key='<cr>', cb=tree_cb("edit") },
+        { key='I'   , cb=tree_cb("toggle_ignored") },
+        { key='H'   , cb=tree_cb("toggle_dotfiles") },
+        { key='R'   , cb=tree_cb("refresh") },
+        { key='='   , cb=tree_cb("preview") }
     }
 
     vim.g.nvim_tree_icons = {
