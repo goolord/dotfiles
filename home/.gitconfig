@@ -3,6 +3,7 @@
 [user]
   email = zacharyachurchill@gmail.com
   name = Zachary Churchill
+  signingkey = 53B96E7DEB1980B23EEE17773F3FD51F702786FB
 [init]
   defaultBranch = main
 [core]

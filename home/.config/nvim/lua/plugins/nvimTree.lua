@@ -4,9 +4,7 @@ return function()
     vim.g.nvim_tree_indent_markers = 1
     vim.g.nvim_tree_hide_dotfiles = 1
 
-    local function tree_cb(cb_name)
-      return string.format(":lua require'nvim-tree'.on_keypress('%s')<CR>", cb_name)
-    end
+    local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 
     vim.g.nvim_tree_bindings = {
         { key='l'   , cb=tree_cb("edit") },
