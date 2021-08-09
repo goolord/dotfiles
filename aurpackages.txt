@@ -56,7 +56,7 @@ tmux
 tokei
 uutils-coreutils
 vlc
-waybar-git
+waybar
 wireplumber
 wl-clipboard
 wlr-randr
