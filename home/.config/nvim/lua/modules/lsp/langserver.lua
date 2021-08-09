@@ -36,7 +36,7 @@ return function()
         on_attach = custom_on_attach,
         capabilities = capabilities,
         settings = {
-            languageServerHaskell = {
+            haskell = {
                 hlintOn = false,
             }
         }
@@ -45,5 +45,4 @@ return function()
         on_attach = custom_on_attach,
         capabilities = capabilities
     }
-    -- lspconfig.elmls.setup{}
 end

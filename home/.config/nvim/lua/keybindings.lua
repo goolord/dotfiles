@@ -56,6 +56,7 @@ set_keybindings {
     {'n', '<C-l>', '<C-w>l', {noremap = true, silent = true} },
     {'n', '<esc>', ':noh<CR>', {noremap = false, silent = true} },
     {'n', '<Leader>s', ':Startify<CR>', {silent = true} },
+    {'n', '<Leader>r', ':TroubleToggle<CR>', {silent = true} },
     -- tabular
     tabularize_bind('','/'),
     tabularize_bind('a','/'),
