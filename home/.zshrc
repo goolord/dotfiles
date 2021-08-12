@@ -19,6 +19,12 @@ function doppelganger() { PWD=$(pwd) "$TERM" & disown }
 function gitignore () {
   curl https://raw.githubusercontent.com/github/gitignore/master/${(C)1}.gitignore > .gitignore
 }
+function bell () {
+  if [ $? = 0 ];
+  then (pw-play ~/Dev/dotfiles/resources/audio/kh1.5/good.ogg &)
+  else (pw-play ~/Dev/dotfiles/resources/audio/kh1.5/bad.ogg &)
+  fi
+}
 
 # Aliases
 setopt complete_aliases
