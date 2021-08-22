@@ -79,10 +79,9 @@ _G.packer_plugins = {
     needs_bufread = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/opt/collaborators.vim"
   },
-  coq_nvim = {
-    config = { "\27LJ\1\2r\0\0\2\0\4\0\0054\0\0\0007\0\1\0003\1\3\0:\1\2\0G\0\1\0\1\0\3\15auto_start\fshut-up\23keymap.recommended\2\29clients.snippets.enabled\1\17coq_settings\6g\bvim\0" },
+  ["compe-tabnine"] = {
     loaded = true,
-    path = "/home/zach/.local/share/nvim/site/pack/packer/start/coq_nvim"
+    path = "/home/zach/.local/share/nvim/site/pack/packer/start/compe-tabnine"
   },
   ghcid = {
     commands = { "Ghcid", "GhcidKill" },
@@ -112,6 +111,11 @@ _G.packer_plugins = {
     config = { "\27LJ\1\2:\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\17nvim_comment\frequire\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/nvim-comment"
+  },
+  ["nvim-compe"] = {
+    config = { '\27LJ\1\2_\0\2\a\0\5\0\t4\2\0\0007\2\1\0027\2\2\2%\3\3\0\16\4\0\0\16\5\1\0003\6\4\0>\2\5\1G\0\1\0\1\0\3\texpr\2\vsilent\2\fnoremap\2\6i\20nvim_set_keymap\bapi\bvim£\1\0\0\5\0\b\2\0304\0\0\0007\0\1\0007\0\2\0%\1\3\0>\0\2\2\21\0\0\0\b\0\1\0T\1\16€4\1\0\0007\1\1\0017\1\4\1%\2\3\0>\1\2\2\16\2\1\0007\1\5\1\16\3\0\0\16\4\0\0>\1\4\2\16\2\1\0007\1\6\1%\3\a\0>\1\3\2\15\0\1\0T\2\3€)\1\2\0H\1\2\0T\1\2€)\1\1\0H\1\2\0G\0\1\0\a%s\nmatch\bsub\fgetline\6.\bcol\afn\bvim\2\0Ž\6\1\0\5\0\31\0.4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\5\0003\3\4\0:\3\6\0023\3\b\0003\4\a\0:\4\t\3:\3\n\0023\3\f\0003\4\v\0:\4\t\3:\3\r\0023\3\15\0003\4\14\0:\4\t\3:\3\16\2:\2\17\1>\0\2\0011\0\18\0001\1\19\0005\1\20\0\16\1\0\0%\2\21\0%\3\22\0>\1\3\1\16\1\0\0%\2\23\0%\3\24\0>\1\3\1\16\1\0\0%\2\25\0%\3\26\0>\1\3\1\16\1\0\0%\2\27\0%\3\28\0>\1\3\1\16\1\0\0%\2\29\0%\3\30\0>\1\3\1G\0\1\0Tpumvisible() ? "<C-p>" : v:lua.Check_backspace() ? "<S-Tab>" : compe#complete()\f<S-Tab>Rpumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete()\n<Tab>\25compe#close("<C-e>")\n<C-e>\26compe#confirm("<CR>")\t<CR>\21compe#complete()\14<C-Space>\20Check_backspace\0\0\vsource\18collaborators\1\0\0\1\2\0\0\14gitcommit\nemoji\1\0\0\1\4\0\0\14gitcommit\ttext\rmarkdown\vbuffer\14filetypes\1\0\0\1\2\0\0\bcoq\rnvim_lsp\1\0\5\ttags\2\tpath\2\rnvim_lua\2\tcalc\2\ftabnine\2\1\0\1\rpriority\3Ÿ\6\1\0\t\17autocomplete\2\19source_timeout\3È\1\fenabled\2\ndebug\1\14preselect\venable\21incomplete_delay\3\3\15min_length\3\1\18throttle_time\3P\18documentation\2\nsetup\ncompe\frequire\0' },
+    loaded = true,
+    path = "/home/zach/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lightbulb"] = {
     loaded = true,
@@ -217,6 +221,10 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for indentLine]], true)
 try_loadstring("\27LJ\1\2ÿ\1\0\0\2\0\b\0\0174\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0'\1\1\0:\1\4\0004\0\0\0007\0\1\0'\1\1\0:\1\5\0004\0\0\0007\0\1\0003\1\a\0:\1\6\0G\0\1\0\1\r\0\0\thelp\rnerdtree\rstartify\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\31indentLine_fileTypeExclude\25indentLine_setColors\22indentLine_faster\bâ–\20indentLine_char\6g\bvim\0", "config", "indentLine")
 time([[Config for indentLine]], false)
+-- Config for: nvim-compe
+time([[Config for nvim-compe]], true)
+try_loadstring('\27LJ\1\2_\0\2\a\0\5\0\t4\2\0\0007\2\1\0027\2\2\2%\3\3\0\16\4\0\0\16\5\1\0003\6\4\0>\2\5\1G\0\1\0\1\0\3\texpr\2\vsilent\2\fnoremap\2\6i\20nvim_set_keymap\bapi\bvim£\1\0\0\5\0\b\2\0304\0\0\0007\0\1\0007\0\2\0%\1\3\0>\0\2\2\21\0\0\0\b\0\1\0T\1\16€4\1\0\0007\1\1\0017\1\4\1%\2\3\0>\1\2\2\16\2\1\0007\1\5\1\16\3\0\0\16\4\0\0>\1\4\2\16\2\1\0007\1\6\1%\3\a\0>\1\3\2\15\0\1\0T\2\3€)\1\2\0H\1\2\0T\1\2€)\1\1\0H\1\2\0G\0\1\0\a%s\nmatch\bsub\fgetline\6.\bcol\afn\bvim\2\0Ž\6\1\0\5\0\31\0.4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\5\0003\3\4\0:\3\6\0023\3\b\0003\4\a\0:\4\t\3:\3\n\0023\3\f\0003\4\v\0:\4\t\3:\3\r\0023\3\15\0003\4\14\0:\4\t\3:\3\16\2:\2\17\1>\0\2\0011\0\18\0001\1\19\0005\1\20\0\16\1\0\0%\2\21\0%\3\22\0>\1\3\1\16\1\0\0%\2\23\0%\3\24\0>\1\3\1\16\1\0\0%\2\25\0%\3\26\0>\1\3\1\16\1\0\0%\2\27\0%\3\28\0>\1\3\1\16\1\0\0%\2\29\0%\3\30\0>\1\3\1G\0\1\0Tpumvisible() ? "<C-p>" : v:lua.Check_backspace() ? "<S-Tab>" : compe#complete()\f<S-Tab>Rpumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete()\n<Tab>\25compe#close("<C-e>")\n<C-e>\26compe#confirm("<CR>")\t<CR>\21compe#complete()\14<C-Space>\20Check_backspace\0\0\vsource\18collaborators\1\0\0\1\2\0\0\14gitcommit\nemoji\1\0\0\1\4\0\0\14gitcommit\ttext\rmarkdown\vbuffer\14filetypes\1\0\0\1\2\0\0\bcoq\rnvim_lsp\1\0\5\ttags\2\tpath\2\rnvim_lua\2\tcalc\2\ftabnine\2\1\0\1\rpriority\3Ÿ\6\1\0\t\17autocomplete\2\19source_timeout\3È\1\fenabled\2\ndebug\1\14preselect\venable\21incomplete_delay\3\3\15min_length\3\1\18throttle_time\3P\18documentation\2\nsetup\ncompe\frequire\0', "config", "nvim-compe")
+time([[Config for nvim-compe]], false)
 -- Config for: vim-gruvbox8
 time([[Config for vim-gruvbox8]], true)
 try_loadstring("\27LJ\1\2º\3\0\0\2\0\15\0,4\0\0\0007\0\1\0'\1\1\0:\1\2\0004\0\0\0007\0\1\0%\1\4\0:\1\3\0004\0\0\0007\0\1\0'\1\1\0:\1\5\0004\0\0\0007\0\1\0'\1\1\0:\1\6\0004\0\0\0007\0\1\0'\1\1\0:\1\a\0004\0\0\0007\0\1\0'\1\1\0:\1\b\0004\0\0\0007\0\1\0'\1\1\0:\1\t\0004\0\0\0007\0\1\0'\1\0\0:\1\n\0004\0\0\0007\0\1\0'\1\1\0:\1\v\0004\0\0\0007\0\1\0'\1\1\0:\1\f\0004\0\r\0%\1\14\0>\0\2\1G\0\1\0\27modules.colors.gruvbox\frequire\22gruvbox_undercurl\29gruvbox_plugin_hi_groups\20gruvbox_italics\27gruvbox_invert_tabline\25gruvbox_invert_signs\30gruvbox_improved_warnings\29gruvbox_improved_strings\31gruvbox_filetype_hi_groups\tsoft\27gruvbox_contrast_light\17gruvbox_bold\6g\bvim\0", "config", "vim-gruvbox8")
@@ -229,18 +237,14 @@ time([[Config for trouble.nvim]], false)
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\1\2Ü\1\0\0\4\0\f\0\0154\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\b\0003\2\3\0003\3\4\0:\3\5\0023\3\6\0:\3\a\2:\2\t\0013\2\n\0:\2\v\1>\0\2\1G\0\1\0\15extensions\1\3\0\0\rfugitive\14nvim-tree\foptions\1\0\0\23section_separators\1\3\0\0\5\5\25component_separators\1\3\0\0\6|\6|\1\0\2\18icons_enabled\2\ntheme\fgruvbox\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
--- Config for: nvim-comment
-time([[Config for nvim-comment]], true)
-try_loadstring("\27LJ\1\2:\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
-time([[Config for nvim-comment]], false)
 -- Config for: nvim-toggleterm.lua
 time([[Config for nvim-toggleterm.lua]], true)
 try_loadstring("\27LJ\1\2É\1\0\0\3\0\5\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\1>\0\2\1G\0\1\0\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\14<Leader>t\17persist_size\2\20insert_mappings\1\tsize\3P\14direction\rvertical\20start_in_insert\2\nsetup\15toggleterm\frequire\0", "config", "nvim-toggleterm.lua")
 time([[Config for nvim-toggleterm.lua]], false)
--- Config for: coq_nvim
-time([[Config for coq_nvim]], true)
-try_loadstring("\27LJ\1\2r\0\0\2\0\4\0\0054\0\0\0007\0\1\0003\1\3\0:\1\2\0G\0\1\0\1\0\3\15auto_start\fshut-up\23keymap.recommended\2\29clients.snippets.enabled\1\17coq_settings\6g\bvim\0", "config", "coq_nvim")
-time([[Config for coq_nvim]], false)
+-- Config for: nvim-comment
+time([[Config for nvim-comment]], true)
+try_loadstring("\27LJ\1\2:\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
+time([[Config for nvim-comment]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

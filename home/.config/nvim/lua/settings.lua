@@ -1,5 +1,5 @@
 vim.opt.bg            = 'dark'
-vim.opt.completeopt   = 'menuone,noselect,noinsert'
+vim.opt.completeopt   = 'menu,menuone,noselect'
 vim.opt.cursorline    = true
 vim.opt.directory     = os.getenv('HOME') .. '/.swap/'
 vim.opt.errorbells    = false
