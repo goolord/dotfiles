@@ -145,9 +145,9 @@ bell:
   animation: Ease
   duration: 0
   color: '0xebdbb2'
-  command:
-    program: pw-play
-    args: ["/home/zach/Dev/dotfiles/resources/audio/kh1.5/bad.ogg"]
+  # command:
+  #   program: pw-play
+  #   args: ["/home/zach/Dev/dotfiles/resources/audio/kh1.5/bad.ogg"]
 
 # Background opacity
 background_opacity: 1.0

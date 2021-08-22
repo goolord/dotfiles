@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local coq = require "coq" -- add this
 
 return function()
 
@@ -32,7 +33,7 @@ return function()
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-    lspconfig.hls.setup {
+    lspconfig.hls.setup(coq.lsp_ensure_capabilities {
         on_attach = custom_on_attach,
         capabilities = capabilities,
         settings = {
@@ -40,9 +41,9 @@ return function()
                 hlintOn = false,
             }
         }
-    }
-    lspconfig.rust_analyzer.setup {
+    })
+    lspconfig.rust_analyzer.setup(coq.lsp_ensure_capabilities {
         on_attach = custom_on_attach,
         capabilities = capabilities
-    }
+    })
 end
