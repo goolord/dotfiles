@@ -128,7 +128,7 @@ _G.packer_plugins = {
     path = "/home/zach/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig"
   },
   ["nvim-toggleterm.lua"] = {
-    config = { "\27LJ\1\2É\1\0\0\3\0\5\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\1>\0\2\1G\0\1\0\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\14<Leader>t\17persist_size\2\20insert_mappings\1\tsize\3P\14direction\rvertical\20start_in_insert\2\nsetup\15toggleterm\frequire\0" },
+    config = { "\27LJ\1\2Ê\1\0\0\3\0\5\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\1>\0\2\1G\0\1\0\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\17persist_size\2\20insert_mappings\1\tsize\3P\14direction\rvertical\20start_in_insert\2\nsetup\15toggleterm\frequire\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
   },
@@ -239,7 +239,7 @@ try_loadstring("\27LJ\1\2Ü\1\0\0\4\0\f\0\0154\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\
 time([[Config for lualine.nvim]], false)
 -- Config for: nvim-toggleterm.lua
 time([[Config for nvim-toggleterm.lua]], true)
-try_loadstring("\27LJ\1\2É\1\0\0\3\0\5\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\1>\0\2\1G\0\1\0\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\14<Leader>t\17persist_size\2\20insert_mappings\1\tsize\3P\14direction\rvertical\20start_in_insert\2\nsetup\15toggleterm\frequire\0", "config", "nvim-toggleterm.lua")
+try_loadstring("\27LJ\1\2Ê\1\0\0\3\0\5\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\1>\0\2\1G\0\1\0\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\17persist_size\2\20insert_mappings\1\tsize\3P\14direction\rvertical\20start_in_insert\2\nsetup\15toggleterm\frequire\0", "config", "nvim-toggleterm.lua")
 time([[Config for nvim-toggleterm.lua]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)
