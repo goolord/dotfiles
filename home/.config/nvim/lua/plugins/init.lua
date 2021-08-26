@@ -10,19 +10,27 @@ packer.startup(function()
     use 'godlygeek/tabular'
     use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
-    use { 'hrsh7th/nvim-compe', config = require('plugins.completion') }
-    use { 'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe' }
+    use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
+    use { 'jremmen/vim-ripgrep', cmd = 'Rg' }
+
+    -- completion
+    use { 'onsails/lspkind-nvim' }
+    use { 'hrsh7th/nvim-cmp', config = require('plugins.completion') }
+    use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-buffer', requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-nvim-lsp', requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-vsnip', requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-path', requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-emoji', requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-calc', requires = 'tzachar/cmp-tabnine' }
     use { 
         'hrsh7th/vim-vsnip', 
         requires = 'hrsh7th/vim-vsnip-integ',
         config = require('plugins.snippets')
     }
-    use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
-    
-    use { 'jremmen/vim-ripgrep', cmd = 'Rg' }
 
     -- gui
-    use { 'Yggdroot/indentLine', config = require('plugins.indentLine') }
+    use { 'lukas-reineke/indent-blankline.nvim', config = require('plugins.indent-blankline') }
     use { 'mhinz/vim-startify', config = require('plugins.startify') }
     use {
         'kyazdani42/nvim-tree.lua',

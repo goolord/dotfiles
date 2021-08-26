@@ -1,44 +1,49 @@
 return function()
-    require'compe'.setup {
-        enabled = true;
-        autocomplete = true;
-        debug = false;
-        min_length = 1;
-        preselect = 'enable';
-        throttle_time = 80;
-        source_timeout = 200;
-        incomplete_delay = 400;
-        documentation = true;
+    local cmp = require('cmp')
+    local lspkind = require('lspkind')
+    cmp.setup {
+        snippet = {
+            expand = function(args)
+                vim.fn['vsnip#anonymous'](args.body)
+            end
+        },
 
-        source = {
-            nvim_lsp = { priority = 99999 };
-            tabnine = true;
-            buffer = { filetypes = { 'coq' } };
-            tags = true;
-            path = true;
-            nvim_lua = true;
-            calc = true;
-            emoji = { filetypes = {'gitcommit', 'text', 'markdown'} };
-            collaborators = { filetypes = {'gitcommit'} }
+        formatting = {
+            format = function(entry, vim_item)
+                -- vim_item.menu = ({
+                --     nvim_lsp = '[L]',
+                --     buffer   = '[B]',
+                -- })[entry.source.name]
+                vim_item.kind = lspkind.presets.default[vim_item.kind]
+                return vim_item
+            end
+        },
+
+        mapping = {
+            ['<C-p>'] = cmp.mapping.select_prev_item(),
+            ['<C-n>'] = cmp.mapping.select_next_item(),
+            ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+            ['<C-f>'] = cmp.mapping.scroll_docs(4),
+            ['<C-Space>'] = cmp.mapping.complete(),
+            ['<C-e>'] = cmp.mapping.close(),
+            ['<CR>'] = cmp.mapping.confirm({
+                behavior = cmp.ConfirmBehavior.Insert,
+                select = true,
+            }),
+            ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+            ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' })
+        },
+
+        sources = {
+            -- { name = 'buffer' },
+            { name = 'cmp_tabnine' },
+            { name = 'nvim_lsp' },
+            { name = 'tags' },
+            { name = 'path' },
+            { name = 'calc' },
+            { name = 'vsnip' },
+            { name = 'collaborators' },
         };
     }
 
-    local function keymap(k,m) vim.api.nvim_set_keymap('i', k, m, {noremap=true, silent=true, expr=true}) end
-
-    function Check_backspace()
-        local col = vim.fn.col('.') - 1
-        if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-            return true
-        else
-            return false
-        end
-    end
-
-    keymap('<C-Space>', 'compe#complete()')
-    keymap('<CR>'     , 'compe#confirm("<CR>")')
-    keymap('<C-e>'    , 'compe#close("<C-e>")')
-    keymap('<Tab>'    , 'pumvisible() ? "<C-n>" : v:lua.Check_backspace() ? "<Tab>" : compe#complete()')
-    keymap('<S-Tab>'  , 'pumvisible() ? "<C-p>" : v:lua.Check_backspace() ? "<S-Tab>" : compe#complete()')
-
 end
-

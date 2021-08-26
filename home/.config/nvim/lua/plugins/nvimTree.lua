@@ -22,5 +22,6 @@ return function()
     }
 
     -- disable word wrap
-    vim.cmd('autocmd FileType LuaTree setlocal nowrap')
+    vim.cmd('autocmd FileType NvimTree setlocal nowrap')
+
 end
