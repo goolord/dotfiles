@@ -16,13 +16,14 @@ packer.startup(function()
     -- completion
     use { 'onsails/lspkind-nvim' }
     use { 'hrsh7th/nvim-cmp', config = require('plugins.completion') }
-    use { 'tzachar/cmp-tabnine', run = './install.sh', requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-buffer', requires = 'tzachar/cmp-tabnine' }
+    -- sources
+    use { 'tzachar/cmp-tabnine' , requires = 'tzachar/cmp-tabnine', run = './install.sh'}
+    use { 'hrsh7th/cmp-buffer'  , requires = 'tzachar/cmp-tabnine' }
     use { 'hrsh7th/cmp-nvim-lsp', requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-vsnip', requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-path', requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-emoji', requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-calc', requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-path'    , requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-emoji'   , requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-calc'    , requires = 'tzachar/cmp-tabnine' }
+    use { 'hrsh7th/cmp-vsnip'   , requires = 'tzachar/cmp-tabnine' }
     use { 
         'hrsh7th/vim-vsnip', 
         requires = 'hrsh7th/vim-vsnip-integ',
@@ -77,7 +78,7 @@ packer.startup(function()
     -- use {
     --     'nvim-treesitter/nvim-treesitter',
     --     config = require('plugins.treesitter'),
-    --     run = function () vim.cmd('TSUpdate') end,
+    --     run = ':TSUpdate',
     -- }
 
     -- filetype plugins
