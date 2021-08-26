@@ -1,12 +1,13 @@
 return function()
     require"toggleterm".setup {
-      size = 80,
+      direction = 'vertical',
+      hide_numbers = true,
+      insert_mappings = false,
       open_mapping = [[<Leader>tt]],
+      persist_size = true,
       shade_filetypes = {},
       shade_terminals = true,
-      start_in_insert = true,
-      persist_size = true,
-      insert_mappings = false,
-      direction = 'vertical',
+      size = vim.o.columns * 0.5,
+      start_in_insert = false,
     }
 end

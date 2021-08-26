@@ -156,7 +156,7 @@ _G.packer_plugins = {
     path = "/home/zach/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig"
   },
   ["nvim-toggleterm.lua"] = {
-    config = { "\27LJ\1\2�\1\0\0\3\0\5\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\1>\0\2\1G\0\1\0\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\17persist_size\2\20insert_mappings\1\tsize\3P\14direction\rvertical\20start_in_insert\2\nsetup\15toggleterm\frequire\0" },
+    config = { "\27LJ\1\2�\1\0\0\3\0\t\1\0144\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\0014\2\5\0007\2\6\0027\2\a\2\22\2\0\2:\2\b\1>\0\2\1G\0\1\0\tsize\fcolumns\6o\bvim\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\14direction\rvertical\17persist_size\2\20start_in_insert\1\20insert_mappings\1\17hide_numbers\2\nsetup\15toggleterm\frequire\1����\3\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
   },
@@ -190,7 +190,7 @@ _G.packer_plugins = {
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
   ["vim-clap"] = {
-    config = { "\27LJ\1\2�\3\0\0\2\0\15\0!4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0%\1\5\0:\1\4\0004\0\0\0007\0\1\0003\1\a\0:\1\6\0004\0\0\0007\0\1\0)\1\2\0:\1\b\0004\0\0\0007\0\1\0'\1\1\0:\1\t\0004\0\0\0007\0\1\0'\1\1\0:\1\n\0004\0\0\0007\0\1\0003\1\f\0:\1\v\0004\0\0\0007\0\1\0003\1\14\0:\1\r\0G\0\1\0\1\t\0\0\t🌑\t🌒\t🌓\t🌔\t🌕\t🌖\t🌗\t🌘\24clap_spinner_frames\1\0\3\vtexthl\29ClapCurrentSelectionSign\ttext\v\vlinehl\25ClapCurrentSelection clap_current_selection_sign#clap_provider_grep_enable_icon\21clap_enable_icon\28clap_disable_run_rooter\1\0\3\brow\b11%\rrelative\veditor\vheight\b80%\16clap_layout\17gruvbox_dark\15clap_theme\bnil\22clap_popup_border\6g\bvim\0" },
+    config = { "\27LJ\1\2�\4\0\0\2\0\16\0%4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0%\1\5\0:\1\4\0004\0\0\0007\0\1\0003\1\a\0:\1\6\0004\0\0\0007\0\1\0)\1\2\0:\1\b\0004\0\0\0007\0\1\0'\1\1\0:\1\t\0004\0\0\0007\0\1\0'\1\1\0:\1\n\0004\0\0\0007\0\1\0003\1\f\0:\1\v\0004\0\0\0007\0\1\0003\1\14\0:\1\r\0004\0\0\0007\0\1\0'\1d\0:\1\15\0G\0\1\0\29clap_provider_grep_delay\1\t\0\0\t🌑\t🌒\t🌓\t🌔\t🌕\t🌖\t🌗\t🌘\24clap_spinner_frames\1\0\3\vtexthl\29ClapCurrentSelectionSign\ttext\v\vlinehl\25ClapCurrentSelection clap_current_selection_sign#clap_provider_grep_enable_icon\21clap_enable_icon\28clap_disable_run_rooter\1\0\3\brow\b11%\rrelative\veditor\vheight\b80%\16clap_layout\17gruvbox_dark\15clap_theme\bnil\22clap_popup_border\6g\bvim\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/vim-clap"
   },
@@ -244,7 +244,7 @@ vim.o.runtimepath = vim.o.runtimepath .. ",/home/zach/.local/share/nvim/site/pac
 time([[Runtimepath customization]], false)
 -- Config for: vim-clap
 time([[Config for vim-clap]], true)
-try_loadstring("\27LJ\1\2�\3\0\0\2\0\15\0!4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0%\1\5\0:\1\4\0004\0\0\0007\0\1\0003\1\a\0:\1\6\0004\0\0\0007\0\1\0)\1\2\0:\1\b\0004\0\0\0007\0\1\0'\1\1\0:\1\t\0004\0\0\0007\0\1\0'\1\1\0:\1\n\0004\0\0\0007\0\1\0003\1\f\0:\1\v\0004\0\0\0007\0\1\0003\1\14\0:\1\r\0G\0\1\0\1\t\0\0\t🌑\t🌒\t🌓\t🌔\t🌕\t🌖\t🌗\t🌘\24clap_spinner_frames\1\0\3\vtexthl\29ClapCurrentSelectionSign\ttext\v\vlinehl\25ClapCurrentSelection clap_current_selection_sign#clap_provider_grep_enable_icon\21clap_enable_icon\28clap_disable_run_rooter\1\0\3\brow\b11%\rrelative\veditor\vheight\b80%\16clap_layout\17gruvbox_dark\15clap_theme\bnil\22clap_popup_border\6g\bvim\0", "config", "vim-clap")
+try_loadstring("\27LJ\1\2�\4\0\0\2\0\16\0%4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0%\1\5\0:\1\4\0004\0\0\0007\0\1\0003\1\a\0:\1\6\0004\0\0\0007\0\1\0)\1\2\0:\1\b\0004\0\0\0007\0\1\0'\1\1\0:\1\t\0004\0\0\0007\0\1\0'\1\1\0:\1\n\0004\0\0\0007\0\1\0003\1\f\0:\1\v\0004\0\0\0007\0\1\0003\1\14\0:\1\r\0004\0\0\0007\0\1\0'\1d\0:\1\15\0G\0\1\0\29clap_provider_grep_delay\1\t\0\0\t🌑\t🌒\t🌓\t🌔\t🌕\t🌖\t🌗\t🌘\24clap_spinner_frames\1\0\3\vtexthl\29ClapCurrentSelectionSign\ttext\v\vlinehl\25ClapCurrentSelection clap_current_selection_sign#clap_provider_grep_enable_icon\21clap_enable_icon\28clap_disable_run_rooter\1\0\3\brow\b11%\rrelative\veditor\vheight\b80%\16clap_layout\17gruvbox_dark\15clap_theme\bnil\22clap_popup_border\6g\bvim\0", "config", "vim-clap")
 time([[Config for vim-clap]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
@@ -272,7 +272,7 @@ try_loadstring("\27LJ\1\2�\1\0\0\4\0\f\0\0154\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\
 time([[Config for lualine.nvim]], false)
 -- Config for: nvim-toggleterm.lua
 time([[Config for nvim-toggleterm.lua]], true)
-try_loadstring("\27LJ\1\2�\1\0\0\3\0\5\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\1>\0\2\1G\0\1\0\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\17persist_size\2\20insert_mappings\1\tsize\3P\14direction\rvertical\20start_in_insert\2\nsetup\15toggleterm\frequire\0", "config", "nvim-toggleterm.lua")
+try_loadstring("\27LJ\1\2�\1\0\0\3\0\t\1\0144\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\0014\2\5\0007\2\6\0027\2\a\2\22\2\0\2:\2\b\1>\0\2\1G\0\1\0\tsize\fcolumns\6o\bvim\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\14direction\rvertical\17persist_size\2\20start_in_insert\1\20insert_mappings\1\17hide_numbers\2\nsetup\15toggleterm\frequire\1����\3\0", "config", "nvim-toggleterm.lua")
 time([[Config for nvim-toggleterm.lua]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)

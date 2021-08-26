@@ -16,4 +16,5 @@ return function()
     }
     vim.g.clap_spinner_frames =
         { "🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘" }
+    vim.g.clap_provider_grep_delay = 100
 end

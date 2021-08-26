@@ -1,7 +1,6 @@
 autocmd FileType lua setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType elm setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType tex setlocal conceallevel=0
-autocmd FileType toggleterm setlocal nonu
 
 augroup Cmp
   autocmd!
