@@ -11,18 +11,8 @@ packer.startup(function()
     use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
     use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
-    use { 
-        'wincent/ferret', 
-        cmd = {
-            'Ack', 'Ack!', 'Acks', 
-            'Back', 'Back!',
-            'Black', 'Black!',
-            'Quack', 'Quack!',
-            'Lack', 'Lack!', 'Lacks',
-            'FerretCancelAsync', 'FerretPullAsync',
-            'Qargs', 'Largs'
-        } 
-    }
+    use { 'jremmen/vim-ripgrep', cmd = 'Rg' }
+    use 'kevinhwang91/nvim-bqf'
 
     -- completion
     use { 'onsails/lspkind-nvim' }
