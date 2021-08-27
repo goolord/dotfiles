@@ -27,7 +27,10 @@ function ApplyGruvbox()
 
         -- coqtail
         {'CoqtailChecked', {bg = '#1b4723'}},
-        {'CoqtailSent', {bg = '#79750e'}}
+        {'CoqtailSent', {bg = '#79750e'}},
+
+        -- telescope
+        {'TelescopeNormal', {bg = '#1d2021'}}
     }
 
     for _, highlight in pairs(highlights) do hl(highlight[1], highlight[2]) end

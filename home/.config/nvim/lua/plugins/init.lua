@@ -47,11 +47,10 @@ packer.startup(function()
     }
 
     use {
-        'liuchengxu/vim-clap',
-        run = function () vim.fn['clap#installer#build_maple']() end,
-        config = require('plugins.clap')
+        'nvim-telescope/telescope.nvim',
+        config = require('plugins.telescope'),
+        requires = 'nvim-lua/plenary.nvim'
     }
-    use 'goolord/vim-clap-gruvbox'
 
     -- git
     use 'tpope/vim-fugitive'
@@ -74,7 +73,6 @@ packer.startup(function()
         ft = { 'rust' },
     }
 
-    use '~/Dev/nvim-clap-lsp'
     use 'kosayoda/nvim-lightbulb'
     use {
         'folke/trouble.nvim',
