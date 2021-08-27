@@ -1,6 +1,13 @@
 return function()
     local telescope = require('telescope')
     local actions = require('telescope.actions')
+
+    local blank_border = {
+        results =  {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
+        prompt =  {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
+        preview = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
+    }
+
     telescope.setup {
         defaults = {
             border = true,
@@ -8,11 +15,7 @@ return function()
             results_title = false,
             preview_title = false,
             dynamic_preview_title = true,
-            borderchars = {
-                results =  {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
-                prompt =  {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
-                preview = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
-            },
+            borderchars = blank_border,
             mappings = {
                 n = {
                     ["gg"] = actions.move_to_top,
@@ -23,15 +26,21 @@ return function()
 
         extensions = {
             fzf = {
-                fuzzy = true,                    -- false will only do exact matching
-                override_generic_sorter = false, -- override the generic sorter
-                override_file_sorter = true,     -- override the file sorter
-                case_mode = "smart_case",        -- ["smart_case", "ignore_case", "respect_case"]
+                fuzzy = true,                   -- false will only do exact matching
+                override_generic_sorter = true, -- override the generic sorter
+                override_file_sorter = true,    -- override the file sorter
+                case_mode = "smart_case",       -- ["smart_case", "ignore_case", "respect_case"]
             },
 
             lsp_handlers = {
                 code_action = {
-                    telescope = require('telescope.themes').get_dropdown({}),
+                    telescope = require('telescope.themes').get_cursor({
+                        borderchars = blank_border,
+                        layout_config = {
+                            width = 55
+                        },
+                        -- initial_mode = "normal",
+                    }),
                 },
             },
         }
