@@ -1,5 +1,6 @@
 return function()
     local telescope = require('telescope')
+    local actions = require('telescope.actions')
     telescope.setup {
         defaults = {
             border = true,
@@ -12,7 +13,14 @@ return function()
                 prompt =  {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
                 preview = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
             },
+            mappings = {
+                n = {
+                    ["gg"] = actions.move_to_top,
+                    ["G"] = actions.move_to_bottom,
+                }
+            },
         },
+
         extensions = {
             fzf = {
                 fuzzy = true,                    -- false will only do exact matching
