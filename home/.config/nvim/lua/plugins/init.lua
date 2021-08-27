@@ -11,11 +11,23 @@ packer.startup(function()
     use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
     use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
-    use { 'jremmen/vim-ripgrep', cmd = 'Rg' }
+    use { 
+        'wincent/ferret', 
+        cmd = {
+            'Ack', 'Ack!', 'Acks', 
+            'Back', 'Back!',
+            'Black', 'Black!',
+            'Quack', 'Quack!',
+            'Lack', 'Lack!', 'Lacks',
+            'FerretCancelAsync', 'FerretPullAsync',
+            'Qargs', 'Largs'
+        } 
+    }
 
     -- completion
     use { 'onsails/lspkind-nvim' }
-    use { 'hrsh7th/nvim-cmp', config = require('plugins.completion') }
+    use { '~/Dev/nvim-cmp', config = require('plugins.completion') }
+    -- use { 'hrsh7th/nvim-cmp', config = require('plugins.completion') }
     -- sources
     use { 'tzachar/cmp-tabnine' , requires = 'tzachar/cmp-tabnine', run = './install.sh'}
     use { 'hrsh7th/cmp-buffer'  , requires = 'tzachar/cmp-tabnine' }
