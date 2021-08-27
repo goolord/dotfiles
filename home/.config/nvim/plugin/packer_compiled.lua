@@ -150,7 +150,7 @@ _G.packer_plugins = {
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
   },
   ["nvim-lspconfig"] = {
-    config = { "\27LJ\1\2Ô\2\0\0\3\0\v\0\0234\0\0\0%\1\1\0>\0\2\2>\0\1\0014\0\0\0%\1\2\0>\0\2\2>\0\1\0014\0\3\0007\0\4\0%\1\5\0>\0\2\0014\0\3\0007\0\6\0007\0\a\0%\1\b\0003\2\t\0>\0\3\0014\0\3\0007\0\4\0%\1\n\0>\0\2\1G\0\1\0>autocmd FileType rust lua require('rust-tools').setup({})\1\0\4\vtexthl\tType\ttext\bÔ†¥\vlinehl\5\nnumhl\5\18LightBulbSign\16sign_define\afnTautocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()\bcmd\bvim\27modules.lsp.diagnostic\27modules.lsp.langserver\frequire\0" },
+    config = { "\27LJ\1\2•\2\0\0\3\0\n\0\0194\0\0\0%\1\1\0>\0\2\2>\0\1\0014\0\0\0%\1\2\0>\0\2\2>\0\1\0014\0\3\0007\0\4\0%\1\5\0>\0\2\0014\0\3\0007\0\6\0007\0\a\0%\1\b\0003\2\t\0>\0\3\1G\0\1\0\1\0\4\vtexthl\tType\ttext\bÔ†¥\vlinehl\5\nnumhl\5\18LightBulbSign\16sign_define\afnTautocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()\bcmd\bvim\27modules.lsp.diagnostic\27modules.lsp.langserver\frequire\0" },
     loaded = false,
     needs_bufread = false,
     path = "/home/zach/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig"
@@ -178,11 +178,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
-  ["rust-tools.nvim"] = {
-    loaded = false,
-    needs_bufread = true,
-    path = "/home/zach/.local/share/nvim/site/pack/packer/opt/rust-tools.nvim"
-  },
   ["startuptime.vim"] = {
     commands = { "StartupTime" },
     loaded = false,
@@ -193,8 +188,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/tabular"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/zach/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim"
+  },
+  ["telescope-lsp-handlers.nvim"] = {
+    loaded = true,
+    path = "/home/zach/.local/share/nvim/site/pack/packer/start/telescope-lsp-handlers.nvim"
+  },
   ["telescope.nvim"] = {
-    config = { "\27LJ\1\2ü\2\0\0\5\0\14\0\0174\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\f\0003\2\3\0003\3\5\0003\4\4\0:\4\6\0033\4\a\0:\4\b\0033\4\t\0:\4\n\3:\3\v\2:\2\r\1>\0\2\1G\0\1\0\rdefaults\1\0\0\16borderchars\fpreview\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \vprompt\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \fresults\1\0\0\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \1\0\5\26dynamic_preview_title\2\18results_title\1\18preview_title\1\17prompt_title\1\vborder\2\nsetup\14telescope\frequire\0" },
+    config = { "\27LJ\1\2ü\4\0\0\b\0\25\0&4\0\0\0%\1\1\0>\0\2\0027\1\2\0003\2\f\0003\3\3\0003\4\5\0003\5\4\0:\5\6\0043\5\a\0:\5\b\0043\5\t\0:\5\n\4:\4\v\3:\3\r\0023\3\15\0003\4\14\0:\4\16\0033\4\20\0003\5\19\0004\6\0\0%\a\17\0>\6\2\0027\6\18\0062\a\0\0>\6\2\2:\6\1\5:\5\21\4:\4\22\3:\3\23\2>\1\2\0017\1\24\0%\2\16\0>\1\2\0017\1\24\0%\2\22\0>\1\2\1G\0\1\0\19load_extension\15extensions\17lsp_handlers\16code_action\1\0\0\1\0\0\17get_dropdown\21telescope.themes\bfzf\1\0\0\1\0\4\28override_generic_sorter\1\14case_mode\15smart_case\25override_file_sorter\2\nfuzzy\2\rdefaults\1\0\0\16borderchars\fpreview\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \vprompt\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \fresults\1\0\0\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \1\0\5\26dynamic_preview_title\2\18results_title\1\18preview_title\1\17prompt_title\1\vborder\2\nsetup\14telescope\frequire\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
@@ -253,12 +256,12 @@ try_loadstring("\27LJ\1\2˛\1\0\0\3\0\t\1\0144\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\
 time([[Config for nvim-toggleterm.lua]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\1\2ü\2\0\0\5\0\14\0\0174\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\f\0003\2\3\0003\3\5\0003\4\4\0:\4\6\0033\4\a\0:\4\b\0033\4\t\0:\4\n\3:\3\v\2:\2\r\1>\0\2\1G\0\1\0\rdefaults\1\0\0\16borderchars\fpreview\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \vprompt\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \fresults\1\0\0\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \1\0\5\26dynamic_preview_title\2\18results_title\1\18preview_title\1\17prompt_title\1\vborder\2\nsetup\14telescope\frequire\0", "config", "telescope.nvim")
+try_loadstring("\27LJ\1\2ü\4\0\0\b\0\25\0&4\0\0\0%\1\1\0>\0\2\0027\1\2\0003\2\f\0003\3\3\0003\4\5\0003\5\4\0:\5\6\0043\5\a\0:\5\b\0043\5\t\0:\5\n\4:\4\v\3:\3\r\0023\3\15\0003\4\14\0:\4\16\0033\4\20\0003\5\19\0004\6\0\0%\a\17\0>\6\2\0027\6\18\0062\a\0\0>\6\2\2:\6\1\5:\5\21\4:\4\22\3:\3\23\2>\1\2\0017\1\24\0%\2\16\0>\1\2\0017\1\24\0%\2\22\0>\1\2\1G\0\1\0\19load_extension\15extensions\17lsp_handlers\16code_action\1\0\0\1\0\0\17get_dropdown\21telescope.themes\bfzf\1\0\0\1\0\4\28override_generic_sorter\1\14case_mode\15smart_case\25override_file_sorter\2\nfuzzy\2\rdefaults\1\0\0\16borderchars\fpreview\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \vprompt\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \fresults\1\0\0\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \1\0\5\26dynamic_preview_title\2\18results_title\1\18preview_title\1\17prompt_title\1\vborder\2\nsetup\14telescope\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
--- Config for: vim-startify
-time([[Config for vim-startify]], true)
-try_loadstring("\27LJ\1\2ª\6\0\0\6\0\22\00004\0\0\0007\0\1\0'\1\0\0:\1\2\0004\0\0\0007\0\1\0003\1\4\0:\1\3\0004\0\0\0007\0\1\0002\1\6\0003\2\6\0002\3\3\0%\4\a\0004\5\0\0007\5\b\0057\5\t\5>\5\1\2$\4\5\4;\4\1\3:\3\n\2;\2\1\0013\2\v\0003\3\f\0:\3\n\2;\2\2\0013\2\r\0003\3\14\0:\3\n\2;\2\3\0013\2\15\0003\3\16\0:\3\n\2;\2\4\0013\2\17\0003\3\18\0:\3\n\2;\2\5\1:\1\5\0004\0\0\0007\0\1\0002\1\3\0003\2\20\0;\2\1\0013\2\21\0;\2\2\1:\1\19\0G\0\1\0\1\0\1\6l$~/Dev/iohk/cardano-ledger-specs\1\0\1\6c\19~/.config/nvim\23startify_bookmarks\1\2\0\0\16   Commands\1\0\1\ttype\rcommands\1\2\0\0\17   Bookmarks\1\0\1\ttype\14bookmarks\1\2\0\0\16   Sessions\1\0\1\ttype\rsessions\1\2\0\0\v   MRU\1\0\1\ttype\nfiles\vheader\vgetcwd\afn\f   MRU \1\0\1\ttype\bdir\19startify_lists\1\a\0\0009                                  __                9     ___     ___    ___   __  __ /\\_\\    ___ ___    9    / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  9   /\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 9   \\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\9    \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\27startify_custom_header\27startify_change_to_dir\6g\bvim\0", "config", "vim-startify")
-time([[Config for vim-startify]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\1\2;\0\1\3\0\4\0\0064\1\0\0007\1\1\0017\1\2\0017\2\3\0>\1\2\1G\0\1\0\tbody\20vsnip#anonymous\afn\bvim:\0\2\4\1\3\0\a+\2\0\0007\2\1\0027\2\2\0027\3\0\0016\2\3\2:\2\0\1H\1\2\0\1¿\fdefault\fpresets\tkindÅ\6\1\0\b\0.\0W4\0\0\0%\1\1\0>\0\2\0024\1\0\0%\2\2\0>\1\2\0027\2\3\0003\3\a\0003\4\5\0001\5\4\0:\5\6\4:\4\b\0033\4\n\0001\5\t\0:\5\v\4:\4\f\0033\4\r\0:\4\14\0033\4\17\0007\5\15\0007\5\16\5>\5\1\2:\5\18\0047\5\15\0007\5\19\5>\5\1\2:\5\20\0047\5\15\0007\5\21\5'\6¸ˇ>\5\2\2:\5\22\0047\5\15\0007\5\21\5'\6\4\0>\5\2\2:\5\23\0047\5\15\0007\5\24\5>\5\1\2:\5\25\0047\5\15\0007\5\26\5>\5\1\2:\5\27\0047\5\15\0007\5\28\0053\6\31\0007\a\29\0007\a\30\a:\a \6>\5\2\2:\5!\0047\5\15\0007\6\15\0007\6\19\6>\6\1\0023\a\"\0>\5\3\2:\5#\0047\5\15\0007\6\15\0007\6\16\6>\6\1\0023\a$\0>\5\3\2:\5%\4:\4\15\0032\4\b\0003\5&\0;\5\1\0043\5'\0;\5\2\0043\5(\0;\5\3\0043\5)\0;\5\4\0043\5*\0;\5\5\0043\5+\0;\5\6\0043\5,\0;\5\a\4:\4-\3>\2\2\0010\0\0ÄG\0\1\0\fsources\1\0\1\tname\18collaborators\1\0\1\tname\nvsnip\1\0\1\tname\tcalc\1\0\1\tname\tpath\1\0\1\tname\ttags\1\0\1\tname\rnvim_lsp\1\0\1\tname\16cmp_tabnine\f<S-Tab>\1\3\0\0\6i\6s\n<Tab>\1\3\0\0\6i\6s\t<CR>\rbehavior\1\0\1\vselect\2\vInsert\20ConfirmBehavior\fconfirm\n<C-e>\nclose\14<C-Space>\rcomplete\n<C-f>\n<C-d>\16scroll_docs\n<C-n>\21select_next_item\n<C-p>\1\0\0\21select_prev_item\fmapping\15completion\1\0\1\15trim_match\1\15formatting\vformat\1\0\0\0\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\flspkind\bcmp\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\1\2∫\5\0\0\6\0\28\0K4\0\0\0007\0\1\0003\1\3\0:\1\2\0004\0\0\0007\0\1\0'\1\1\0:\1\4\0004\0\0\0007\0\1\0'\1\1\0:\1\5\0004\0\0\0007\0\1\0'\1\1\0:\1\6\0004\0\a\0%\1\b\0>\0\2\0027\0\t\0004\1\0\0007\1\1\0012\2\b\0003\3\v\0\16\4\0\0%\5\f\0>\4\2\2:\4\r\3;\3\1\0023\3\14\0\16\4\0\0%\5\f\0>\4\2\2:\4\r\3;\3\2\0023\3\15\0\16\4\0\0%\5\f\0>\4\2\2:\4\r\3;\3\3\0023\3\16\0\16\4\0\0%\5\17\0>\4\2\2:\4\r\3;\3\4\0023\3\18\0\16\4\0\0%\5\19\0>\4\2\2:\4\r\3;\3\5\0023\3\20\0\16\4\0\0%\5\21\0>\4\2\2:\4\r\3;\3\6\0023\3\22\0\16\4\0\0%\5\23\0>\4\2\2:\4\r\3;\3\a\2:\2\n\0014\1\0\0007\1\1\0013\2\25\0:\2\24\0014\1\0\0007\1\26\1%\2\27\0>\1\2\1G\0\1\0.autocmd FileType NvimTree setlocal nowrap\bcmd\1\0\2\fdefault\bÓòí\fsymlink\bÔíÅ\20nvim_tree_icons\fpreview\1\0\1\bkey\6=\frefresh\1\0\1\bkey\6R\20toggle_dotfiles\1\0\1\bkey\6H\19toggle_ignored\1\0\1\bkey\6I\1\0\1\bkey\t<cr>\1\0\1\bkey\6o\acb\tedit\1\0\1\bkey\6l\23nvim_tree_bindings\23nvim_tree_callback\21nvim-tree.config\frequire\28nvim_tree_hide_dotfiles\29nvim_tree_indent_markers\21nvim_tree_follow\1\4\0\0\t.git\17node_modules\v.cache\21nvim_tree_ignore\6g\bvim\0", "config", "nvim-tree.lua")
@@ -283,14 +286,14 @@ time([[Config for lualine.nvim]], false)
 time([[Config for nvim-comment]], true)
 try_loadstring("\27LJ\1\2:\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
 time([[Config for nvim-comment]], false)
+-- Config for: vim-startify
+time([[Config for vim-startify]], true)
+try_loadstring("\27LJ\1\2ª\6\0\0\6\0\22\00004\0\0\0007\0\1\0'\1\0\0:\1\2\0004\0\0\0007\0\1\0003\1\4\0:\1\3\0004\0\0\0007\0\1\0002\1\6\0003\2\6\0002\3\3\0%\4\a\0004\5\0\0007\5\b\0057\5\t\5>\5\1\2$\4\5\4;\4\1\3:\3\n\2;\2\1\0013\2\v\0003\3\f\0:\3\n\2;\2\2\0013\2\r\0003\3\14\0:\3\n\2;\2\3\0013\2\15\0003\3\16\0:\3\n\2;\2\4\0013\2\17\0003\3\18\0:\3\n\2;\2\5\1:\1\5\0004\0\0\0007\0\1\0002\1\3\0003\2\20\0;\2\1\0013\2\21\0;\2\2\1:\1\19\0G\0\1\0\1\0\1\6l$~/Dev/iohk/cardano-ledger-specs\1\0\1\6c\19~/.config/nvim\23startify_bookmarks\1\2\0\0\16   Commands\1\0\1\ttype\rcommands\1\2\0\0\17   Bookmarks\1\0\1\ttype\14bookmarks\1\2\0\0\16   Sessions\1\0\1\ttype\rsessions\1\2\0\0\v   MRU\1\0\1\ttype\nfiles\vheader\vgetcwd\afn\f   MRU \1\0\1\ttype\bdir\19startify_lists\1\a\0\0009                                  __                9     ___     ___    ___   __  __ /\\_\\    ___ ___    9    / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  9   /\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 9   \\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\9    \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\27startify_custom_header\27startify_change_to_dir\6g\bvim\0", "config", "vim-startify")
+time([[Config for vim-startify]], false)
 -- Config for: vim-vsnip
 time([[Config for vim-vsnip]], true)
 try_loadstring("\27LJ\1\2_\0\2\a\0\5\0\t4\2\0\0007\2\1\0027\2\2\2%\3\3\0\16\4\0\0\16\5\1\0003\6\4\0>\2\5\1G\0\1\0\1\0\3\texpr\2\vsilent\2\fnoremap\2\6i\20nvim_set_keymap\bapi\bvim°\1\1\0\6\0\b\0\n1\0\0\0004\1\1\0007\1\2\0017\1\3\1%\2\4\0%\3\5\0%\4\6\0003\5\a\0>\1\5\1G\0\1\0\1\0\2\texpr\2\fnoremap\1Cvsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'\n<C-l>\6i\20nvim_set_keymap\bapi\bvim\0\0", "config", "vim-vsnip")
 time([[Config for vim-vsnip]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-try_loadstring("\27LJ\1\2;\0\1\3\0\4\0\0064\1\0\0007\1\1\0017\1\2\0017\2\3\0>\1\2\1G\0\1\0\tbody\20vsnip#anonymous\afn\bvim:\0\2\4\1\3\0\a+\2\0\0007\2\1\0027\2\2\0027\3\0\0016\2\3\2:\2\0\1H\1\2\0\1¿\fdefault\fpresets\tkindÅ\6\1\0\b\0.\0W4\0\0\0%\1\1\0>\0\2\0024\1\0\0%\2\2\0>\1\2\0027\2\3\0003\3\a\0003\4\5\0001\5\4\0:\5\6\4:\4\b\0033\4\n\0001\5\t\0:\5\v\4:\4\f\0033\4\r\0:\4\14\0033\4\17\0007\5\15\0007\5\16\5>\5\1\2:\5\18\0047\5\15\0007\5\19\5>\5\1\2:\5\20\0047\5\15\0007\5\21\5'\6¸ˇ>\5\2\2:\5\22\0047\5\15\0007\5\21\5'\6\4\0>\5\2\2:\5\23\0047\5\15\0007\5\24\5>\5\1\2:\5\25\0047\5\15\0007\5\26\5>\5\1\2:\5\27\0047\5\15\0007\5\28\0053\6\31\0007\a\29\0007\a\30\a:\a \6>\5\2\2:\5!\0047\5\15\0007\6\15\0007\6\19\6>\6\1\0023\a\"\0>\5\3\2:\5#\0047\5\15\0007\6\15\0007\6\16\6>\6\1\0023\a$\0>\5\3\2:\5%\4:\4\15\0032\4\b\0003\5&\0;\5\1\0043\5'\0;\5\2\0043\5(\0;\5\3\0043\5)\0;\5\4\0043\5*\0;\5\5\0043\5+\0;\5\6\0043\5,\0;\5\a\4:\4-\3>\2\2\0010\0\0ÄG\0\1\0\fsources\1\0\1\tname\18collaborators\1\0\1\tname\nvsnip\1\0\1\tname\tcalc\1\0\1\tname\tpath\1\0\1\tname\ttags\1\0\1\tname\rnvim_lsp\1\0\1\tname\16cmp_tabnine\f<S-Tab>\1\3\0\0\6i\6s\n<Tab>\1\3\0\0\6i\6s\t<CR>\rbehavior\1\0\1\vselect\2\vInsert\20ConfirmBehavior\fconfirm\n<C-e>\nclose\14<C-Space>\rcomplete\n<C-f>\n<C-d>\16scroll_docs\n<C-n>\21select_next_item\n<C-p>\1\0\0\21select_prev_item\fmapping\15completion\1\0\1\15trim_match\1\15formatting\vformat\1\0\0\0\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\flspkind\bcmp\frequire\0", "config", "nvim-cmp")
-time([[Config for nvim-cmp]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
@@ -306,8 +309,8 @@ vim.cmd [[au!]]
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType gitcommit ++once lua require("packer.load")({'collaborators.vim'}, { ft = "gitcommit" }, _G.packer_plugins)]]
 vim.cmd [[au FileType haskell ++once lua require("packer.load")({'nvim-lspconfig'}, { ft = "haskell" }, _G.packer_plugins)]]
-vim.cmd [[au FileType rust ++once lua require("packer.load")({'rust-tools.nvim', 'nvim-lspconfig'}, { ft = "rust" }, _G.packer_plugins)]]
 vim.cmd [[au FileType coq ++once lua require("packer.load")({'Coqtail'}, { ft = "coq" }, _G.packer_plugins)]]
+vim.cmd [[au FileType rust ++once lua require("packer.load")({'nvim-lspconfig'}, { ft = "rust" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
