@@ -16,16 +16,15 @@ packer.startup(function()
 
     -- completion
     use { 'onsails/lspkind-nvim' }
-    use { '~/Dev/nvim-cmp', config = require('plugins.completion') }
-    -- use { 'hrsh7th/nvim-cmp', config = require('plugins.completion') }
+    use { 'hrsh7th/nvim-cmp', config = require('plugins.completion') }
     -- sources
-    use { 'tzachar/cmp-tabnine' , requires = 'tzachar/cmp-tabnine', run = './install.sh'}
-    use { 'hrsh7th/cmp-buffer'  , requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-nvim-lsp', requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-path'    , requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-emoji'   , requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-calc'    , requires = 'tzachar/cmp-tabnine' }
-    use { 'hrsh7th/cmp-vsnip'   , requires = 'tzachar/cmp-tabnine' }
+    use { 'tzachar/cmp-tabnine' , requires = 'tzachar/nvim-cmp', run = './install.sh'}
+    use { 'hrsh7th/cmp-buffer'  , requires = 'tzachar/nvim-cmp' }
+    use { 'hrsh7th/cmp-nvim-lsp', requires = 'tzachar/nvim-cmp' }
+    use { 'hrsh7th/cmp-path'    , requires = 'tzachar/nvim-cmp' }
+    use { 'hrsh7th/cmp-emoji'   , requires = 'tzachar/nvim-cmp' }
+    use { 'hrsh7th/cmp-calc'    , requires = 'tzachar/nvim-cmp' }
+    use { 'hrsh7th/cmp-vsnip'   , requires = 'tzachar/nvim-cmp' }
     use { 
         'hrsh7th/vim-vsnip', 
         requires = 'hrsh7th/vim-vsnip-integ',
@@ -68,6 +67,11 @@ packer.startup(function()
         'neovim/nvim-lspconfig',
         config = require('modules.lsp'),
         ft = { 'haskell', 'rust' }
+    }
+    use {
+        'simrat39/rust-tools.nvim',
+        requires = 'neovim/nvim-lspconfig',
+        ft = { 'rust' },
     }
 
     use '~/Dev/nvim-clap-lsp'
