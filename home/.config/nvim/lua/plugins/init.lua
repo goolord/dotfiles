@@ -52,6 +52,9 @@ packer.startup(function()
         requires = 'nvim-lua/plenary.nvim'
     }
 
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { 'gbrlsnchs/telescope-lsp-handlers.nvim' }
+
     -- git
     use 'tpope/vim-fugitive'
 
@@ -66,11 +69,6 @@ packer.startup(function()
         'neovim/nvim-lspconfig',
         config = require('modules.lsp'),
         ft = { 'haskell', 'rust' }
-    }
-    use {
-        'simrat39/rust-tools.nvim',
-        requires = 'neovim/nvim-lspconfig',
-        ft = { 'rust' },
     }
 
     use 'kosayoda/nvim-lightbulb'
