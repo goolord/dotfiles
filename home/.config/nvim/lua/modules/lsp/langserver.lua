@@ -19,12 +19,14 @@ return function()
         buf_keymap('n', 'gr'        , ':lua vim.lsp.buf.references()<CR>'                  , {noremap = true , silent = true})
         buf_keymap('n', 'gR'        , ':lua vim.lsp.buf.rename()<CR>'                      , {noremap = true , silent = true})
         buf_keymap('' , '<leader>F' , ':lua vim.lsp.buf.formatting()<CR>'                  , {noremap = true , silent = true})
-        -- nvim-clap-lsp
-        vim.lsp.handlers['textDocument/codeAction']     = require'clap-lsp.codeAction'.code_action_handler
-        vim.lsp.handlers['textDocument/references']     = require'clap-lsp.locations'.references_handler
-        vim.lsp.handlers['textDocument/definition']     = require'clap-lsp.locations'.definition_handler
-        vim.lsp.handlers['textDocument/documentSymbol'] = require'clap-lsp.symbols'.document_handler
-        vim.lsp.handlers['workspace/symbol']            = require'clap-lsp.symbols'.workspace_handler
+        -- telescope
+        local telescope = require('telescope')
+        vim.lsp.handlers["textDocument/references"]     = telescope.builtin.lsp_references
+        vim.lsp.handlers['textDocument/codeAction']     = telescope.builtin.code_actions
+        vim.lsp.handlers['textDocument/references']     = telescope.builtin.references
+        vim.lsp.handlers['textDocument/definition']     = telescope.builtin.definitions
+        vim.lsp.handlers['textDocument/documentSymbol'] = telescope.builtin.document_symbols
+        vim.lsp.handlers['workspace/symbol']            = telescope.builtin.workspace_symbols
 
         vim.cmd('setlocal signcolumn=yes')
     end
