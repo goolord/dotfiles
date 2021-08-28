@@ -68,7 +68,7 @@ packer.startup(function()
     use {
         'neovim/nvim-lspconfig',
         config = require('modules.lsp'),
-        ft = { 'haskell', 'rust' }
+        ft = { 'haskell', 'rust', 'lua' }
     }
 
     use 'kosayoda/nvim-lightbulb'
