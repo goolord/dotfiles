@@ -25,8 +25,8 @@ packer.startup(function()
     use { 'hrsh7th/cmp-emoji'   , requires = 'tzachar/nvim-cmp' }
     use { 'hrsh7th/cmp-calc'    , requires = 'tzachar/nvim-cmp' }
     use { 'hrsh7th/cmp-vsnip'   , requires = 'tzachar/nvim-cmp' }
-    use { 
-        'hrsh7th/vim-vsnip', 
+    use {
+        'hrsh7th/vim-vsnip',
         requires = 'hrsh7th/vim-vsnip-integ',
         config = require('plugins.snippets')
     }
@@ -68,6 +68,7 @@ packer.startup(function()
     use {
         'neovim/nvim-lspconfig',
         config = require('modules.lsp'),
+        after = 'rust-tools.nvim',
         ft = { 'haskell', 'rust', 'lua' }
     }
 
@@ -76,6 +77,8 @@ packer.startup(function()
         'folke/trouble.nvim',
         config = require('plugins.trouble'),
     }
+
+    use 'simrat39/rust-tools.nvim'
 
     -- use {
     --     'nvim-treesitter/nvim-treesitter',

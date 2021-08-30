@@ -43,9 +43,11 @@ return function()
             }
         }
     }
-    lspconfig.rust_analyzer.setup {
-        on_attach = custom_on_attach,
-        capabilities = capabilities
+    require('rust-tools').setup {
+        server = {
+            on_attach = custom_on_attach,
+            capabilities = capabilities
+        }
     }
 
     local sumneko_root_path = 'usr/share/lua-language-server'
