@@ -47,4 +47,3 @@ vim.g.python3_host_prog = '/usr/bin/python3'
 vim.g.vimsyn_embed = 'l'
 
 vim.g.neovide_cursor_animation_length = 0
-
