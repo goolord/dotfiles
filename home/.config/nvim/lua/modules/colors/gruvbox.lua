@@ -17,7 +17,7 @@ function ApplyGruvbox()
         {'NvimTreeFolderIcon', {fg = '#D79921'}},
         {'NvimTreeIndentMarker', {fg = '#928374'}},
 
-        -- diagnostic-nvim
+        -- lsp-highlight-diagnostics
         {'LspDiagnosticsDefaultError', {bg = 'NONE', fg = '#FB4934'}},
         {'LspDiagnosticsDefaultInformation', {bg = 'NONE', fg = '#D3869B'}},
         {'LspDiagnosticsDefaultWarning', {bg = 'NONE', fg = '#FABD2F'}},
