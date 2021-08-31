@@ -14,3 +14,10 @@ augroup NvimTree
   au FileType NvimTree hi NvimTreeNormal guibg=#1d2021
   au FileType NvimTree hi Cursor blend=100
 augroup END
+
+augroup Dashboard
+  au!
+  au User DashboardReady lua vim.api.nvim_buf_set_keymap(0, 'n', 'e', ':DashboardNewFile<CR>', {silent = true})
+  au User DashboardReady syntax region DashboardShortCut start=/\s\s\s\w/ end=/$/
+  au User DashboardReady hi! def link dashboardCenter Normal
+augroup END

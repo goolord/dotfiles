@@ -38,7 +38,7 @@ packer.startup(function()
     }
     -- gui
     use { 'lukas-reineke/indent-blankline.nvim', config = require('plugins.indent-blankline') }
-    use { 'mhinz/vim-startify', config = require('plugins.startify') }
+    use { 'glepnir/dashboard-nvim', config = require('plugins.dashboard') }
     use {
         'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons' },
