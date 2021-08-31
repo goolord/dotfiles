@@ -1,9 +1,9 @@
 local keymap = vim.api.nvim_set_keymap
 
 local function telescope_bind(c, provider)
-    return 
-        {   'n', '<Leader>f' .. c, 
-            '<CMD>Telescope ' .. provider .. '<CR>', 
+    return
+        {   'n', '<Leader>f' .. c,
+            '<CMD>Telescope ' .. provider .. '<CR>',
             { noremap = true, silent = false }
         }
 end

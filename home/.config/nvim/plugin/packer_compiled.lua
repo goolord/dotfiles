@@ -117,8 +117,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/idris2-vim"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/home/zach/.local/share/nvim/site/pack/packer/start/impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\1\2¯\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\21filetype_exclude\1\r\0\0\thelp\rnerdtree\rstartify\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\1\0\3#show_trailing_blankline_indent\1\28show_first_indent_level\1\tchar\b‚ñè\nsetup\21indent_blankline\frequire\0" },
+    config = { "\27LJ\1\2¯\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\21filetype_exclude\1\r\0\0\thelp\rnerdtree\rstartify\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\1\0\3\tchar\b‚ñè\28show_first_indent_level\1#show_trailing_blankline_indent\1\nsetup\21indent_blankline\frequire\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
@@ -156,7 +160,7 @@ _G.packer_plugins = {
     path = "/home/zach/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig"
   },
   ["nvim-toggleterm.lua"] = {
-    config = { "\27LJ\1\2˛\1\0\0\3\0\t\1\0144\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\0014\2\5\0007\2\6\0027\2\a\2\22\2\0\2:\2\b\1>\0\2\1G\0\1\0\tsize\fcolumns\6o\bvim\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\14direction\rvertical\17persist_size\2\20start_in_insert\1\20insert_mappings\1\17hide_numbers\2\nsetup\15toggleterm\frequire\1ÄÄÄˇ\3\0" },
+    config = { "\27LJ\1\2˛\1\0\0\3\0\t\1\0144\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\0014\2\5\0007\2\6\0027\2\a\2\22\2\0\2:\2\b\1>\0\2\1G\0\1\0\tsize\fcolumns\6o\bvim\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\14direction\rvertical\17persist_size\2\20insert_mappings\1\17hide_numbers\2\20start_in_insert\1\nsetup\15toggleterm\frequire\1ÄÄÄˇ\3\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua"
   },
@@ -201,7 +205,7 @@ _G.packer_plugins = {
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/telescope-lsp-handlers.nvim"
   },
   ["telescope.nvim"] = {
-    config = { '\27LJ\1\2¥\5\0\0\v\0%\00044\0\0\0%\1\1\0>\0\2\0024\1\0\0%\2\2\0>\1\2\0023\2\4\0003\3\3\0:\3\5\0023\3\6\0:\3\a\0023\3\b\0:\3\t\0027\3\n\0003\4\21\0003\5\v\0:\2\f\0053\6\18\0003\a\14\0007\b\r\1:\b\15\a7\b\16\1:\b\17\a:\a\19\6:\6\20\5:\5\22\0043\5\24\0003\6\23\0:\6\25\0053\6 \0003\a\31\0004\b\0\0%\t\26\0>\b\2\0027\b\27\b3\t\28\0:\2\f\t3\n\29\0:\n\30\t>\b\2\2:\b\1\a:\a!\6:\6"\5:\5#\4>\3\2\0017\3$\0%\4\25\0>\3\2\0017\3$\0%\4"\0>\3\2\1G\0\1\0\19load_extension\15extensions\17lsp_handlers\16code_action\1\0\0\1\0\0\18layout_config\1\0\1\nwidth\0037\1\0\0\15get_cursor\21telescope.themes\bfzf\1\0\0\1\0\4\28override_generic_sorter\2\14case_mode\15smart_case\25override_file_sorter\2\nfuzzy\2\rdefaults\1\0\0\rmappings\6n\1\0\0\6G\19move_to_bottom\agg\1\0\0\16move_to_top\16borderchars\1\0\5\26dynamic_preview_title\2\18results_title\1\18preview_title\1\17prompt_title\1\vborder\2\nsetup\fpreview\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \vprompt\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \fresults\1\0\0\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \22telescope.actions\14telescope\frequire\0' },
+    config = { '\27LJ\1\2¥\5\0\0\v\0%\00044\0\0\0%\1\1\0>\0\2\0024\1\0\0%\2\2\0>\1\2\0023\2\4\0003\3\3\0:\3\5\0023\3\6\0:\3\a\0023\3\b\0:\3\t\0027\3\n\0003\4\21\0003\5\v\0:\2\f\0053\6\18\0003\a\14\0007\b\r\1:\b\15\a7\b\16\1:\b\17\a:\a\19\6:\6\20\5:\5\22\0043\5\24\0003\6\23\0:\6\25\0053\6 \0003\a\31\0004\b\0\0%\t\26\0>\b\2\0027\b\27\b3\t\28\0:\2\f\t3\n\29\0:\n\30\t>\b\2\2:\b\1\a:\a!\6:\6"\5:\5#\4>\3\2\0017\3$\0%\4\25\0>\3\2\0017\3$\0%\4"\0>\3\2\1G\0\1\0\19load_extension\15extensions\17lsp_handlers\16code_action\1\0\0\1\0\0\18layout_config\1\0\1\nwidth\0037\1\0\0\15get_cursor\21telescope.themes\bfzf\1\0\0\1\0\4\28override_generic_sorter\2\14case_mode\15smart_case\25override_file_sorter\2\nfuzzy\2\rdefaults\1\0\0\rmappings\6n\1\0\0\6G\19move_to_bottom\agg\1\0\0\16move_to_top\16borderchars\1\0\5\18preview_title\1\18results_title\1\26dynamic_preview_title\2\17prompt_title\1\vborder\2\nsetup\fpreview\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \vprompt\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \fresults\1\0\0\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \22telescope.actions\14telescope\frequire\0' },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
@@ -239,7 +243,7 @@ _G.packer_plugins = {
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/vim-toml"
   },
   ["vim-vsnip"] = {
-    config = { "\27LJ\1\2_\0\2\a\0\5\0\t4\2\0\0007\2\1\0027\2\2\2%\3\3\0\16\4\0\0\16\5\1\0003\6\4\0>\2\5\1G\0\1\0\1\0\3\texpr\2\vsilent\2\fnoremap\2\6i\20nvim_set_keymap\bapi\bvim°\1\1\0\6\0\b\0\n1\0\0\0004\1\1\0007\1\2\0017\1\3\1%\2\4\0%\3\5\0%\4\6\0003\5\a\0>\1\5\1G\0\1\0\1\0\2\texpr\2\fnoremap\1Cvsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'\n<C-l>\6i\20nvim_set_keymap\bapi\bvim\0\0" },
+    config = { "\27LJ\1\2_\0\2\a\0\5\0\t4\2\0\0007\2\1\0027\2\2\2%\3\3\0\16\4\0\0\16\5\1\0003\6\4\0>\2\5\1G\0\1\0\1\0\3\texpr\2\fnoremap\2\vsilent\2\6i\20nvim_set_keymap\bapi\bvim°\1\1\0\6\0\b\0\n1\0\0\0004\1\1\0007\1\2\0017\1\3\1%\2\4\0%\3\5\0%\4\6\0003\5\a\0>\1\5\1G\0\1\0\1\0\2\texpr\2\fnoremap\1Cvsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'\n<C-l>\6i\20nvim_set_keymap\bapi\bvim\0\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   },
@@ -256,11 +260,11 @@ vim.o.runtimepath = vim.o.runtimepath .. ",/home/zach/.local/share/nvim/site/pac
 time([[Runtimepath customization]], false)
 -- Config for: nvim-toggleterm.lua
 time([[Config for nvim-toggleterm.lua]], true)
-try_loadstring("\27LJ\1\2˛\1\0\0\3\0\t\1\0144\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\0014\2\5\0007\2\6\0027\2\a\2\22\2\0\2:\2\b\1>\0\2\1G\0\1\0\tsize\fcolumns\6o\bvim\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\14direction\rvertical\17persist_size\2\20start_in_insert\1\20insert_mappings\1\17hide_numbers\2\nsetup\15toggleterm\frequire\1ÄÄÄˇ\3\0", "config", "nvim-toggleterm.lua")
+try_loadstring("\27LJ\1\2˛\1\0\0\3\0\t\1\0144\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0002\2\0\0:\2\4\0014\2\5\0007\2\6\0027\2\a\2\22\2\0\2:\2\b\1>\0\2\1G\0\1\0\tsize\fcolumns\6o\bvim\20shade_filetypes\1\0\a\20shade_terminals\2\17open_mapping\15<Leader>tt\14direction\rvertical\17persist_size\2\20insert_mappings\1\17hide_numbers\2\20start_in_insert\1\nsetup\15toggleterm\frequire\1ÄÄÄˇ\3\0", "config", "nvim-toggleterm.lua")
 time([[Config for nvim-toggleterm.lua]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
-try_loadstring('\27LJ\1\2¥\5\0\0\v\0%\00044\0\0\0%\1\1\0>\0\2\0024\1\0\0%\2\2\0>\1\2\0023\2\4\0003\3\3\0:\3\5\0023\3\6\0:\3\a\0023\3\b\0:\3\t\0027\3\n\0003\4\21\0003\5\v\0:\2\f\0053\6\18\0003\a\14\0007\b\r\1:\b\15\a7\b\16\1:\b\17\a:\a\19\6:\6\20\5:\5\22\0043\5\24\0003\6\23\0:\6\25\0053\6 \0003\a\31\0004\b\0\0%\t\26\0>\b\2\0027\b\27\b3\t\28\0:\2\f\t3\n\29\0:\n\30\t>\b\2\2:\b\1\a:\a!\6:\6"\5:\5#\4>\3\2\0017\3$\0%\4\25\0>\3\2\0017\3$\0%\4"\0>\3\2\1G\0\1\0\19load_extension\15extensions\17lsp_handlers\16code_action\1\0\0\1\0\0\18layout_config\1\0\1\nwidth\0037\1\0\0\15get_cursor\21telescope.themes\bfzf\1\0\0\1\0\4\28override_generic_sorter\2\14case_mode\15smart_case\25override_file_sorter\2\nfuzzy\2\rdefaults\1\0\0\rmappings\6n\1\0\0\6G\19move_to_bottom\agg\1\0\0\16move_to_top\16borderchars\1\0\5\26dynamic_preview_title\2\18results_title\1\18preview_title\1\17prompt_title\1\vborder\2\nsetup\fpreview\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \vprompt\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \fresults\1\0\0\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \22telescope.actions\14telescope\frequire\0', "config", "telescope.nvim")
+try_loadstring('\27LJ\1\2¥\5\0\0\v\0%\00044\0\0\0%\1\1\0>\0\2\0024\1\0\0%\2\2\0>\1\2\0023\2\4\0003\3\3\0:\3\5\0023\3\6\0:\3\a\0023\3\b\0:\3\t\0027\3\n\0003\4\21\0003\5\v\0:\2\f\0053\6\18\0003\a\14\0007\b\r\1:\b\15\a7\b\16\1:\b\17\a:\a\19\6:\6\20\5:\5\22\0043\5\24\0003\6\23\0:\6\25\0053\6 \0003\a\31\0004\b\0\0%\t\26\0>\b\2\0027\b\27\b3\t\28\0:\2\f\t3\n\29\0:\n\30\t>\b\2\2:\b\1\a:\a!\6:\6"\5:\5#\4>\3\2\0017\3$\0%\4\25\0>\3\2\0017\3$\0%\4"\0>\3\2\1G\0\1\0\19load_extension\15extensions\17lsp_handlers\16code_action\1\0\0\1\0\0\18layout_config\1\0\1\nwidth\0037\1\0\0\15get_cursor\21telescope.themes\bfzf\1\0\0\1\0\4\28override_generic_sorter\2\14case_mode\15smart_case\25override_file_sorter\2\nfuzzy\2\rdefaults\1\0\0\rmappings\6n\1\0\0\6G\19move_to_bottom\agg\1\0\0\16move_to_top\16borderchars\1\0\5\18preview_title\1\18results_title\1\26dynamic_preview_title\2\17prompt_title\1\vborder\2\nsetup\fpreview\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \vprompt\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \fresults\1\0\0\1\t\0\0\6 \6 \6 \6 \6 \6 \6 \6 \22telescope.actions\14telescope\frequire\0', "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
 -- Config for: vim-startify
 time([[Config for vim-startify]], true)
@@ -268,11 +272,11 @@ try_loadstring("\27LJ\1\2ª\6\0\0\6\0\22\00004\0\0\0007\0\1\0'\1\0\0:\1\2\0004\0\
 time([[Config for vim-startify]], false)
 -- Config for: vim-vsnip
 time([[Config for vim-vsnip]], true)
-try_loadstring("\27LJ\1\2_\0\2\a\0\5\0\t4\2\0\0007\2\1\0027\2\2\2%\3\3\0\16\4\0\0\16\5\1\0003\6\4\0>\2\5\1G\0\1\0\1\0\3\texpr\2\vsilent\2\fnoremap\2\6i\20nvim_set_keymap\bapi\bvim°\1\1\0\6\0\b\0\n1\0\0\0004\1\1\0007\1\2\0017\1\3\1%\2\4\0%\3\5\0%\4\6\0003\5\a\0>\1\5\1G\0\1\0\1\0\2\texpr\2\fnoremap\1Cvsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'\n<C-l>\6i\20nvim_set_keymap\bapi\bvim\0\0", "config", "vim-vsnip")
+try_loadstring("\27LJ\1\2_\0\2\a\0\5\0\t4\2\0\0007\2\1\0027\2\2\2%\3\3\0\16\4\0\0\16\5\1\0003\6\4\0>\2\5\1G\0\1\0\1\0\3\texpr\2\fnoremap\2\vsilent\2\6i\20nvim_set_keymap\bapi\bvim°\1\1\0\6\0\b\0\n1\0\0\0004\1\1\0007\1\2\0017\1\3\1%\2\4\0%\3\5\0%\4\6\0003\5\a\0>\1\5\1G\0\1\0\1\0\2\texpr\2\fnoremap\1Cvsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'\n<C-l>\6i\20nvim_set_keymap\bapi\bvim\0\0", "config", "vim-vsnip")
 time([[Config for vim-vsnip]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\1\2¯\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\21filetype_exclude\1\r\0\0\thelp\rnerdtree\rstartify\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\1\0\3#show_trailing_blankline_indent\1\28show_first_indent_level\1\tchar\b‚ñè\nsetup\21indent_blankline\frequire\0", "config", "indent-blankline.nvim")
+try_loadstring("\27LJ\1\2¯\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\21filetype_exclude\1\r\0\0\thelp\rnerdtree\rstartify\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\1\0\3\tchar\b‚ñè\28show_first_indent_level\1#show_trailing_blankline_indent\1\nsetup\21indent_blankline\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
 -- Config for: vim-gruvbox8
 time([[Config for vim-gruvbox8]], true)
@@ -301,10 +305,10 @@ time([[Config for nvim-tree.lua]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command! -nargs=* -range -bang -complete=file Ghcid lua require("packer.load")({'ghcid'}, { cmd = "Ghcid", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command! -nargs=* -range -bang -complete=file StartupTime lua require("packer.load")({'startuptime.vim'}, { cmd = "StartupTime", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command! -nargs=* -range -bang -complete=file Rg lua require("packer.load")({'vim-ripgrep'}, { cmd = "Rg", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-pcall(vim.cmd, [[command! -nargs=* -range -bang -complete=file GhcidKill lua require("packer.load")({'ghcid'}, { cmd = "GhcidKill", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Ghcid lua require("packer.load")({'ghcid'}, { cmd = "Ghcid", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file StartupTime lua require("packer.load")({'startuptime.vim'}, { cmd = "StartupTime", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Rg lua require("packer.load")({'vim-ripgrep'}, { cmd = "Rg", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file GhcidKill lua require("packer.load")({'ghcid'}, { cmd = "GhcidKill", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
@@ -312,10 +316,10 @@ vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType gitcommit ++once lua require("packer.load")({'collaborators.vim'}, { ft = "gitcommit" }, _G.packer_plugins)]]
-vim.cmd [[au FileType lua ++once lua require("packer.load")({'nvim-lspconfig'}, { ft = "lua" }, _G.packer_plugins)]]
-vim.cmd [[au FileType haskell ++once lua require("packer.load")({'nvim-lspconfig'}, { ft = "haskell" }, _G.packer_plugins)]]
 vim.cmd [[au FileType coq ++once lua require("packer.load")({'Coqtail'}, { ft = "coq" }, _G.packer_plugins)]]
+vim.cmd [[au FileType haskell ++once lua require("packer.load")({'nvim-lspconfig'}, { ft = "haskell" }, _G.packer_plugins)]]
 vim.cmd [[au FileType rust ++once lua require("packer.load")({'nvim-lspconfig'}, { ft = "rust" }, _G.packer_plugins)]]
+vim.cmd [[au FileType lua ++once lua require("packer.load")({'nvim-lspconfig'}, { ft = "lua" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
