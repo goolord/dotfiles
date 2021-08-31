@@ -1,6 +1,5 @@
 return function()
     require('modules.lsp.langserver')()
-    require('modules.lsp.diagnostic')()
 
     -- lightbulb
     vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
