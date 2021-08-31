@@ -5,6 +5,8 @@ local packer = require('packer')
 packer.init()
 
 packer.startup(function()
+    use { 'lewis6991/impatient.nvim', rocks = 'mpack' }
+
     use { 'wbthomason/packer.nvim', opt = true }
 
     use 'godlygeek/tabular'
@@ -16,21 +18,24 @@ packer.startup(function()
 
     -- completion
     use { 'onsails/lspkind-nvim' }
-    use { 'hrsh7th/nvim-cmp', config = require('plugins.completion') }
-    -- sources
-    use { 'tzachar/cmp-tabnine' , requires = 'tzachar/nvim-cmp', run = './install.sh'}
-    use { 'hrsh7th/cmp-buffer'  , requires = 'tzachar/nvim-cmp' }
-    use { 'hrsh7th/cmp-nvim-lsp', requires = 'tzachar/nvim-cmp' }
-    use { 'hrsh7th/cmp-path'    , requires = 'tzachar/nvim-cmp' }
-    use { 'hrsh7th/cmp-emoji'   , requires = 'tzachar/nvim-cmp' }
-    use { 'hrsh7th/cmp-calc'    , requires = 'tzachar/nvim-cmp' }
-    use { 'hrsh7th/cmp-vsnip'   , requires = 'tzachar/nvim-cmp' }
     use {
-        'hrsh7th/vim-vsnip',
-        requires = 'hrsh7th/vim-vsnip-integ',
-        config = require('plugins.snippets')
+        'hrsh7th/nvim-cmp',
+        config = require('plugins.completion'),
+        requires = {
+            { 'tzachar/cmp-tabnine', run = './install.sh' },
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-emoji',
+            'hrsh7th/cmp-calc',
+            'hrsh7th/cmp-vsnip',
+            {
+                'hrsh7th/vim-vsnip',
+                requires = 'hrsh7th/vim-vsnip-integ',
+                config = require('plugins.snippets')
+            }
+        }
     }
-
     -- gui
     use { 'lukas-reineke/indent-blankline.nvim', config = require('plugins.indent-blankline') }
     use { 'mhinz/vim-startify', config = require('plugins.startify') }
