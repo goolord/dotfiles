@@ -54,11 +54,16 @@ packer.startup(function()
     use {
         'nvim-telescope/telescope.nvim',
         config = require('plugins.telescope'),
-        requires = 'nvim-lua/plenary.nvim'
+        requires = {
+            'nvim-lua/plenary.nvim',
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+            { 'gbrlsnchs/telescope-lsp-handlers.nvim' },
+            {
+                'nvim-telescope/telescope-frecency.nvim',
+                requires = {'tami5/sql.nvim'}
+            }
+        }
     }
-
-    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-    use { 'gbrlsnchs/telescope-lsp-handlers.nvim' }
 
     -- git
     use 'tpope/vim-fugitive'
