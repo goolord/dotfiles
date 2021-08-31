@@ -40,6 +40,7 @@ set_keybindings {
     telescope_bind(':','command_history'),
     telescope_bind('/','search_history'),
     telescope_bind('h','oldfiles'),
+    telescope_bind('r','frecency'),
     telescope_bind('d','dumb_jump'),
     telescope_bind('_',''),
     -- Delete in search result
