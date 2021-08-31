@@ -107,6 +107,11 @@ _G.packer_plugins = {
     needs_bufread = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/opt/collaborators.vim"
   },
+  ["dashboard-nvim"] = {
+    config = { "\27LJ\1\2ù\t\0\0\4\0\29\0)4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0003\1\5\0:\1\4\0004\0\0\0007\0\1\0003\1\n\0003\2\b\0003\3\a\0:\3\t\2:\2\v\0013\2\r\0003\3\f\0:\3\t\2:\2\14\0013\2\16\0003\3\15\0:\3\t\2:\2\17\0013\2\19\0003\3\18\0:\3\t\2:\2\20\0013\2\22\0003\3\21\0:\3\t\2:\2\23\0013\2\25\0003\3\24\0:\3\t\2:\2\26\0013\2\28\0003\3\27\0:\3\t\2:\2\1\1:\1\6\0G\0\1\0\1\0\1\fcommand\23DashboardJumpMarks\1\2\0\0007Ôë°  Jump to bookmarks                     SPC f m\6f\1\0\1\fcommand\22DashboardFindWord\1\2\0\0007ÔáÇ  Find word                             SPC f g\6e\1\0\1\fcommand\22DashboardFindFile\1\2\0\0007ÔÖú  Find file                             SPC f f\6d\1\0\1\fcommand\23Telescope frecency\1\2\0\0007Ôú°  Frecency/MRU                          SPC f r\6c\1\0\1\fcommand\25DashboardFindHistory\1\2\0\0007Ôú°  Recently opened files                 SPC f h\6b\1\0\1\fcommand\16SessionLoad\1\2\0\0007Ôë§  Open last session                     SPC s l\6a\1\0\0\16description\1\0\1\fcommand\21DashboardNewFile\1\2\0\0007ÔÖõ  New file                              e      \29dashboard_custom_section\1\a\0\0006                               __                6  ___     ___    ___   __  __ /\\_\\    ___ ___    6 / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  6/\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 6\\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\6 \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\28dashboard_custom_header\14telescope dashboard_default_executive\6g\bvim\0" },
+    loaded = true,
+    path = "/home/zach/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
+  },
   ghcid = {
     commands = { "Ghcid", "GhcidKill" },
     loaded = false,
@@ -122,7 +127,7 @@ _G.packer_plugins = {
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\1\2¯\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\21filetype_exclude\1\r\0\0\thelp\rnerdtree\rstartify\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\1\0\3\tchar\b‚ñè\28show_first_indent_level\1#show_trailing_blankline_indent\1\nsetup\21indent_blankline\frequire\0" },
+    config = { "\27LJ\1\2˘\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\21filetype_exclude\1\r\0\0\thelp\rnerdtree\14dashboard\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\1\0\3\tchar\b‚ñè\28show_first_indent_level\1#show_trailing_blankline_indent\1\nsetup\21indent_blankline\frequire\0" },
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
@@ -241,11 +246,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/zach/.local/share/nvim/site/pack/packer/opt/vim-ripgrep"
   },
-  ["vim-startify"] = {
-    config = { "\27LJ\1\2ª\6\0\0\6\0\22\00004\0\0\0007\0\1\0'\1\0\0:\1\2\0004\0\0\0007\0\1\0003\1\4\0:\1\3\0004\0\0\0007\0\1\0002\1\6\0003\2\6\0002\3\3\0%\4\a\0004\5\0\0007\5\b\0057\5\t\5>\5\1\2$\4\5\4;\4\1\3:\3\n\2;\2\1\0013\2\v\0003\3\f\0:\3\n\2;\2\2\0013\2\r\0003\3\14\0:\3\n\2;\2\3\0013\2\15\0003\3\16\0:\3\n\2;\2\4\0013\2\17\0003\3\18\0:\3\n\2;\2\5\1:\1\5\0004\0\0\0007\0\1\0002\1\3\0003\2\20\0;\2\1\0013\2\21\0;\2\2\1:\1\19\0G\0\1\0\1\0\1\6l$~/Dev/iohk/cardano-ledger-specs\1\0\1\6c\19~/.config/nvim\23startify_bookmarks\1\2\0\0\16   Commands\1\0\1\ttype\rcommands\1\2\0\0\17   Bookmarks\1\0\1\ttype\14bookmarks\1\2\0\0\16   Sessions\1\0\1\ttype\rsessions\1\2\0\0\v   MRU\1\0\1\ttype\nfiles\vheader\vgetcwd\afn\f   MRU \1\0\1\ttype\bdir\19startify_lists\1\a\0\0009                                  __                9     ___     ___    ___   __  __ /\\_\\    ___ ___    9    / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  9   /\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 9   \\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\9    \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\27startify_custom_header\27startify_change_to_dir\6g\bvim\0" },
-    loaded = true,
-    path = "/home/zach/.local/share/nvim/site/pack/packer/start/vim-startify"
-  },
   ["vim-toml"] = {
     loaded = true,
     path = "/home/zach/.local/share/nvim/site/pack/packer/start/vim-toml"
@@ -284,7 +284,7 @@ try_loadstring("\27LJ\1\2∫\5\0\0\6\0\28\0K4\0\0\0007\0\1\0003\1\3\0:\1\2\0004\0\
 time([[Config for nvim-tree.lua]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\1\2¯\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\21filetype_exclude\1\r\0\0\thelp\rnerdtree\rstartify\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\1\0\3\tchar\b‚ñè\28show_first_indent_level\1#show_trailing_blankline_indent\1\nsetup\21indent_blankline\frequire\0", "config", "indent-blankline.nvim")
+try_loadstring("\27LJ\1\2˘\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\21filetype_exclude\1\r\0\0\thelp\rnerdtree\14dashboard\fPreview\f__doc__\rpeekaboo\bman\ntrans\bfzf\rmarkdown\blog\rterminal\1\0\3\tchar\b‚ñè\28show_first_indent_level\1#show_trailing_blankline_indent\1\nsetup\21indent_blankline\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
 -- Config for: vim-gruvbox8
 time([[Config for vim-gruvbox8]], true)
@@ -306,10 +306,10 @@ time([[Config for nvim-comment]], false)
 time([[Config for vim-vsnip]], true)
 try_loadstring("\27LJ\1\2_\0\2\a\0\5\0\t4\2\0\0007\2\1\0027\2\2\2%\3\3\0\16\4\0\0\16\5\1\0003\6\4\0>\2\5\1G\0\1\0\1\0\3\texpr\2\fnoremap\2\vsilent\2\6i\20nvim_set_keymap\bapi\bvim°\1\1\0\6\0\b\0\n1\0\0\0004\1\1\0007\1\2\0017\1\3\1%\2\4\0%\3\5\0%\4\6\0003\5\a\0>\1\5\1G\0\1\0\1\0\2\texpr\2\fnoremap\1Cvsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'\n<C-l>\6i\20nvim_set_keymap\bapi\bvim\0\0", "config", "vim-vsnip")
 time([[Config for vim-vsnip]], false)
--- Config for: vim-startify
-time([[Config for vim-startify]], true)
-try_loadstring("\27LJ\1\2ª\6\0\0\6\0\22\00004\0\0\0007\0\1\0'\1\0\0:\1\2\0004\0\0\0007\0\1\0003\1\4\0:\1\3\0004\0\0\0007\0\1\0002\1\6\0003\2\6\0002\3\3\0%\4\a\0004\5\0\0007\5\b\0057\5\t\5>\5\1\2$\4\5\4;\4\1\3:\3\n\2;\2\1\0013\2\v\0003\3\f\0:\3\n\2;\2\2\0013\2\r\0003\3\14\0:\3\n\2;\2\3\0013\2\15\0003\3\16\0:\3\n\2;\2\4\0013\2\17\0003\3\18\0:\3\n\2;\2\5\1:\1\5\0004\0\0\0007\0\1\0002\1\3\0003\2\20\0;\2\1\0013\2\21\0;\2\2\1:\1\19\0G\0\1\0\1\0\1\6l$~/Dev/iohk/cardano-ledger-specs\1\0\1\6c\19~/.config/nvim\23startify_bookmarks\1\2\0\0\16   Commands\1\0\1\ttype\rcommands\1\2\0\0\17   Bookmarks\1\0\1\ttype\14bookmarks\1\2\0\0\16   Sessions\1\0\1\ttype\rsessions\1\2\0\0\v   MRU\1\0\1\ttype\nfiles\vheader\vgetcwd\afn\f   MRU \1\0\1\ttype\bdir\19startify_lists\1\a\0\0009                                  __                9     ___     ___    ___   __  __ /\\_\\    ___ ___    9    / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  9   /\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 9   \\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\9    \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\27startify_custom_header\27startify_change_to_dir\6g\bvim\0", "config", "vim-startify")
-time([[Config for vim-startify]], false)
+-- Config for: dashboard-nvim
+time([[Config for dashboard-nvim]], true)
+try_loadstring("\27LJ\1\2ù\t\0\0\4\0\29\0)4\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0003\1\5\0:\1\4\0004\0\0\0007\0\1\0003\1\n\0003\2\b\0003\3\a\0:\3\t\2:\2\v\0013\2\r\0003\3\f\0:\3\t\2:\2\14\0013\2\16\0003\3\15\0:\3\t\2:\2\17\0013\2\19\0003\3\18\0:\3\t\2:\2\20\0013\2\22\0003\3\21\0:\3\t\2:\2\23\0013\2\25\0003\3\24\0:\3\t\2:\2\26\0013\2\28\0003\3\27\0:\3\t\2:\2\1\1:\1\6\0G\0\1\0\1\0\1\fcommand\23DashboardJumpMarks\1\2\0\0007Ôë°  Jump to bookmarks                     SPC f m\6f\1\0\1\fcommand\22DashboardFindWord\1\2\0\0007ÔáÇ  Find word                             SPC f g\6e\1\0\1\fcommand\22DashboardFindFile\1\2\0\0007ÔÖú  Find file                             SPC f f\6d\1\0\1\fcommand\23Telescope frecency\1\2\0\0007Ôú°  Frecency/MRU                          SPC f r\6c\1\0\1\fcommand\25DashboardFindHistory\1\2\0\0007Ôú°  Recently opened files                 SPC f h\6b\1\0\1\fcommand\16SessionLoad\1\2\0\0007Ôë§  Open last session                     SPC s l\6a\1\0\0\16description\1\0\1\fcommand\21DashboardNewFile\1\2\0\0007ÔÖõ  New file                              e      \29dashboard_custom_section\1\a\0\0006                               __                6  ___     ___    ___   __  __ /\\_\\    ___ ___    6 / _ `\\  / __`\\ / __`\\/\\ \\/\\ \\\\/\\ \\  / __` __`\\  6/\\ \\/\\ \\/\\  __//\\ \\_\\ \\ \\ \\_/ |\\ \\ \\/\\ \\/\\ \\/\\ \\ 6\\ \\_\\ \\_\\ \\____\\ \\____/\\ \\___/  \\ \\_\\ \\_\\ \\_\\ \\_\\6 \\/_/\\/_/\\/____/\\/___/  \\/__/    \\/_/\\/_/\\/_/\\/_/\28dashboard_custom_header\14telescope dashboard_default_executive\6g\bvim\0", "config", "dashboard-nvim")
+time([[Config for dashboard-nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

@@ -33,6 +33,7 @@ set_keybindings {
     telescope_bind('t','tags'),       -- :tj
     telescope_bind('b','buffers'),    -- :ls :b
     telescope_bind('g','live_grep'),  -- :grep
+    telescope_bind('i','file_browser'),
     telescope_bind('k','keymaps'),
     telescope_bind('m','marks'),
     telescope_bind('j','jumplist'),
@@ -54,8 +55,9 @@ set_keybindings {
     {'n', '<C-k>', '<C-w>k', {noremap = true, silent = true} },
     {'n', '<C-l>', '<C-w>l', {noremap = true, silent = true} },
     {'n', '<esc>', ':noh<CR>', {noremap = false, silent = true} },
-    {'n', '<Leader>s', ':Startify<CR>', {silent = true} },
     {'n', '<Leader>r', ':TroubleToggle<CR>', {silent = true} },
+    {'n', '<Leader>ss', ':SessionSave<CR>', {silent = true} },
+    {'n', '<Leader>sl', ':SessionLoad<CR>', {silent = true} },
     -- tabular
     tabularize_bind('','/'),
     tabularize_bind('a','/'),
