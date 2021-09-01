@@ -58,6 +58,7 @@ set_keybindings {
     {'n', '<Leader>r', ':TroubleToggle<CR>', {silent = true} },
     {'n', '<Leader>ss', ':SessionSave<CR>', {silent = true} },
     {'n', '<Leader>sl', ':SessionLoad<CR>', {silent = true} },
+    {'n', '<Leader>D', ':Dashboard<CR>', {silent = true} },
     -- tabular
     tabularize_bind('','/'),
     tabularize_bind('a','/'),
