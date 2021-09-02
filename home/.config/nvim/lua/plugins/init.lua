@@ -38,7 +38,6 @@ packer.startup(function()
     }
     -- gui
     use { 'lukas-reineke/indent-blankline.nvim', config = require('plugins.indent-blankline') }
-    use { 'glepnir/dashboard-nvim', config = require('plugins.dashboard') }
     use {
         'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons' },
@@ -107,6 +106,13 @@ packer.startup(function()
         'ndmitchell/ghcid',
         rtp = 'plugins/nvim',
         cmd = { 'Ghcid', 'GhcidKill' },
+    }
+
+    use {
+        "~/Dev/alpha-nvim",
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+        end
     }
 end)
 

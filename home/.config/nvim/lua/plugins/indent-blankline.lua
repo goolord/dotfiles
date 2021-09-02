@@ -4,12 +4,12 @@ return function()
         show_trailing_blankline_indent = false,
         show_first_indent_level = false,
         filetype_exclude = {
-            'help'     , 'nerdtree',
-            'dashboard', 'Preview' ,
-            '__doc__'  , 'peekaboo',
-            'man'      , 'trans'   ,
-            'fzf'      , 'markdown',
-            'log'      , 'terminal',
+            'help'   , 'nerdtree',
+            'alpha'  , 'Preview' ,
+            '__doc__', 'peekaboo',
+            'man'    , 'trans'   ,
+            'fzf'    , 'markdown',
+            'log'    , 'terminal',
         }
     }
 end
