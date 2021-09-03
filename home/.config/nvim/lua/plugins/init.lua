@@ -45,7 +45,8 @@ packer.startup(function()
     }
 
     use {
-        'hoob3rt/lualine.nvim',
+        'shadmansaleh/lualine.nvim', -- this is a fork, most up to date atm
+        -- 'hoob3rt/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons', opt = true},
         config = require('plugins.statusline')
     }
@@ -110,6 +111,7 @@ packer.startup(function()
 
     use {
         "~/Dev/alpha-nvim",
+        requires = { 'kyazdani42/nvim-web-devicons' },
         config = function ()
             require'alpha'.setup(require'alpha.themes.dashboard'.opts)
         end
