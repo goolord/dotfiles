@@ -18,5 +18,3 @@ augroup END
 augroup Trouble
   au!
 augroup END
-
-au FileType qf cclose | Trouble quickfix
