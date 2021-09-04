@@ -55,7 +55,9 @@ set_keybindings {
     {'n', '<C-k>', '<C-w>k', {noremap = true, silent = true} },
     {'n', '<C-l>', '<C-w>l', {noremap = true, silent = true} },
     {'n', '<esc>', ':noh<CR>', {noremap = false, silent = true} },
-    {'n', '<Leader>r', ':TroubleToggle<CR>', {silent = true} },
+    {'n', '<Leader>rr', ':TroubleToggle lsp_workspace_diagnostics <CR>', {silent = true} },
+    {'n', '<Leader>rq', ':TroubleToggle quickfix<CR>', {silent = true} },
+    {'n', '<Leader>rl', ':TroubleToggle loclist<CR>', {silent = true} },
     {'n', '<Leader>ss', ':SessionSave<CR>', {silent = true} },
     {'n', '<Leader>sl', ':SessionLoad<CR>', {silent = true} },
     {'n', '<Leader>D', ':Dashboard<CR>', {silent = true} },
@@ -78,5 +80,7 @@ set_keybindings {
     -- macro
     {'n', '<A-m>', '@q', {} },
 }
+
+vim.cmd('command -nargs=+ Rg silent grep <args> <bar> Trouble quickfix')
 
 return set_keybindings
