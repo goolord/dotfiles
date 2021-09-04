@@ -14,3 +14,9 @@ augroup NvimTree
   au FileType NvimTree hi NvimTreeNormal guibg=#1d2021
   au FileType NvimTree hi Cursor blend=100
 augroup END
+
+augroup Trouble
+  au!
+augroup END
+
+au FileType qf cclose | Trouble quickfix

@@ -12,9 +12,7 @@ packer.startup(function()
     use 'godlygeek/tabular'
     use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
     use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
-    use { 'tweekmonster/startuptime.vim', cmd = { 'StartupTime' } }
-    use { 'jremmen/vim-ripgrep', cmd = 'Rg' }
-    use 'kevinhwang91/nvim-bqf'
+    use { 'dstein64/vim-startuptime', cmd = { 'StartupTime' } }
 
     -- completion
     use { 'onsails/lspkind-nvim' }
@@ -65,6 +63,14 @@ packer.startup(function()
         }
     }
 
+    use {
+        "~/Dev/alpha-nvim",
+        requires = { 'kyazdani42/nvim-web-devicons' },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+        end
+    }
+
     -- git
     use 'tpope/vim-fugitive'
 
@@ -109,13 +115,6 @@ packer.startup(function()
         cmd = { 'Ghcid', 'GhcidKill' },
     }
 
-    use {
-        "~/Dev/alpha-nvim",
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.dashboard'.opts)
-        end
-    }
 end)
 
 return packer
