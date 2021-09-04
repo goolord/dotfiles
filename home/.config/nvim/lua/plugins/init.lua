@@ -1,4 +1,5 @@
 vim.cmd('packadd packer.nvim')
+vim.cmd('packadd cfilter')
 
 local packer = require('packer')
 
