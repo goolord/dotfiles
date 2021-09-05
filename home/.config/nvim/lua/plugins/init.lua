@@ -64,6 +64,8 @@ packer.startup(function()
         }
     }
 
+    use '~/Dev/persistence.nvim'
+
     use {
         "~/Dev/alpha-nvim",
         requires = { 'kyazdani42/nvim-web-devicons' },
