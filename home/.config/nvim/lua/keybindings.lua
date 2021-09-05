@@ -58,8 +58,8 @@ set_keybindings {
     {'n', '<Leader>rr', ':TroubleToggle lsp_workspace_diagnostics <CR>', {silent = true} },
     {'n', '<Leader>rq', ':TroubleToggle quickfix<CR>', {silent = true} },
     {'n', '<Leader>rl', ':TroubleToggle loclist<CR>', {silent = true} },
-    {'n', '<Leader>ss', ':SessionSave<CR>', {silent = true} },
-    {'n', '<Leader>sl', ':SessionLoad<CR>', {silent = true} },
+    {'n', '<Leader>ss', ':lua require("persistence").save()<cr>', {silent = true} },
+    {'n', '<Leader>sl', ':lua require("persistence").load()<cr>', {silent = true} },
     {'n', '<Leader>D', ':Dashboard<CR>', {silent = true} },
     -- tabular
     tabularize_bind('','/'),
