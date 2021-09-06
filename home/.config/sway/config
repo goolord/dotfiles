@@ -211,17 +211,11 @@ font pango:monospace 10
 
 exec swaybg -c '#404040'
 
-for_window [app_id="zenity"] floating enable
-
-for_window [app_id="org.gnome.Nautilus"] { 
+for_window [app_id="org.gnome.Nautilus|firefox|cinny|zenity"] { 
   border pixel 2
 }
 
-for_window [class="Chromium|Slack|discord|lightcord|firefox|Bitwig Studio|emacs"] { 
-  border pixel 2
-}
-
-for_window [app_id="firefox"] { 
+for_window [class="Chromium|Slack|discord|firefox|Bitwig Studio|emacs"] { 
   border pixel 2
 }
 
