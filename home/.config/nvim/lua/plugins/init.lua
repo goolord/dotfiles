@@ -103,7 +103,6 @@ packer.startup(function()
     use 'edwinb/idris2-vim'
     use 'cespare/vim-toml'
 
-    use { '~/Dev/collaborators.vim', ft = 'gitcommit' }
     use { 'whonore/Coqtail', ft = 'coq' }
 
     use {
