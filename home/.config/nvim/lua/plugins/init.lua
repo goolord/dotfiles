@@ -16,7 +16,6 @@ packer.startup(function()
     use { 'dstein64/vim-startuptime', cmd = { 'StartupTime' } }
 
     -- completion
-    use { 'onsails/lspkind-nvim' }
     use {
         'hrsh7th/nvim-cmp',
         config = require('plugins.completion'),
@@ -28,6 +27,7 @@ packer.startup(function()
             'hrsh7th/cmp-emoji',
             'hrsh7th/cmp-calc',
             'hrsh7th/cmp-vsnip',
+            'onsails/lspkind-nvim',
             {
                 'hrsh7th/vim-vsnip',
                 requires = 'hrsh7th/vim-vsnip-integ',
@@ -65,9 +65,7 @@ packer.startup(function()
     use {
         "~/Dev/alpha-nvim",
         requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.opts)
-        end
+        config = require'plugins.alpha'
     }
 
     -- git
@@ -105,6 +103,7 @@ packer.startup(function()
     use 'LnL7/vim-nix'
     use 'edwinb/idris2-vim'
     use 'cespare/vim-toml'
+
     use { '~/Dev/collaborators.vim', ft = 'gitcommit' }
     use { 'whonore/Coqtail', ft = 'coq' }
 
