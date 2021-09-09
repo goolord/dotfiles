@@ -47,7 +47,6 @@ return function()
             { name = 'path' },
             { name = 'calc' },
             { name = 'vsnip' },
-            { name = 'collaborators' },
         };
     }
 
