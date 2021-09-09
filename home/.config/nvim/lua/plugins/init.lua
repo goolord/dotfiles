@@ -36,7 +36,7 @@ packer.startup(function()
         }
     }
     -- gui
-    use { 'lukas-reineke/indent-blankline.nvim', config = require('plugins.indent-blankline') }
+    use { '~/Dev/indent-blankline.nvim', config = require('plugins.indent-blankline') }
     use {
         'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons' },
@@ -85,7 +85,6 @@ packer.startup(function()
         ft = { 'haskell', 'rust', 'lua' }
     }
 
-    use 'kosayoda/nvim-lightbulb'
     use {
         'folke/trouble.nvim',
         config = require('plugins.trouble'),
