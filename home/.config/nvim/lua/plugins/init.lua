@@ -57,10 +57,6 @@ packer.startup(function()
             'nvim-lua/plenary.nvim',
             { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
             { 'gbrlsnchs/telescope-lsp-handlers.nvim' },
-            {
-                'nvim-telescope/telescope-frecency.nvim',
-                requires = {'tami5/sql.nvim'}
-            }
         }
     }
 
@@ -70,7 +66,7 @@ packer.startup(function()
         "~/Dev/alpha-nvim",
         requires = { 'kyazdani42/nvim-web-devicons' },
         config = function ()
-            require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+            require'alpha'.setup(require'alpha.themes.startify'.opts)
         end
     }
 

@@ -47,6 +47,5 @@ return function()
     }
     telescope.load_extension('fzf')
     telescope.load_extension('lsp_handlers')
-    telescope.load_extension("frecency")
 end
 
