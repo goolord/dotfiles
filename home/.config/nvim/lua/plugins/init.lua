@@ -12,7 +12,7 @@ packer.startup(function()
 
     use 'godlygeek/tabular'
     use { 'terrortylor/nvim-comment', config = require('plugins.nvim-comment') }
-    use { 'akinsho/nvim-toggleterm.lua', config = require('plugins.toggleterm') }
+    use { 'akinsho/toggleterm.nvim', config = require('plugins.toggleterm') }
     use { 'dstein64/vim-startuptime', cmd = { 'StartupTime' } }
 
     -- completion
