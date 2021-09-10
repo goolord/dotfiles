@@ -219,6 +219,10 @@ for_window [class="Chromium|Slack|discord|firefox|Bitwig Studio|emacs"] {
   border pixel 2
 }
 
+for_window [app_id="zenity"] {
+  floating enable
+}
+
 input 6392:3993:USB_OPTICAL_MOUSE {
   accel_profile flat
   pointer_accel -0.55
