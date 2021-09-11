@@ -8,6 +8,7 @@ bat
 bottom
 broot
 capitaine-cursors
+chromium
 coq
 debtap
 discord_arch_electron
