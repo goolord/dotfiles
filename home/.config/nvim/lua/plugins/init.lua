@@ -36,7 +36,11 @@ packer.startup(function()
         }
     }
     -- gui
-    use { '~/Dev/indent-blankline.nvim', config = require('plugins.indent-blankline') }
+    use { 
+        'lukas-reineke/indent-blankline.nvim',
+        config = require('plugins.indent-blankline'),
+        branch = 'develop'
+    }
     use {
         'kyazdani42/nvim-tree.lua',
         requires = { 'kyazdani42/nvim-web-devicons' },
