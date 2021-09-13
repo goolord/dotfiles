@@ -223,14 +223,9 @@ for_window [app_id="zenity"] {
   floating enable
 }
 
-input 6392:3993:USB_OPTICAL_MOUSE {
+input 1133:49290:Logitech_MX_Vertical_Advanced_Ergonomic_Mouse {
   accel_profile flat
-  pointer_accel -0.55
-}
-
-input 7119:5:USB_Optical_Mouse {
-  accel_profile flat
-  pointer_accel -0.7
+  pointer_accel -0.5
 }
 
 input 1267:12529:ELAN1206:00_04F3:30F1_Mouse {
