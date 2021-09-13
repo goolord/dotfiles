@@ -1,3 +1,6 @@
 return function()
-    require'alpha'.setup(require'alpha.themes.startify'.opts)
+    local startify = require'alpha.themes.startify'
+    startify.nvim_web_devicons.enabled = false
+    local alpha = require'alpha'
+    alpha.setup(startify.opts)
 end
