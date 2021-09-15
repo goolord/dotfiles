@@ -36,7 +36,7 @@ packer.startup(function()
         }
     }
     -- gui
-    use { 
+    use {
         'lukas-reineke/indent-blankline.nvim',
         config = require('plugins.indent-blankline'),
         branch = 'develop'

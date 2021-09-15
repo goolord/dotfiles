@@ -4,9 +4,6 @@ pcall(require, "impatient")
 -- unload default plugins
 require('plugins.unload')
 
--- install packer
-require('plugins.bootstrapping')
-
 -- neovim package manager
 require('plugins')
 
