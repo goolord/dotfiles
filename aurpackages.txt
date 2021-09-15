@@ -14,7 +14,7 @@ debtap
 discord_arch_electron
 exa
 fd
-firefox
+firefox-beta-bin
 fzf
 gammastep
 git-delta
