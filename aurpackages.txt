@@ -33,6 +33,7 @@ nemo
 neofetch
 networkmanager-dmenu-git
 numix-icon-theme-git
+nvim-packer-git
 obs-studio-git
 openconnect
 otf-nerd-fonts-fira-code
@@ -50,7 +51,7 @@ rust-analyzer
 shellcheck-bin
 slurp-git
 stow
-sway
+sway-git
 swaylock-fancy-git
 tealdeer-git
 the_silver_searcher
