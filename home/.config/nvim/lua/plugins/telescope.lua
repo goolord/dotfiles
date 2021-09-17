@@ -16,6 +16,7 @@ return function()
             preview_title = false,
             dynamic_preview_title = true,
             borderchars = blank_border,
+            prompt_prefix = '',
             mappings = {
                 n = {
                     ["gg"] = actions.move_to_top,
