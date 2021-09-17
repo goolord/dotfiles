@@ -17,12 +17,17 @@ return function()
             dynamic_preview_title = true,
             borderchars = blank_border,
             prompt_prefix = '',
+            layout_config = {
+                width = 0.85,
+            },
             mappings = {
                 n = {
                     ["gg"] = actions.move_to_top,
                     ["G"] = actions.move_to_bottom,
                 }
             },
+            selection_caret = ' ',
+            entry_prefix = ' ',
         },
 
         extensions = {
