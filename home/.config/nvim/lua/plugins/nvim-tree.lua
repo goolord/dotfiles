@@ -23,5 +23,9 @@ return function()
 
     -- disable word wrap
     vim.cmd('autocmd FileType NvimTree setlocal nowrap')
-
+    vim.cmd[[
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+        \ execute 'cd '.argv()[0] | execute 'NvimTreeOpen' | wincmd p | q | endif
+    ]]
 end
