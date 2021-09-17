@@ -42,6 +42,7 @@ set_keybindings {
     telescope_bind('/','search_history'),
     telescope_bind('h','oldfiles'),
     telescope_bind('d','dumb_jump'),
+    telescope_bind('s','sessions'),
     telescope_bind('_',''),
     -- Delete in search result
     {'n', '<Leader>x', '<CMD>%s///g<CR>', {noremap = false, silent = false}},
@@ -57,8 +58,8 @@ set_keybindings {
     {'n', '<Leader>rr', ':TroubleToggle lsp_workspace_diagnostics <CR>', {silent = true} },
     {'n', '<Leader>rq', ':TroubleToggle quickfix<CR>', {silent = true} },
     {'n', '<Leader>rl', ':TroubleToggle loclist<CR>', {silent = true} },
-    {'n', '<Leader>ss', ':lua require("persistence").save()<cr>', {silent = true} },
-    {'n', '<Leader>sl', ':lua require("persistence").load()<cr>', {silent = true} },
+    {'n', '<Leader>ss', ':SaveSession<cr>', {silent = true} },
+    {'n', '<Leader>sl', ':LoadSession<cr>', {silent = true} },
     {'n', '<Leader>D', ':Dashboard<CR>', {silent = true} },
     -- tabular
     tabularize_bind('','/'),

@@ -55,6 +55,13 @@ packer.startup(function()
     }
 
     use {
+        'Shatur/neovim-session-manager',
+        config = function ()
+            vim.g.autoload_last_session = false
+        end
+    }
+
+    use {
         'nvim-telescope/telescope.nvim',
         config = require('plugins.telescope'),
         requires = {
