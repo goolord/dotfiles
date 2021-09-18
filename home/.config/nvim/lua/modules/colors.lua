@@ -6,7 +6,7 @@ local function hl(group, options)
     vim.cmd(string.format('hi %s %s %s %s', group, bg, fg, gui))
 end
 
-function ApplyGruvbox()
+function _G.apply_colors()
     local highlights = {
         -- normal stuff
         {'SignColumn', {bg = 'NONE'}},
@@ -39,7 +39,7 @@ end
 -- automatically override colourscheme
 vim.cmd('augroup NewColor')
 vim.cmd('au!')
-vim.cmd('au ColorScheme * call v:lua.ApplyGruvbox()')
+vim.cmd('au ColorScheme * call v:lua.apply_colors()')
 vim.cmd('augroup END')
 
 vim.cmd('colors gruvbox8')

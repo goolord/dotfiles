@@ -9,6 +9,4 @@ return function()
     vim.g.gruvbox_italics = 0
     vim.g.gruvbox_plugin_hi_groups = 0
     vim.g.gruvbox_undercurl = 1
-
-    require('modules.colors.gruvbox')
 end
