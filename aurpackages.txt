@@ -46,7 +46,6 @@ pipewire-jack
 pipewire-media-session
 pipewire-pulse
 pix
-pix-image-viewer-git
 procs
 qbittorrent
 ripgrep
