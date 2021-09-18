@@ -17,13 +17,13 @@ function ApplyGruvbox()
         {'NvimTreeFolderIcon', {fg = '#D79921'}},
         {'NvimTreeIndentMarker', {fg = '#928374'}},
 
-        -- lsp-highlight-diagnostics
-        {'LspDiagnosticsDefaultError', {bg = 'NONE', fg = '#FB4934'}},
-        {'LspDiagnosticsDefaultInformation', {bg = 'NONE', fg = '#D3869B'}},
-        {'LspDiagnosticsDefaultWarning', {bg = 'NONE', fg = '#FABD2F'}},
-        {'LspDiagnosticsDefaultHint', {bg = 'NONE', fg = '#83A598'}},
-        {'LspDiagnosticsUnderlineError', {bg = 'NONE', fg = 'NONE', gui = 'underline'}},
-        {'LspDiagnosticsUnderlineWarning', {bg = 'NONE', fg = 'NONE', gui = 'underline'}},
+        -- diagnostics
+        {'DiagnosticError', {bg = 'NONE', fg = '#FB4934'}},
+        {'DiagnosticInfo', {bg = 'NONE', fg = '#D3869B'}},
+        {'DiagnosticWarn', {bg = 'NONE', fg = '#FABD2F'}},
+        {'DiagnosticHint', {bg = 'NONE', fg = '#83A598'}},
+        {'DiagnosticUnderlineError', {bg = 'NONE', fg = 'NONE', gui = 'underline'}},
+        {'DiagnosticUnderlineWarn', {bg = 'NONE', fg = 'NONE', gui = 'underline'}},
 
         -- coqtail
         {'CoqtailChecked', {bg = '#1b4723'}},
