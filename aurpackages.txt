@@ -12,6 +12,7 @@ chromium
 coq
 debtap
 discord_arch_electron
+dust
 exa
 fd
 firefox-beta-bin
@@ -20,6 +21,7 @@ gammastep
 git-delta
 greetd
 greetd-tuigreet
+grex
 htop
 hyperfine
 inkscape
@@ -45,9 +47,11 @@ pipewire-media-session
 pipewire-pulse
 pix
 pix-image-viewer-git
+procs
 qbittorrent
 ripgrep
 rust-analyzer
+sd
 shellcheck-bin
 slurp-git
 stow
