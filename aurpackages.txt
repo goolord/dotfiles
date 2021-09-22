@@ -28,6 +28,7 @@ inkscape
 kakoune
 krita
 lua-language-server
+luajit-openresty
 luarocks
 mako
 mupdf
