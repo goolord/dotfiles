@@ -47,7 +47,7 @@
   },
 
   "custom/weather": {
-    "exec": "~/bin/rsdarksky --api eb0bc7ab4f02dfbb93f361282c8085af --latitude 33.941890 --longitude -84.212180",
+    "exec": "~/.cargo/bin/rsdarksky --api eb0bc7ab4f02dfbb93f361282c8085af --latitude=33.941890 --longitude=-84.212180",
     "interval": 3600,
     "format": "{}"
   },
