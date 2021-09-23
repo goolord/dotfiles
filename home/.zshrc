@@ -14,24 +14,13 @@ export BAT_THEME="gruvbox-dark"
 # Functions
 function nvim-closest() { nvim $(fd -p $@) }
 function rgless () { rg "$@" --color always --column | less -r }
-function clone() { git clone git@github.com:$1/$2.git && cd $2 }
+function clone() { git clone git@github.com:$1.git && cd $2 }
 function doppelganger() { PWD=$(pwd) "$TERM" & disown }
-function gitignore () {
-  curl https://raw.githubusercontent.com/github/gitignore/master/${(C)1}.gitignore > .gitignore
-}
 function bell () {
   if [ $? = 0 ];
   then (pw-play ~/Dev/dotfiles/resources/audio/kh1.5/good.ogg &)
   else (pw-play ~/Dev/dotfiles/resources/audio/kh1.5/bad.ogg &)
   fi
-}
-function rgi () {
-  INITIAL_QUERY=""
-  RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
-  FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY'" \
-    fzf --bind "change:reload:$RG_PREFIX {q} || true" \
-        --ansi --disabled --query "$INITIAL_QUERY" \
-        --height=50% --layout=reverse
 }
 
 # Aliases
@@ -41,7 +30,6 @@ alias ssh="TERM=xterm-256color ssh"
 alias pm="sudo pacman"
 alias mocp="mocp ~/Music -T transparent-background"
 alias mkalias="vim $HOME/.zshrc +"
-alias music="udisksctl mount -b /dev/sda2 > /dev/null 2>&1; cd /run/media/zachchurchill/1AD2B07DD2B05EA7/music/; mocp -m"
 alias youtube-audio="youtube-dl --extract-audio -f bestaudio --add-metadata --embed-thumbnail -o '%(autonumber)s.%(title)s.%(ext)s'"
 alias neofetch="neofetch \
 --block_range 1 14 \
