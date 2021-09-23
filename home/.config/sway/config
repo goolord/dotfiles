@@ -18,7 +18,7 @@ set $menu dmenu_path | wofi --show drun -I | xargs swaymsg exec --¬
 
 # output * scale 2
 
-hide_edge_borders --i3 smart
+smart_borders on
 
 ### Idle configuration
 exec swayidle -w \
@@ -211,16 +211,19 @@ font pango:monospace 10
 
 exec swaybg -c '#404040'
 
-for_window [app_id="org.gnome.Nautilus|Firefox.*|cinny|zenity"] { 
-  border pixel 2
-}
+default_border pixel 2
 
-for_window [class="Chromium|Slack|discord|Firefox.*|Bitwig Studio|emacs|code.*"] { 
-  border pixel 2
-}
+# for_window [app_id="org.gnome.Nautilus|Firefox.*|cinny|zenity"] { 
+#   border pixel 2
+# }
+# 
+# for_window [class="Chromium|Slack|discord|Firefox.*|Bitwig Studio|emacs|code.*"] { 
+#   border pixel 2
+# }
 
 for_window [app_id="zenity"] {
   floating enable
+  border normal
 }
 
 input 1133:49290:Logitech_MX_Vertical_Advanced_Ergonomic_Mouse {
