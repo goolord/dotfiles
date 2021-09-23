@@ -14,7 +14,10 @@ export BAT_THEME="gruvbox-dark"
 # Functions
 function nvim-closest() { nvim $(fd -p $@) }
 function rgless () { rg "$@" --color always --column | less -r }
-function clone() { git clone git@github.com:$1.git && cd $2 }
+function clone() { 
+  name=(${(s;/;)1})
+  git clone git@github.com:$1.git && cd "$name[2]"
+}
 function doppelganger() { PWD=$(pwd) "$TERM" & disown }
 function bell () {
   if [ $? = 0 ];
