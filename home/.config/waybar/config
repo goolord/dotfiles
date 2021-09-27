@@ -15,7 +15,7 @@
   "modules-right": [
     "custom/weather",
     "pulseaudio",
-    "disk",
+  //  "disk",
     "memory",
     "cpu",
     "temperature",

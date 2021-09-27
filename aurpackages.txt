@@ -55,7 +55,7 @@ sd
 shellcheck-bin
 slurp-git
 stow
-sway-git
+sway
 swaylock-fancy-git
 tealdeer-git
 the_silver_searcher
