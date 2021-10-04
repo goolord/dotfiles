@@ -31,6 +31,8 @@ lua-language-server
 luajit-openresty
 luarocks
 mako
+moc
+mocp-scrobbler
 mupdf
 nemo
 neofetch

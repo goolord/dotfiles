@@ -30,7 +30,6 @@ function bell () {
 setopt complete_aliases
 
 alias ssh="TERM=xterm-256color ssh"
-alias pm="sudo pacman"
 alias mocp="mocp ~/Music -T transparent-background"
 alias mkalias="vim $HOME/.zshrc +"
 alias youtube-audio="youtube-dl --extract-audio -f bestaudio --add-metadata --embed-thumbnail -o '%(autonumber)s.%(title)s.%(ext)s'"
@@ -50,7 +49,7 @@ alias listenmic="pw-loopback"
 alias ds4="ds4drv --hidraw --led 000002"
 alias flux="gammastep -O 5500 & disown"
 alias unflux="killall gammastep"
-alias weather="curl wttr.in/Norcross"
+alias weather="curl wttr.in/Atlanta"
 alias rampart="sudo mount -t tmpfs tmpfs /mnt -o size=1024m && cd /mnt"
 alias vim="nvim"
 alias cat="bat --paging never -p"
