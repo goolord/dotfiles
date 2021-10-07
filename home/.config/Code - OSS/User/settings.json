@@ -3,7 +3,7 @@
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "tabnine.experimentalAutoImports": true,
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.linux": "/home/zach/.config/nvim-code/init.lua",
+    "vscode-neovim.neovimInitVimPaths.linux": "NONE",
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "monospace",
     "editor.occurrencesHighlight": false,
