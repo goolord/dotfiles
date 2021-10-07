@@ -9,6 +9,8 @@ bottom
 broot
 capitaine-cursors
 chromium
+code
+code-marketplace
 coq
 debtap
 discord_arch_electron

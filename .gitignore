@@ -1,6 +1,6 @@
-.config/nvim/plugged
-.config/nvim/plugged/*
-.config/nvim/autoload/plug.vim.old
-.config/nvim/.netrwhist
+home/.config/nvim/plugged
+home/.config/nvim/plugged/*
+home/.config/nvim/autoload/plug.vim.old
+home/.config/nvim/.netrwhist
 home/.config/Lightcord_BD/bdstorage.json
 home/.config/kak/plugins
