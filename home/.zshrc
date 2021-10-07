@@ -14,7 +14,7 @@ export BAT_THEME="gruvbox-dark"
 # Functions
 function nvim-closest() { nvim $(fd -p $@) }
 function rgless () { rg "$@" --color always --column | less -r }
-function clone() { 
+function clone() {
   name=(${(s;/;)1})
   git clone git@github.com:$1.git && cd "$name[2]"
 }
@@ -41,7 +41,6 @@ alias neofetch="neofetch \
 --speed_shorthand on \
 "
 alias sudo="sudo -E"
-alias gksudo="gksudo -k"
 alias unrarall="fd -e rar -X unrar x -y {} \;"
 alias unzipall="fd -e zip -X unzip {} \;"
 alias unfolder="fd --min-depth 2 --type f --exec mv {} . \;"

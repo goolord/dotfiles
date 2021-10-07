@@ -1,0 +1,64 @@
+[2021-09-18 03:09:50.371] [exthost] [info] extension host started
+[2021-09-18 03:09:50.453] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2021-09-18 03:09:50.453] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/debug-auto-launch/dist/extension
+[2021-09-18 03:09:50.462] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-09-18 03:09:50.462] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/git/dist/main
+[2021-09-18 03:09:50.592] [exthost] [info] ExtensionService#_doActivateExtension TabNine.tabnine-vscode {"startup":true,"extensionId":{"value":"TabNine.tabnine-vscode","_lower":"tabnine.tabnine-vscode"},"activationEvent":"*"}
+[2021-09-18 03:09:50.592] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/zach/.vscode-oss/extensions/tabnine.tabnine-vscode-3.4.27/out/extension
+[2021-09-18 03:09:50.711] [exthost] [warning] [TabNine.tabnine-vscode] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for 'javascript.suggest.autoImports', provide the URI of a resource or 'null' for any resource.
+[2021-09-18 03:09:50.711] [exthost] [warning] [TabNine.tabnine-vscode] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for 'typescript.suggest.autoImports', provide the URI of a resource or 'null' for any resource.
+[2021-09-18 03:09:50.730] [exthost] [info] ExtensionService#_doActivateExtension asvetliakov.vscode-neovim {"startup":true,"extensionId":{"value":"asvetliakov.vscode-neovim","_lower":"asvetliakov.vscode-neovim"},"activationEvent":"*"}
+[2021-09-18 03:09:50.730] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/zach/Dev/vscode-neovim/dist/extension.js
+[2021-09-18 03:09:50.733] [exthost] [error] Activating extension asvetliakov.vscode-neovim failed due to an error:
+[2021-09-18 03:09:50.733] [exthost] [error] Error: Cannot find module '/home/zach/Dev/vscode-neovim/dist/extension.js'
+Require stack:
+- /usr/lib/code/out/vs/loader.js
+- /usr/lib/code/out/bootstrap-amd.js
+- /usr/lib/code/out/bootstrap-fork.js
+	at Function._resolveFilename (internal/modules/cjs/loader.js:887:15)
+	at internal/modules/cjs/loader.js:732:27
+	at Function.<anonymous> (electron/js2c/asar_bundle.js:5:12913)
+	at Function.<anonymous> (/usr/lib/code/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:27800)
+	at Function.<anonymous> (/usr/lib/code/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:24471)
+	at Function._load (/usr/lib/code/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:59004)
+	at Module.require (internal/modules/cjs/loader.js:959:19)
+	at require (internal/modules/cjs/helpers.js:88:18)
+	at Function.t [as __$__nodeRequire] (/usr/lib/code/out/vs/loader.js:5:101)
+	at c._loadCommonJSModule (/usr/lib/code/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:25877)
+	at c._doActivateExtension (/usr/lib/code/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:12556)
+	at c._activateExtension (/usr/lib/code/out/vs/workbench/services/extensions/node/extensionHostProcess.js:89:11657)
+	at processTicksAndRejections (internal/process/task_queues.js:93:5)
+	at async Promise.all (index 3)
+	at async Promise.all (index 0)
+[2021-09-18 03:09:51.012] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"extensionId":{"value":"vscode.configuration-editing","_lower":"vscode.configuration-editing"},"activationEvent":"onLanguage:jsonc"}
+[2021-09-18 03:09:51.012] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/configuration-editing/dist/configurationEditingMain
+[2021-09-18 03:09:51.024] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"extensionId":{"value":"vscode.json-language-features","_lower":"vscode.json-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2021-09-18 03:09:51.024] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/json-language-features/client/dist/node/jsonClientMain
+[2021-09-18 03:09:51.146] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2021-09-18 03:09:51.147] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/typescript-language-features/dist/extension
+[2021-09-18 03:09:51.264] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-09-18 03:09:51.265] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/github/dist/extension.js
+[2021-09-18 03:09:51.326] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug {"startup":false,"extensionId":{"value":"ms-vscode.js-debug","_lower":"ms-vscode.js-debug"},"activationEvent":"onCommand:extension.js-debug.clearAutoAttachVariables"}
+[2021-09-18 03:09:51.326] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/ms-vscode.js-debug/src/extension.js
+[2021-09-18 03:09:51.778] [exthost] [info] eager extensions activated
+[2021-09-18 03:09:51.804] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"onStartupFinished"}
+[2021-09-18 03:09:51.804] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/emmet/dist/node/emmetNodeMain
+[2021-09-18 03:09:51.859] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":false,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"onStartupFinished"}
+[2021-09-18 03:09:51.859] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/merge-conflict/dist/mergeConflictMain
+[2021-09-18 03:09:51.868] [exthost] [info] ExtensionService#_doActivateExtension vscode.testing-editor-contributions {"startup":false,"extensionId":{"value":"vscode.testing-editor-contributions","_lower":"vscode.testing-editor-contributions"},"activationEvent":"onStartupFinished"}
+[2021-09-18 03:09:51.868] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/lib/code/extensions/testing-editor-contributions/dist/extension.js
+[2021-09-18 03:09:51.870] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.code-runner {"startup":false,"extensionId":{"value":"formulahendry.code-runner","_lower":"formulahendry.code-runner"},"activationEvent":"onStartupFinished"}
+[2021-09-18 03:09:51.870] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/zach/.vscode-oss/extensions/formulahendry.code-runner-0.11.5/out/src/extension
+[2021-09-18 03:09:51.990] [exthost] [warning] [formulahendry.code-runner] Accessing a resource scoped configuration without providing a resource is not expected. To get the effective value for 'code-runner.enableAppInsights', provide the URI of a resource or 'null' for any resource.
+[2021-09-18 03:10:04.540] [exthost] [info] extension host terminating: renderer closed the socket
+[2021-09-18 03:10:04.615] [exthost] [error] Error: write EPIPE
+	at afterWriteDispatched (internal/stream_base_commons.js:156:25)
+	at writeGeneric (internal/stream_base_commons.js:147:3)
+	at Socket._writeGeneric (net.js:785:11)
+	at Socket._write (net.js:797:8)
+	at writeOrBuffer (internal/streams/writable.js:358:12)
+	at Socket.write (internal/streams/writable.js:303:10)
+	at console.error (/usr/lib/code/out/bootstrap-fork.js:3:727)
+	at process.<anonymous> (/usr/lib/code/out/bootstrap.js:1:364)
+	at process.emit (events.js:315:20)
+	at Signal.callbackTrampoline (internal/async_hooks.js:131:14)
