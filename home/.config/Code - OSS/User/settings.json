@@ -8,6 +8,6 @@
     "editor.fontFamily": "monospace",
     "editor.occurrencesHighlight": false,
     "window.menuBarVisibility": "toggle",
-    "editor.scrollbar.vertical": "hidden",
-    "editor.minimap.showSlider": "always"
+    "editor.minimap.showSlider": "always",
+    "editor.scrollBeyondLastLine": false
 }
