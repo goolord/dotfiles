@@ -22,6 +22,7 @@ firefox-beta-bin
 fzf
 gammastep
 git-delta
+git-lfs
 greetd
 greetd-tuigreet
 grex
