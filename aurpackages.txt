@@ -22,6 +22,7 @@ firefox-beta-bin
 fzf
 gammastep
 git-delta
+git-lfs
 greetd
 greetd-tuigreet
 grex
@@ -42,14 +43,13 @@ neofetch
 networkmanager-dmenu-git
 numix-icon-theme-git
 nvim-packer-git
-obs-studio-git
+obs-studio
 openconnect
 otf-nerd-fonts-fira-code
 pamixer
 pavucontrol
 pipewire
 pipewire-jack
-pipewire-media-session
 pipewire-pulse
 pix
 procs
