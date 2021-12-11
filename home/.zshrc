@@ -13,13 +13,13 @@ export BAT_THEME="gruvbox-dark"
 
 # Functions
 function nvim-closest() { nvim $(fd -p $@) }
-function rgless () { rg "$@" --color always --column | less -r }
+function rgless() { rg "$@" --color always --column | less -r }
 function clone() {
   name=(${(s;/;)1})
   git clone git@github.com:$1.git && cd "$name[2]"
 }
 function doppelganger() { PWD=$(pwd) "$TERM" & disown }
-function bell () {
+function bell() {
   if [ $? = 0 ];
   then (pw-play ~/Dev/dotfiles/resources/audio/kh1.5/good.ogg &)
   else (pw-play ~/Dev/dotfiles/resources/audio/kh1.5/bad.ogg &)

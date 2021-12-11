@@ -3,7 +3,7 @@
 [user]
   email = zacharyachurchill@gmail.com
   name = Zachary Churchill
-  signingkey = 53B96E7DEB1980B23EEE17773F3FD51F702786FB
+	signingkey = 98EFEB17
 [init]
   defaultBranch = main
 [core]
@@ -16,3 +16,10 @@
 
 [alias]
   nix = !nix-prefetch-git \"file://$(git rev-parse --show-toplevel)\" --rev \"$(git rev-parse HEAD)\" 2>&1 | grep 'sha256\\|rev\"' | sed 's/\"rev\"/tag/g' | sed 's/\"sha256\"/--sha256/g' | sed 's/[,\"]//g'
+[gpg]
+	program = gpg2
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
