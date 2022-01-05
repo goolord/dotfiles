@@ -1,5 +1,4 @@
 source ~/.config/zim/zim.zsh
-fpath+=~/.zfunc
 
 source /etc/profile
 
@@ -31,7 +30,6 @@ setopt complete_aliases
 
 alias ssh="TERM=xterm-256color ssh"
 alias mocp="mocp ~/Music -T transparent-background"
-alias mkalias="vim $HOME/.zshrc +"
 alias youtube-audio="youtube-dl --extract-audio -f bestaudio --add-metadata --embed-thumbnail -o '%(autonumber)s.%(title)s.%(ext)s'"
 alias neofetch="neofetch \
 --block_range 1 14 \

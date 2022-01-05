@@ -1,4 +1,3 @@
-# Start configuration added by Zim install {{{
 # -------
 # Modules
 # -------
@@ -22,6 +21,8 @@ zmodule git-info
 zmodule minimal
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
+# Nix autocompletion
+zmodule spwhitt/nix-zsh-completions -s nix-zsh-completions.plugin.zsh -f .
 # Enables and configures smart and extensive tab completion.
 # completion must be sourced after zsh-users/zsh-completions
 zmodule completion
@@ -33,8 +34,6 @@ zmodule zsh-users/zsh-syntax-highlighting
 # Fish-like history search (up arrow) for Zsh.
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
-# }}} End configuration added by Zim install
-
 zmodule junegunn/fzf -s shell/key-bindings.zsh -s shell/completion.zsh
 zmodule chisui/zsh-nix-shell -s nix-shell.plugin.zsh
 zmodule Aloxaf/fzf-tab -s fzf-tab.plugin.zsh
