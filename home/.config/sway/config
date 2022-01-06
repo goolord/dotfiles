@@ -212,14 +212,9 @@ font pango:monospace 10
 exec swaybg -c '#404040'
 
 default_border pixel 2
-
-# for_window [app_id="org.gnome.Nautilus|Firefox.*|cinny|zenity"] { 
-#   border pixel 2
-# }
-# 
-# for_window [class="Chromium|Slack|discord|Firefox.*|Bitwig Studio|emacs|code.*"] { 
-#   border pixel 2
-# }
+# broken :l
+# for_window [floating] border normal
+# for_window [tiling] border pixel 2
 
 for_window [app_id="zenity"] {
   floating enable
