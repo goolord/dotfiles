@@ -10,44 +10,8 @@ window#waybar {
   color: #fdf6e3;
 }
 
-.modules-right > * {
-  background: #3c3836;
-  border-left: 1px solid #555555;
-}
-
-.modules-right > widget > * { padding: 0 15px; }
-
-.modules-right > widget > #tray {
-  padding-left: 8px; 
-  padding-right: 13px; 
-}
-.modules-right > widget > #custom-shutdown { 
-  padding-left: 10px; 
-  padding-right: 12px; 
-}
-
-#battery.good     { color: #b8bb26; }
-#battery.wraning  { color: #fabd2f; }
-
-*.critical { 
-  color: #fb4934; 
-  animation: blinking 0.8s infinite;
-  font-weight: bold;
-}
-
-/*
-#pulseaudio     { color: #b76389; }
-#backlight      { color: #b58900; }
-#memory         { color: #fe8019; }
-#temperature    { color: #fb4924; }
-#cpu            { color: #8ec07c; }
-#battery        { color: #f2b80c; }
-#custom-weather { color: #83a598; }
-#disk           { color: #c1440a; }
-*/
-
-#tray > * > * {
-  padding: 0 0px 0.1em 5px; 
+#workspaces:first-child {
+  border-left: 1px solid #7c6f64;
 }
 
 #workspaces button {
@@ -69,6 +33,40 @@ window#waybar {
 
 #workspaces button:hover { background: #83a598; }
 
+.modules-right > * {
+  background: #3c3836;
+  border-left: 1px solid #555555;
+}
+
+.modules-right > widget > * { padding: 0 15px; }
+
+.modules-right > widget > #tray {
+  padding-left: 8px; 
+  padding-right: 13px; 
+}
+
+.modules-right > widget > #custom-shutdown { 
+  padding-left: 11px; 
+  padding-right: 13px; 
+}
+
+#battery.good     { color: #b8bb26; }
+#battery.wraning  { color: #fabd2f; }
+
+*.critical { 
+  color: #fb4934; 
+  animation: blinking 0.8s infinite;
+  font-weight: bold;
+}
+
+#clock { padding: 0.1em 0.5em; }
+
+#tray > * > * {
+  padding: 0 0px 0.1em 5px; 
+}
+
+#tray { padding-left: 10px; }
+
 @keyframes blinking {
   0%   { background-color: #ff0000; }
   49%  { background-color: inherit; }
@@ -76,7 +74,3 @@ window#waybar {
   99%  { background-color: inherit; }
   100% { background-color: #f00000; }
 }
-
-#clock { padding: 0.1em 0.5em; }
-
-#tray { padding-left: 10px; }
