@@ -2,6 +2,7 @@
   font-size: 17px;
   font-family: monospace;
   transition: all 0s;
+  color: #fbf1c7;
 }
 
 window#waybar {
@@ -10,8 +11,8 @@ window#waybar {
 }
 
 .modules-right > * {
-  background: #272727;
-  border-left: 1px solid #5c5c5c;
+  background: #3c3836;
+  border-left: 1px solid #555555;
 }
 
 .modules-right > widget > * { padding: 0 15px; }
@@ -25,6 +26,30 @@ window#waybar {
   padding-right: 12px; 
 }
 
+#battery.good     { color: #b8bb26; }
+#battery.wraning  { color: #fabd2f; }
+#battery.critical { 
+  color: #fb4934; 
+  animation: blinking 0.8s infinite;
+  font-weight: bold;
+}
+
+#memory.critical {
+  color: #fb4934; 
+  animation: blinking 0.8s infinite;
+  font-weight: bold;
+}
+/*
+#pulseaudio     { color: #b76389; }
+#backlight      { color: #b58900; }
+#memory         { color: #fe8019; }
+#temperature    { color: #fb4924; }
+#cpu            { color: #8ec07c; }
+#battery        { color: #f2b80c; }
+#custom-weather { color: #83a598; }
+#disk           { color: #c1440a; }
+*/
+
 #tray > * > * {
   padding: 0 0px 0.1em 5px; 
 }
@@ -32,20 +57,21 @@ window#waybar {
 #workspaces button {
   padding: 0 5px;
   color: #fdf6e3;
-  background: #323232;
-  border: 1px solid #4c4c4c;
+  background: #504945;
+  border-right: 1px solid #7c6f64;
 }
 
 #workspaces button.focused {
   background: #458588;
-  border: 1px solid #aaaaee;
+  border-right: 1px solid #458588;
 }
 
 #workspaces button.urgent {
   background: #ff0000;
   animation: blinking 0.8s infinite;
-  border: 1px solid red;
 }
+
+#workspaces button:hover { background: #83a598; }
 
 @keyframes blinking {
   0%   { background-color: #ff0000; }
@@ -55,18 +81,6 @@ window#waybar {
   100% { background-color: #f00000; }
 }
 
-#workspaces button:hover { background: #8ec07c; }
-
-#pulseaudio     { color: #b76389; }
-#backlight      { color: #b58900; }
-#memory         { color: #fe8019; }
-#temperature    { color: #fb4924; }
-#cpu            { color: #8ec07c; }
-#battery        { color: #f2b80c; }
-#custom-weather { color: #83a598; }
-#disk           { color: #c1440a; }
-
 #clock { padding: 0.1em 0.5em; }
 
 #tray { padding-left: 10px; }
-

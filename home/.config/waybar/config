@@ -15,7 +15,6 @@
   "modules-right": [
     "custom/weather",
     "pulseaudio",
-  //  "disk",
     "memory",
     "cpu",
     "temperature",
@@ -23,7 +22,6 @@
     "tray",
     "custom/shutdown"
   ],
-
 
   "sway/workspaces": {
     "disable-scroll": false,
@@ -52,9 +50,9 @@
     "format": "{}"
   },
   "pulseaudio": {
-    "format": "{icon} {volume:2}%",
-    "format-bluetooth": "{icon}  {volume}%",
-    "format-muted": "MUTE",
+    "format": "<span color='#b76389'>{icon}</span> {volume:2}%",
+    "format-bluetooth": "<span color='#b76389'>{icon}</span>  {volume}%",
+    "format-muted": "<span color='#fb4934'> MUTE</span>",
     "format-icons": {
       "headphones": "",
       "default": [
@@ -69,14 +67,18 @@
   },
   "memory": {
     "interval": 5,
-    "format": " {used:0.1f}G/{total:0.1f}G"
+    "states": {
+      "good": 0,
+      "critical": 93
+    },
+    "format": "<span color='#fe8019'></span> {used:0.1f}G/{total:0.1f}G"
   },
   "cpu": {
     "interval": 5,
-    "format": " {usage:2}%"
+    "format": "<span color='#8ec07c'></span> {usage:2}%"
   },
   "temperature": {
-    "format": "{icon} {temperatureC}°C",
+    "format": "<span color='#fb4924'>{icon}</span> {temperatureC}°C",
     "format-icons": [
       "",
       "",
@@ -92,7 +94,7 @@
       "critical": 10
     },
     "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
+    "format-charging": "<span color='#f2b80c'> {capacity}%</span>",
     "format-icons": [
       " ",
       " ",
