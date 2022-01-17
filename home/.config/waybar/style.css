@@ -28,17 +28,13 @@ window#waybar {
 
 #battery.good     { color: #b8bb26; }
 #battery.wraning  { color: #fabd2f; }
-#battery.critical { 
+
+*.critical { 
   color: #fb4934; 
   animation: blinking 0.8s infinite;
   font-weight: bold;
 }
 
-#memory.critical {
-  color: #fb4934; 
-  animation: blinking 0.8s infinite;
-  font-weight: bold;
-}
 /*
 #pulseaudio     { color: #b76389; }
 #backlight      { color: #b58900; }

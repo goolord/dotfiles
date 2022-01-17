@@ -26,8 +26,8 @@ window:
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
   padding:
-    x: 1
-    y: 1
+    x: 0
+    y: 0
 
   dynamic_title: true
 
