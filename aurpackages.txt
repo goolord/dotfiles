@@ -26,7 +26,6 @@ git-lfs
 greetd
 greetd-tuigreet
 grex
-htop
 hyperfine
 inkscape
 kakoune
