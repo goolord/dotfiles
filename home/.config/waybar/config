@@ -88,13 +88,14 @@
     ]
   },
   "battery": {
+    "bat": "BAT0",
     "states": {
-      "good": 95,
+      "good": 100,
       "warning": 20,
       "critical": 10
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": "<span color='#f2b80c'> {capacity}%</span>",
+    "format": "{icon} <span color='#fbf1c7'>{capacity}%</span>",
+    "format-plugged": "<span color='#f2b80c'></span> <span color='#fbf1c7'>{capacity}%</span>",
     "format-icons": [
       " ",
       " ",

@@ -37,8 +37,8 @@ window#waybar {
   padding-right: 0.7em; 
 }
 
-#battery.good     { color: #b8bb26; }
-#battery.wraning  { color: #fabd2f; }
+#battery.good     { color: #98971a; }
+#battery.warning  { color: #fabd2f; }
 
 *.critical { 
   color: #fb4934; 
