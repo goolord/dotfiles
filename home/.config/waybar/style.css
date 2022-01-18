@@ -3,6 +3,8 @@
   font-family: monospace;
   transition: all 0s;
   color: #fbf1c7;
+
+  /* border-radius: 3px; */
 }
 
 window#waybar {
@@ -10,20 +12,29 @@ window#waybar {
   color: #fdf6e3;
 }
 
-.modules-right > * {
+.modules-right * {
+  /* margin-left: 0.5em; */
+}
+
+.modules-right > * > * {
   background: #3c3836;
   border-left: 1px solid #555555;
+  /* border-right: 1px solid #555555; */
+  padding: 0 0.75em;
 }
-
-.modules-right > widget > * { padding: 0 15px; }
 
 .modules-right > widget > #tray {
-  padding-left: 8px; 
-  padding-right: 13px; 
+  padding-left: 8; 
+  padding-right: 8px; 
 }
+
+#tray * {
+  padding-bottom: 1px;
+}
+
 .modules-right > widget > #custom-shutdown { 
-  padding-left: 10px; 
-  padding-right: 12px; 
+  padding-left: 0.5em;
+  padding-right: 0.7em; 
 }
 
 #battery.good     { color: #b8bb26; }
@@ -45,10 +56,6 @@ window#waybar {
 #custom-weather { color: #83a598; }
 #disk           { color: #c1440a; }
 */
-
-#tray > * > * {
-  padding: 0 0px 0.1em 5px; 
-}
 
 #workspaces button {
   padding: 0 5px;
@@ -78,5 +85,3 @@ window#waybar {
 }
 
 #clock { padding: 0.1em 0.5em; }
-
-#tray { padding-left: 10px; }
