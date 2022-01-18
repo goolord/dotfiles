@@ -98,6 +98,7 @@
     },
     "format": "{icon} <span color='#fbf1c7'>{capacity}%</span>",
     "format-plugged": "<span color='#f2b80c'></span> <span color='#fbf1c7'>{capacity}%</span>",
+    "format-full": "<span color='#f2b80c'></span> <span color='#fbf1c7'>{capacity}%</span>",
     "format-icons": [
       " ",
       " ",
