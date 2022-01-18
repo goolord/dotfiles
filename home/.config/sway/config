@@ -209,7 +209,7 @@ include /etc/sway/config.d/*
 
 font pango:monospace 10
 
-exec swaybg -c '#404040'
+output "*" bg "#222222" solid_color
 
 default_border pixel 2
 # broken :l
