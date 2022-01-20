@@ -71,11 +71,13 @@
       "good": 0,
       "critical": 93
     },
+    "on-click": "alacritty -e btm -bg",
     "format": "<span color='#fe8019'></span> {used:0.1f}G/{total:0.1f}G"
   },
   "cpu": {
     "interval": 5,
-    "format": "<span color='#8ec07c'></span> {usage:2}%"
+    "on-click": "alacritty -e btm -bg",
+    "format": "<span color='#8ec07c'> </span> {usage:2}%"
   },
   "temperature": {
     "format": "<span color='#fb4924'>{icon}</span> {temperatureC}°C",
@@ -88,13 +90,15 @@
     ]
   },
   "battery": {
+    "bat": "BAT0",
     "states": {
-      "good": 95,
+      "good": 100,
       "warning": 20,
       "critical": 10
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": "<span color='#f2b80c'> {capacity}%</span>",
+    "format": "{icon} <span color='#fbf1c7'>{capacity}%</span>",
+    "format-plugged": "<span color='#f2b80c'></span> <span color='#fbf1c7'>{capacity}%</span>",
+    "format-full": "<span color='#f2b80c'></span> <span color='#fbf1c7'>{capacity}%</span>",
     "format-icons": [
       " ",
       " ",
