@@ -16,7 +16,7 @@ set $menu dmenu_path | wofi --show drun -I | xargs swaymsg exec --¬
 ### Output configuration
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-# output * scale 2
+output * scale 2
 
 smart_borders on
 
