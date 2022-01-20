@@ -17,7 +17,7 @@ window#waybar {
 }
 
 .modules-right > * > * {
-  background: #3c3836;
+  background: #403b39;
   border-left: 1px solid #555555;
   /* border-right: 1px solid #555555; */
   padding-top: 2px;
@@ -68,8 +68,7 @@ window#waybar {
 
 #workspaces button {
   padding: 0 5px;
-  color: #fdf6e3;
-  background: #504945;
+  background: #403b39;
   border-right: 1px solid #7c6f64;
 }
 
