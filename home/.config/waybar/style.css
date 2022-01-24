@@ -72,6 +72,10 @@ window#waybar {
   border-right: 1px solid #7c6f64;
 }
 
+#workspaces button:last-child {
+  border-right: none;
+}
+
 #workspaces button.focused {
   background: #458588;
   border-right: 1px solid #458588;
