@@ -84,6 +84,40 @@ window#waybar {
 
 #workspaces button:hover { background: #83a598; }
 
+.modules-right > * {
+  background: #3c3836;
+  border-left: 1px solid #555555;
+}
+
+.modules-right > widget > * { padding: 0 15px; }
+
+.modules-right > widget > #tray {
+  padding-left: 8px; 
+  padding-right: 13px; 
+}
+
+.modules-right > widget > #custom-shutdown { 
+  padding-left: 11px; 
+  padding-right: 13px; 
+}
+
+#battery.good     { color: #b8bb26; }
+#battery.wraning  { color: #fabd2f; }
+
+*.critical { 
+  color: #fb4934; 
+  animation: blinking 0.8s infinite;
+  font-weight: bold;
+}
+
+#clock { padding: 0.1em 0.5em; }
+
+#tray > * > * {
+  padding: 0 0px 0.1em 5px; 
+}
+
+#tray { padding-left: 10px; }
+
 @keyframes blinking {
   0%   { background-color: #ff0000; }
   49%  { background-color: inherit; }
