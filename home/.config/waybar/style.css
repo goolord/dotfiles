@@ -69,12 +69,12 @@ window#waybar {
 #workspaces button {
   padding: 0 5px;
   background: #403b39;
-  border-right: 1px solid #7c6f64;
+  border-right: 1px solid #555555;
 }
 
-#workspaces button:last-child {
-  border-right: none;
-}
+/* #workspaces button:last-child { */
+/*   border-right: none; */
+/* } */
 
 #workspaces button.focused {
   background: #458588;
