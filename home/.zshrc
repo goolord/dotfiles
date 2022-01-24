@@ -8,6 +8,8 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
 
 export BAT_THEME="gruvbox-dark"
 
+export MANPAGER="nvim +Man!"
+
 . /home/zach/.nix-profile/etc/profile.d/nix.sh
 
 # Functions
