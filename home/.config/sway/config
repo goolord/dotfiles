@@ -179,6 +179,8 @@ bindsym XF86AudioMute exec pamixer -t
 bindsym XF86AudioMicMute exec amixer set Capture toggle
 bindsym $mod+Tab move workspace to output right
 bindsym $mod+Shift+s exec scroat
+bindsym XF86SelectiveScreenshot exec scroat
+bindsym Shift+XF86SelectiveScreenshot exec grim - | wl-copy -t image/png
 # bindsym Print exec scroat
 
 # discord hack
