@@ -17,6 +17,8 @@
 @define-color theme_bg_color #d4d0c8;
 @define-color theme_fg_color #0e0e0e;
 @define-color theme_base_color #f8f8f8;
+@define-color text_view_bg  #f8f8f8;
+/*workaround for new vte versions */
 @define-color theme_text_color #0e0e0e;
 @define-color theme_selected_bg_color #22AA99;
 @define-color theme_selected_fg_color #ebebeb;
