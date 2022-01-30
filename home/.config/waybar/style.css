@@ -26,8 +26,8 @@ window#waybar {
 }
 
 .modules-right > widget > #tray {
-  padding-left: 0.5em; 
-  padding-right: 0.5em; 
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 #tray > * > * {
@@ -40,17 +40,17 @@ window#waybar {
   padding-left: 0px;
 }
 
-.modules-right > widget > #custom-shutdown { 
+.modules-right > widget > #custom-shutdown {
   padding-top: 0px;
   padding-left: 0.5em;
-  padding-right: 0.7em; 
+  padding-right: 0.7em;
 }
 
 #battery.good     { color: #98971a; }
 #battery.warning  { color: #fabd2f; }
 
-*.critical { 
-  color: #fb4934; 
+*.critical {
+  color: #fb4934;
   animation: blinking 0.8s infinite;
   font-weight: bold;
 }
@@ -96,20 +96,20 @@ window#waybar {
 .modules-right > widget > * { padding: 0 15px; }
 
 .modules-right > widget > #tray {
-  padding-left: 8px; 
-  padding-right: 13px; 
+  padding-left: 8px;
+  padding-right: 13px;
 }
 
-.modules-right > widget > #custom-shutdown { 
-  padding-left: 11px; 
-  padding-right: 13px; 
+.modules-right > widget > #custom-shutdown {
+  padding-left: 11px;
+  padding-right: 13px;
 }
 
 #battery.good     { color: #b8bb26; }
 #battery.wraning  { color: #fabd2f; }
 
-*.critical { 
-  color: #fb4934; 
+*.critical {
+  color: #fb4934;
   animation: blinking 0.8s infinite;
   font-weight: bold;
 }
@@ -117,7 +117,7 @@ window#waybar {
 #clock { padding: 0.1em 0.5em; }
 
 #tray > * > * {
-  padding: 0 0px 0.1em 5px; 
+  padding: 0 0px 0.1em 5px;
 }
 
 #tray { padding-left: 10px; }
