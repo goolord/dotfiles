@@ -13,7 +13,7 @@ plug "andreyorst/fzf.kak"
 
 map global normal <c-p> ': fzf-mode<ret>'
 
-colorscheme gruvbox
+colorscheme gruvbox-dark
 
 hook global InsertCompletionShow .* %{
     try %{
