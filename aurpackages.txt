@@ -68,7 +68,7 @@ tmate
 tmux
 tokei
 upc
-uutils-coreutils
+coreutils-hybrid
 vlc
 waybar
 wireplumber
