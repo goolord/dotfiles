@@ -14,7 +14,7 @@ code
 code-marketplace
 coq
 debtap
-discord_arch_electron
+discord
 dust
 exa
 fd
