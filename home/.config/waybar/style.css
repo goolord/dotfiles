@@ -35,6 +35,7 @@ window#waybar {
   padding-top: 0px;
   padding-bottom: 4px;
   padding-left: 0.25em;
+  padding-right: 0px;
 }
 
 #tray > *:first-child > * {
@@ -98,7 +99,7 @@ window#waybar {
 
 .modules-right > widget > #tray {
   padding-left: 8px;
-  padding-right: 13px;
+  padding-right: 8px;
 }
 
 .modules-right > widget > #custom-shutdown {
