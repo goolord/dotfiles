@@ -13,6 +13,7 @@ chromium
 code
 code-marketplace
 coq
+coreutils-hybrid
 debtap
 discord
 dust
@@ -68,7 +69,6 @@ tmate
 tmux
 tokei
 upc
-coreutils-hybrid
 vlc
 waybar
 wireplumber
