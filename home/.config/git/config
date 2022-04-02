@@ -3,7 +3,7 @@
 [user]
   email = zacharyachurchill@gmail.com
   name = Zachary Churchill
-	signingkey = 98EFEB17
+  signingkey = 98EFEB17 #gitignore
 [init]
   defaultBranch = main
 [core]
@@ -23,3 +23,6 @@
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
+[filter "gitignore"]
+  clean = "sed '/#gitignore$/d'"
+  smudge = cat
