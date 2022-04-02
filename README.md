@@ -12,10 +12,10 @@ tendrils:
 - https://github.com/goolord/nvim
 
 main programs:
-  - zsh, zimfw
-  - alacritty
-  - sway
-  - nvim
+- zsh, zimfw
+- alacritty
+- sway
+- nvim
 
 ## Quick Start
 run `./bootstrap.sh`
