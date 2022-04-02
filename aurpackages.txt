@@ -68,7 +68,6 @@ themix-full-git
 tmate
 tmux
 tokei
-ugrep
 upc
 vlc
 waybar
