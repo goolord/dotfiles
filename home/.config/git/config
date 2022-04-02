@@ -3,7 +3,6 @@
 [user]
   email = zacharyachurchill@gmail.com
   name = Zachary Churchill
-  signingkey = 98EFEB17 #gitignore
 [init]
   defaultBranch = main
 [core]
