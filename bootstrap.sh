@@ -11,6 +11,9 @@ then
 fi
 
 yay -S $(cat aurpackages.txt) --needed --sudoloop
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+cabal install $(cat cabalpackages.txt) --overwrite-policy=always
+cargo install $(cat cargopackages.txt)
 
 if ! command -v zimfw 
 then
