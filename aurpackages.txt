@@ -2,7 +2,6 @@ acpi
 acpid
 alacritty-git
 amd-ucode
-arch-silence-grub-theme-git
 asciinema
 audacity
 bat
