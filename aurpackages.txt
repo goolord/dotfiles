@@ -23,6 +23,7 @@ fzf
 gammastep
 git-delta
 git-lfs
+gnome-keyring
 greetd
 greetd-tuigreet
 grex
