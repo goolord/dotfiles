@@ -57,7 +57,7 @@ ripgrep
 rust-analyzer
 sd
 shellcheck-bin
-slurp-git
+slurp
 stow
 sway
 swaylock-fancy-git
@@ -70,6 +70,7 @@ tokei
 upc
 vlc
 waybar
+wf-recorder
 wireplumber
 wl-clipboard
 wlr-randr
