@@ -10,7 +10,7 @@ export BAT_THEME="gruvbox-dark"
 
 export MANPAGER="nvim +Man!"
 
-. /home/zach/.nix-profile/etc/profile.d/nix.sh
+# . /home/zach/.nix-profile/etc/profile.d/nix.sh
 
 # Functions
 function nvim-closest() { nvim $(fd -p $@) }

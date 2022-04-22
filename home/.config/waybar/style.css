@@ -4,7 +4,7 @@
   transition: all 0s;
   color: #fbf1c7;
 
-  /* border-radius: 3px; */
+  border-radius: 0px;
 }
 
 window#waybar {
