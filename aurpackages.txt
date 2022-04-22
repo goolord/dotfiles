@@ -39,7 +39,6 @@ mocp-scrobbler
 mupdf
 nemo
 neofetch
-networkmanager-dmenu-git
 numix-icon-theme-git
 nvim-packer-git
 obs-studio
