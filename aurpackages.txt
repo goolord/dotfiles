@@ -12,7 +12,6 @@ chromium
 code
 code-marketplace
 coq
-coreutils-hybrid
 debtap
 discord
 dust
@@ -45,7 +44,7 @@ numix-icon-theme-git
 nvim-packer-git
 obs-studio
 openconnect
-otf-nerd-fonts-fira-code
+nerd-fonts-fira-code
 pamixer
 pavucontrol
 pipewire
@@ -62,13 +61,13 @@ slurp
 stow
 sway
 swaylock-fancy-git
-tealdeer-git
+tealdeer
 the_silver_searcher
 themix-full-git
 tmate
 tmux
 tokei
-upc
+uutils-coreutils
 vlc
 waybar
 wf-recorder

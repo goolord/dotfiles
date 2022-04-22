@@ -21,3 +21,8 @@ then
   curl https://raw.githubusercontent.com/zimfw/zimfw/master/zimfw.zsh > ~/.zim/zimfw.zsh 
   zsh ~/.zim/zimfw.zsh install
 fi
+
+systemctl enable greetd.service
+
+./home.sh
+./slash.sh
