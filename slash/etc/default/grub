@@ -43,8 +43,8 @@ GRUB_DISABLE_RECOVERY=true
 #GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
-GRUB_THEME="/boot/grub/themes/nano/theme.txt"
-GRUB_FONT="/boot/grub/DejaVuSans.pf2"
+GRUB_THEME="/etc/grub.d/themes/nano/theme.txt"
+GRUB_FONT="/etc/grub.d/fonts/DejaVuSans.pf2"
 GRUB_BACKGROUND=""
 
 # Uncomment to get a beep at GRUB start
