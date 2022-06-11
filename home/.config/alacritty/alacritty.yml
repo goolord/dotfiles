@@ -18,9 +18,10 @@ window:
   # Window dimensions in character columns and lines
   # Falls back to size specified by window manager if set to 0x0.
   # (changes require restart)
-  # dimensions:
-  #   columns: 80
-  #   lines: 24
+  dimensions:
+    columns: 555
+    lines: 555
+  # startup_mode: Maximized
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
@@ -33,7 +34,7 @@ window:
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: 'full'
+  decorations: 'none'
 
   opacity: 1.0
 
