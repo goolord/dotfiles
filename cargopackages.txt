@@ -1,4 +1,4 @@
-dust
+du-dust
 loc
 ptags
 stylua
