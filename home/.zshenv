@@ -30,3 +30,4 @@ append_path '/home/zach/.cabal/bin'
 append_path '/home/zach/.cargo/bin'
 append_path '/home/zach/.luarocks/bin'
 
+export PATH
