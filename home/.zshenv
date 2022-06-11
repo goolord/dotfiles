@@ -9,10 +9,10 @@
 
 if [ -e /home/zach/.nix-profile/etc/profile.d/nix.sh ]; then . /home/zach/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-MOZ_ENABLE_WAYLAND=1
-MOZ_DBUS_REMOTE=1
-EDITOR=nvim
-GDK_BACKEND=wayland
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_DBUS_REMOTE=1
+export EDITOR=nvim
+export GDK_BACKEND=wayland
 
 append_path () {
     case ":$PATH:" in
