@@ -228,6 +228,10 @@ input 1133:49290:Logitech_MX_Vertical_Advanced_Ergonomic_Mouse {
   pointer_accel -0.5
 }
 
+input 1267:12756:ASUE1A01:00_04F3:31D4_Touchpad {
+  accel_profile adaptive
+}
+
 input 1267:12529:ELAN1206:00_04F3:30F1_Mouse {
   accel_profile adaptive
   pointer_accel -0.3
