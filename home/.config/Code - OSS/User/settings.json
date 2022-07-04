@@ -3,11 +3,13 @@
     "workbench.colorTheme": "Gruvbox Dark Medium",
     "tabnine.experimentalAutoImports": true,
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.linux": "NONE",
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim-code/",
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "monospace",
     "editor.occurrencesHighlight": false,
     "window.menuBarVisibility": "toggle",
     "editor.minimap.showSlider": "always",
-    "editor.scrollBeyondLastLine": false
+    "editor.scrollBeyondLastLine": false,
+    "vscode-neovim.neovimClean": true,
+    "workbench.editor.untitled.hint": "hidden"
 }
