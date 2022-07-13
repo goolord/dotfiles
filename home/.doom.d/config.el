@@ -67,10 +67,6 @@
       :desc "Toggle tree"
       "d" #'treemacs)
 
-(map! :leader
-      :desc "Toggle vterm"
-      "v" #'+vterm/toggle)
-
 (map! :desc "Tab between windows"
       :n "<tab>" #'evil-window-next)
 
