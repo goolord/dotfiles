@@ -13,6 +13,9 @@
   features = side-by-side line-numbers decorations
   whitespace-error-style = 22 reverse
 
+[includeIf "gitdir:~/Dev/knoema/"]
+  path = ~/Dev/knoema/.gitconfig
+
 [alias]
   nix = !nix-prefetch-git \"file://$(git rev-parse --show-toplevel)\" --rev \"$(git rev-parse HEAD)\" 2>&1 | grep 'sha256\\|rev\"' | sed 's/\"rev\"/tag/g' | sed 's/\"sha256\"/--sha256/g' | sed 's/[,\"]//g'
 [gpg]
