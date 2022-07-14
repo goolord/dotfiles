@@ -1,6 +1,4 @@
 {
-    "window.zoomLevel": 2,
-    "workbench.colorTheme": "Gruvbox Dark Medium",
     "tabnine.experimentalAutoImports": true,
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim-code/",
@@ -11,5 +9,8 @@
     "editor.minimap.showSlider": "always",
     "editor.scrollBeyondLastLine": false,
     "vscode-neovim.neovimClean": true,
-    "workbench.editor.untitled.hint": "hidden"
+    "workbench.editor.untitled.hint": "hidden",
+    "editor.fontSize": 16,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Gruvbox Dark Medium"
 }
