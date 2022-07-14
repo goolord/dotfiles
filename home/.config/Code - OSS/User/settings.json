@@ -5,7 +5,6 @@
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "monospace",
     "editor.occurrencesHighlight": false,
-    "window.menuBarVisibility": "toggle",
     "editor.minimap.showSlider": "always",
     "editor.scrollBeyondLastLine": false,
     "vscode-neovim.neovimClean": true,
@@ -13,4 +12,10 @@
     "editor.fontSize": 16,
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Gruvbox Dark Medium"
+    "haskell.manageHLS": "GHCup",
+    "editor.glyphMargin": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.minimap.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": false
 }
