@@ -223,7 +223,7 @@ for_window [app_id="zenity"] {
   border normal
 }
 
-input 1133:49290:Logitech_MX_Vertical_Advanced_Ergonomic_Mouse {
+input 1133:16507:Logitech_MX_Vertical {
   accel_profile flat
   pointer_accel -0.5
 }
