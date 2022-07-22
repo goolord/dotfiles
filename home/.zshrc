@@ -12,6 +12,9 @@ export MANPAGER="nvim +Man!"
 
 # . /home/zach/.nix-profile/etc/profile.d/nix.sh
 
+# opam configuration
+[[ ! -r /home/zach/.opam/opam-init/init.zsh ]] || source /home/zach/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
 # Functions
 function nvim-closest() { nvim $(fd -p $@) }
 function rgless() { rg "$@" --color always --column | less -r }
