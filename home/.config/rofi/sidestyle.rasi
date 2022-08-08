@@ -17,7 +17,7 @@
   fc-color-trans: #d65d0eF0; 
   bg-color-trans: #272727F0;
 
-  font: "FiraCode Nerd Font 12";
+  font: "monospace 12";
 }
 
 /* ================================================= */
@@ -59,7 +59,7 @@
 }
 
 #button selected {
-  font:              "FiraCode Nerd Font 12";
+  font:              "monospace 12";
   background-color:  @fc-color-trans;
 }
 /* ================================================= */
@@ -74,11 +74,11 @@
 }
 
 #prompt {
-  font: "FiraCode Nerd Font SemiBold 13";
+  font: "monospace SemiBold 13";
 }
 
 #entry {
-  font: "FiraCode Nerd Font 13";
+  font: "monospace 13";
   width: 15em;
 }
 /* ================================================= */
@@ -92,7 +92,7 @@
 }
 
 #element {
-  font:     "FiraCode Nerd Font 14";
+  font:     "monospace 14";
   padding:  12px 1.5em 12px 14px;
 }
 
