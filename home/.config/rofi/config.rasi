@@ -5,5 +5,5 @@ configuration {
   drun-icon-theme: "Numix";
   show-icons: true;
   sidebar-mode: false;
-  font: "FiraCode Nerd Font 10";
+  font: "monospace 10";
 }
