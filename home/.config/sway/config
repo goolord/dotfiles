@@ -223,12 +223,12 @@ for_window [app_id="zenity"] {
   border normal
 }
 
-input 1133:16507:Logitech_MX_Vertical {
+input type:pointer {
   accel_profile flat
   pointer_accel -0.5
 }
 
-input 1267:12756:ASUE1A01:00_04F3:31D4_Touchpad {
+input type:touchpad {
   accel_profile adaptive
 }
 
