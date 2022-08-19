@@ -1,4 +1,5 @@
-vim.opt.rtp:append('/home/zach/.config/nvim-code')
+vim.opt.rtp:append(os.getenv('HOME') .. '/.config/nvim-code')
 
 require('plugins.unload')
 require('settings')
+require('keybindings')
