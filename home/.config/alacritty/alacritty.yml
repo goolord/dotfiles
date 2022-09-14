@@ -107,7 +107,7 @@ colors:
     yellow:  '0xF0C674'
     blue:    '0x81A2BE'
     magenta: '0xB294BB'
-    cyan:    '0x8ABEB7'
+    cyan:    '0xCC6666'
     white:   '0xE0E0E0'
 
   # Bright colors
@@ -118,13 +118,13 @@ colors:
     yellow:  '0xF0C674'
     blue:    '0x81A2BE'
     magenta: '0xB294BB'
-    cyan:    '0x8ABEB7'
+    cyan:    '0xCC6666'
     white:   '0xE0E0E0'
 
   indexed_colors:
     - { index: 16, color: '0xDE935F' }
     - { index: 17, color: '0x9E9E9E' }
-    - { index: 18, color: '0x383838' }
+    - { index: 18, color: '0x282828' }
     - { index: 19, color: '0x264f78' }
     - { index: 20, color: '0x7E7E7E' }
     - { index: 21, color: '0xFAFAFA' }
