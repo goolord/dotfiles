@@ -1,16 +1,10 @@
 source ~/.config/zim/zim.zsh
-
-source /etc/profile
+source ~/.nix-profile/lib/ah_aws.sh
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-# add support for ctrl+o to open selected file in vim
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
-
 export BAT_THEME="gruvbox-dark"
-
 export MANPAGER="nvim +Man!"
-
-# . /home/zach/.nix-profile/etc/profile.d/nix.sh
 
 # Functions
 function nvim-closest() { nvim $(fd -p $@) }
@@ -22,10 +16,14 @@ function clone() {
 function doppelganger() { PWD=$(pwd) "$TERM" & disown }
 function bell() {
   if [ $? = 0 ];
-  then (pw-play ~/Dev/dotfiles/resources/audio/kh1.5/good.ogg &)
-  else (pw-play ~/Dev/dotfiles/resources/audio/kh1.5/bad.ogg &)
+  then (vlc --intf dummy ~/Dev/dotfiles/resources/audio/kh1.5/good.ogg vlc://quit &>/dev/null &)
+  else (vlc --intf dummy ~/Dev/dotfiles/resources/audio/kh1.5/bad.ogg vlc://quit &>/dev/null &)
   fi
 }
+
+# function cabal_check() {
+#   cabal build $@ -fno-code
+# }
 
 # Aliases
 setopt complete_aliases
@@ -40,7 +38,6 @@ alias neofetch="neofetch \
 --ascii_logo_size small \
 --speed_shorthand on \
 "
-alias sudo="sudo -E"
 alias unrarall="fd -e rar -X unrar x -y {} \;"
 alias unzipall="fd -e zip -X unzip {} \;"
 alias unfolder="fd --min-depth 2 --type f --exec mv {} . \;"
@@ -59,6 +56,6 @@ alias tmux="tmux -f ~/.config/tmux.conf"
 alias tmate="tmate -f ~/.config/tmux.conf"
 alias dumpcore="cabal exec -- ghc-core --no-asm --no-cast"
 alias loc="tokei"
-alias ls="exa --icons"
+alias ls="exa-wrapper.sh"
 alias commitshit="git commit -am \"\$(curl 'whatthecommit.com/index.txt')\""
 alias hasktags="ptags"
