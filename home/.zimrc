@@ -17,6 +17,7 @@ zmodule utility
 zmodule duration-info
 # Exposes git repository status information to prompts, used by asciiship.
 zmodule git-info
+zmodule prompt-pwd
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 zmodule minimal
 # Additional completion definitions for Zsh.
@@ -35,6 +36,5 @@ zmodule zsh-users/zsh-syntax-highlighting
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 zmodule junegunn/fzf -s shell/key-bindings.zsh -s shell/completion.zsh
-zmodule chisui/zsh-nix-shell -s nix-shell.plugin.zsh
+zmodule chisui/zsh-nix-shell -s nix-shell.plugin.zsh -f .
 zmodule Aloxaf/fzf-tab -s fzf-tab.plugin.zsh
-
