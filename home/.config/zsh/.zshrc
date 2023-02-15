@@ -1,4 +1,4 @@
-source ~/.config/zim/zim.zsh
+source ${ZIM_HOME}/zim.zsh
 source ~/.nix-profile/lib/ah_aws.sh
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
