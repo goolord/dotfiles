@@ -1,0 +1,17 @@
+zmodule environment
+zmodule input
+zmodule termtitle
+zmodule utility
+zmodule duration-info
+zmodule git-info
+zmodule prompt-pwd
+zmodule minimal
+zmodule zsh-users/zsh-completions
+zmodule spwhitt/nix-zsh-completions -s nix-zsh-completions.plugin.zsh -f .
+zmodule completion
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-history-substring-search
+zmodule junegunn/fzf -s shell/key-bindings.zsh -s shell/completion.zsh
+zmodule Aloxaf/fzf-tab -s fzf-tab.plugin.zsh
+zmodule goolord/simple-zsh-nix-shell
