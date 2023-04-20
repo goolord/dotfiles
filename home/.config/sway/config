@@ -237,7 +237,9 @@ input 1267:12529:ELAN1206:00_04F3:30F1_Mouse {
   pointer_accel -0.3
 }
 
-seat seat0 xcursor_theme default 36
+output DP-1 scale 2
+
+seat seat0 xcursor_theme default 42
 
 # startup
 exec cat ~/.cache/brightness | xargs brightnessctl set
