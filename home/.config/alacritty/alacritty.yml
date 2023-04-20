@@ -33,7 +33,7 @@ window:
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: 'buttonless'
+  decorations: 'None'
 
   opacity: 1.0
 
@@ -67,8 +67,8 @@ font:
     # style: Regular
 
   # Point size of the font
-  size: 21
-  # size: 15.5
+  # size: 21
+  size: 15.5
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
