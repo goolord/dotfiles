@@ -86,48 +86,82 @@ font:
 # Should display the render timer
 devuf.render_timer: false
 
-# Base16 Tomorrow min 256 - alacritty color config
-# Zachary Churchill
 colors:
   # Default colors
   primary:
-    background: '0x1F1F1F'
-    foreground: '0xE0E0E0'
+    background: '0x282828'
+    foreground: '0xfbf1c7'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x1F1F1F'
-    cursor: '0xE0E0E0'
+    text: '0x282828'
+    cursor: '0xfbf1c7'
 
   # Normal colors
   normal:
-    black:   '0x1F1F1F'
-    red:     '0xCC6666'
-    green:   '0xB5BD68'
-    yellow:  '0xF0C674'
-    blue:    '0x81A2BE'
-    magenta: '0xB294BB'
-    cyan:    '0xCC6666'
-    white:   '0xE0E0E0'
+    black:   '0x282828'
+    red:     '0xfb4934'
+    green:   '0xb8bb26'
+    yellow:  '0xfabd2f'
+    blue:    '0x83a598'
+    magenta: '0xd3869b'
+    cyan:    '0x8ec07c'
+    white:   '0xfbf1c7'
 
   # Bright colors
   bright:
-    black:   '0x727272'
-    red:     '0xCC6666'
-    green:   '0xB5BD68'
-    yellow:  '0xF0C674'
-    blue:    '0x81A2BE'
-    magenta: '0xB294BB'
-    cyan:    '0xCC6666'
-    white:   '0xE0E0E0'
+    black:   '0x665c54'
+    red:     '0xfb4934'
+    green:   '0xb8bb26'
+    yellow:  '0xfabd2f'
+    blue:    '0x83a598'
+    magenta: '0xd3869b'
+    cyan:    '0x8ec07c'
+    white:   '0xfbf1c7'
 
-  indexed_colors:
-    - { index: 16, color: '0xDE935F' }
-    - { index: 17, color: '0x9E9E9E' }
-    - { index: 18, color: '0x282828' }
-    - { index: 19, color: '0x264f78' }
-    - { index: 20, color: '0x7E7E7E' }
-    - { index: 21, color: '0xFAFAFA' }
+
+# Base16 Tomorrow min 256 - alacritty color config
+# Zachary Churchill
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x1F1F1F'
+#     foreground: '0xE0E0E0'
+#
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: '0x1F1F1F'
+#     cursor: '0xE0E0E0'
+#
+#   # Normal colors
+#   normal:
+#     black:   '0x1F1F1F'
+#     red:     '0xCC6666'
+#     green:   '0xB5BD68'
+#     yellow:  '0xF0C674'
+#     blue:    '0x81A2BE'
+#     magenta: '0xB294BB'
+#     cyan:    '0xCC6666'
+#     white:   '0xE0E0E0'
+#
+#   # Bright colors
+#   bright:
+#     black:   '0x727272'
+#     red:     '0xCC6666'
+#     green:   '0xB5BD68'
+#     yellow:  '0xF0C674'
+#     blue:    '0x81A2BE'
+#     magenta: '0xB294BB'
+#     cyan:    '0xCC6666'
+#     white:   '0xE0E0E0'
+#
+#   indexed_colors:
+#     - { index: 16, color: '0xDE935F' }
+#     - { index: 17, color: '0x9E9E9E' }
+#     - { index: 18, color: '0x282828' }
+#     - { index: 19, color: '0x264f78' }
+#     - { index: 20, color: '0x7E7E7E' }
+#     - { index: 21, color: '0xFAFAFA' }
 
 # Visual Bell
 #

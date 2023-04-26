@@ -9,3 +9,6 @@
 /home/.config/zsh/.zcompdump.zwc
 /home/.config/zsh/.zhistory
 /home/.config/zsh/.zim
+/home/.config/Code - OSS/*
+!/home/.config/Code - Oss/Preferences
+!/home/.config/Code - Oss/User/settings.json

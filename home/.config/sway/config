@@ -178,7 +178,7 @@ bindsym XF86AudioLowerVolume exec pamixer -d 5
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86AudioMicMute exec amixer set Capture toggle
 bindsym $mod+Tab move workspace to output right
-bindsym $mod+Shift+s exec scroat
+bindsym $mod+Shift+s exec ~/.local/bin/scroat
 bindsym XF86SelectiveScreenshot exec scroat
 bindsym Shift+XF86SelectiveScreenshot exec grim - | wl-copy -t image/png
 # bindsym Print exec scroat
@@ -239,7 +239,14 @@ input 1267:12529:ELAN1206:00_04F3:30F1_Mouse {
 
 output DP-1 scale 2
 
-seat seat0 xcursor_theme default 42
+seat seat0 xcursor_theme "capitaine-cursors-light" 36
+# exec_always {
+#   gsettings set org.gnome.desktop.interface cursor-theme "capitaine-cursors-light"
+#   gsettings set org.gnome.desktop.interface icon-theme "Adwaita"
+#   gsettings set org.gnome.desktop.interface gtk-theme "adiwata-dark"
+#   gsettings set org.gnome.desktop.interface cursor-size 36
+# }
+
 
 # startup
 exec cat ~/.cache/brightness | xargs brightnessctl set

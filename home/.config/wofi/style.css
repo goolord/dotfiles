@@ -1,7 +1,15 @@
+@define-color border-color #505050;
+
+#window {
+  background-color: #2c2c2c;
+}
+
+
 * {
   font-family: 'Fira Code Nerd Font', monospace;
   font-size: 18px;
   font-weight: 500;
+  color: #ddd;
 }
 
 #input {
@@ -17,12 +25,12 @@
 
 #outer-box {
   padding: 5px;
-  border: 2px solid #666666;
+  border: 2px solid @border-color;
 }
 
 #scroll {
   margin: 5px;
-  border-top: 2px solid #666666;
+  border-top: 2px solid @border-color;
 }
 
 #text {
