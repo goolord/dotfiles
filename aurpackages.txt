@@ -6,6 +6,8 @@ audacity
 bat
 bottom
 broot
+cage
+capitaine-cursors
 chromium
 code
 code-marketplace
@@ -21,6 +23,8 @@ gammastep
 git-delta
 git-lfs
 gnome
+greetd
+greetd-gtkgreet-git
 grex
 hyperfine
 inkscape
@@ -33,6 +37,7 @@ mako
 moc
 mocp-scrobbler
 mupdf
+nemo
 neofetch
 nerd-fonts-fira-code
 obs-studio
@@ -51,6 +56,7 @@ sd
 shellcheck-bin
 slurp
 stow
+swaysettings-git
 tealdeer
 the_silver_searcher
 themix-full-git
