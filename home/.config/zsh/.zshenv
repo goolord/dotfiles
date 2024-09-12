@@ -9,3 +9,4 @@ export EDITOR=nvim
 
 [ -f "/Users/zach/.ghcup/env" ] && source "/Users/zach/.ghcup/env" # ghcup-env
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+. "$HOME/.cargo/env"
