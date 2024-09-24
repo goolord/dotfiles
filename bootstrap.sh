@@ -10,8 +10,12 @@ then
   git clone git@github.com:goolord/nvim.git ~/.config/nvim -q
 fi
 
-yay -S $(cat aurpackages.txt) --needed --sudoloop
-curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+aur -S $(cat aurpackages.txt) --needed --sudoloop
+
+if ! [ -d ~/.ghcup/ ]
+then
+  curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+fi
 cabal install $(cat cabalpackages.txt) --overwrite-policy=always
 cargo install $(cat cargopackages.txt)
 

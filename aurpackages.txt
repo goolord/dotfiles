@@ -39,7 +39,6 @@ mocp-scrobbler
 mupdf
 nemo
 neofetch
-nerd-fonts-fira-code
 obs-studio
 openconnect
 pamixer

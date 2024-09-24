@@ -12,42 +12,6 @@ window#waybar {
   color: #fdf6e3;
 }
 
-.modules-right * {
-  /* margin-left: 0.5em; */
-}
-
-.modules-right > * > * {
-  background: #403b39;
-  border-left: 1px solid #555555;
-  /* border-right: 1px solid #555555; */
-  padding-bottom: 0px;
-  padding-top: 2px;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-}
-
-.modules-right > widget > #tray {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-#tray > * > * {
-  padding-top: 0px;
-  padding-bottom: 4px;
-  padding-left: 0.25em;
-  padding-right: 0px;
-}
-
-#tray > *:first-child > * {
-  padding-left: 0px;
-}
-
-.modules-right > widget > #custom-shutdown {
-  padding-top: 0px;
-  padding-left: 0.5em;
-  padding-right: 0.7em;
-}
-
 #battery.good     { color: #98971a; }
 #battery.warning  { color: #fabd2f; }
 
@@ -57,26 +21,11 @@ window#waybar {
   font-weight: bold;
 }
 
-/*
-#pulseaudio     { color: #b76389; }
-#backlight      { color: #b58900; }
-#memory         { color: #fe8019; }
-#temperature    { color: #fb4924; }
-#cpu            { color: #8ec07c; }
-#battery        { color: #f2b80c; }
-#custom-weather { color: #83a598; }
-#disk           { color: #c1440a; }
-*/
-
 #workspaces button {
   padding: 0 5px;
   background: #403b39;
   border-right: 1px solid #555555;
 }
-
-/* #workspaces button:last-child { */
-/*   border-right: none; */
-/* } */
 
 #workspaces button.focused {
   background: #458588;
@@ -97,14 +46,13 @@ window#waybar {
 
 .modules-right > widget > * { padding: 0 15px; }
 
-.modules-right > widget > #tray {
+#tray {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.modules-right > widget > #custom-shutdown {
-  padding-left: 11px;
-  padding-right: 13px;
+#custom-shutdown {
+  margin-bottom: -4px;
 }
 
 #battery.good     { color: #b8bb26; }
@@ -117,12 +65,6 @@ window#waybar {
 }
 
 #clock { padding: 0.1em 0.5em; }
-
-#tray > * > * {
-  padding: 0 0px 0.1em 5px;
-}
-
-#tray { padding-left: 10px; }
 
 @keyframes blinking {
   0%   { background-color: #ff0000; }
