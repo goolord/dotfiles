@@ -90,7 +90,7 @@
     ]
   },
   "battery": {
-    "bat": "BAT0",
+    "bat": "BAT1",
     "states": {
       "good": 100,
       "warning": 20,

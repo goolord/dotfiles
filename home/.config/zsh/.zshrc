@@ -128,7 +128,7 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
 # }}} End configuration added by Zim install
 
-source ${ZIM_HOME}/zim.zsh
+# source ${ZIM_HOME}/zim.zsh
 if [[ -f ~/.nix-profile/lib/ah_aws.sh ]] then
   source ~/.nix-profile/lib/ah_aws.sh
 fi
@@ -192,3 +192,4 @@ alias ls="exa-wrapper.sh"
 alias commitshit="git commit -am \"\$(curl 'whatthecommit.com/index.txt')\""
 alias hasktags="ptags -c --languages=haskell"
 alias aur="paru"
+alias sudoe="sudo -E"

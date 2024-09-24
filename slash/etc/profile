@@ -19,13 +19,13 @@ append_path '/usr/local/sbin'
 append_path '/usr/local/bin'
 append_path '/usr/bin'
 
-append_path '/home/zach/bin'
-append_path '/home/zach/.local/share/bin'
-append_path '/home/zach/.local/bin'
-append_path '/home/zach/.ghcup/bin'
-append_path '/home/zach/.cabal/bin'
-append_path '/home/zach/.cargo/bin'
-append_path '/home/zach/.luarocks/bin'
+append_path '/home/nano/bin'
+append_path '/home/nano/.local/share/bin'
+append_path '/home/nano/.local/bin'
+append_path '/home/nano/.ghcup/bin'
+append_path '/home/nano/.cabal/bin'
+append_path '/home/nano/.cargo/bin'
+append_path '/home/nano/.luarocks/bin'
 
 # Force PATH to be environment
 export PATH

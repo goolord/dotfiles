@@ -237,15 +237,19 @@ input 1267:12529:ELAN1206:00_04F3:30F1_Mouse {
   pointer_accel -0.3
 }
 
+# input 2362:628:PIXA3854:00_093A:0274_Touchpad {
+#   scroll_factor 0.18
+# }
+
 output DP-1 scale 2
 
 seat seat0 xcursor_theme "capitaine-cursors-light" 36
-# exec_always {
-#   gsettings set org.gnome.desktop.interface cursor-theme "capitaine-cursors-light"
-#   gsettings set org.gnome.desktop.interface icon-theme "Adwaita"
-#   gsettings set org.gnome.desktop.interface gtk-theme "adiwata-dark"
-#   gsettings set org.gnome.desktop.interface cursor-size 36
-# }
+exec_always {
+  gsettings set org.gnome.desktop.interface cursor-theme "capitaine-cursors-light"
+  gsettings set org.gnome.desktop.interface icon-theme "Adwaita"
+  gsettings set org.gnome.desktop.interface gtk-theme "adiwata-dark"
+  gsettings set org.gnome.desktop.interface cursor-size 36
+}
 
 
 # startup
