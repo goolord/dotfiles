@@ -50,7 +50,7 @@
     "format": "{}"
   },
   "pulseaudio": {
-    "format": "<span color='#b76389'>{icon}</span> {volume:2}%",
+    "format": "<span color='#b76389'>{icon}</span>  {volume:2}%",
     "format-bluetooth": "<span color='#b76389'>{icon}</span>  {volume}%",
     "format-muted": "<span color='#fb4934'> MUTE</span>",
     "format-icons": {

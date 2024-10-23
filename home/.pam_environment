@@ -4,3 +4,4 @@ PATH=/home/zach/bin:/home/zach/.local/share/bin:/home/zach/.local/bin:/home/zach
 EDITOR=nvim
 XDG_CURRENT_DESKTOP=sway
 GDK_BACKEND=wayland
+QT_QPA_PLATFORMTHEME=qt5ct:qt6ct
