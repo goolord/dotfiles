@@ -1,0 +1,4 @@
+#!/bin/sh
+export WLR_RENDERER=vulkan
+
+exec sway "$@"
