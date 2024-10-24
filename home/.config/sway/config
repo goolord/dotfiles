@@ -213,6 +213,7 @@ include /etc/sway/config.d/*
 font pango:monospace 10
 
 output "*" bg "#404040" solid_color
+output * color_profile icc "/usr/share/color/icc/colord/framework.icc"
 
 default_border pixel 2
 # broken :l
