@@ -21,6 +21,16 @@ window#waybar {
   font-weight: bold;
 }
 
+#battery.critical.charging {
+  animation: none;
+  font-weight: inherit;
+}
+
+#workspaces button:first-child {     /* gitignore */
+  padding-left: 6px;                 /* gitignore */
+  border-top-left-radius: 15px 15px; /* gitignore */
+}                                    /* gitignore */
+
 #workspaces button {
   padding: 0 5px;
   background: #403b39;
