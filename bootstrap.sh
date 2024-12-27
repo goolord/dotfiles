@@ -1,3 +1,21 @@
+if ! command -v paru
+then
+  sudo pacman -S --needed base-devel
+  git clone https://aur.archlinux.org/paru.git
+  cd paru
+  makepkg -si
+fi
+
+if ! command -v stow
+then
+  sudo pacman -S stow
+fi
+
+if ! command -v git
+then
+  sudo pacman -S git
+fi
+
 if ! [ -d ~/Dev/shell-scripts ]
 then
   mkdir -p ~/Dev/shell-scripts
@@ -19,7 +37,7 @@ fi
 cabal install $(cat cabalpackages.txt) --overwrite-policy=always
 cargo install $(cat cargopackages.txt)
 
-if ! command -v zimfw 
+if ! command -v zimfw
 then
   mkdir -p ~/.zim
   curl https://raw.githubusercontent.com/zimfw/zimfw/master/zimfw.zsh > ~/.zim/zimfw.zsh 
