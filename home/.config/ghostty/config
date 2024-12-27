@@ -1,0 +1,11 @@
+font-family = Input Mono
+font-style = Regular
+font-size = 13
+font-thicken = true
+
+theme = Tomorrow Min
+window-decoration = false
+
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
