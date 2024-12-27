@@ -1,12 +1,6 @@
 # dotfiles
 contains configuration files for syncing across my machines
 
-deps:
-- arch linux
-- yay
-- GNU stow
-- git
-
 tendrils:
 - https://github.com/goolord/shell-scripts
 - https://github.com/goolord/nvim
@@ -18,7 +12,7 @@ main programs:
 - nvim
 
 ## Quick Start
-run `./bootstrap.sh`
+run `./bootstrap.sh`, which will install dependencies and create symlinks
 
 ## Structure
 `home.sh` will link `home/` to `~`

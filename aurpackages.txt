@@ -37,7 +37,6 @@ mako
 moc
 mocp-scrobbler
 mupdf
-nemo
 neofetch
 obs-studio
 openconnect
