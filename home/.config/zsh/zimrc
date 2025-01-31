@@ -6,9 +6,9 @@ zmodule duration-info
 zmodule git-info
 zmodule prompt-pwd
 zmodule minimal
+zmodule completion
 zmodule zsh-users/zsh-completions
 zmodule spwhitt/nix-zsh-completions -s nix-zsh-completions.plugin.zsh -f .
-zmodule completion
 zmodule zsh-users/zsh-autosuggestions
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
