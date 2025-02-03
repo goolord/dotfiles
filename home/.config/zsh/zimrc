@@ -12,6 +12,6 @@ zmodule completion
 zmodule zsh-users/zsh-autosuggestions
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
-zmodule junegunn/fzf -s shell/key-bindings.zsh -s shell/completion.zsh
+source <(fzf --zsh)
 zmodule Aloxaf/fzf-tab -s fzf-tab.plugin.zsh
 zmodule goolord/simple-zsh-nix-shell
