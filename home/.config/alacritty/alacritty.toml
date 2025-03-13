@@ -43,7 +43,6 @@ unfocused_hollow = true
 TERM = "alacritty"
 
 [font]
-size = 13
 
 [font.glyph_offset]
 x = 0
