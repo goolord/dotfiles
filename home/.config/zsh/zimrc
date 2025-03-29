@@ -9,9 +9,9 @@ zmodule minimal
 zmodule zsh-users/zsh-completions
 zmodule spwhitt/nix-zsh-completions -s nix-zsh-completions.plugin.zsh -f .
 zmodule completion
+source <(fzf --zsh)
+zmodule Aloxaf/fzf-tab
 zmodule zsh-users/zsh-autosuggestions
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
-source <(fzf --zsh)
-zmodule Aloxaf/fzf-tab -s fzf-tab.plugin.zsh
 zmodule goolord/simple-zsh-nix-shell
