@@ -1,4 +1,11 @@
 # directory of dotfiles
-DIR="$( { cd "$(dirname "$0")" || exit; } ; pwd -P )"
+export DIR="$( { cd "$(dirname "$0")" || exit; } ; pwd -P )"
+export TARGET_DIR=~/
 
-stow home -d "$DIR" -t ~/ $@
+function stow_command() {
+  stow home -d "$DIR" -t $TARGET_DIR $@
+}
+
+export -f stow_command
+
+$DIR/stow.sh $@
