@@ -1,3 +1,10 @@
+[general]
+live_config_reload = true
+
+[[mouse.bindings]]
+action = "None"
+mouse = "Middle"
+
 [bell]
 animation = "Ease"
 color = "0xebdbb2"
@@ -6,33 +13,57 @@ duration = 0
 [colors]
 draw_bold_text_with_bright_colors = true
 
-[colors.primary]
-background = '0x1F1F1F'
-foreground = '0xE0E0E0'
+[[colors.indexed_colors]]
+color = "0xDE935F"
+index = 16
 
-[colors.cursor]
-text = '0x1F1F1F'
-cursor = '0xE0E0E0'
+[[colors.indexed_colors]]
+color = "0x9E9E9E"
+index = 17
 
-[colors.normal]
-black   = '0x1F1F1F'
-red     = '0xCC6666'
-green   = '0xB5BD68'
-yellow  = '0xF0C674'
-blue    = '0x81A2BE'
-magenta = '0xB294BB'
-cyan    = '0xCC6666'
-white   = '0xE0E0E0'
+[[colors.indexed_colors]]
+color = "0x282828"
+index = 18
+
+[[colors.indexed_colors]]
+color = "0x264f78"
+index = 19
+
+[[colors.indexed_colors]]
+color = "0x7E7E7E"
+index = 20
+
+[[colors.indexed_colors]]
+color = "0xFAFAFA"
+index = 21
 
 [colors.bright]
-black   = '0x727272'
-red     = '0xCC6666'
-green   = '0xB5BD68'
-yellow  = '0xF0C674'
-blue    = '0x81A2BE'
-magenta = '0xB294BB'
-cyan    = '0xCC6666'
-white   = '0xE0E0E0'
+black   = "0x727272"
+blue    = "0x81A2BE"
+cyan    = "0xCC6666"
+green   = "0xB1BE6F"
+magenta = "0xB294BB"
+red     = "0xCC6666"
+white   = "0xE0E0E0"
+yellow  = "0xF0C674"
+
+[colors.cursor]
+cursor = "0xE0E0E0"
+text   = "0x1F1F1F"
+
+[colors.normal]
+black   = "0x1F1F1F"
+blue    = "0x81A2BE"
+cyan    = "0xCC6666"
+green   = "0xB1BE6F"
+magenta = "0xB294BB"
+red     = "0xCC6666"
+white   = "0xE0E0E0"
+yellow  = "0xF0C674"
+
+[colors.primary]
+background = "0x1F1F1F"
+foreground = "0xE0E0E0"
 
 [cursor]
 style = "Block"
@@ -42,14 +73,13 @@ unfocused_hollow = true
 TERM = "alacritty"
 
 [font]
-#size = 12
+size = 16
+normal.family = "IosevkaCustomSemi Nerd Font Extended"
+bold.family =  "IosevkaCustomBoldSemi Nerd Font Extended"
 
 [font.glyph_offset]
 x = 0
 y = 0
-
-[font.normal]
-family = "InconsolataGo Nerd Font Propo"
 
 [font.offset]
 x = 0
@@ -58,25 +88,27 @@ y = 0
 [mouse]
 hide_when_typing = true
 
-[scrolling]
-# multiplier = 8
-
 [[mouse.bindings]]
 action = "None"
 mouse = "Middle"
 
 [selection]
-semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+semantic_escape_chars = ''',│`|:"' ()[]{}<>'''
 
 [window]
 decorations = "None"
 dynamic_title = true
 opacity = 1.0
+option_as_alt = "OnlyLeft"
 startup_mode = "Maximized"
 
 [window.padding]
 x = 0
 y = 0
 
-[general]
-live_config_reload = true
+[keyboard]
+
+[[keyboard.bindings]]
+chars = "\u001Bm"
+key = "M"
+mods = "Alt"
