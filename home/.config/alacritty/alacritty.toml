@@ -73,7 +73,7 @@ unfocused_hollow = true
 TERM = "alacritty"
 
 [font]
-size = 16
+size = 17
 normal.family = "IosevkaCustomSemi Nerd Font Extended"
 bold.family =  "IosevkaCustomBoldSemi Nerd Font Extended"
 
