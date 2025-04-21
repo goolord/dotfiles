@@ -3,6 +3,7 @@ export ZIM_CONFIG_FILE="$ZDOTDIR/zimrc"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR=nvim
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
 # neither work :V
 # unset HISTFILE
 # export HISTFILE=${XDG_DATA_HOME:-$HOME/.local/data}/zsh_history
