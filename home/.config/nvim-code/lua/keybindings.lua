@@ -1,17 +1,19 @@
 local keymap = vim.keymap.set
 
+local vscode = require('vscode')
+
 keymap('', '<Space>', '<Leader>', { silent = true, remap = true })
 -- disable keys
 keymap('', '<MiddleMouse>', '<Nop>', { silent = true, nowait = true, remap = true })
 keymap('i', '<MiddleMouse>', '<Nop>', { silent = true, nowait = true, remap = true })
-keymap('', '<Leader>ff', "<Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>",
+keymap('', '<Leader>ff', function () vscode.call('workbench.action.quickOpen') end,
     { silent = true, nowait = true, remap = true })
-keymap('', '<Leader>fg', "<Cmd>call VSCodeNotify('search.action.openEditor')<CR>",
+keymap('', '<Leader>fg', function () vscode.call('search.action.openEditor') end,
     { silent = true, nowait = true, remap = true })
 keymap('', '<Leader>d', function()
-    vim.fn.VSCodeNotify('workbench.action.toggleSidebarVisibility')
+    vscode.call('workbench.action.toggleSidebarVisibility')
 end, { silent = true, nowait = true, remap = true })
-keymap('', '<Leader>t', "<Cmd>call VSCodeNotify('workbench.action.terminal.toggleTerminal')<CR>",
+keymap('', '<Leader>t', function () vscode.call('workbench.action.terminal.toggleTerminal') end,
     { silent = true, nowait = true, remap = true })
 keymap('n', '<Esc>', "<Cmd>noh<CR>", { silent = true, nowait = true, remap = false })
 
