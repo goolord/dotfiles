@@ -7,6 +7,16 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "use_smartcase_search": true,
+  "agent_servers": {
+    "github-copilot": {
+      "type": "registry"
+    }
+  },
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+  "buffer_line_height": "standard",
   "agent": {
     "default_model": {
       "provider": "copilot_chat",

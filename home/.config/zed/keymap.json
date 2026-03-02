@@ -13,14 +13,21 @@
     },
   },
   {
-    "context": "Editor && vim_mode == insert",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       // "j k": "vim::NormalBefore"
     },
   },
   {
+    "context": "Editor && vim_mode == normal",
     "bindings": {
-      "space f f": "file_finder::Toggle"
-    }
-  }
+      "space f f": "file_finder::Toggle",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space f g": "workspace::NewSearch",
+    },
+  },
 ]
