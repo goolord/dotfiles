@@ -194,3 +194,8 @@ alias hasktags="ptags -c --languages=haskell"
 alias aur="paru"
 alias sudoe="sudo -E"
 alias ghcid="ghcid -o ghcid.txt"
+alias nix="noglob nix"
+
+# opencode
+export PATH=/Users/zach/.opencode/bin:$PATH
+# eval "$(direnv hook zsh)"

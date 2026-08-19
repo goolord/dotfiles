@@ -13,6 +13,18 @@
     },
   },
   {
+    "context": "Workspace && vim_mode != insert",
+    "bindings": {
+      "space d": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space d": "workspace::ToggleLeftDock",
+    },
+  },
+  {
     "context": "Editor && vim_mode == normal",
     "bindings": {
       // "j k": "vim::NormalBefore"

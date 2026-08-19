@@ -112,3 +112,8 @@ y = 0
 chars = "\u001Bm"
 key = "M"
 mods = "Alt"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
