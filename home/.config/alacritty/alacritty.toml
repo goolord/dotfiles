@@ -74,8 +74,8 @@ TERM = "alacritty"
 
 [font]
 size = 17
-normal.family = "IosevkaCustomSemi Nerd Font Extended"
-bold.family =  "IosevkaCustomBoldSemi Nerd Font Extended"
+normal.family = "Iosevka Custom SemiExtended Nerd Font"
+bold.family =  "Iosevka Custom SemiExtended Nerd Font"
 
 [font.glyph_offset]
 x = 0

@@ -7,6 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "buffer_font_weight": 450.0,
+  "terminal": {
+    "minimum_contrast": 45.0,
+    "dock": "right"
+  },
   "vim": {
     "use_system_clipboard": "never"
   },
@@ -27,6 +32,12 @@
   },
   "use_smartcase_search": true,
   "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "model": "default"
+      },
+      "type": "registry"
+    },
     "amp-acp": {
       "type": "registry"
     },
@@ -52,7 +63,7 @@
   },
   "cursor_blink": false,
   "theme": "Tomorrow Night Min",
-  "buffer_font_family": "Iosevka Custom",
+  "buffer_font_family": "Iosevka Custom SemiExtended Nerd Font",
   "buffer_font_size": 16.0,
   "vim_mode": true
 }

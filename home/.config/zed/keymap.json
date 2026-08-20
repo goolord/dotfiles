@@ -19,6 +19,12 @@
     },
   },
   {
+    "context": "Workspace && vim_mode != insert",
+    "bindings": {
+      "space t": "terminal_panel::Toggle",
+    },
+  },
+  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "space d": "workspace::ToggleLeftDock",
