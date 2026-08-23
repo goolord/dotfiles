@@ -12,4 +12,5 @@
 /home/.config/Code - OSS/*
 !/home/.config/Code - Oss/Preferences
 !/home/.config/Code - Oss/User/settings.json
+home/.config/zsh/.zsh_history
 /fonts/output
