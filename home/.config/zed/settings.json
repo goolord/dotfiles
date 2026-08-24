@@ -12,8 +12,10 @@
       "enabled": false
     }
   },
+  "cli_default_open_behavior": "existing_window",
   "buffer_font_weight": 450.0,
   "terminal": {
+    "shell": "system",
     "minimum_contrast": 45.0,
     "dock": "right"
   },
@@ -21,6 +23,7 @@
     "use_system_clipboard": "never"
   },
   "project_panel": {
+    "hide_gitignore": true,
     "dock": "left"
   },
   "outline_panel": {
@@ -37,6 +40,9 @@
   },
   "use_smartcase_search": true,
   "agent_servers": {
+    "antigravity-acp": {
+      "type": "registry"
+    },
     "claude-acp": {
       "default_config_options": {
         "model": "default"
@@ -58,17 +64,128 @@
   },
   "buffer_line_height": "standard",
   "agent": {
+    "terminal_init_command": "",
+    "sandbox_permissions": {
+      "allow_unsandboxed": true,
+      "warn_ntfs_grants": false
+    },
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {
+        "terminal": {
+          "default": "allow",
+          "always_allow": [
+            {
+              "pattern": "^which\\s+cabal(\\s|$)"
+            },
+            {
+              "pattern": "^cabal\\b"
+            },
+            {
+              "pattern": "^ghc\\b"
+            },
+            {
+              "pattern": "^cabal\\s+build(\\s|$)"
+            },
+            {
+              "pattern": "^tail\\b"
+            },
+            {
+              "pattern": "^ghcup\\s+list(\\s|$)"
+            },
+            {
+              "pattern": "^grep\\b"
+            },
+            {
+              "pattern": "^ls\\s+/c/Program(\\s|$)"
+            },
+            {
+              "pattern": "^head\\b"
+            },
+            {
+              "pattern": "^find\\s+dist-newstyle(\\s|$)"
+            },
+            {
+              "pattern": "^find\\s+/(\\s|$)"
+            },
+            {
+              "pattern": "^rm\\b"
+            },
+            {
+              "pattern": "^git\\s+clone(\\s|$)"
+            },
+            {
+              "pattern": "^cd\\s+/tmp/quant_inspect(\\s|$)"
+            },
+            {
+              "pattern": "^git\\s+checkout(\\s|$)"
+            },
+            {
+              "pattern": "^find\\s+\\.(\\s|$)"
+            }
+          ]
+        }
+      }
+    },
+    "default_profile": "alow-all",
+    "profiles": {
+      "alow-all": {
+        "default_model": {
+          "provider": "copilot_chat",
+          "model": "claude-sonnet-5",
+          "enable_thinking": true,
+          "effort": "high"
+        },
+        "name": "Alow all",
+        "tools": {
+          "write_file": true,
+          "terminal": true,
+          "spawn_agent": true,
+          "skill": true,
+          "move_path": true,
+          "read_file": true,
+          "list_directory": true,
+          "grep": true,
+          "find_path": true,
+          "fetch": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "delete_path": true,
+          "create_directory": true,
+          "copy_path": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      }
+    },
     "dock": "right",
     "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
       "provider": "copilot_chat",
-      "model": "claude-opus-4.6"
+      "model": "claude-sonnet-5"
     },
     "favorite_models": [],
     "model_parameters": []
   },
   "cursor_blink": false,
   "theme": "Tomorrow Night Min",
+  "theme_overrides": {
+    "Tomorrow Night Min": {
+      "syntax": {
+        "type": {
+          "color": "#81A2BE",
+          "font_weight": 600
+        },
+        "type.builtin": {
+          "color": "#81A2BE",
+          "font_weight": 600
+        }
+      }
+    }
+  },
   "buffer_font_family": "Iosevka Custom SemiExtended Nerd Font",
   "buffer_font_size": 16.0,
   "vim_mode": true
 }
+
