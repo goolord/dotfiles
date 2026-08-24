@@ -6,46 +6,72 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
+  // ---------------------------------------------------------------------------
+  // Workspace & Navigation
+  // ---------------------------------------------------------------------------
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    },
+      // "shift shift": "file_finder::Toggle",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
   },
+
   {
-    "context": "Workspace && vim_mode != insert",
+    "context": "Editor",
+    "unbind": {
+      "ctrl-l": "editor::SelectLine",
+      "ctrl-h": "search::ToggleReplace"
+    }
+  },
+  // ---------------------------------------------------------------------------
+  // Editor (Vim Normal / Non-Insert Mode)
+  // ---------------------------------------------------------------------------
+  {
+    "context": "Editor && mode == full && vim_mode == normal && vim_operator == none && !BufferSearchBar",
     "bindings": {
       "space d": "project_panel::ToggleFocus",
-    },
-  },
-  {
-    "context": "Workspace && vim_mode != insert",
-    "bindings": {
       "space t": "terminal_panel::Toggle",
-    },
+      "space f f": "file_finder::Toggle",
+      "space f g": "workspace::NewSearch"
+    }
   },
+
+  // ---------------------------------------------------------------------------
+  // Terminal Panel
+  // ---------------------------------------------------------------------------
   {
-    "context": "ProjectPanel && not_editing",
+    "context": "Terminal",
+    "bindings": {
+      "escape": "terminal_panel::Toggle"
+    }
+  },
+
+  // ---------------------------------------------------------------------------
+  // Project Panel
+  // ---------------------------------------------------------------------------
+  {
+    "context": "ProjectPanel && not_editing && !BufferSearchBar",
     "bindings": {
       "space d": "workspace::ToggleLeftDock",
-    },
+      "l": "project_panel::Open",
+      "q": "project_panel::Toggle"
+    }
   },
+
+  // ---------------------------------------------------------------------------
+  // Search Bar
+  // ---------------------------------------------------------------------------
   {
-    "context": "Editor && vim_mode == normal",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
+    "context": "BufferSearchBar",
+    "unbind": {
+      "ctrl-h": "search::ToggleReplace"
     },
-  },
-  {
-    "context": "Editor && vim_mode == normal",
     "bindings": {
-      "space f f": "file_finder::Toggle",
-    },
-  },
-  {
-    "context": "Editor && vim_mode == normal",
-    "bindings": {
-      "space f g": "workspace::NewSearch",
-    },
-  },
+      "ctrl-alt-h": "search::ToggleReplace"
+    }
+  }
 ]
