@@ -199,3 +199,4 @@ alias nix="noglob nix"
 # opencode
 export PATH=/Users/zach/.opencode/bin:$PATH
 # eval "$(direnv hook zsh)"
+

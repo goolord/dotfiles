@@ -8,6 +8,6 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
 # unset HISTFILE
 # export HISTFILE=${XDG_DATA_HOME:-$HOME/.local/data}/zsh_history
 
-[ -f "/Users/zach/.ghcup/env" ] && source "/Users/zach/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 # . "$HOME/.cargo/env"
