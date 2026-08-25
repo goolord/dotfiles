@@ -4,19 +4,22 @@ set -euo pipefail
 thumb_dir="${XDG_CACHE_HOME:-$HOME/.cache}/cliphist/thumbs"
 mkdir -p "$thumb_dir"
 
-mapfile -t entries < <(cliphist list)
+if ! mapfile -t entries < <(cliphist list 2>/dev/null); then
+    exit 0
+fi
+[[ ${#entries[@]} -gt 0 ]] || exit 0
 
-for thumb in "$thumb_dir"/*; do
-    [[ -e "$thumb" ]] || continue
-    id="${thumb##*/}"
-    id="${id%.*}"
-    if ! printf '%s\n' "${entries[@]}" | rg -q "^${id}\t"; then
-        rm -f "$thumb"
-    fi
+declare -A label_count
+for entry in "${entries[@]}"; do
+    content="${entry#*$'\t'}"
+    ((label_count[$content]++)) || label_count[$content]=1
 done
 
 wofi_lines=()
-for entry in "${entries[@]}"; do
+entry_map=()
+
+for i in "${!entries[@]}"; do
+    entry="${entries[$i]}"
     id="${entry%%$'\t'*}"
     content="${entry#*$'\t'}"
 
@@ -24,15 +27,27 @@ for entry in "${entries[@]}"; do
         continue
     fi
 
-    if [[ "$content" =~ ^\[\[\ binary\ data\ .*[[:space:]](png|jpe?g|bmp)[[:space:]] ]]; then
+    label="$content"
+    if (( label_count[$content] > 1 )); then
+        label="$content · #$id"
+    fi
+
+    if [[ "$content" =~ ^\[\[\ binary\ data\ .*[[:space:]](png|jpe?g|bmp|webp|gif)[[:space:]] ]]; then
         ext="${BASH_REMATCH[1],,}"
         thumb="$thumb_dir/${id}.${ext}"
         if [[ ! -f "$thumb" ]]; then
-            printf '%s\n' "$entry" | cliphist decode | magick - -resize '256x256>' "$thumb"
+            if ! printf '%s\n' "$entry" | cliphist decode | magick - -resize '256x256>' "$thumb" 2>/dev/null; then
+                rm -f "$thumb"
+                wofi_lines+=("$label")
+                entry_map+=("$i")
+                continue
+            fi
         fi
         wofi_lines+=("img:$thumb")
+        entry_map+=("$i")
     else
-        wofi_lines+=("$content")
+        wofi_lines+=("$label")
+        entry_map+=("$i")
     fi
 done
 
@@ -47,16 +62,9 @@ selected="$(printf '%s\n' "${wofi_lines[@]}" | wofi --dmenu \
     || true)"
 [[ -n "$selected" ]] || exit 0
 
-if [[ "$selected" == img:* ]]; then
-    thumb_file="${selected#img:}"
-    id="${thumb_file##*/}"
-    id="${id%.*}"
-    printf '%s\t' "$id" | cliphist decode | wl-copy
-else
-    for entry in "${entries[@]}"; do
-        if [[ "${entry#*$'\t'}" == "$selected" ]]; then
-            printf '%s\n' "$entry" | cliphist decode | wl-copy
-            exit 0
-        fi
-    done
-fi
+for j in "${!wofi_lines[@]}"; do
+    if [[ "${wofi_lines[$j]}" == "$selected" ]]; then
+        printf '%s\n' "${entries[entry_map[$j]]}" | cliphist decode | wl-copy
+        exit 0
+    fi
+done

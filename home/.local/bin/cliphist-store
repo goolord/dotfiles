@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+thumb_dir="${XDG_CACHE_HOME:-$HOME/.cache}/cliphist/thumbs"
+rm -rf "$thumb_dir"
+
+start_watch() {
+    local type=$1
+    local pattern="wl-paste --type ${type} --watch cliphist store"
+    if ! pgrep -f "$pattern" >/dev/null 2>&1; then
+        wl-paste --type "$type" --watch cliphist store &
+    fi
+}
+
+start_watch text
+start_watch image

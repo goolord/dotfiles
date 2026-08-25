@@ -268,5 +268,4 @@ exec_always {
 exec cat ~/.cache/brightness | xargs brightnessctl set
 exec xmousepasteblock
 exec mako
-exec wl-paste --type text --watch cliphist store
-exec wl-paste --type image --watch cliphist store
+exec ~/.local/bin/cliphist-store
