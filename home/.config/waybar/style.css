@@ -12,6 +12,10 @@ window#waybar {
   color: #f2f2f2;
 }
 
+.modules-left, .modules-center, .modules-right, window#waybar {
+    border-bottom: 2px solid #1f1f1f;
+}
+
 #battery.good     { color: #b5bd68; }
 #battery.warning  { color: #f0c674; }
 
@@ -57,7 +61,7 @@ window#waybar {
   border-left: 1px solid #4d5057;
 }
 
-.modules-right > widget > * { padding: 5px 15px; }
+.modules-right > widget > * { padding: 4px 15px; }
 
 #custom-shutdown {
   margin-bottom: 0px;
