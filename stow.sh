@@ -16,9 +16,9 @@ stow_conflicts() {
   output=$(stow_command "$@" -n 2>&1) || true
   {
     printf '%s\n' "$output" \
-      | rg 'existing target is not owned by stow: (.+)$' -or '$1'
+      | rg 'existing target is not owned by stow: (.+)$' -or '$1' || true
     printf '%s\n' "$output" \
-      | rg 'cannot stow .* over existing target ([^ ]+/[^ ]+?) since' -or '$1'
+      | rg 'cannot stow .* over existing target ([^ ]+) since' -or '$1' || true
   } | sort -u
 }
 

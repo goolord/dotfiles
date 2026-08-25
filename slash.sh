@@ -17,4 +17,9 @@ stow_command() {
 
 export -f stow_command
 
-"$DIR/stow.sh" "$@"
+install_nix_conf() {
+  sudo install -Dm644 "$DIR/slash/etc/nix/nix.conf" /etc/nix/nix.conf
+}
+
+install_nix_conf
+"$DIR/stow.sh" --skip-existing "$@"

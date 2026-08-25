@@ -20,3 +20,10 @@ stow_command() {
 export -f stow_command
 
 "$DIR/stow.sh" "$@"
+
+# Restricted nix settings belong in /etc/nix/nix.conf (slash/etc/nix/nix.conf).
+rm -f ~/.config/nix/nix.conf
+
+if command -v nix-channel &>/dev/null && [[ -f ~/.nix-channels ]]; then
+  nix-channel --update
+fi
