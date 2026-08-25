@@ -1,22 +1,22 @@
 * {
   font-size: 16px;
-  font-family: monospace;
+  font-family: "Iosevka Custom SemiExtended Nerd Font", monospace;
   transition: all 0s;
-  color: #fbf1c7;
+  color: #f2f2f2;
 
   border-radius: 0px;
 }
 
 window#waybar {
-  background: #323232;
-  color: #fdf6e3;
+  background: #282a2e;
+  color: #f2f2f2;
 }
 
-#battery.good     { color: #98971a; }
-#battery.warning  { color: #fabd2f; }
+#battery.good     { color: #b5bd68; }
+#battery.warning  { color: #f0c674; }
 
 *.critical {
-  color: #fb4934;
+  color: #ff9da4;
   animation: blinking 0.8s infinite;
   font-weight: bold;
 }
@@ -33,43 +33,42 @@ window#waybar {
 
 #workspaces button {
   padding: 0 5px;
-  background: #403b39;
-  border-right: 1px solid #555555;
+  background: #373b41;
+  border-right: 1px solid #4d5057;
+  color: #c5c8c6;
 }
 
 #workspaces button.focused {
-  background: #458588;
-  border-right: 1px solid #458588;
+  background: #81a2be;
+  border-right: 1px solid #81a2be;
+  color: #1e1f21;
 }
 
 #workspaces button.urgent {
-  background: #ff0000;
+  background: #ff5b69;
+  color: #f2f2f2;
   animation: blinking 0.8s infinite;
 }
 
-#workspaces button:hover { background: #83a598; }
+#workspaces button:hover { background: #4d5057; color: #f2f2f2; }
 
 .modules-right > * {
-  background: #3c3836;
-  border-left: 1px solid #555555;
+  background: #373b41;
+  border-left: 1px solid #4d5057;
 }
 
-.modules-right > widget > * { padding: 0 15px; }
-
-#tray {
-  padding-left: 8px;
-  padding-right: 8px;
-}
+.modules-right > widget > * { padding: 5px 15px; }
 
 #custom-shutdown {
-  margin-bottom: -4px;
+  margin-bottom: 0px;
+  padding-right: 20px;
 }
 
-#battery.good     { color: #b8bb26; }
-#battery.wraning  { color: #fabd2f; }
+#battery.good     { color: #b5bd68; }
+#battery.wraning  { color: #f0c674; }
 
 *.critical {
-  color: #fb4934;
+  color: #ff9da4;
   animation: blinking 0.8s infinite;
   font-weight: bold;
 }
@@ -77,11 +76,11 @@ window#waybar {
 #clock { padding: 0.1em 0.5em; }
 
 @keyframes blinking {
-  0%   { background-color: #ff0000; }
+  0%   { background-color: #ff5b69; }
   49%  { background-color: inherit; }
   50%  { background-color: inherit; }
   99%  { background-color: inherit; }
-  100% { background-color: #f00000; }
+  100% { background-color: #c66; }
 }
 
 #clock { padding: 0.1em 0.5em; }
