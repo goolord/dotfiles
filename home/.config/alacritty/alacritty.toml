@@ -7,7 +7,7 @@ mouse = "Middle"
 
 [bell]
 animation = "Ease"
-color = "0xebdbb2"
+color = "0xF0C674"
 duration = 0
 
 [colors]

@@ -1,7 +1,23 @@
-padding=12
-font=monospace 12
-text-color=#ebdbb2
-background-color=#32302f
+## COLORSCHEME: tomorrow-min
+
+anchor=top-right
 width=350
-border-color=#928374
+padding=12
+border-size=2
+border-color=#4d5057
 default-timeout=8000
+
+font=Iosevka Custom SemiExtended Nerd Font 12
+text-color=#c5c8c6
+background-color=#282a2e
+
+[urgency=low]
+text-color=#727272
+background-color=#373b41
+border-color=#4d5057
+
+[urgency=critical]
+text-color=#f2f2f2
+background-color=#373b41
+border-color=#ff5b69
+default-timeout=0

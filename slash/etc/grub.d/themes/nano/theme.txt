@@ -1,6 +1,6 @@
 # Global Property
 title-text: ""
-desktop-color: "#282828"
+desktop-color: "#1e1f21"
 terminal-font: "DejaVu Sans Regular 32"
 terminal-box: "terminal_box_*.png"
 terminal-left: "0"
@@ -16,7 +16,7 @@ terminal-border: "0"
   width = 45%
   height = 60%
   item_font = "DejaVu Sans Regular 32"
-  item_color = "#ebdbb2"
+  item_color = "#c5c8c6"
   selected_item_color = "#ffffff"
   item_height = 48
   item_spacing = 24
@@ -31,6 +31,6 @@ terminal-border: "0"
   align = "center"
   id = "__timeout__"
   text = "Booting in %d seconds"
-  color = "#ebdbb2"
+  color = "#c5c8c6"
   font = "DejaVu Sans Regular 32"
 }

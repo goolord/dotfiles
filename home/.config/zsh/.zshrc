@@ -135,7 +135,7 @@ fi
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(nvim {})+abort'"
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="base16"
 export MANPAGER="nvim +Man!"
 
 # Functions
