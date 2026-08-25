@@ -1,3 +1,4 @@
 * filter=gitignore
 *.tar.gz filter=lfs diff=lfs merge=lfs -text
 *.tar.xz filter=lfs diff=lfs merge=lfs -text
+home/.themes/**/*.gresource filter=lfs diff=lfs merge=lfs -text

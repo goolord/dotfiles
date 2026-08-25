@@ -28,7 +28,6 @@ greetd-gtkgreet-git
 grex
 hyperfine
 inkscape
-kakoune
 krita
 lua-language-server
 luajit-openresty

@@ -105,7 +105,7 @@ if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   fi
 fi
 # Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
-if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/zimrc} ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 # Initialize modules.
@@ -191,12 +191,17 @@ alias loc="tokei"
 alias ls="exa-wrapper.sh"
 alias commitshit="git commit -am \"\$(curl 'whatthecommit.com/index.txt')\""
 alias hasktags="ptags -c --languages=haskell"
-alias aur="paru"
+aur() {
+  if [[ -n "${DOTFILES:-}" && -x "${DOTFILES}/bin/aur" ]]; then
+    "${DOTFILES}/bin/aur" "$@"
+  else
+    paru "$@"
+  fi
+}
 alias sudoe="sudo -E"
 alias ghcid="ghcid -o ghcid.txt"
 alias nix="noglob nix"
 
-# opencode
-export PATH=/Users/zach/.opencode/bin:$PATH
+[[ -d "${HOME}/.opencode/bin" ]] && export PATH="${HOME}/.opencode/bin:${PATH}"
 # eval "$(direnv hook zsh)"
 

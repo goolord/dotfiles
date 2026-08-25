@@ -3,7 +3,7 @@
 /home/.config/nvim/autoload/plug.vim.old
 /home/.config/nvim/.netrwhist
 /home/.config/Lightcord_BD/bdstorage.json
-/home/.config/kak/plugins
+/home/.config/kak
 /home/.config/zsh/.zcompdump
 /home/.config/zsh/.zcompdump.dat
 /home/.config/zsh/.zcompdump.zwc
@@ -13,4 +13,7 @@
 !/home/.config/Code - Oss/Preferences
 !/home/.config/Code - Oss/User/settings.json
 home/.config/zsh/.zsh_history
+home/.config/zed/prompts/
+home/.config/gtk-3.0/bookmarks
+home/.config/zed/**/*.mdb
 /fonts/output

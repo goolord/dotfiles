@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if command -v paru &>/dev/null; then
+  exec paru "$@"
+fi
+
+if command -v yay &>/dev/null; then
+  exec yay "$@"
+fi
+
+echo "aur: need paru or yay on PATH" >&2
+exit 1

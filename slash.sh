@@ -1,11 +1,20 @@
-# directory of dotfiles
-export DIR="$( { cd "$(dirname "$0")" || exit; } ; pwd -P )"
-export TARGET_DIR=/
+#!/usr/bin/env bash
+set -euo pipefail
 
-function stow_command() {
-  sudo stow slash -d "$DIR" -t $TARGET_DIR $@
+if [[ "$(uname -s)" != Linux ]]; then
+  echo "slash.sh is Linux only (stows to /)." >&2
+  exit 1
+fi
+
+# directory of dotfiles
+export DIR="$(cd "$(dirname "$0")" && pwd -P)"
+export TARGET_DIR=/
+export STOW_SUDO=1
+
+stow_command() {
+  sudo stow slash -d "$DIR" -t "$TARGET_DIR" "$@"
 }
 
 export -f stow_command
 
-$DIR/stow.sh $@
+"$DIR/stow.sh" "$@"

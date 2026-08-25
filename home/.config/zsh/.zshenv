@@ -1,3 +1,7 @@
+for candidate in "$HOME/Dev/dotfiles" "$HOME/dotfiles"; do
+  [[ -d "$candidate/bin" ]] && export DOTFILES="$candidate" && break
+done
+
 export ZIM_HOME="$ZDOTDIR/.zim"
 export ZIM_CONFIG_FILE="$ZDOTDIR/zimrc"
 export PATH="$HOME/.local/bin:$PATH"
