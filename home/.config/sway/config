@@ -263,6 +263,8 @@ exec_always {
 
 
 # startup
+# gnome-keyring: systemd user socket + greetd PAM (see /etc/pam.d/greetd)
+# SSH agent: gcr-ssh-agent.socket + SSH_AUTH_SOCK in greetd start-sway
 exec cat ~/.cache/brightness | xargs brightnessctl set
 exec xmousepasteblock
 exec mako
