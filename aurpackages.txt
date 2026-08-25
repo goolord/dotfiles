@@ -28,6 +28,7 @@ greetd
 greetd-gtkgreet-git
 grex
 hyperfine
+imagemagick
 inkscape
 krita
 lua-language-server
