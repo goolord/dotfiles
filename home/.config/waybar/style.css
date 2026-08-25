@@ -61,7 +61,7 @@ window#waybar {
   border-left: 1px solid #4d5057;
 }
 
-.modules-right > widget > * { padding: 4px 15px; }
+.modules-right > widget > * { padding: 4px 12px; }
 
 #custom-shutdown {
   margin-bottom: 0px;
