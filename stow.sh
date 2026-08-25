@@ -1,21 +1,37 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Paths stow reports relative to TARGET_DIR (usually ~).
+conflict_target() {
+  local target=$1
+  if [[ "$target" = /* ]]; then
+    printf '%s\n' "$target"
+  else
+    printf '%s/%s\n' "${TARGET_DIR%/}" "$target"
+  fi
+}
+
 stow_conflicts() {
-  stow_command "$@" -n 2>&1 \
-    | rg ".*\* cannot stow .* over existing target ([^ ]+/[^ ]+?) since .*" -r '$1' \
-    || true
+  local output
+  output=$(stow_command "$@" -n 2>&1) || true
+  {
+    printf '%s\n' "$output" \
+      | rg 'existing target is not owned by stow: (.+)$' -or '$1'
+    printf '%s\n' "$output" \
+      | rg 'cannot stow .* over existing target ([^ ]+/[^ ]+?) since' -or '$1'
+  } | sort -u
 }
 
 remove_conflicts() {
-  local target
+  local target resolved
   local -a rm_cmd=(rm -rf)
   [[ -n "${STOW_SUDO:-}" ]] && rm_cmd=(sudo rm -rf)
 
   for target in "$@"; do
     [[ -n "$target" ]] || continue
-    echo "Replacing conflicting target: $target" >&2
-    "${rm_cmd[@]}" "$target"
+    resolved="$(conflict_target "$target")"
+    echo "Replacing conflicting target: $resolved" >&2
+    "${rm_cmd[@]}" "$resolved"
   done
 }
 
