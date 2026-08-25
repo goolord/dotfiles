@@ -43,7 +43,7 @@ exec swayidle -w \
 
     # Start your launcher
     bindsym $mod+d exec $menu
-    # bindsym $mod+c exec wofi --show combi -i
+    bindsym $mod+c exec ~/.local/bin/cliphist-wofi
     bindsym $mod+r exec wofi --show run -i
     # bindsym $mod+shift+w exec wofi --show window -i
 
@@ -268,3 +268,5 @@ exec_always {
 exec cat ~/.cache/brightness | xargs brightnessctl set
 exec xmousepasteblock
 exec mako
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store

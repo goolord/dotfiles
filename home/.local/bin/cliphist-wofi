@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+mapfile -t entries < <(cliphist list)
+
+labels=()
+for entry in "${entries[@]}"; do
+  labels+=("${entry#*$'\t'}")
+done
+
+selected="$(printf '%s\n' "${labels[@]}" | wofi --dmenu --prompt Clipboard --insensitive || true)"
+[[ -n "$selected" ]] || exit 0
+
+for i in "${!labels[@]}"; do
+  if [[ "${labels[$i]}" == "$selected" ]]; then
+    printf '%s\n' "${entries[$i]}" | cliphist decode | wl-copy
+    exit 0
+  fi
+done
