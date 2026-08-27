@@ -216,7 +216,7 @@ output "*" bg "#17181a" solid_color
 output * color_profile icc "/usr/share/color/icc/colord/framework.icc"
 
 # Tomorrow Night Min — surfaces lift off terminal #1e1f21
-client.focused          #81a2be #282a2e #f2f2f2 #81a2be #81a2be
+client.focused          #81a2be #282a2e #f2f2f2 #ff5b69 #81a2be
 client.focused_inactive #4d5057 #282a2e #c5c8c6 #4d5057 #4d5057
 client.unfocused        #373b41 #1e1f21 #63666e #373b41 #373b41
 client.urgent           #ff5b69 #282a2e #f2f2f2 #ff5b69 #ff5b69
