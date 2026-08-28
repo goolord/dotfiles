@@ -115,7 +115,9 @@ jobs: $ncpus
 -- install-method:
 installdir: /home/nano/.cabal/bin
 -- username:
+-- gitignore
 -- password:
+-- gitignore
 -- password-command:
 -- builddir:
 

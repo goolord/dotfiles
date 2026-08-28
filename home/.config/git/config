@@ -26,5 +26,5 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
 [filter "gitignore"]
-  clean = "sed -e '/.*#gitignore\\s*$/d' -e '/.*-- gitignore\\s*$/d'"
+  clean = "sed -e '/.*#gitignore\\s*$/d' -e '/.*-- gitignore\\s*$/{n;d;}'"
   smudge = cat
