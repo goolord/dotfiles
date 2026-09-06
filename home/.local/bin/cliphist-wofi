@@ -12,7 +12,7 @@ fi
 declare -A label_count
 for entry in "${entries[@]}"; do
     content="${entry#*$'\t'}"
-    ((label_count[$content]++)) || label_count[$content]=1
+    label_count[$content]=$(( ${label_count[$content]:-0} + 1 ))
 done
 
 wofi_lines=()
