@@ -6,6 +6,7 @@ export ZIM_HOME="$ZDOTDIR/.zim"
 export ZIM_CONFIG_FILE="$ZDOTDIR/zimrc"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 export EDITOR=nvim
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
 # neither work :V
