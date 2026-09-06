@@ -7,6 +7,24 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "context_servers": {
+    "mcp-server-exa-search": {
+      "enabled": false, // Disable by default; search schemas add tokens to every request
+      "remote": false,
+      "settings": {
+        "exa_api_key": "YOUR_KEY_HERE"
+      }
+    }
+  },
+  "tab_size": 2,
+  "auto_indent_on_paste": false,
+  "auto_indent": "preserve_indent",
+  "restore_on_startup": "launchpad",
+  "language_models": {
+    "ollama": {
+      "context_window": 32768
+    }
+  },
   "git": {
     "inline_blame": {
       "enabled": false
@@ -23,7 +41,7 @@
     "use_system_clipboard": "never"
   },
   "project_panel": {
-    "hide_gitignore": true,
+    "hide_gitignore": false,
     "dock": "left"
   },
   "outline_panel": {
@@ -40,19 +58,17 @@
   },
   "use_smartcase_search": true,
   "agent_servers": {
-    "antigravity-acp": {
-      "type": "registry"
-    },
-    "claude-acp": {
+    "cursor": {
       "default_config_options": {
-        "model": "default"
+        "model": "grok-4.6"
       },
       "type": "registry"
     },
-    "amp-acp": {
-      "type": "registry"
-    },
-    "github-copilot-cli": {
+    "antigravity-acp": {
+      "default_config_options": {
+        "model": "gemini-3.7-flash-high",
+        "mode": "yolo"
+      },
       "type": "registry"
     },
     "github-copilot": {
@@ -63,110 +79,101 @@
     "provider": "copilot"
   },
   "buffer_line_height": "standard",
+  "session": {
+    "trust_all_worktrees": true
+  },
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "deepseek",
+        "model": "deepseek-v4-flash",
+        "enable_thinking": false
+      },
+      {
+        "provider": "deepseek",
+        "model": "deepseek-v4-flash",
+        "enable_thinking": true,
+        "effort": "low"
+      },
+      {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "enable_thinking": true,
+        "effort": "low"
+      }
+    ],
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "enable_thinking": false
+    },
+    "auto_compact": {
+      "enabled": true,
+      "threshold": 0.4
+    },
     "terminal_init_command": "",
     "sandbox_permissions": {
       "allow_unsandboxed": true,
-      "warn_ntfs_grants": false
+      "warn_ntfs_grants": false,
+      "allow_all_hosts": true,
+      "allow_fs_write_all": true
     },
     "tool_permissions": {
-      "default": "allow",
+      "default": "allow", // Auto-approves file edits, diffs, diagnostics, and reads
       "tools": {
         "terminal": {
-          "default": "allow",
+          "default": "confirm", // Halts unexpected/destructive commands
           "always_allow": [
-            {
-              "pattern": "^which\\s+cabal(\\s|$)"
-            },
-            {
-              "pattern": "^cabal\\b"
-            },
-            {
-              "pattern": "^ghc\\b"
-            },
-            {
-              "pattern": "^cabal\\s+build(\\s|$)"
-            },
-            {
-              "pattern": "^tail\\b"
-            },
-            {
-              "pattern": "^ghcup\\s+list(\\s|$)"
-            },
-            {
-              "pattern": "^grep\\b"
-            },
-            {
-              "pattern": "^ls\\s+/c/Program(\\s|$)"
-            },
-            {
-              "pattern": "^head\\b"
-            },
-            {
-              "pattern": "^find\\s+dist-newstyle(\\s|$)"
-            },
-            {
-              "pattern": "^find\\s+/(\\s|$)"
-            },
-            {
-              "pattern": "^rm\\b"
-            },
-            {
-              "pattern": "^git\\s+clone(\\s|$)"
-            },
-            {
-              "pattern": "^cd\\s+/tmp/quant_inspect(\\s|$)"
-            },
-            {
-              "pattern": "^git\\s+checkout(\\s|$)"
-            },
-            {
-              "pattern": "^find\\s+\\.(\\s|$)"
-            }
+            // Safe inspection commands
+            { "pattern": "^(ls|pwd|head|tail|grep|find|cat|which)(\\s|$)" },
+            // Build & compile loops
+            { "pattern": "^cabal\\s+(build|test|check|run)(\\s|$)" },
+            { "pattern": "^ghc\\b" },
+            { "pattern": "^ghcup\\s+list(\\s|$)" },
+            { "pattern": "^cargo\\s+(check|build|test|clippy)(\\s|$)" },
+            { "pattern": "^zig\\s+(build|test)(\\s|$)" },
+            // Git read actions
+            { "pattern": "^git\\s+(status|diff|log|branch)(\\s|$)" }
+          ],
+          "always_confirm": [
+            // Require explicit confirmation for potentially destructive operations
+            { "pattern": "^rm\\b" },
+            { "pattern": "^git\\s+(reset|clean|push|checkout)(\\s|$)" }
           ]
         }
       }
     },
-    "default_profile": "alow-all",
+    "default_profile": "autonomous-dev",
     "profiles": {
-      "alow-all": {
+      "autonomous-dev": {
         "default_model": {
-          "provider": "copilot_chat",
-          "model": "claude-sonnet-5",
-          "enable_thinking": true,
-          "effort": "high"
+          "provider": "deepseek",
+          "model": "deepseek-v4-flash",
+          "enable_thinking": false
         },
-        "name": "Alow all",
+        "name": "Autonomous Dev",
         "tools": {
-          "write_file": true,
-          "terminal": true,
-          "spawn_agent": true,
-          "skill": true,
-          "move_path": true,
           "read_file": true,
+          "edit_file": true,
+          "write_file": true,
+          "diagnostics": true,
+          "terminal": true,
           "list_directory": true,
           "grep": true,
           "find_path": true,
-          "fetch": true,
-          "diagnostics": true,
-          "edit_file": true,
-          "delete_path": true,
-          "create_directory": true,
-          "copy_path": true
+          "spawn_agent": false, // Keeps loops focused on a single context thread
+          "skill": false,
+          "fetch": false,
+          "copy_path": false,
+          "move_path": false,
+          "delete_path": false,
+          "create_directory": true
         },
         "enable_all_context_servers": false,
         "context_servers": {}
       }
     },
-    "dock": "right",
-    "default_model": {
-      "effort": "high",
-      "enable_thinking": true,
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-5"
-    },
-    "favorite_models": [],
-    "model_parameters": []
+    "dock": "right"
   },
   "cursor_blink": false,
   "theme": "Tomorrow Night Min",
@@ -188,4 +195,3 @@
   "buffer_font_size": 16.0,
   "vim_mode": true
 }
-
