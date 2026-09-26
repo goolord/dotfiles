@@ -7,19 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  {
-    "buffer_font_features": {
-      "calt": false
-    }
+  "buffer_font_features": {
+    "calt": false
   },
   "context_servers": {
-    "mcp-server-exa-search": {
-      "enabled": false, // Disable by default; search schemas add tokens to every request
-      "remote": false,
-      "settings": {
-        "exa_api_key": "YOUR_KEY_HERE"
-      }
-    }
+
   },
   "tab_size": 2,
   "auto_indent_on_paste": false,
@@ -64,6 +56,15 @@
   "use_smartcase_search": true,
   "agent_servers": {
     "opencode": {
+      "favorite_config_option_values": {
+        "effort": [
+          "high"
+        ]
+      },
+      "default_config_options": {
+        "effort": "xhigh",
+        "model": "opencode/big-pickle"
+      },
       "type": "registry"
     },
     "cursor": {
@@ -95,7 +96,7 @@
       {
         "provider": "deepseek",
         "model": "deepseek-v4-flash",
-        "enable_thinking": false
+        "enable_thinking": true
       },
       {
         "provider": "deepseek",
@@ -107,13 +108,14 @@
         "provider": "deepseek",
         "model": "deepseek-v4-pro",
         "enable_thinking": true,
-        "effort": "low"
+        "effort": "max"
       }
     ],
     "default_model": {
+      "effort": "max",
       "provider": "deepseek",
-      "model": "deepseek-v4-flash",
-      "enable_thinking": false
+      "model": "deepseek-v4-pro",
+      "enable_thinking": true
     },
     "auto_compact": {
       "enabled": true,
@@ -130,16 +132,21 @@
       "default": "allow", // Auto-approves file edits, diffs, diagnostics, and reads
       "tools": {
         "terminal": {
-          "default": "confirm", // Halts unexpected/destructive commands
+          "default": "allow", // Halts unexpected/destructive commands
           "always_allow": [
             // Safe inspection commands
-            { "pattern": "^(ls|pwd|head|tail|grep|find|cat|which)(\\s|$)" },
+            { "pattern": "^(ls|pwd|head|tail|grep|find|cat|which|fd|rg)(\\s|$)" },
             // Build & compile loops
             { "pattern": "^cabal\\s+(build|test|check|run)(\\s|$)" },
             { "pattern": "^ghc\\b" },
             { "pattern": "^ghcup\\s+list(\\s|$)" },
             { "pattern": "^cargo\\s+(check|build|test|clippy)(\\s|$)" },
             { "pattern": "^zig\\s+(build|test)(\\s|$)" },
+            { "pattern": "^gcc(\\b|\\s)" },
+            { "pattern": "^(g\\+\\+|clang|clang\\+\\+)(\\b|\\s)" },
+            { "pattern": "^make(\\b|\\s)" },
+            { "pattern": "^cmake(\\b|\\s)" },
+            { "pattern": "^ninja(\\b|\\s)" },
             // Git read actions
             { "pattern": "^git\\s+(status|diff|log|branch)(\\s|$)" }
           ],

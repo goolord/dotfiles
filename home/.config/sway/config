@@ -264,6 +264,8 @@ exec_always {
 
 # startup
 # gnome-keyring: systemd user socket + greetd PAM (see /etc/pam.d/greetd)
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets,ssh
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 # SSH agent: gcr-ssh-agent.socket + SSH_AUTH_SOCK in greetd start-sway
 exec cat ~/.cache/brightness | xargs brightnessctl set
 exec xmousepasteblock

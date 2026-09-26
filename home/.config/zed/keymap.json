@@ -7,6 +7,19 @@
 // from the command palette.
 [
   // ---------------------------------------------------------------------------
+  // Non-editor screens (welcome/splash, git diff, project search, etc.)
+  // ---------------------------------------------------------------------------
+  {
+    "context": "EmptyPane || SharedScreen || ProjectDiff || ProjectSearchView",
+    "unbind": {
+      "space f": "file_finder::Toggle"
+    },
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f g": "workspace::NewSearch"
+    }
+  },
+  // ---------------------------------------------------------------------------
   // Workspace & Navigation
   // ---------------------------------------------------------------------------
   {

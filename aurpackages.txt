@@ -58,7 +58,6 @@ stow
 swaysettings-git
 tealdeer
 the_silver_searcher
-themix-full-git
 tmate
 tmux
 tokei
