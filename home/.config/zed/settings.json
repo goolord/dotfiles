@@ -55,6 +55,13 @@
   },
   "use_smartcase_search": true,
   "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "auto",
+        "model": "opus[1m]"
+      },
+      "type": "registry"
+    },
     "opencode": {
       "favorite_config_option_values": {
         "effort": [

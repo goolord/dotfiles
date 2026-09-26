@@ -7,25 +7,14 @@
 // from the command palette.
 [
   // ---------------------------------------------------------------------------
-  // Non-editor screens (welcome/splash, git diff, project search, etc.)
+  // Window navigation (ctrl-hjkl, mirrors nvim's `wincmd`)
   // ---------------------------------------------------------------------------
+  // Workspace covers panels/docks; VimControl is needed too because the
+  // editor's own bindings (e.g. vim's ctrl-j -> vim::Down, ctrl-h -> replace)
+  // take precedence over Workspace ones.
   {
-    "context": "EmptyPane || SharedScreen || ProjectDiff || ProjectSearchView",
-    "unbind": {
-      "space f": "file_finder::Toggle"
-    },
+    "context": "Workspace || VimControl && !menu",
     "bindings": {
-      "space f f": "file_finder::Toggle",
-      "space f g": "workspace::NewSearch"
-    }
-  },
-  // ---------------------------------------------------------------------------
-  // Workspace & Navigation
-  // ---------------------------------------------------------------------------
-  {
-    "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle",
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
@@ -33,23 +22,48 @@
     }
   },
 
+  // ---------------------------------------------------------------------------
+  // Leader (space) bindings
+  // ---------------------------------------------------------------------------
+  // Default vim keymap binds `space f` on non-editor screens, which would
+  // shadow the `space f _` group below.
   {
-    "context": "Editor",
+    "context": "EmptyPane || SharedScreen || ProjectDiff || ProjectSearchView",
     "unbind": {
-      "ctrl-l": "editor::SelectLine",
-      "ctrl-h": "search::ToggleReplace"
+      "space f": "file_finder::Toggle"
     }
   },
-  // ---------------------------------------------------------------------------
-  // Editor (Vim Normal / Non-Insert Mode)
-  // ---------------------------------------------------------------------------
   {
-    "context": "Editor && mode == full && vim_mode == normal && vim_operator == none && !BufferSearchBar",
+    "context": "Editor && mode == full && vim_mode == normal && vim_operator == none && !BufferSearchBar || EmptyPane || SharedScreen || ProjectDiff || ProjectSearchView",
     "bindings": {
       "space d": "project_panel::ToggleFocus",
       "space t": "terminal_panel::Toggle",
+
+      // Find
       "space f f": "file_finder::Toggle",
-      "space f g": "workspace::NewSearch"
+      "space f g": "workspace::NewSearch",
+      "space f b": "tab_switcher::Toggle",
+      "space f s": "project_symbols::Toggle",
+      "space f d": "diagnostics::Deploy",
+      "space f m": "zed::OpenKeymap",
+      "space f :": "command_palette::Toggle",
+
+      // Trouble
+      "space r r": "diagnostics::Deploy",
+
+      // Session
+      "space s l": "projects::OpenRecent"
+    }
+  },
+
+  // ---------------------------------------------------------------------------
+  // Editor (vim normal mode)
+  // ---------------------------------------------------------------------------
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !menu",
+    "bindings": {
+      "alt-m": ["workspace::SendKeystrokes", "@ q"],
+      "space x": ["workspace::SendKeystrokes", ": % s / / / g enter"]
     }
   },
 
@@ -78,6 +92,7 @@
   // ---------------------------------------------------------------------------
   // Search Bar
   // ---------------------------------------------------------------------------
+  // Frees ctrl-h for pane navigation.
   {
     "context": "BufferSearchBar",
     "unbind": {
